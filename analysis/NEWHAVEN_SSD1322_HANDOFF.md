@@ -42,7 +42,35 @@ Recommended path: first light on **Default** config (no module rework, no 15 V s
 needed), then do the one-time rework (move the 0 Ω resistor from R4 to R7; photos on
 datasheet p.5) and stay on **Option #2**.
 
-## 2. Wiring
+## 2. Translation: the SSD1309 way → the SSD1322 way
+
+If you already know how the HiLetgo/SSD1309 screen is driven, this table is the whole
+migration in one place. Everything the old code does has an equivalent — nothing is
+"kept as-is" except the drawing layer above the driver.
+
+| Concept | SSD1309 (HiLetgo, today) | SSD1322 (Newhaven, target) |
+|---|---|---|
+| Bus | I2C @ 400 kHz, device address **0x3C** | 4-wire SPI ≤ ~3.3 MHz. No address — chip select instead |
+| Command vs data | In-band prefix byte: `0x00` = command stream, `0x40` = data stream | **D/C GPIO level**: low = command, high = data. The prefix bytes disappear entirely |
+| Pull-ups | I2C required them (the HiLetgo module silently provided them) | None. SPI needs no termination |
+| Reset | HiLetgo handled it onboard (RC) — firmware never touched reset | **You must drive /RES**: low ≥ 200 µs, wait ≥ 200 µs, before any command |
+| Framebuffer | 1bpp, 1,024 B, page layout (1 byte = 8 vertical pixels) | 4bpp grayscale stream, **8,192 B** (1 byte = one visible pixel = two doubled controller nibbles). Keep the 1bpp buffer and expand during transfer: bit → `0xFF`/`0x00` |
+| Addressing | Page mode: `0x20 0x02`, then per page `0xB0\|page` + column pointer, 8 transfers of 128 B | One window then one stream: `0x15 0x1C 0x5B` (columns), `0x75 0x00 0x3F` (rows), `0x5C` (write RAM), then all 8,192 B linearly. **Column origin is 0x1C, not 0** |
+| Display on/off | `0xAE` / `0xAF` | **Same** (`SetDisplayOn` logic ports unchanged) |
+| Normal / inverse / all-on | `0xA6` / `0xA7` / `0xA5` | **Same opcodes** |
+| Contrast | `0x81 val` | `0xC1 val` + master contrast `0xC7 val` |
+| Clock / osc | `0xD5 val` | `0xB3 val` |
+| Precharge | `0xD9 val` | Phase length `0xB1 val` + precharge voltage `0xBB val` |
+| VCOMH | `0xDB val` | `0xBE val` |
+| Multiplex ratio | `0xA8 0x3F` | `0xCA 0x3F` |
+| Display offset / start line | `0xD3 val` / `0x40\|line` | `0xA2 val` / `0xA1 line` |
+| Segment/COM remap (flip) | `0xA1`/`0xA0` and `0xC8`/`0xC0` | Single `0xA0 A B` two-arg command (`0x16 0x11` normal, `0x04 0x11` flipped 180°) |
+| Charge pump | `0x8D` (module's boost did the panel voltage) | No such command — panel VCC is a hardware question (module boost jumper or external 15 V), not an init command |
+| New, no SSD1309 equivalent | — | Command lock `0xFD 0x12` (unlock), function select `0xAB 0x01`, VSL `0xB4`, grayscale table `0xB8`/`0xB9` |
+| Full-frame cost | 8 × (1+128) B over I2C ≈ 22 ms | 8,192 B over SPI ≈ 20 ms — **parity, not a speedup** |
+| Old init lore | The 0xD5/0xD9 "noise" tweaks in the SSD1309 init | Do **not** carry over — start from the SSD1322 sequence in §5 verbatim |
+
+## 3. Wiring
 
 ### 20-pin header (4-wire SPI; identical in both power configs except pins 2/15)
 
@@ -84,7 +112,7 @@ Pod carrier pins that are NOT available (claimed by the Pod itself, per libDaisy
 `daisy_pod.cpp`): D13, D15, D17–D21, D23–D28, plus SD and audio. Free pins on this
 setup: D0, D29, D30 (D0 = PB12 doubles as USB OTG ID — unused in USB device mode).
 
-## 3. How BAKER's display stack works today (what you're porting)
+## 4. How BAKER's display stack works today (what you're porting)
 
 - All drawing goes through one class: `OledPager` (`src/ui/oled_pager.{h,cpp}`),
   which subclasses libDaisy's `OneBitGraphicsDisplayImpl`. It owns **1bpp back/front
@@ -107,7 +135,7 @@ So "the library" = a SSD1322/SPI transport + init + a frame pusher that expands 
 existing 1bpp page-layout buffer into SSD1322 bytes, packaged behind `OledPager`'s
 existing public API.
 
-## 4. Build it in four phases
+## 5. Build it in four phases
 
 ### Phase A — standalone blocking bring-up app (no BAKER code)
 
@@ -255,12 +283,12 @@ exercised on the Pod unmodified.
 1. Replace `OledPager`'s internals with phases B+C (or swap the class). A build flag
    (e.g. `BAKER_OLED_SSD1322`) keeps the HiLetgo/I2C build alive during transition.
 2. Delete the `OledDisplay<SSD130xI2c128x64Driver>` block from `main.cpp:39,103-117`.
-3. Apply the three pin moves from §2 (`controls.cpp:47-48`: 7→11, 8→12;
+3. Apply the three pin moves from §3 (`controls.cpp:47-48`: 7→11, 8→12;
    `main.cpp:381`: 10→0).
 4. Timing comments citing "~22 ms blocking on I2C" (`ui_render.h:22-27`) become
    ~20 ms on SPI — budgets hold; no UI code changes.
 
-## 5. Known traps, collected
+## 6. Known traps, collected
 
 - It's an **SSD1322, not SSD1309**, and there is **no I2C** — don't try to adapt the
   old transport.
@@ -274,7 +302,7 @@ exercised on the Pod unmodified.
 - `/SHDN` (pin 18) only controls the onboard boost; in Option #2 it does nothing.
 - In Option #2, bring VDD up before VCC, and drop VCC before VDD.
 
-## 6. Later, once it works (not bring-up scope)
+## 7. Later, once it works (not bring-up scope)
 
 - **Dirty-rect partial updates**: SSD1322 windowed writes make small-region refresh
   cheap — a real latency win the SSD1309 page scheme never offered.
