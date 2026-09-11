@@ -3,7 +3,8 @@
 *Compiled 2026-09-11. Companion to `REV2_OLED_PLAN.md` (the Crystalfontz CFAL12864G-024W plan).
 Sources: NHD-2.7-12864WDW3 datasheet rev.6 (07/31/2024), Newhaven's official example code
 (github.com/NewhavenDisplay/NHD-2.7-12864WD_Example), and the BAKER firmware at branch
-`CUZ_AUG_WRAPUP`. Status: DISCUSSION ONLY — no PCB or firmware files modified.*
+`CUZ_AUG_WRAPUP`. Status: DISCUSSION ONLY — no PCB or firmware files modified.
+Breadboard-first bring-up (Daisy Pod) lives in `NEWHAVEN_BREADBOARD_BRINGUP.md`.*
 
 ---
 
