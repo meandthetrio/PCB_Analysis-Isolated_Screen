@@ -33,4 +33,5 @@ print("== ERC"); [print(f"   {n:4d}  {t} ({s})") for (t, s), n in summ(v for sh 
 print("== DRC"); [print(f"   {n:4d}  {t} ({s})") for (t, s), n in summ(drc['violations'])]
 print(f"   {len(drc['unconnected_items']):4d}  unconnected items")
 PY
+echo "== freerouting: $(freerouting -h 2>&1 | grep -o 'Freerouting v[0-9.]*' || echo MISSING)"
 echo "== outputs in $OUT/"; ls "$OUT"
