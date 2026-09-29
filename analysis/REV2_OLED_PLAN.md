@@ -314,6 +314,13 @@ constant between the two.
 SPI clock: keep ≤ 4MHz on the breadboard; SSD1322 limit is ~10MHz. Signal traces ≥0.25mm
 per §7, kept out of the centre audio corridor.
 
+VDD note from Trey's review: with default jumpers (boost active) the module can draw up to
+375mA from a Seed 3V3 regulator with no published limit (F-021). Fine once on jumper
+option #2 (~0.3mA on VDD); on the breadboard feed VDD from a separate supply.
+
+SPI clock: keep ≤ 4MHz on the breadboard; SSD1322 limit is ~10MHz. Signal traces ≥0.25mm
+per §7, kept out of the centre audio corridor.
+
 STM32 port names (Trey's list, 2026-09-29): D7 = PG10 SPI1_NSS, D8 = PG11 SPI1_SCK,
 D10 = PB5 SPI1_MOSI. Matches the mapping above; corroborated by two sources.
 
