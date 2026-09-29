@@ -270,46 +270,46 @@ Physical Seed pin numbers; `D#` is the libDaisy name.
 | 10 | D9 | MISO | /TAC_SHIFT_R |
 | 11 | D10 | MOSI | /ENCL_CLICK |
 
-The screen is write-only, so only SCK and MOSI need the peripheral. CS is software-driven
-on any GPIO (libDaisy software-NSS mode leaves D7 untouched); MISO is unused.
+**DECISION (2026-09-29): one pin assignment, identical on the Pod breadboard and the
+rev-2 board.** The screen is the new, complex element; the encoders/switches are simple
+and move around it. This also matches Trey's pin list exactly.
 
-**Nets that move (2):**
+| Module pin | Signal | Daisy | Seed pin | Notes |
+|---|---|---|---|---|
+| 1, 5, 6, 10–14 | VSS | GND | 20/40 | |
+| 2 | VDD | 3V3 | 38 | local 100nF + ≥4.7µF. Breadboard with boost active: separate 3.3V supply ≥400mA |
+| 3 | NC (BC_VDD) | — | | leave open |
+| 4 | D/C | **D11 (PB8)** | 12 | ex-I2C_SCL |
+| 7 | SCLK | **D8 (PG11, SPI1_SCK)** | 9 | |
+| 8 | SDIN | **D10 (PB5, SPI1_MOSI)** | 11 | |
+| 9 | NC | — | | leave open |
+| 15 | NC (VCC) | — / 15V branch | | open with default jumpers; 15V only with jumper option #2 (ferrite + 100nF + ≥100µF at header) |
+| 16 | /RES | **D12 (PB9)** | 13 | ex-I2C_SDA; 10k pull-down to GND |
+| 17 | /CS | **D7 (PG10, SPI1_NSS)** | 8 | hardware NSS or software-driven, firmware's choice |
+| 18 | /SHDN | — | | leave open (internally pulled high) |
+| 19 | BS1 | GND | | BS1=0, BS0=0 → 4-wire SPI |
+| 20 | BS0 | GND | | |
+
+All five signal pins are free on the Pod today; on the board D11/D12 free up when J2 goes.
+
+**Board nets that move in rev 2 (3):**
 
 | Net | From | To | Note |
 |---|---|---|---|
-| /ENCR_B | pin 9 (D8) | **pin 13 (D12)** | ex-I2C_SDA |
-| /ENCL_CLICK | pin 11 (D10) | **pin 12 (D11)** | ex-I2C_SCL. Free move: this net is unrouted in rev 1 (F-007) and must be re-routed anyway |
+| /ENCR_A | pin 8 (D7) | **pin 1 (D0, PB12)** | USB_ID pin, plain GPIO |
+| /ENCR_B | pin 9 (D8) | **pin 22 (D15, PC0)** | was spare ADC0 |
+| /ENCL_CLICK | pin 11 (D10) | **pin 28 (D21, PC4)** | was spare ADC6; unrouted in rev 1 (F-007), needs re-routing anyway |
 
-/ENCR_A (pin 8) and /TAC_SHIFT_R (pin 10) stay.
+/TAC_SHIFT_R stays on pin 10 (D9 = SPI1_MISO, unused; the peripheral is write-only).
 
-**Proposed screen assignment:**
+Cost: all three rev-1 spares are consumed, including both remaining ADCs (the §4 warning
+stands). If the LED-drive redesign (F-018) moves the six LEDs to a driver chip, pins
+24–27/30/31 free up again — decide the two together.
 
-| Module pin | Signal | Daisy pin | Notes |
-|---|---|---|---|
-| 1 | VSS | GND | |
-| 2 | VDD | +3V3_D | local 100nF + ≥4.7µF |
-| 3 | NC (BC_VDD) | — | leave open |
-| 4 | D/C | **pin 22 (D15)** | |
-| 5, 6 | VSS | GND | |
-| 7 | SCLK | **pin 9 (D8)** | SPI1 SCK |
-| 8 | SDIN | **pin 11 (D10)** | SPI1 MOSI |
-| 9 | NC | — | leave open |
-| 10–14 | VSS | GND | |
-| 15 | VCC | 15V branch | only with jumper option #2; ferrite + 100nF + ≥100µF at the header |
-| 16 | /RES | **pin 1 (D0)** | 10k pull-down so the panel stays in reset until firmware releases it |
-| 17 | /CS | **pin 28 (D21)** — or tie to GND, see below | |
-| 18 | /SHDN | — | leave open (internally pulled high); unused with option #2 |
-| 19 | BS1 | GND | BS1=0, BS0=0 → 4-wire SPI |
-| 20 | BS0 | GND | |
-
-**Option to keep one spare ADC:** the screen is the only SPI device, so /CS can be tied
-permanently to GND (common on SSD1322 modules). Then only D/C and /RES need GPIOs and
-**pin 28 (ADC6) stays spare**. Downside: no way to deselect the panel if SPI1 is ever
-shared. Decide at schematic capture.
-
-Otherwise this consumes every spare pin including both remaining ADCs (the §4 warning
-still stands). If the LED-drive redesign (F-018) moves the six LEDs to a driver chip, pins
-24–27/30/31 free up and the squeeze goes away — decide the two together.
+*Rejected alternative, for the record:* keeping the three GPIO lines (D/C, /RES, /CS) on the
+board's spares (pins 1/22/28) and moving only 2 nets. Same pin cost, one fewer net move,
+but different pin configs on breadboard vs board — rejected to keep the screen's wiring a
+constant between the two.
 
 SPI clock: keep ≤ 4MHz on the breadboard; SSD1322 limit is ~10MHz. Signal traces ≥0.25mm
 per §7, kept out of the centre audio corridor.
@@ -373,18 +373,14 @@ Fixed: 20/40 GND, 21 3V3_A, 38 3V3_D, 39 VIN.
 | D16 | PA3 | 23 | ADC-capable |
 | D22 | PA5 | 29 | 3.3V-only pin |
 
-The whole SPI1 block D7–D10 plus D11/D12 is uncommitted on the Pod, so both Option 1 and
-Option 2 wiring work there without touching any Pod control. **Pod ≠ board for the three
-GPIO lines:** the board's spares (pins 1, 22, 28) are the Pod's knobs at 22/28, so on the
-breadboard put D/C, /RES and (if not tied low) /CS on D0, D11, D12 or D16 instead. SCLK and
-SDIN (D8/D10) are identical on both; that is the only part of the firmware pin config
-that must not change between breadboard and board.
+The whole SPI1 block D7–D10 plus D11/D12 is uncommitted on the Pod, so the §11.2
+assignment (D7/D8/D10/D11/D12) wires up identically on the Pod with no Pod control
+touched. Do not use D15/D21 (pins 22/28) on the breadboard — those are the Pod's knobs.
 
 1. **Default jumpers first** (on-board boost, 3.3V only). Power VDD from a separate 3.3V
    supply able to source ≥400mA — not the Seed's 3V3 pin. Common all grounds.
-2. Wire per the table above, with the Pod-side substitutions: D/C → D9, /RES → D11,
-   /CS → D7 (all free on the Pod). Optionally /SHDN → D12 so firmware can kill the boost
-   while audio plays and the difference can be heard through the Pod's output.
+2. Wire exactly per the §11.2 table. Optionally /SHDN → D16 (free on the Pod only) so
+   firmware can kill the boost while audio plays and the difference can be heard.
 3. Firmware: /RES low ≥200µs, release, wait ≥200µs, send the p.15 init. Test with 0xA5
    (all pixels on) before real graphics.
 4. **Then** move the 0Ω jumper R4 → R7 (option #2), feed 15.0V into pin 15 from a bench
@@ -400,5 +396,5 @@ that must not change between breadboard and board.
    audio) for the screen only — partly defeats the purpose; (c) accept the module's boost
    with /SHDN control + the §2 ferrite/bulk isolation, and evaluate noise on the breadboard
    first (§11.3 step 4 vs step 1 is exactly this A/B test). Decide from measurement.
-7. /CS tied low vs on pin 28 (§11.2).
+7. /CS on D7: hardware NSS vs software-driven GPIO (firmware choice; pin is the same).
 8. SSD1322 driver: port `oled_ssd1327` or write fresh; who owns it.
