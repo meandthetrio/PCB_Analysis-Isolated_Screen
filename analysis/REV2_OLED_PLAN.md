@@ -311,32 +311,12 @@ board's spares (pins 1/22/28) and moving only 2 nets. Same pin cost, one fewer n
 but different pin configs on breadboard vs board — rejected to keep the screen's wiring a
 constant between the two.
 
-SPI clock: keep ≤ 4MHz on the breadboard; SSD1322 limit is ~10MHz. Signal traces ≥0.25mm
-per §7, kept out of the centre audio corridor.
-
 VDD note from Trey's review: with default jumpers (boost active) the module can draw up to
 375mA from a Seed 3V3 regulator with no published limit (F-021). Fine once on jumper
 option #2 (~0.3mA on VDD); on the breadboard feed VDD from a separate supply.
 
 SPI clock: keep ≤ 4MHz on the breadboard; SSD1322 limit is ~10MHz. Signal traces ≥0.25mm
 per §7, kept out of the centre audio corridor.
-
-STM32 port names (Trey's list, 2026-09-29): D7 = PG10 SPI1_NSS, D8 = PG11 SPI1_SCK,
-D10 = PB5 SPI1_MOSI. Matches the mapping above; corroborated by two sources.
-
-**Option 2 (Trey's assignment):** same SCLK/SDIN/BS/GND wiring, but **/CS on D7 (pin 8,
-hardware SPI1_NSS)**, D/C and /RES on any free GPIO, VDD from the Seed's 3V3 pin, default
-jumpers (on-board boost), pin 15 open. Differences from Option 1:
-
-| | Option 1 (above) | Option 2 (Trey) |
-|---|---|---|
-| /CS | software CS on pin 28, or tied to GND | hardware NSS on D7 = pin 8 → **/ENCR_A must also move** (3 nets relocated instead of 2) |
-| VDD source | +3V3_D rail | Seed 3V3 pin — same rail; fine on option #2 jumpers (~0.3mA), but with the default boost active the module can draw up to 375mA from a regulator with no published limit (F-021) |
-| Jumpers | default for bring-up, then option #2 | default (boost stays) — leaves §11.4 Q6 unanswered |
-| /RES pull-down | 10k to GND | not specified — keep it either way |
-
-Option 2 is the correct Pod breadboard configuration and a fine first target. For the board,
-the /CS choice and the boost-vs-external-VCC question are the two items to settle.
 
 ### 11.3 Breadboard bring-up with a Daisy Pod
 
