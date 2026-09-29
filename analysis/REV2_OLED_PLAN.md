@@ -333,8 +333,52 @@ the /CS choice and the boost-vs-external-VCC question are the two items to settl
 
 ### 11.3 Breadboard bring-up with a Daisy Pod
 
-Pod usage (libDaisy `daisy_pod.cpp`): D13, D15, D17–D21, D23–D28, MIDI on D13/D14.
-**D7–D12 are free on the Pod**, so the same SPI1 wiring works there without conflict.
+**Pod pin usage** (libDaisy `daisy_pod.cpp` Rev 3/4 table, `daisy_seed.h` port map,
+`uart.cpp` USART1 pins). Physical = Seed 40-pin numbering (D0–D14 = pins 1–15,
+D15–D30 = pins 22–37).
+
+| libDaisy | STM32 | Seed pin | Pod function |
+|---|---|---|---|
+| D13 | PB6 | 14 | Encoder click (also USART1_TX — unused, no MIDI out) |
+| D14 | PB7 | 15 | MIDI in (USART1_RX) |
+| D15 | PC0 | 22 | Knob 2 (ADC) |
+| D17 | PB1 | 24 | LED 2 red |
+| D18 | PA7 | 25 | LED 1 blue |
+| D19 | PA6 | 26 | LED 1 green |
+| D20 | PC1 | 27 | LED 1 red |
+| D21 | PC4 | 28 | Knob 1 (ADC) |
+| D23 | PA4 | 30 | LED 2 blue |
+| D24 | PA1 | 31 | LED 2 green |
+| D25 | PA0 | 32 | Encoder B |
+| D26 | PD11 | 33 | Encoder A |
+| D27 | PG9 | 34 | Button 1 |
+| D28 | PA2 | 35 | Button 2 |
+| — | — | 16–19 | Audio in/out L/R |
+| D29/D30 | PB14/PB15 | 36–37 | USB D−/D+ |
+
+Fixed: 20/40 GND, 21 3V3_A, 38 3V3_D, 39 VIN.
+
+**Free on the Pod:**
+
+| libDaisy | STM32 | Seed pin | Note |
+|---|---|---|---|
+| D0 | PB12 | 1 | USB_ID, usable GPIO |
+| D1–D6 | PC11, PC10, PC9, PC8, PD2, PC12 | 2–7 | SDMMC pins, no SD slot on the Pod |
+| **D7** | **PG10** | 8 | **SPI1_NSS** |
+| **D8** | **PG11** | 9 | **SPI1_SCK** |
+| D9 | PB4 | 10 | SPI1_MISO (unused by screen) |
+| **D10** | **PB5** | 11 | **SPI1_MOSI** |
+| D11 | PB8 | 12 | I2C1_SCL |
+| D12 | PB9 | 13 | I2C1_SDA |
+| D16 | PA3 | 23 | ADC-capable |
+| D22 | PA5 | 29 | 3.3V-only pin |
+
+The whole SPI1 block D7–D10 plus D11/D12 is uncommitted on the Pod, so both Option 1 and
+Option 2 wiring work there without touching any Pod control. **Pod ≠ board for the three
+GPIO lines:** the board's spares (pins 1, 22, 28) are the Pod's knobs at 22/28, so on the
+breadboard put D/C, /RES and (if not tied low) /CS on D0, D11, D12 or D16 instead. SCLK and
+SDIN (D8/D10) are identical on both; that is the only part of the firmware pin config
+that must not change between breadboard and board.
 
 1. **Default jumpers first** (on-board boost, 3.3V only). Power VDD from a separate 3.3V
    supply able to source ≥400mA — not the Seed's 3V3 pin. Common all grounds.
