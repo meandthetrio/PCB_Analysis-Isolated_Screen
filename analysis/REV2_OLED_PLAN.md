@@ -215,3 +215,132 @@ optional 0.5A polyfuse on the screen branch (datasheet-recommended, p.10) ·
   simply ties to GND.
 - The brief's "+12V rail / 12.0V acceptable" premise was wrong on both counts
   (see §2).
+
+---
+
+## 11. Screen change: Newhaven NHD-2.7-12864WDW3 (supersedes §1–§4 where they conflict)
+
+*Added 2026-09-29. The Crystalfontz bare-glass panel in §1–§4 has been replaced by the
+Newhaven NHD-2.7-12864WDW3 module (datasheet rev 6, 07/31/2024). Status: DISCUSSION
+ONLY — no design files modified.*
+
+### 11.1 What is different
+
+| | Crystalfontz plan (§1–§4) | Newhaven NHD-2.7-12864WDW3 |
+|---|---|---|
+| Controller | SSD1309, 1-bit | **SSD1322**, 16-level grayscale, different command set |
+| Interface | I2C @ 0x3C | **SPI (3/4-wire) or 8-bit parallel — no I2C** |
+| Connection | bare glass, 31-pin FPC into ZIF | **module PCB, 1×20 pin 2.54mm header** |
+| Panel power | 13.0V from our LDO | on-board boost from 3.3V (default), or **14.5–15.5V into pin 15** (jumper option #2, R4 open / R7 closed) |
+| Logic power | 3.3V | 3.0–3.5V. Default jumpers: up to 375mA @ 100% on. Option #2: ~0.3mA + 60–70mA @ 15V on VCC |
+
+Consequences for the plan:
+
+1. **Firmware:** the SSD1309 driver does not carry over. libDaisy has no SSD1322 driver;
+   its `oled_ssd1327` (also 4-bit grayscale) is the closest starting point. Newhaven's
+   init sequence is on datasheet p.15. Visible 128 columns sit at an offset inside the
+   controller's 256-column RAM (mechanical drawing, Detail A) — copy the column/row window
+   from Newhaven's example code.
+2. **Pin count:** 4-wire SPI needs 5 Daisy pins (SCK, MOSI, CS, D/C, RES) vs 3 for I2C.
+   See §11.2.
+3. **Power:** the default (on-board boost) reintroduces exactly the switcher the rev-2
+   brief set out to remove. Bypassing it (option #2) needs **14.5V minimum** on pin 15,
+   but the §2 scheme (15V adapter → bridge → ~14.3V → LDO) can't reach that. Open — see §11.4.
+4. **Mechanical:** §3 (ZIF orientation, tail reach) and `screen mounting solution.md` no
+   longer apply. The module has its own PCB and header; mount per the datasheet
+   mechanical drawing (bezel redesign rev 3, 2021).
+5. **§5 removals and §6 BOM** still apply in spirit (J2, OLED_HOT filter block go away),
+   but the ZIF, IREF/VCOMH parts and the I2C pull-ups are all dropped.
+
+### 11.2 Daisy pin budget (from the rev-1 schematic netlist)
+
+Physical Seed pin numbers; `D#` is the libDaisy name.
+
+- **Free in rev 1:** pin 1 (D0, USB_ID — usable GPIO), pin 22 (D15/ADC0), pin 28 (D21/ADC6).
+- **Freed by removing J2:** pin 12 (D11, /I2C_SCL), pin 13 (D12, /I2C_SDA).
+- Total: 5 → enough for bit-banged SPI with no moves, but bit-banging a 4KB grayscale
+  frame on the audio core with no DMA is a poor trade. Use hardware SPI1.
+
+**Hardware SPI1 pins are all occupied in rev 1:**
+
+| Pin | libDaisy | SPI1 role | rev-1 net |
+|---|---|---|---|
+| 8 | D7 | NSS | /ENCR_A |
+| 9 | D8 | SCK | /ENCR_B |
+| 10 | D9 | MISO | /TAC_SHIFT_R |
+| 11 | D10 | MOSI | /ENCL_CLICK |
+
+The screen is write-only, so only SCK and MOSI need the peripheral. CS is software-driven
+on any GPIO (libDaisy software-NSS mode leaves D7 untouched); MISO is unused.
+
+**Nets that move (2):**
+
+| Net | From | To | Note |
+|---|---|---|---|
+| /ENCR_B | pin 9 (D8) | **pin 13 (D12)** | ex-I2C_SDA |
+| /ENCL_CLICK | pin 11 (D10) | **pin 12 (D11)** | ex-I2C_SCL. Free move: this net is unrouted in rev 1 (F-007) and must be re-routed anyway |
+
+/ENCR_A (pin 8) and /TAC_SHIFT_R (pin 10) stay.
+
+**Proposed screen assignment:**
+
+| Module pin | Signal | Daisy pin | Notes |
+|---|---|---|---|
+| 1 | VSS | GND | |
+| 2 | VDD | +3V3_D | local 100nF + ≥4.7µF |
+| 3 | NC (BC_VDD) | — | leave open |
+| 4 | D/C | **pin 22 (D15)** | |
+| 5, 6 | VSS | GND | |
+| 7 | SCLK | **pin 9 (D8)** | SPI1 SCK |
+| 8 | SDIN | **pin 11 (D10)** | SPI1 MOSI |
+| 9 | NC | — | leave open |
+| 10–14 | VSS | GND | |
+| 15 | VCC | 15V branch | only with jumper option #2; ferrite + 100nF + ≥100µF at the header |
+| 16 | /RES | **pin 1 (D0)** | 10k pull-down so the panel stays in reset until firmware releases it |
+| 17 | /CS | **pin 28 (D21)** — or tie to GND, see below | |
+| 18 | /SHDN | — | leave open (internally pulled high); unused with option #2 |
+| 19 | BS1 | GND | BS1=0, BS0=0 → 4-wire SPI |
+| 20 | BS0 | GND | |
+
+**Option to keep one spare ADC:** the screen is the only SPI device, so /CS can be tied
+permanently to GND (common on SSD1322 modules). Then only D/C and /RES need GPIOs and
+**pin 28 (ADC6) stays spare**. Downside: no way to deselect the panel if SPI1 is ever
+shared. Decide at schematic capture.
+
+Otherwise this consumes every spare pin including both remaining ADCs (the §4 warning
+still stands). If the LED-drive redesign (F-018) moves the six LEDs to a driver chip, pins
+24–27/30/31 free up and the squeeze goes away — decide the two together.
+
+SPI clock: keep ≤ 4MHz on the breadboard; SSD1322 limit is ~10MHz. Signal traces ≥0.25mm
+per §7, kept out of the centre audio corridor.
+
+*Verify before capture:* the SPI1 = D7/D8/D9/D10 mapping is from libDaisy documentation
+recalled from memory — confirm against the current Daisy Seed pinout / `libDaisy/src/per/spi.h`.
+
+### 11.3 Breadboard bring-up with a Daisy Pod
+
+Pod usage (libDaisy `daisy_pod.cpp`): D13, D15, D17–D21, D23–D28, MIDI on D13/D14.
+**D7–D12 are free on the Pod**, so the same SPI1 wiring works there without conflict.
+
+1. **Default jumpers first** (on-board boost, 3.3V only). Power VDD from a separate 3.3V
+   supply able to source ≥400mA — not the Seed's 3V3 pin. Common all grounds.
+2. Wire per the table above, with the Pod-side substitutions: D/C → D9, /RES → D11,
+   /CS → D7 (all free on the Pod). Optionally /SHDN → D12 so firmware can kill the boost
+   while audio plays and the difference can be heard through the Pod's output.
+3. Firmware: /RES low ≥200µs, release, wait ≥200µs, send the p.15 init. Test with 0xA5
+   (all pixels on) before real graphics.
+4. **Then** move the 0Ω jumper R4 → R7 (option #2), feed 15.0V into pin 15 from a bench
+   supply (3.3V up first, 15V second) and confirm the panel is quiet enough without the
+   boost before committing the board to that scheme.
+
+### 11.4 Open questions (add to §9)
+
+6. **15V VCC source.** Option #2 needs 14.5–15.5V at pin 15. 15V adapter → bridge gives
+   ~14.3V: too low. Candidates: (a) 18V adapter → bridge ~17.3V → LDO to 15.0V — but
+   17.3V exceeds Daisy VIN max 17V unless the Daisy gets its own pre-regulator; (b) keep the
+   9V/15V adapter and add a *quiet* boost (fixed-frequency, well filtered, placed away from
+   audio) for the screen only — partly defeats the purpose; (c) accept the module's boost
+   with /SHDN control + the §2 ferrite/bulk isolation, and evaluate noise on the breadboard
+   first (§11.3 step 4 vs step 1 is exactly this A/B test). Decide from measurement.
+7. /CS tied low vs on pin 28 (§11.2).
+8. SSD1322 driver: port `oled_ssd1327` or write fresh; who owns it.
