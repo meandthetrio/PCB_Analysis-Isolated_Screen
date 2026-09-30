@@ -320,6 +320,8 @@ per §7, kept out of the centre audio corridor.
 
 ### 11.3 Breadboard bring-up with a Daisy Pod
 
+Standalone handover for the firmware repo: `analysis/POD_BREADBOARD_HANDOVER.md`.
+
 **Pod pin usage** (libDaisy `daisy_pod.cpp` Rev 3/4 table, `daisy_seed.h` port map,
 `uart.cpp` USART1 pins). Physical = Seed 40-pin numbering (D0–D14 = pins 1–15,
 D15–D30 = pins 22–37).
