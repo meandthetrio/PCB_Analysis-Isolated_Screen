@@ -1,0 +1,845 @@
+                                                       Click here to ask an associate for production status of specific part numbers.
+
+Microphone Amplifier with AGC and                                                                                                       MAX9814
+Low-Noise Microphone Bias
+
+General Description                                                 Features
+The MAX9814 is a low-cost, high-quality microphone                  ● Automatic Gain Control (AGC)
+amplifier with automatic gain control (AGC) and                     ● Three Gain Settings (40dB, 50dB, 60dB)
+low-noise microphone bias. The device features a
+low-noise preamplifier, variable gain amplifier (VGA), output       ● Programmable Attack Time
+amplifier, microphone-bias-voltage generator, and AGC               ● Programmable Attack and Release Ratio
+control circuitry.                                                  ● 2.7V to 5.5V Supply Voltage Range
+The low-noise preamplifier has a fixed 12dB gain, while             ● Low Input-Referred Noise Density of 30nV/√Hz
+the VGA gain automatically adjusts from 20dB to 0dB,
+                                                                    ● Low THD: 0.04% (typ)
+depending on the output voltage and the AGC threshold.
+The output amplifier offers selectable gains of 8dB, 18dB,          ● Low-Power Shutdown Mode
+and 28dB. With no compression, the cascade of the                   ● Internal Low-Noise Microphone Bias, 2V
+amplifiers results in an overall gain of 40dB, 50dB, or 60dB.
+                                                                    ● Available in the Space-Saving, 14-Pin TDFN
+A trilevel digital input programs the output amplifier gain. An
+                                                                      (3mm x 3mm) Package
+external resistive divider controls the AGC threshold and
+a single capacitor programs the attack/release times. A             ● -40°C to +85°C Extended Temperature Range
+trilevel digital input programs the ratio of attack-to-release
+time. The hold time of the AGC is fixed at 30ms. The low-
+noise microphone-bias-voltage generator can bias most
+electret microphones.                                               Ordering Information appears at end of data sheet.
+The MAX9814 is available in the space-saving, 14-pin
+TDFN package. This device is specified over the -40°C to
++85°C extended temperature range.
+                                                                    Simplified Block Diagram
+Applications
+● Digital Still Cameras                                                                                                  2.7V TO 5.5V
+
+
+● Digital Video Cameras
+● PDAs                                                                                                            SHDN      VDD
+
+                                                                                          MICBIAS     LOW-NOISE                                   MAX9814
+
+● Bluetooth Headsets                                                 RMICBIAS
+                                                                                                      REFERENCE                 AGC
+
+
+
+● Entertainment Systems (e.g., Karaoke)
+                                                                                CIN                                                                             COUT
+                                                                                          MICIN                                          GAIN
+                                                                                                       LNA                    VGA                      MICOUT
+                                                                                                                                        +8/+18/
+                                                                                                      +12dB                +20dB/0dB
+                                                                                                                                        +28dB
+
+● Two-Way Communicators
+                                                                                                                            GND
+● High-Quality Portable Recorders
+● IP Phones/Telephone Conferencing
+
+
+
+
+                                                                                                                                           19-0764; Rev 4; 2/20
+
+© 2022 Analog Devices, Inc. All rights reserved. Trademarks and registered trademarks are the property of their respective owners.
+One Analog Way, Wilmington, MA 01887 U.S.A.        |    Tel: 781.329.4700             |           © 2022 Analog Devices, Inc. All rights reserved.
+MAX9814                                                                                                    Microphone Amplifier with AGC and
+                                                                                                                  Low-Noise Microphone Bias
+
+Absolute Maximum Ratings
+VDD to GND.............................................................-0.3V to +6V                Continuous Power Dissipation (TA = +70°C)
+All Other Pins to GND............................... -0.3V to (VDD + 0.3V)                           14-Pin TDFN-EP
+Output Short-Circuit Duration.....................................Continuous                          (derate 16.7mW/°C above +70°C).........................1481.5mW
+Continuous Current (MICOUT, MICBIAS).......................±100mA                                  Operating Temperature Range............................ -40°C to +85°C
+All Other Pins....................................................................±20mA            Junction Temperature.......................................................+150°C
+                                                                                                   Lead Temperature (soldering, 10s).................................. +300°C
+                                                                                                   Bump Temperature (soldering) Reflow............................. +235°C
+Stresses beyond those listed under “Absolute Maximum Ratings” may cause permanent damage to the device. These are stress ratings only, and functional operation of the device at these
+or any other conditions beyond those indicated in the operational sections of the specifications is not implied. Exposure to absolute maximum rating conditions for extended periods may affect
+device reliability.
+
+
+Electrical Characteristics
+(VDD = 3.3V, SHDN = VDD, CCT = 470nF, CCG = 2μF, GAIN = VDD, TA = TMIN to TMAX, unless otherwise specified. Typical values
+are at TA = +25°C.) (Note 1)
+
+      PARAMETER                                     SYMBOL                                    CONDITIONS                                   MIN           TYP           MAX         UNITS
+ GENERAL
+ Operating Voltage                                      VDD              Guaranteed by PSRR test                                            2.7                         5.5            V
+ Supply Current                                         IDD                                                                                               3.1            6            mA
+ Shutdown Supply Current                              ISHDN                                                                                              0.01            1            µA
+ Input-Referred Noise Density                            en              BW = 20kHz, all gain settings                                                     30                      nV/√Hz
+ Output Noise                                                            BW = 20kHz                                                                       430                      µVRMS
+                                                                         BW = 22Hz to 22kHz
+                                                                                                                                                           61
+ Signal-to-Noise Ratio                                  SNR              (500mVRMS output signal)                                                                                     dB
+                                                                         A-weighted                                                                        64
+ Dynamic Range                                           DR              (Note 2)                                                                          60                         dB
+                                                                         fIN = 1kHz, BW = 20Hz to 20kHz,
+                                                                         RL = 10kΩ, VTH = 1V (threshold = 2VP-P),                                        0.04
+ Total Harmonic Distortion Plus                                          VIN = 0.5mVRMS, VCT = 0V
+                                                      THD+N                                                                                                                           %
+ Noise                                                                   fIN = 1kHz, BW = 20Hz to 20kHz,
+                                                                         RL = 10kΩ, VTH = 0.1V (threshold =                                               0.2
+                                                                         200mVP-P), VIN = 30mVRMS, VCT = 2V
+ Amplifier Input BIAS                                   VIN                                                                                1.14          1.23          1.32            V
+ Maximum Input Voltage                               VIN_MAX             1% THD                                                                           100                      mVP-P
+ Input Impedance                                         ZIN                                                                                              100                         kΩ
+                                                                         GAIN = VDD                                                        39.5            40          40.5
+ Maximum Gain                                             A              GAIN = GND                                                        49.5            50          50.6           dB
+                                                                         GAIN = unconnected                                                59.5            60          60.5
+                                                                         GAIN = VDD                                                        18.7            20          20.5
+ Minimum Gain                                                            GAIN = GND                                                        29.0            30          30.8           dB
+                                                                         GAIN = unconnected                                                38.7            40          40.5
+ Maximum Output Level                              VOUT_RMS­             1% THD+N, VTH = MICBIAS                                                        0.707                       VRMS
+ Regulated Output Level                                                  AGC enabled, VTH = 0.7V                                           1.26          1.40          1.54         VP-P
+ AGC Attack Time                                     tATTACK             CCT = 470nF (Note 3)                                                             1.1                         ms
+                                                                         A/R = GND                                                                      1:500
+ Attack/Release Ratio                                   A/R              A/R = VDD                                                                     1:2000                      ms/ms
+                                                                         A/R = unconnected                                                             1:4000
+
+www.analog.com                                                                                                                                                     Analog Devices │ 2
+MAX9814                                                                Microphone Amplifier with AGC and
+                                                                              Low-Noise Microphone Bias
+
+Electrical Characteristics (continued)
+(VDD = 3.3V, SHDN = VDD, CCT = 470nF, CCG = 2μF, GAIN = VDD, TA = TMIN to TMAX, unless otherwise specified. Typical values
+are at TA = +25°C.) (Note 1)
+
+        PARAMETER                   SYMBOL                    CONDITIONS                     MIN       TYP      MAX       UNITS
+MICOUT High Output Voltage            VOH        IOUT sourcing 1mA                                     2.45                V
+MICOUT Low Output Voltage             VOL        IOUT sinking 1mA                                       3                  mV
+MICOUT Bias                                      MICOUT unconnected                          1.14      1.23      1.32      V
+Output Impedance                     ZOUT                                                              50                  Ω
+Minimum Resistive Load             RLOAD_MIN                                                            5                  kΩ
+Maximum Capacitive Drive          CLOAD_MAX                                                            200                 pF
+Maximum Output Current             I­OUT_MAX     1% THD, RL = 500Ω                                      1         2        mA
+Output Short-Circuit Current          ISC                                                     3         8                  mA
+                                                 AGC mode; VDD = 2.7V to 5.5V (Note 4)        35       50
+                                                 f = 217Hz, VRIPPLE = 100mVP-P (Note 5)                55
+Power-Supply Rejection Ratio         PSRR                                                                                  dB
+                                                 f = 1kHz, VRIPPLE = 100mVP-P (Note 5)                 52.5
+                                                 f = 10kHz, VRIPPLE = 100mVP-P (Note 5)                43
+MICROPHONE BIAS
+Microphone Bias Voltage             VMICBIAS     IMICBIAS = 0.5mA                            1.84      2.0       2.18      V
+Output Resistance                   RMICBIAS     IMICBIAS = 1mA                                         1                  Ω
+Output Noise Voltage             VMICBIAS_NOISE IMICBIAS = 0.5mA, BW = 22Hz to 22kHz                   5.5                µVRMS
+                                                 DC, VDD = 2.7V to 5.5V                       70       80
+Power-Supply Rejection Ratio         PSRR        IMICBIAS = 0.5mA, VRIPPLE = 100mVP-P,                                     dB
+                                                                                                       71
+                                                 fIN = 1kHz
+TRILEVEL INPUTS (A/R, GAIN)
+                                                                                           0.5VDD 0.5VDD 0.5VDD
+                                                 A/R or GAIN = VDD
+                                                                                           / 180kΩ / 100kΩ / 50kΩ
+Trilevel Input Leakage Current                                                                                             mA
+                                                                                           0.5VDD 0.5VDD 0.5VDD
+                                                 A/R or GAIN = GND
+                                                                                           / 180kΩ / 100kΩ / 50kΩ
+Input High Voltage                    VIH                                                  VDD x 0.7                       V
+Input Low Voltage                      VIL                                                                    VDD x 0.3    V
+Shutdown Enable Time                  tON                                                              60                  ms
+Shutdown Disable Time                 tOFF                                                             40                  ms
+DIGITAL INPUT (SHDN)
+SHDN Input Leakage Current                                                                    -1                  +1       µA
+Input High Voltage                    VIH                                                    1.3                           V
+Input Low Voltage                      VIL                                                                       0.5       V
+AGC THRESHOLD INPUT (TH)
+TH Input Leakage Current                                                                      -1                  +1       µA
+Note 1: Devices are production tested at TA = +25°C. Limits over temperature are guaranteed by design.
+Note 2: Dynamic range is calculated using the EIAJ method. The input is applied at -60dBFS (0.707μVRMS), fIN = 1kHz.
+Note 3: Attack time measured as time from AGC trigger to gain reaching 90% of its final value.
+Note 4: CG is connected to an external DC voltage source, and adjusted until VMICOUT = 1.23V.
+Note 5: CG connected to GND with 2.2μF.
+
+
+
+www.analog.com                                                                                                Analog Devices │ 3
+MAX9814                                                                                                                                                                     Microphone Amplifier with AGC and
+                                                                                                                                                                                   Low-Noise Microphone Bias
+
+Typical Operating Characteristics
+(VDD = 5V, CCT = 470nF, CCG = 2.2μF, VTH = VMICBIAS x 0.4, GAIN = VDD (40dB), AGC disabled, no load, RL = 10kΩ, COUT = 1μF,
+TA = +25°C, unless otherwise noted.)
+
+                                                                                                                                     POWER-SUPPLY REJECTION RATIO                                                                                 MICBIAS POWER-SUPPLY REJECTION RATIO
+                                         GAIN vs. FREQUENCY                                                                                 vs. FREQUENCY                                                                                                    vs. FREQUENCY
+                       80                                                                                                    0                                                                                                                   -30
+                                                                                  MAX9814 toc01
+
+
+
+
+                                                                                                                                                                                              MAX9814 toc02
+
+
+
+
+                                                                                                                                                                                                                                                                                                            MAX9814 toc03
+                       70           GAIN = UNCONNECTED                                                                     -10                                                                                                                   -40
+
+                       60                                                                                                  -20                                                                                                                   -50
+
+                       50                                                                                                  -30                                                                                                                   -60
+                                                                                                   PSRR (dB)
+
+
+
+
+                                                                                                                                                                                                              PSRR (dB)
+GAIN (dB)
+
+
+
+
+                       40                                                                                                  -40                                                                                                                   -70
+
+                       30                  GAIN = 0                                                                        -50                                                                                                                   -80
+                                                             GAIN = 1
+                       20                                                                                                  -60                                                                                                                   -90
+
+                       10                                                                                                  -70                                                                                                                  -100
+                                                                                                                                                                    VRIPPLE = 200mVP-P                                                                                              VRIPPLE = 200mVP-P
+                        0                                                                                                  -80                                                                                                                  -110
+                             10          100            1k          10k         100k                                             10          100               1k               10k         100k                                                       10         100          1k              10k        100k
+                                               FREQUENCY (Hz)                                                                                      FREQUENCY (Hz)                                                                                                       FREQUENCY (Hz)
+
+                                          SUPPLY CURRENT                                                                                     SHUTDOWN CURRENT                                                                                                MICROPHONE BIAS VOLTAGE
+                                         vs. SUPPLY VOLTAGE                                                                                  vs. SUPPLY VOLTAGE                                                                                        vs. MICROPHONE BIAS SOURCE CURRENT
+                       3.5                                                                                                 0.5                                                                                                                   2.5
+
+
+
+
+                                                                                                                                                                                                                                                                                                             MAX9814 toc06
+                                                                                  MAX9814 toc04
+
+
+
+
+                                                                                                                                                                                             MAX9814 toc05
+
+
+
+
+                       3.4
+                       3.3                                                                                                 0.4                                                                                                                   2.0
+                                                                                                  SHUTDOWN CURRENT (nA)
+SUPPLY CURRENT (mA)
+
+
+
+
+                                                                                                                                                                                                                VMICBIAS VOLTAGE (V)
+
+
+
+                       3.2
+                       3.1                                                                                                 0.3                                                                                                                   1.5
+                       3.0
+                       2.9                                                                                                 0.2                                                                                                                   1.0
+                       2.8
+                       2.7                                                                                                 0.1                                                                                                                   0.5
+                       2.6
+                       2.5                                                                                                  0                                                                                                                      0
+                             2.5   3.0    3.5     4.0        4.5   5.0    5.5   6.0                                              2.5   3.0    3.5        4.0        4.5     5.0       5.5   6.0                                                         0     5         10     15         20         25    30
+                                          SUPPLY VOLTAGE (V)                                                                                   SUPPLY VOLTAGE (V)                                                                                                         IMICBIAS (mA)
+
+                        TOTAL HARMONIC DISTORTION PLUS NOISE                                                                TOTAL HARMONIC DISTORTION PLUS NOISE                                                                                              INPUT-REFERRED NOISE
+                                  vs. FREQUENCY                                                                                      vs. OUTPUT VOLTAGE                                                                                                           vs. FREQUENCY
+                       10                                                                                                  10                                                                                                                   1000
+                                                                                                                                                                                                                                                                                                            MAX9814 toc09
+                                                                                                                                                                                             MAX9814 toc08
+                                                                                  MAX9814 toc07
+
+
+
+
+                                                              VOUT = 800mVRMS                                                                                                                                                                                                       MICIN AC-COUPLED
+                                                                                                                                                                                                              INPUT-REFERRED NOISE (µVRMS/Hz)
+
+
+
+
+                                                                                                                                                                                                                                                                                    TO GND
+
+                                                                                                                                              fIN = 300Hz, 1kHz,
+                        1                                                                                                   1                 and 3kHz                                                                                           100
+                                                                                                  THD+N (%)
+THD+N (%)
+
+
+
+
+                       0.1                                                                                                 0.1                                                                                                                   10
+
+
+                                                                                                                                         fIN = 10kHz
+
+                      0.01                                                                                                0.01                                                                                                                     1
+                             10          100            1k          10k         100k                                             0                 0.5                    1.0               1.5                                                        0.01       0.1          1               10         100
+                                               FREQUENCY (Hz)                                                                                OUTPUT VOLTAGE (VRMS)                                                                                                      FREQUENCY (kHz)
+
+
+
+
+www.analog.com                                                                                                                                                                                                                                                                  Analog Devices │ 4
+ MAX9814                                                                                                                                                      Microphone Amplifier with AGC and
+                                                                                                                                                                     Low-Noise Microphone Bias
+
+ Typical Operating Characteristics (continued)
+ (VDD = 5V, CCT = 470nF, CCG = 2.2μF, VTH = VMICBIAS x 0.4, GAIN = VDD (40dB), AGC disabled, no load, RL = 10kΩ, COUT = 1μF,
+ TA = +25°C, unless otherwise noted.)
+
+
+                                       MICBIAS NOISE vs. FREQUENCY                                                               SMALL-SIGNAL PULSE RESPONSE                                                                 TURN-ON RESPONSE
+            10,000
+                                                                                        MAX9814 toc10
+
+
+
+
+                                                                                                                                                                              MAX9814 toc11
+
+
+
+
+                                                                                                                                                                                                                                                                      MAX9814 toc12
+                                                                                                           VMICIN                                                                                    VSHDN
+                                                                                                         10mV/div                                                                                    5V/div
+MICBIAS NOISE (nVRMS/Hz)
+
+
+
+
+                                                                                                              0V                                                                                        0V
+                           1000
+                                                                                                                                                                                               VMICBIAS
+                                                                                                         VMICOUT                                                                                 2V/div
+                                                                                                        500mV/div                                                                                    0V
+
+                            100
+                                                                                                                                                                                               VMICOUT
+                                                                                                                                                                                                 1V/div
+                                                                                                                        0V                                                                          0V
+                                                                                                                                                                 CL = 10pF
+                            10
+                                  10         100            1k             10k      100k                                                         200µs/div                                                                             20µs/div
+                                                   FREQUENCY (Hz)
+
+
+                                                    VOUT vs. VIN                                                                            VOUT vs. VIN                                                                             VOUT vs. VIN
+                           1.00                                                                                       1.00                                                                                  1.00
+                                                                                        MAX9814 toc13
+
+
+
+
+                                                                                                                                                                              MAX9814 toc14
+
+
+
+
+                                                                                                                                                                                                                                                                       MAX9814 toc15
+                                       VTH = 1V                                                                                  VTH = 1V                                                                              VTH = 1V
+                           0.75                                                                                       0.75                                                                                  0.75
+VOUT (VRMS)
+
+
+
+
+                                                                                                        VOUT (VRMS)
+
+
+
+
+                                                                                                                                                                                              VOUT (VRMS)
+
+
+
+
+                           0.50                                                                                       0.50                                                                                  0.50
+
+                                                        VTH = 0.75V                                                                             VTH = 0.75V                                                                           VTH = 0.75V
+
+                           0.25                                                                                       0.25                                                                                  0.25
+                                                                                                                                   VTH = 0.5V                                                                           VTH = 0.5V
+                                         VTH = 0.5V                                                                                                                                                                                       AGC ENABLED
+                                                                      AGC ENABLED                                                                             AGC ENABLED
+                                                                      GAIN = 1                                                                                GAIN = 0                                                                    GAIN = UNCONNECTED
+                             0                                                                                          0                                                                                     0
+                                  0                50                100            150                                      0         10           20          30           40                                    0              5                 10                15
+                                                        VIN (mVRMS)                                                                             VIN (mVRMS)                                                                           VIN (mVRMS)
+
+
+
+                                                   ATTACK TIME                                                                              ATTACK TIME                                                                   HOLD AND RELEASE TIME
+                                                                                        MAX9814 toc16
+
+
+
+
+                                                                                                                                                                              MAX9814 toc17
+
+
+
+
+                                                                                                                                                                                                                                                                       MAX9814 toc18
+
+
+
+
+ VMICOUT                                                                                                 VMICOUT
+500mV/div                                                                                                                                                                                      VMICOUT
+                                                                                                        500mV/div
+                                                                                                                                                                                              500mV/div
+
+
+
+
+                             0V                                                                                         0V                                                                                    0V
+
+                                                                                                                                                                                                                                                         CCT = 47nF
+                                                                           CCT = 47nF                                                                           CCT = 100nF                                                                              A/R = GND
+
+                                                         200µs/div                                                                               200µs/div                                                                             20ms/div
+
+
+
+
+ www.analog.com                                                                                                                                                                                                                           Analog Devices │ 5
+MAX9814                                                                Microphone Amplifier with AGC and
+                                                                              Low-Noise Microphone Bias
+
+Typical Operating Characteristics (continued)
+(VDD = 5V, CCT = 470nF, CCG = 2.2μF, VTH = VMICBIAS x 0.4, GAIN = VDD (40dB), AGC disabled, no load, RL = 10kΩ, COUT = 1μF,
+TA = +25°C, unless otherwise noted.)
+
+
+                       HOLD AND RELEASE TIME                                        HOLD AND RELEASE TIME
+
+
+
+
+                                                       MAX9814 toc19
+
+
+
+
+                                                                                                                    MAX9814 toc20
+           VMICOUT                                                       VMICOUT
+          500mV/div                                                     500mV/div
+
+
+
+
+                 0V                                                           0V
+
+                                          CCT = 47nF                                            CCT = 47nF
+                                          A/R = VDD                                             A/R = UNCONNECTED
+
+                               40ms/div                                                     100ms/div
+
+
+
+
+www.analog.com                                                                                             Analog Devices │ 6
+MAX9814                                                                               Microphone Amplifier with AGC and
+                                                                                             Low-Noise Microphone Bias
+
+
+Pin Configuration
+
+                                       TOP VIEW
+
+
+
+
+                                                              MICBIAS
+
+
+
+
+                                                                                                      MICIN
+                                                                                      GAIN
+                                                                        BIAS
+
+                                                                               N.C.
+
+
+
+                                                                                             A/R
+                                                     TH
+                                                      14       13       12     11     10       9       8
+
+
+
+
+                                                                        MAX9814
+
+
+                                                              *EP
+                                                          +
+
+                                                      1         2        3      4      5       6       7
+                                                     CT
+
+                                                              SHDN
+
+                                                                        CG
+
+                                                                               N.C.
+
+                                                                                      VDD
+
+                                                                                             MICOUT
+
+                                                                                                      GND
+                                                                             TDFN
+
+
+
+
+Pin Description
+     PIN
+                 NAME                                                                      FUNCTION
+    TDFN
+                           Timing Capacitor Connection. Connect a capacitor to CT to control the Attack and Release times of
+      1            CT
+                           the AGC.
+      2           SHDN     Active-Low Shutdown Control
+      3            CG      Amplifier DC Offset Adjust. Connect a 2.2µF capacitor to GND to ensure zero offset at the output.
+     4, 11        N.C.     No Connection. Connect to GND.
+      5           VDD      Power Supply. Bypass to GND with a 1µF capacitor.
+       6         MICOUT    Amplifier Output
+       7          GND      Ground
+       8          MICIN    Microphone Noninverting Input
+
+                           Trilevel Attack and Release Ratio Select. Controls the ratio of attack time to release time for the
+                           AGC circuit.
+       9           A/R     A/R = GND: Attack/Release Ratio is 1:500
+                           A/R = VDD: Attack/Release Ratio is 1:2000
+                           A/R = Unconnected: Attack/Release Ratio is 1:4000
+
+                           Trilevel Amplifier Gain Control.
+                           GAIN = VDD, gain set to 40dB.
+      10          GAIN
+                           GAIN = GND, gain set to 50dB.
+                           GAIN = Unconnected, uncompressed gain set to 60dB.
+      12          BIAS     Amplifier Bias. Bypass to GND with a 0.47µF capacitor.
+      13         MICBIAS   Microphone Bias Output
+                           AGC Threshold Control. TH voltage sets gain control threshold. Connect TH to MICBIAS to disable
+      14           TH
+                           the AGC.
+      —            EP      Exposed Pad. Connect the TDFN EP to GND.
+
+
+
+
+www.analog.com                                                                                                Analog Devices │ 7
+MAX9814                                                                   Microphone Amplifier with AGC and
+                                                                                 Low-Noise Microphone Bias
+
+Detailed Description                                                 The MAX9814’s AGC controls the gain by first detecting
+The MAX9814 is a low-cost, high-quality microphone                   that the output voltage has exceeded a preset limit. The
+amplifier with automatic gain control (AGC) and a low-               microphone amplifier gain is then reduced with a select-
+noise microphone bias. The MAX9814 consists of several               able time constant to correct for the excessive output-
+distinct circuits: a low-noise preamplifier, a variable gain         voltage amplitude. This process is known as the attack
+amplifier (VGA), an output amplifier, a microphone-bias-             time. When the output signal subsequently lowers in
+voltage generator, and AGC control circuitry.                        amplitude, the gain is held at the reduced state for a short
+                                                                     period before slowly increasing to the normal value. This
+An internal microphone bias voltage generator provides               process is known as the hold and release time. The speed
+a 2V bias that is suitable for most electret condenser               at which the amplifiers adjust to changing input signals is
+microphones. The MAX9814 amplifies the input in three                set by the external timing capacitor CCT and the voltage
+distinct stages. In the first stage, the input is buffered and       applied to A/R. The AGC threshold can be set by adjusting
+amplified through the low-noise preamplifier with a gain of          VTH. Gain reduction is a function of input signal ampli-
+12dB. The second stage consists of the VGA controlled                tude with a maximum AGC attenuation of 20dB. Figure 2
+by the AGC. The VGA/AGC combination is capable of                    shows the effect of an input burst exceeding the preset
+varying the gain from 20dB to 0dB. The output amplifier is           limit, output attack, hold and release times.
+the final stage in which a fixed gain of 8dB, 18dB, 20dB is
+programmed through a single trilevel logic input. With no            If the attack-and-release times are configured to respond
+compression from the AGC, the MAX9814 is capable of                  too fast, audible artifacts often described as “pumping”
+providing 40dB, 50dB, or 60dB gain.                                  or “breathing” can occur as the gain is rapidly adjusted
+                                                                     to follow the dynamics of the signal. For best results,
+Automatic Gain Control (AGC)                                         adjust the time constant of the AGC to accommodate
+A device without AGC experiences clipping at the output              the source material. For applications in which music CDs
+when too much gain is applied to the input. AGC prevents             are the main audio source, a 160μs attack time with an
+clipping at the output when too much gain is applied to              80ms release time is recommended. Music applications
+the input, eliminating output clipping. Figure 1 shows a             typically require a shorter release time than voice or
+comparison of an over-gained microphone input with and               movie content.
+without AGC.
+
+
+
+                  MAX9814 AGC DISABLED                                           MAX9814 AGC ENABLED
+                                     MAX9814 fig01a                                                 MAX9814 fig01b
+
+
+
+
+                                                      VMICIN                                                         VMICIN
+         0V                                           100mV/div         0V                                           100mV/div
+
+
+
+
+                                                      VMICOUT                                                        VMICOUT
+         0V                                           (AC-COUPLED)      0V                                           (AC-COUPLED)
+                                                      1V/div                                                         1V/div
+
+
+
+                         400µs/div                                                      400µs/div
+
+
+Figure 1. Microphone Input with and Without AGC
+
+
+
+
+www.analog.com                                                                                                         Analog Devices │ 8
+MAX9814                                                             Microphone Amplifier with AGC and
+                                                                           Low-Noise Microphone Bias
+
+                                                               attack time using CCT and setting the attack-to-release
+                                                               time ratio by configuring A/R, as shown in Table 1:
+                     HOLD                                         ●    Use a small ratio to maximize the speed of the
+                                                                  AGC.
+                                            VCT                   ●    Use a large ratio to maximize the sound quality
+                                            500mV/div
+                 ATTACK                                           and prevent repeated excursions above the threshold
+                          RELEASE                                 from being independently adjusted by the AGC.
+      0V
+                                                               AGC Output Threshold
+                                            VMICOUT            The output threshold that activates AGC is adjustable
+       0V                                   (AC-COUPLED)       through the use of an external resistive divider. Once the
+                                            1V/div
+                                                               divider is set, AGC reduces the gain to match the output
+                                                               voltage to the voltage set at the TH input.
+                            10ms/div                           Microphone Bias
+                                                               The MAX9814 features an internal low-noise microphone
+                                                               bias voltage capable of driving most electret condenser
+Figure 2. Input Burst Exceeding AGC Limit
+                                                               microphones. The microphone bias is regulated at 2V to
+                                                               provide that the input signal to the low-noise preamplifier
+Attack Time                                                    does not clip to ground.
+The attack time is the time it takes for the AGC to reduce
+the gain after the input signal has exceeded the thresh-       Applications Information
+old level. The gain attenuation during the attack time is
+exponential, and defined as one-time constant. The time        Programming Attack-and-Release Times
+constant of the attack is given by 2400 x CCT seconds          Attack-and-release times are set by selecting the
+(where CCT is the external timing capacitor):                  capacitance value between CT and GND, and by setting
+                                                               the logic state of A/R (Table 1). A/R is a trilevel logic input
+   ●    Use a short attack time for the AGC to react
+                                                               that sets the attack-to-release time ratio.
+   quickly to transient signals, such as snare drum
+   beats (music) or gun shots (DVD).                           Table 1. Attack-and-Release Ratios
+   ●    Use a longer attack time to allow the AGC to
+                                                                         A/R               ATTACK/RELEASE RATIO
+   ignore short-duration peaks and only reduce the
+   gain when a noticeable increase in loudness occurs.                GND                             1:500
+   Short-duration peaks are not reduced, but louder                    VDD                           1:2000
+   passages are. This allows the louder passages to               Unconnected                        1:4000
+   be reduced in volume, thereby maximizing output
+   dynamic range.                                              The attack-and-release times can be selected by utilizing
+Hold Time                                                      the corresponding capacitances listed in Table 2.
+Hold time is the delay after the signal falls below the        Table 2. Attack-and-Release Time
+threshold level before the release phase is initiated. Hold
+time is internally set to 30ms and nonadjustable. The hold                                        tRELEASE (ms)
+                                                                               tATTACK
+time is cancelled by any signal exceeding the set thresh-          CCT                   A/R =    A/R =        A/R =
+                                                                                 (ms)
+old level, and the attack time is reinitiated.                                           GND      VDD      UNCONNECTED
+
+Release Time                                                      22nF          0.05      25       100            200
+
+The release time is how long it takes for the gain to return      47nF          0.11      55       220            440
+to its normal level after the output signal has fallen below      68nF          0.16      80       320            640
+the threshold level and 30ms hold time has expired.               100nF         0.24     120       480            960
+Release time is defined as release from a 20dB gain com-
+                                                                  220nF         0.53     265      1060           2120
+pression to 10% of the nominal gain setting after the input
+signal has fallen below the TH threshold and the 30ms             470nF          1.1     550      2200           4400
+hold time has expired. Release time is adjustable and has         680nF         1.63     815      3260           6520
+a minimum of 25ms. The release time is set by picking an           1µF           2.4     1200     4800           9600
+
+
+
+www.analog.com                                                                                            Analog Devices │ 9
+MAX9814                                                               Microphone Amplifier with AGC and
+                                                                             Low-Noise Microphone Bias
+
+Setting the AGC Threshold                                        Choose CIN such that f-3dB_IN is well below the lowest
+To set the output-voltage threshold at which the                 frequency of interest. Setting f-3dB_IN too high affects the
+microphone output is clamped, an external resistor-divider       amplifier’s low-frequency response. Use capacitors with
+must be connected from MICBIAS to ground with the out-           low-voltage coefficient dielectrics. Aluminum electrolytic,
+put of the resistor-divider applied to TH. The voltage VTH       tantalum, or film dielectric capacitors are good choices
+determines the peak output-voltage threshold at which the        for AC-coupling capacitors. Capacitors with high-voltage
+output becomes clamped. The maximum signal swing at              coefficients, such as ceramics (non-C0G dielectrics), can
+the output is then limited to two times VTH and remains at       result in increased distortion at low frequencies.
+that level until the amplitude of the input signal is reduced.   Output Capacitor
+To disable AGC, connect TH to MICBIAS.
+                                                                 The output of the MAX9814 is biased at 1.23V. To
+Microphone Bias Resistor                                         eliminate the DC offset, an AC-coupling capacitor (COUT)
+MICBIAS is capable of sourcing 20mA. Select a value for          must be used. Depending on the input resistance (RL) of
+RMICBIAS that provides the desired bias current for the          the following stage, COUT and RL effectively form a high-
+electret microphone. A value of 2.2kΩ is usually sufficient      pass filter. The -3dB point of the highpass filter, assuming
+for a microphone of typical sensitivity. Consult the micro-      zero output impedance, is given by:
+phone data sheet for the recommended bias resistor.                                                   1
+                                                                               f −3dB_OUT =
+Bias Capacitor                                                                                2π × R L × C OUT
+The BIAS output of the MAX9814 is internally buffered
+and provides a low-noise bias. Bypass BIAS with a 470nF          Shutdown
+capacitor to ground.                                             The MAX9814 features a low-power shutdown mode.
+                                                                 When SHDN goes low, the supply current drops to
+Input Capacitor                                                  0.01μA, the output enters a high-impedance state, and
+The input AC-coupling capacitor (CIN) and the input              the bias current to the microphone is switched off. Driving
+resistance (RIN) to the microphone amplifier form a high-        SHDN high enables the amplifier. Do not leave SHDN
+pass filter that removes any DC bias from an input signal        unconnected.
+(see the Typical Application Circuit/Functional Diagram).
+CIN prevents any DC components from the input-signal             Power-Supply Bypassing and PCB Layout
+source from appearing at the amplifier outputs. The -3dB         Bypass the power supply with a 0.1μF capacitor to
+point of the highpass filter, assuming zero source imped-        ground. Reduce stray capacitance by minimizing trace
+ance due to the input signal source, is given by:                lengths and place external components as close to
+                                                                 the device as possible. Surface-mount components are
+                                      1                          recommended. In systems where analog and digital
+                 f −3dB_IN =
+                               2π × R IN × C IN                  grounds are available, connect the MAX9814 to analog
+                                                                 ground.
+
+
+
+
+www.analog.com                                                                                           Analog Devices │ 10
+MAX9814                                                                              Microphone Amplifier with AGC and
+                                                                                            Low-Noise Microphone Bias
+
+Typical Application Circuit/Functional Diagram
+
+                                                                         VDD
+
+
+
+
+                                                                                      CBYPASS
+                                                                                      1µF
+
+
+                                                              SHDN      VDD
+                                                                                                                                    MICBIAS
+                                                                                                MAX9814
+
+                                 BIAS                                                                                A/R
+                                                                                                                                         R1
+                CBIAS                                                                                                                    150kΩ
+               0.47µF
+                                                                                                                      TH
+
+                                 MICBIAS                                                                                   VDD
+                                                             REF          AGC                                                            R2
+                                                                                                                                         100kΩ
+                                                                                                                    GAIN
+         RMICBIAS
+          2.21kΩ
+                                 MICIN
+                                              LNA                         VGA                                              COUT
+                                                                                                                 MICOUT
+                          CIN
+                         0.1µF
+                                                                                                                                         ROUT
+                                 CT
+                   CCT
+                 470nF
+
+
+                                 CG
+                   CCG
+                 2.2µF
+                                                                        GND
+
+
+
+
+      *THE DEVICE HAS BEEN CONFIGURED WITH AN ATTACK TIME OF 1.1µs, 40dB GAIN, AND AN ATTACK-AND-RELEASE RATIO OF 1:500.
+
+
+
+
+www.analog.com                                                                                                                    Analog Devices │ 11
+MAX9814                                                       Microphone Amplifier with AGC and
+                                                                     Low-Noise Microphone Bias
+
+
+Ordering Information                                     Chip Information
+        PART             TEMP RANGE       PIN-PACKAGE
+                                                         PROCESS: BiCMOS
+
+MAX9814ETD+T            -40°C to +85°C     14 TDFN-EP*
+
++Denotes a lead(Pb)-free/RoHS-compliant package.         Package Information
+T = Tape and reel.
+                                                         For the latest package outline information and land patterns
+*EP = Exposed pad.
+                                                         (footprints), go to www.maximintegrated.com/packages. Note
+                                                         that a “+”, “#”, or “-” in the package code indicates RoHS status
+                                                         only. Package drawings may show a different suffix character,
+                                                         but the drawing pertains to the package regardless of RoHS
+                                                         status.
+
+                                                           PACKAGE        PACKAGE        OUTLINE           LAND
+                                                             TYPE           CODE           NO.          PATTERN NO.
+
+                                                          14 TDFN-EP       T1433+2        21-0137          90-0062
+
+
+
+
+www.analog.com                                                                                       Analog Devices │ 12
+MAX9814                                                                      Microphone Amplifier with AGC and
+                                                                                    Low-Noise Microphone Bias
+
+Revision History
+ REVISION   REVISION                                                                                                                 PAGES
+                                                                DESCRIPTION
+ NUMBER       DATE                                                                                                                  CHANGED
+    0         3/07     Initial release                                                                                                    —
+                       Updated Ordering Information, Absolute Maximum Ratings, Pin Description, and Pin
+    1         2/09                                                                                                                   1, 2, 6, 11
+                       Configuration sections to include EP for TDFN package
+    2         6/09     Removed UCSP package                                                                                       1, 2, 6, 11, 12
+    3         8/16     Updated and moved Ordering Information and Package Information tables                                            1, 12
+    4         2/20     Updated Ordering Information                                                                                      12
+
+
+
+
+                                    Information furnished by Analog Devices is believed to be accurate and reliable. However, no responsibility is
+                                    assumed by Analog Devices for its use, nor for any infringements of patents or other rights of third parties that
+                                    may result from its use. Specifications subject to change without notice. No license is granted by implication
+                                    or otherwise under any patent or patent rights of Analog Devices. Trademarks and registered trademarks are
+                                    the property of their respective owners.
+
+
+w w w . a n a l o g . c o m                                                                                                 Analog Devices │ 13
+

@@ -1,5 +1,5 @@
 # Pass 5 — Signal-Specific, Round 2 (2026-10 files)
-**Date:** 2026-10-07 · **Truth checked:** `.kicad_pcb` geometry (pcbnew extraction) + schematic networks · **Thresholds:** TPA6110A2 SLOS314B (fetched 2026-10-07, `datasheets_2026-10/`), Newhaven NHD-2.7-12864WDW3 Rev 6, Daisy Seed v1.2.0, MIDI 3.3 V practice; MAX9814 pin functions from third-party datasheet copies (analog.com blocked — see §7) · **Status: COMPLETE**
+**Date:** 2026-10-07 · **Truth checked:** `.kicad_pcb` geometry (pcbnew extraction) + schematic networks · **Thresholds:** TPA6110A2 SLOS314B, MAX9814 (19-0764 Rev 4, 2/20), H11L1/2/3 (Fairchild), USBLC6-2 (ST DS4260 Rev 7, Dec 2021) — all archived in `datasheets_2026-10/`; Newhaven NHD-2.7-12864WDW3 Rev 6, Daisy Seed v1.2.0, MIDI 3.3 V practice · **Status: COMPLETE**
 
 ## 1. SPI display bus (new — replaces the I2C bus of Round 1)
 
@@ -14,14 +14,14 @@
 Point-to-point, no pull-ups needed (push-pull, unlike I2C — F-027 is moot). Electrical length ≈ 0.6–0.8 ns per line vs a ≥ 100 ns bit at the SSD1322's 10 MHz class serial clock: no termination or matching concern. SCLK/SDIN skew 5.8 mm ≈ 40 ps, irrelevant. Newhaven's example code holds /RES low ≥ 200 µs — a GPIO (pin 1 / D0) does that. All five lines run over the GND pour on both layers. **PASS** (F-067). JUDGMENT: DC_SPI's 7 vias and 37 mm on B.Cu are the untidiest of the five; cosmetic.
 
 ## 2. USB Full-Speed pair (F-028 revisited → PASS)
-Connector side P2 → U2 ESD: 16.0 / 14.2 mm (4 / 2 vias). MCU side U2 → A1: **130.2 / 130.6 mm, 9 / 11 vias, 0.3 mm** — skew 0.4 mm (≈ 3 ps). Round 1's 7.2 mm / 2-via asymmetry and 0.1/0.2 width mix are gone; one 1.1 mm 0.1 mm stub remains on USB_IN_MCU_N (F-037). Still no impedance control (2-layer, 1.6 mm — inherent) and the pair goes 84 mm as the crow flies for 130 mm of trace; fine at 12 Mb/s, field-proven. U2 USBLC6-2P6 in the data path, VBUS to U2 pin 5 ✓, CC1/CC2 5.1 k pull-downs ✓ (Pass 3).
+Connector side P2 → U2 ESD: 16.0 / 14.2 mm (4 / 2 vias). MCU side U2 → A1: **130.2 / 130.6 mm, 9 / 11 vias, 0.3 mm** — skew 0.4 mm (≈ 3 ps). Round 1's 7.2 mm / 2-via asymmetry and 0.1/0.2 width mix are gone; one 1.1 mm 0.1 mm stub remains on USB_IN_MCU_N (F-037). Still no impedance control (2-layer, 1.6 mm — inherent) and the pair goes 84 mm as the crow flies for 130 mm of trace; fine at 12 Mb/s, field-proven. U2 USBLC6-2P6 pinout verified against DS4260 (SOT-666: 1/6 = I/O1, 3/4 = I/O2, 2 = GND, 5 = VBUS): pin 1 ← USB_IN_N, pin 6 → USB_IN_MCU_N, pin 3 ← USB_IN_P, pin 4 → USB_IN_MCU_P — each data line passes through its own I/O pair ✓; VBUS to pin 5 ✓; 3.5 pF max line capacitance (fine at Full-Speed) ✓; CC1/CC2 5.1 k pull-downs ✓ (Pass 3).
 
 ## 3. SD card (PASS)
 Runs now 27–49 mm (Round 1: 89–108) — the Daisy and P1 moved together. Max skew 22 mm (≈ 150 ps) at SDIO ≤ 50 MHz: irrelevant. 47 k pull-ups on CMD, D0–D3 per the Daisy reference (Pass 3). All 0.3 mm with short 0.2 mm necks. Card-detect remains half-wired (F-022).
 
 ## 4. MIDI (F-029 → PASS, unchanged topology)
 - **OUT (J3):** USART1_TX → R1 10 Ω → tip; +3V3_D → R4 33 Ω → ring. 3.3 V MIDI practice ✓. USART1_TX is 130.5 mm / 13 vias (5.9 mm at 0.1 mm — F-037).
-- **IN (J6):** tip → R3 0 Ω → D1 (NSR1020 Schottky, reverse protection across the opto LED) / U1 H11L1 pin 2; ring → R2 0 Ω → R5 220 Ω → U1 pin 1. U1.4 → USART1_RX (112.6 mm / 11 vias), R6 270 Ω pull-up to 3V3_D on the opto output ✓ (H11L1 is open-collector). Textbook.
+- **IN (J6):** ring → R2 0 Ω → R5 220 Ω → U1 pin 1 (anode); tip → R3 0 Ω → U1 pin 2 (cathode); D1 (NSR1020 Schottky) anti-parallel across the LED (anode on the opto-cathode net, cathode on the opto-anode net) ✓. Current source on the ring, sink on the tip = **TRS MIDI type A** ✓. U1.4 (V_O, open collector) → USART1_RX (112.6 mm / 11 vias) with R6 270 Ω pull-up to 3V3_D — exactly the datasheet's R_L = 270 Ω test condition ✓; U1.6 V_CC on 3V3_D within the 3–15 V range ✓; U1.3 is N/C per the pinout ✓; LED reverse rating 6 V, protected by D1 ✓; turn-on threshold ≤ 1.6 mA vs the ≈5 mA a 3.3 V MIDI source delivers through 33 Ω + 220 Ω ✓. Textbook.
 - 31.25 kbaud on 130 mm: no concern.
 
 ## 5. Audio
@@ -43,8 +43,8 @@ Checked against SLOS314B:
 
 The pot sits at the codec output (passive volume into the amp): J5's line-out level is **not** affected by the pot, which matches the "PHONES" vs "AUDIO OUTPUT" labelling. Output nets VO1/VO2 run 57/65 mm to the 100 µF caps, then 12 mm to J7 — short.
 
-### 5.2 Mic path (MAX9814, U4) — pin functions from datasheet copies (§7)
-MK1 (electret) → /MIC_HOT ← R20 2.2 k ← MICBIAS (bias resistor, matches the reference 2.21 k); /MIC_HOT → C11 100 nF → MICIN; MICOUT → C12 4.7 µF → Daisy AUDIO_IN_2 (pin 17); GAIN → +3V3_A = **40 dB** (lowest setting); A/R → GND = **1:500**; CT → C8 100 nF (attack ≈ 240 µs by the EV-kit scaling); TH ← R18 100 k / R19 150 k divider from MICBIAS (same values as the MAX9814 EV kit); CG → C9 2.2 µF; BIAS → C10 470 nF; SHDN tied to VDD (always on); VDD ← FB2 ← +3V3_A with C13 2.2 µF at 5.7 mm. Configuration is the EV-kit configuration. **PASS** on topology (F-068); the only Round 2 change is that the fan-out is the board's last 0.1 mm copper (≈ 46 mm, forced by 0.25 mm pads — F-037).
+### 5.2 Mic path (MAX9814, U4) — verified against the datasheet (19-0764 Rev 4)
+MK1 (electret) → /MIC_HOT ← R20 2.2 k ← MICBIAS (bias resistor, matches the reference 2.21 k); /MIC_HOT → C11 100 nF → MICIN; MICOUT → C12 4.7 µF → Daisy AUDIO_IN_2 (pin 17); GAIN → +3V3_A = **40 dB** ("GAIN = VDD, gain set to 40dB"); A/R → GND = **1:500** ("A/R = GND: Attack/Release Ratio is 1:500"); CT → C8 100 nF (datasheet's t_ATTACK 1.1 ms at 470 nF scales to ≈ 0.24 ms); TH ← R18 100 k / R19 150 k divider from MICBIAS → V_TH = 0.4 × V_MICBIAS, the datasheet's own typical-characteristics condition; CG → C9 2.2 µF ("Connect a 2.2µF capacitor to GND"); BIAS → C10 470 nF ("Bypass to GND with a 0.47µF capacitor"); SHDN (active-low) tied to VDD = always on; VDD ← FB2 ← +3V3_A (2.7–5.5 V range) with C13 2.2 µF at 5.7 mm (datasheet: 1 µF); N.C. pins 4/11 to GND ✓; EP to GND ✓. Every pin matches the datasheet's pin-description table. **PASS** (F-068); the only Round 2 change is that the fan-out is the board's last 0.1 mm copper (≈ 46 mm, forced by 0.25 mm pads — F-037).
 
 ### 5.3 Run lengths and crosstalk (F-030 revisited)
 Analog runs are shorter and wider than Round 1: AUDIO_OUT_L/R 205 / 228 mm (was 285 / 277, 0.1 mm → now **0.3 mm**), AUDIO_IN_L 141 mm (was 213), mic return 53 mm (was 171). All over the pour on both layers.
@@ -75,4 +75,4 @@ No broadside (opposite-layer) overlaps at all. The aggressors are slow (buttons:
 - **F-030 improved:** analog runs 25–70 % shorter and 3× wider than Round 1.
 
 ## 7. Threshold provenance
-TPA6110A2 SLOS314B fetched from ti.com and archived. NHD Rev 6 and Daisy v1.2.0 archived (Pass 2). `analog.com` (MAX9814), `onsemi.com` (H11L1) and `st.com` (USBLC6) are **not** on the allow list: MAX9814 pin functions (GAIN/A/R settings, 2.21 k bias, 100 k/150 k TH, 2.2 µF CG) were taken from search extracts of third-party datasheet copies and the MAX9814 EV-kit document; H11L1 and USBLC6 topologies are unchanged from Round 1 and were not re-verified. Add those three hosts to re-fetch.
+TPA6110A2 (ti.com) and MAX9814 (analog.com, via a headless-browser session because the site rejects plain HTTP clients) fetched on 2026-10-07. H11L1 (Fairchild H11L1/H11L2/H11L3, scanned PDF — pin table read from the page image) and USBLC6-2 (ST DS4260 Rev 7) were supplied by the user the same day after the vendor sites refused the proxy. All six Pass 5 references are archived with text extracts in `datasheets_2026-10/`. No Pass 5 verdict rests on a search extract any longer.

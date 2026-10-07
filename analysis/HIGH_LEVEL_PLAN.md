@@ -133,7 +133,7 @@ Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026
 - **Question:** Q-R2-5 (U5 intent)
 
 ## R2 Pass 5 — Signal-specific
-**Status: COMPLETE** (2026-10-07) — TPA6110A2 SLOS314B fetched and archived; MAX9814 values from datasheet copies (analog.com not allowed)
+**Status: COMPLETE** (2026-10-07) — TPA6110A2, MAX9814, H11L1 and USBLC6-2 datasheets all archived; every Pass 5 verdict is datasheet-cited
 - [x] SPI display bus: 89–124 mm, 0.3 mm, point-to-point — PASS (F-067)
 - [x] USB pair re-measured: 130.2/130.6 mm, 0.4 mm skew, 0.3 mm — F-028 fixed; SD 27–49 mm; MIDI unchanged — all PASS (F-068)
 - [x] Headphone amp vs SLOS314B: gain, HPF, Eq. 6, coupling cap all PASS; **F-031 (no ≥ 10 µF bulk) persists**; F-069 no 5 pF compensation cap
