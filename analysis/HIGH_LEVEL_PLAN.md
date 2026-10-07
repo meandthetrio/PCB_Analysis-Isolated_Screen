@@ -105,7 +105,14 @@ Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026
 - **Carried to Pass 6:** 10 B-paste flashes without mask openings; silk artwork regions
 
 ## R2 Pass 2 — Power distribution
-**Status: NOT STARTED** — new topology (F-044): DSY_VIN / +9V_FLAG / D6 / 3.3 Ω series / 100 µF bank; TPS62172 buck (F-043) vs datasheet; LED drive re-derivation (F-001/F-018 not carried forward); starved thermals (F-042) on return paths
+**Status: COMPLETE** (2026-10-07) — caveat: all datasheet hosts blocked by the session network policy; thresholds from search-engine extracts + LCSC listings (see report §7)
+- [x] Rail topology mapped from the netlist: bridge → FB3–FB6 → D6 → two 3.3 Ω/100 µF RC ladders (Daisy branch, display+LED branch) → TPS62172 buck → OLED
+- [x] Current/voltage budget: display 345/375 mA at 3.3 V dominates; main path ≈ 0.30–0.49 A; Daisy VIN ≈ 5.8 V worst case (in range)
+- [x] Decoupling audit (nearest same-net cap per IC power pin) and rail copper/IPC-2221 table
+- [x] LED drive re-derived: unchanged, still reverse-biased to ~9 V on 3.3 V-only pins (F-052)
+- **Deliverable:** ✅ `PASS2_POWER_2026-10.md`; findings F-049…F-055
+- **Headlines:** F-049 input cap 6.3 V on an 8 V node (confirmed); F-050 four 200 mA beads carrying 0.3–0.5 A; F-051 0603 3.3 Ω resistors over their 100 mW rating in the display branch; F-053 fixed-voltage buck wired with an adjustable divider; F-054 3V3_D still has one 100 nF
+- **Questions:** Q-R2-2, Q-R2-3, Q-R2-4
 
 ## R2 Pass 3 — Connectivity
 **Status: NOT STARTED** — sch↔pcb netlist diff (110 sch nets vs 103 pcb); encoder clicks pin check (F-039); J8 NC pins vs NHD-2.7-12864WDW3 pinout; which LED2 wiring won (F-014); SWA (F-022); ERC 20 errors dispositioned
