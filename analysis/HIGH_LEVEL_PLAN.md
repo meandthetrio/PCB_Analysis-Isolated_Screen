@@ -152,4 +152,7 @@ Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026
 - **Questions:** Q-R2-6 (which side faces the user), Q-R2-7 (module mounting)
 
 ## R2 Final — Synthesis
-**Status: NOT STARTED**
+**Status: DRAFT COMPLETE** (2026-10-07) — pending review of the asks with the user before publishing for Trey
+- [x] Verification sweep: 37/38 confirmed, F-065 plausible; Round 1 closures and persistences listed in `FINDINGS.md`
+- [x] Ranked report: Tier 1 (3 items: C25 rating, 9 V ladder vs display current, LED drive) → Tier 2 (BOM, display mounting, back-side artwork, regulator part/footprint) → Tier 3 (fab margins) → Tier 4 (robustness) + passes + 7 questions
+- **Deliverable:** ✅ `FINAL_REPORT_2026-10.md` (draft)

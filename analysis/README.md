@@ -12,7 +12,8 @@ Start here: **`FINAL_REPORT.md`** — the tiered red-flag summary, including the
 - `PASS6_MECHANICAL_2026-10.md` — Round 2 Pass 6: sides, display-module projection, silk, paste/mask, holes, F-071…F-073
 - `datasheets_2026-10/` — archived PDFs + text: TPS6217x, Daisy Seed v1.2.0, Cree CLS6B-FKW, NHD-2.7-12864WDW3 (fetched 2026-10-07)
 - `baseline_2026-10/` — Round 2 ERC/DRC JSON and parser output (stock rules + JLCPCB-minimum copy)
-- `FINAL_REPORT.md` — final summary, Tiers 1–4, questions for Trey
+- `FINAL_REPORT_2026-10.md` — **Round 2** final summary (draft): Tiers 1–4, passes, seven questions for Trey
+- `FINAL_REPORT.md` — Round 1 final summary, Tiers 1–4, questions for Trey
 - `FINDINGS.md` — full ledger: F-001…F-035 (Round 1), F-036… (Round 2)
 - `HIGH_LEVEL_PLAN.md` — the pass plan; Round 1 complete, Round 2 status at the end
 - `SOURCE_OF_TRUTH.md` — methodology: which file is authoritative for what, verification rules
