@@ -48,6 +48,18 @@ The BOM's TPS62172 is the **fixed** 3.3 V part, but the schematic carries the **
 - **Firmware note:** Daisy pin 10 is SPI1_MISO and is used as the TAC_SHIFT_R button while SPI1 drives the display — open SPI1 TX-only (F-061).
 - No external pull-ups or debounce on the eight switch/encoder inputs (F-058, works on Round 1 boards); SD card-detect still half-wired (F-022); ERC hygiene — 14 no-connect flags + 4 PWR_FLAGs would take ERC to zero (F-059); no chassis mounting holes (F-032); no fiducials; no hand-assembly list for 18 THT parts incl. the two THT caps at the display connector (F-026); nine single-spoke GND pads (F-042, accepted).
 
+## Noise — which items matter, ranked
+Round 1's original complaint was display noise. Rev 2 fixed the structural cause (display off the shared 3V3 rail onto its own buck + two-stage RC ladder; GND plane on both layers with 225 stitching vias; 0.3 mm 3V3_D; shorter, wider analog runs). Of the findings above, these still move the noise floor, biggest first:
+
+1. **F-050 saturated beads.** FB3–FB6 (200 mA) at 0.3–0.5 A are inert — the protection they were added for is absent. One ≥ 1 A bead restores it. The 3.3 Ω / 100 µF stages (f_c ≈ 480 Hz each, two in series per branch) are the real filter and are good.
+2. **F-049 / F-053 buck layout.** SW → L1 8.3 mm (loop antenna); 22 µF 0603 Cout ≈ half value at 3.3 V (display-rail ripple); 6.3 V Cin on 8 V (input ripple pushed back into the ladder). Audio parts 33 mm and nearest audio trace 60 mm from the SW node — adequate.
+3. **F-054 3V3_D single 100 nF.** SD bursts, 120 mm to the nearest cap; rail also feeds the MIDI opto. 100 nF + 10 µF at P1.
+4. **F-031 / F-069 headphone amp.** +3V3_A (headphone + mic amps) carries one 100 nF; TI's ≥ 10 µF bulk cap is against THD/oscillation with long leads; the 5 pF compensation cap is a stability item (hiss/whine if marginal).
+5. **F-070 trace neighbours.** AUDIO_OUT_R 0.20 mm from TAC_SWITCH_2 for 25 mm; AUDIO_IN_L beside USART1_RX for 43 mm. Slow aggressors → click on button press / tick on MIDI traffic. Move 0.5 mm.
+6. **F-060 FB1.** If it was meant as an AGND/DGND split, don't: one stitched plane is better for this board; delete it.
+
+No noise effect: F-063/F-064 BOM, F-071 mounting, Tier 3 margins, F-065 pads (weak joint → intermittent at most). Fixing F-052 removes six resistors from the 9 V ladder.
+
 ## What passed (verified, cited)
 Provenance: board file ↔ Gerbers byte-identical; sch ↔ pcb 0 differences; DRC 0 unconnected. Power: AGND/DGND tied; VIN in range; 35 V electrolytics on 9 V nodes; rail copper 0.5 mm (1.45 A) / 0.3 mm (1.0 A); GND zone on both layers with 225 stitching vias; local caps at every IC within 6 mm; buck LC per TI reference; EN/VOS/PG per datasheet. Connectivity: every Daisy pin on the right function; display connector matches Newhaven's 4-wire SPI table exactly (BS1/BS0, D/C, SCLK, SDIN, /RES, /CS, N/C pins); tactile switches wired correctly for the footprint; USB CC 5.1 k; SD 47 k pull-ups; MIDI in = TRS type A with the opto's own 270 Ω test-condition pull-up, out = 10/33 Ω 3.3 V practice; mic amp = MAX9814 EV-kit configuration pin for pin; USB ESD pinout correct. Fab: vias 0.6/0.3; copper spacing 0.15 vs 0.10; hole-to-hole 0.50; PTH/via/NPTH-to-track all above minimum; mask bridges 0.15 vs 0.10; drills in range. BOM: 80/80 shared designators match the LCSC listings. Mechanical: 0 courtyard overlaps; all three exposed pads stencilled; outline identical to the fabbed board; nothing under the display on the front.
 
