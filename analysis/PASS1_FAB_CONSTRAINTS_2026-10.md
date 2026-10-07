@@ -1,5 +1,5 @@
 # Pass 1 — Fab Constraints, Round 2 (2026-10 files)
-**Date:** 2026-10-07 · **Truth checked:** `Manifold_Gerbs_2026-10/` + root `.kicad_pcb` (proven identical in Pass 0, F-036) · **Status: COMPLETE**, with one threshold caveat (§3).
+**Date:** 2026-10-07 (thresholds re-fetched live the same day after `jlcpcb.com` was allowed) · **Truth checked:** `Manifold_Gerbs_2026-10/` + root `.kicad_pcb` (proven identical in Pass 0, F-036) · **Status: COMPLETE**. Threshold source: JLCPCB capabilities page fetched 2026-10-07, archived as `baseline_2026-10/jlcpcb_capabilities_2026-10-07.txt`.
 
 Every dimension in use on the Round 2 board vs. JLCPCB's published 2-layer / 1 oz limits. Classification per SOURCE_OF_TRUTH §4. Round 1 values in the last column for the fabbed LedFix board.
 
@@ -15,11 +15,15 @@ Every dimension in use on the Round 2 board vs. JLCPCB's published 2-layer / 1 o
 | 6 | NPTH sizes | 0.65 (×2, P2), 1.20 (×25, jacks), 2.00 (×1), 2.0×1.5 slot (×1) | ≥ 0.50 mm | 0.15 mm | OK | same |
 | 7 | NPTH-to-copper | **0.197 mm** (P2 GND pads A1/A12/B1/B12 to P2's own 0.65 NPTH, B.Cu); next 0.251 (/+5V_USB tracks) | ≥ 0.20 mm | **−0.003 mm** | **VIOLATION (marginal)** (F-008 persists — footprint unchanged) | 0.194 |
 | 8 | Hole-to-hole gap | 0.500 mm min (via–via, 12 pairs); no pad–pad pair under 0.6 | via–via ≥ 0.2; pad–pad ≥ 0.45 | 0.30 mm | OK | 0.50 |
-| 9 | Copper-to-edge | **0.414 mm** (SW1 two no-net anchor pads, both rounds — see §2); **0.451 mm** (3 × /+3V3_D tracks, F.Cu, bottom edge x ≈ 102–121); GND pour 0.50 | ≥ 0.20 mm (fetched 2026-08-13); community reports the page now says ≥ 0.30 | +0.21 / +0.15 (vs 0.2); +0.11 / +0.15 (vs 0.3) | OK vs JLCPCB; **breaks the project's own 0.50 rule** (F-041); F-010 re-classified OK | reported 0.0 for SW1 (§2) |
+| 9 | Copper-to-edge | **0.414 mm** (SW1 two no-net anchor pads, both rounds — see §2); **0.451 mm** (3 × /+3V3_D tracks, F.Cu, bottom edge x ≈ 102–121); GND pour 0.50 | ≥ 0.20 mm from routed edges (live page: "Copper clearance from routed board edges: ≧0.2 mm") | +0.21 / +0.25 mm | OK vs JLCPCB; **breaks the project's own 0.50 rule** (F-041); F-010 re-classified OK | reported 0.0 for SW1 (§2) |
 | 10 | Hole-edge to board-edge | 0.735 mm (SW1 1.85 drills); NPTH 1.05 (jacks) | ≥ 0.25 (NPTH), ≥ 0.4 (drill to outline) per JLCPCB support | 0.34 / 0.65 mm | OK | — |
-| 11 | Solder mask | expansion 0.0 (openings = pads); narrowest mask web 0.15 mm between U3/U4 pads; `min mask web` 0.0 in project | not in fetched table (see §3) | — | unverified | same |
-| 12 | Silkscreen | lines 0.12 mm (588 footprint strokes, KiCad lib default) + 1 × 0.10; artwork = 3,905 filled regions (0 stroke); text min 1.0 mm / 0.15 mm thick (105 of 108 refdes) | not in fetched table; community rule 0.15 mm thickness / 1.0 mm height | 0.12 vs 0.15 → −0.03 | **plausible, threshold unverified** (F-046) | same lib defaults |
-| 13 | Board thickness / copper | 1.6 mm, 2 layers, 1 oz (gbrjob stackup 0.035 mm Cu) | standard | — | OK | same |
+| 11 | Solder mask | expansion 0.0 (1:1 openings); narrowest mask web 0.15 mm between U3/U4 pads | soldermask bridge ≥ 0.10 mm (green); expansion 1:1 supported since June 2025 | 0.05 mm | OK | same |
+| 12 | Silkscreen | lines **0.12 mm** (588 footprint strokes, KiCad lib default) + 1 × 0.10; artwork = 3,905 filled regions; text 1.0 mm high / 0.15 mm stroke (105 of 108 refdes) | min line width ≥ 0.15 mm; min text height 1.0 mm (40 mil); pad-to-silk ≥ 0.15 mm | **−0.03 mm** (lines); 0.00 (text height) | **VIOLATION (cosmetic)** (F-046) — page says sub-0.15 strokes "will be unidentifiable", not rejected | same lib defaults |
+| 13 | Board thickness / copper | 1.6 mm, 2 layers, 1 oz (gbrjob stackup 0.035 mm Cu) | 1.6 mm standard; 1 oz | — | OK | same |
+| 14 | PTH hole to other-net track | 0.350 mm (J5 shield hole to AUDIO_OUT_R) | ≥ 0.28 mm (0.35 recommended) | 0.07 mm | OK (at the recommended value) | — |
+| 15 | Via hole to other-net track | 0.350 mm (several) | ≥ 0.20 mm | 0.15 mm | OK | — |
+| 16 | NPTH hole to track | 0.251 mm (P2 to /+5V_USB) | ≥ 0.20 mm | 0.05 mm | OK | — |
+| 17 | Hole size tolerance | 0.25 mm drills (U6) finish at 0.17–0.38 mm | +0.13 / −0.08 mm | — | note: ring on the 0.6 pad could fall to 0.11 mm at the +0.13 extreme (F-040) | — |
 
 Gerber cross-check: parser (`gerber_analyze.py Manifold_Gerbs_2026-10`) gives the same track-width histogram per layer (F 0.1×5 / B 0.1×61 = 66 ✓; 0.2: 115+61 ✓; 0.3: 271+301 ✓; 0.5: 29+86 ✓), 330/330 PTH↔pad matches on both layers, min via ring 0.150, drill tools T1C0.250 ×2 hits.
 
@@ -30,22 +34,17 @@ Gerber cross-check: parser (`gerber_analyze.py Manifold_Gerbs_2026-10`) gives th
 - **Row 7 / F-008** — the P2 USB-C footprint is unchanged, so the 0.197 mm NPTH-to-copper stays 3 µm under spec. It fabbed twice. Latent, not blocking.
 - **Row 9 / F-010 correction** — Round 1 reported SW1 anchor pads at 0.000 mm from the edge. Re-measuring both rounds' boards with the same method (pad polygon vertices to the Edge.Cuts outline, outline-only distance) gives **0.414 mm for both**; KiCad DRC agrees (0.4105). The Round 1 figure was a measurement artefact, not a copper change (SW1 moved +8.9 mm in x between rounds; Edge_Cuts is byte-identical). SW1 is **OK** against JLCPCB and only trips the project's own 0.5 mm rule. F-010 is re-classified OK; the notch remains a deliberate outline feature.
 - **Row 9 / F-041** — the three +3V3_D tracks at 0.451 mm are inside JLCPCB's limit (0.2 or 0.3) with margin. The project rule (0.5) is the designer's own, stricter target. JUDGMENT: nudge the trunk 50 µm inboard to clear the designer's rule, or accept and set an exclusion.
-- **Row 12 / F-046** — the 0.12 mm silk strokes are KiCad's library default and are widely fabbed at JLCPCB, but the published silk minimum could not be fetched (§3). Leave as plausible.
+- **Row 12 / F-046** — the 0.12 mm silk strokes are KiCad's library default. The live page sets the legend minimum at 0.15 mm and says thinner strokes "will be unidentifiable" (a legibility statement, not a DFM rejection). Cosmetic VIOLATION; the fab preview will show faint footprint outlines. The 3,905 artwork regions are filled polygons, unaffected.
 - Unused drill-tool definitions (0.4, 0.6, 0.8, 1.5 at 0 hits) are plot artefacts, as in Round 1.
 
-## 3. Threshold provenance caveat
+## 3. Threshold provenance
 
-`jlcpcb.com` is blocked by this session's network egress policy (also `schemalyzer.com`), so the capabilities page could **not** be re-fetched today as SOURCE_OF_TRUTH §3 requires. Thresholds used:
-
-1. **Primary:** the JLCPCB capabilities values fetched on 2026-08-12/13 and recorded in `SOURCE_OF_TRUTH.md` §3 and `PASS1_FAB_CONSTRAINTS.md` (trace/space 0.10, via ≥ 0.25 dia / hole + 0.1, PTH ring 0.18 abs / 0.25 rec, drill 0.15–6.3, NPTH ≥ 0.5, NPTH-to-copper 0.20, via–via 0.2 / pad–pad 0.45, copper-to-edge 0.20).
-2. **Corroboration (2026-10-07 web search, search-engine summaries of jlcpcb.com):** same trace/space, ring, via, hole-to-hole and NPTH figures; copper-to-routed-edge quoted as ≥ 0.2 by the page summary and as "≥ 0.3 (updated for router tolerance)" by a 2023 comment on the darkxst KiCad-rules gist. Both values are shown in row 9. Silk and mask minimums were not in any fetched source.
-
-**Action:** re-fetch `https://jlcpcb.com/capabilities/pcb-capabilities` from a session where the domain is allowed (environment → Network access → add `jlcpcb.com`) and update rows 9, 11, 12 if the live page differs. Nothing in the table changes class under either edge value.
+First attempt (earlier the same day) was blocked by the session's network policy; after `jlcpcb.com` was added to the environment's allowed domains the capabilities page was fetched with `curl` through the proxy and the table cells extracted (`baseline_2026-10/jlcpcb_capabilities_2026-10-07.txt`). Live values used above, verbatim: 2-layer 1 oz track/space 0.10/0.10 mm, ±20 % width tolerance; via 0.15 mm hole / 0.25 mm diameter (0.2 mm hole preferred; 0.2–0.25 mm holes with via diameter < 0.45 mm cost more); PTH annular ring 2-layer 1 oz recommended ≥ 0.25 mm, absolute minimum 0.18 mm; NPTH pad annular ≥ 0.45 mm; drill 0.15–6.3 mm, tolerance +0.13/−0.08 mm; NPTH ≥ 0.50 mm; plated slot ≥ 0.5 mm; via hole-to-hole 0.2 mm; pad hole-to-hole 0.45 mm; via hole to track 0.2 mm; PTH to track 0.28 mm (0.35 recommended); NPTH to track 0.2 mm; same-net track spacing 0.25 mm; copper to routed edge ≥ 0.2 mm (V-cut 0.4 mm); soldermask bridge 0.10 mm (green), expansion 1:1; legend min line width ≥ 0.15 mm, min text height 1.0 mm, pad-to-silk 0.15 mm; minimum SMD pad 0.25 × 0.25 mm. The 2026-08-13 values used in Round 1 are unchanged except that the page now also publishes the PTH-to-track and silk minimums.
 
 ## 4. Results
 
 - **No hard fab violations.** Two marginal ones persist from Round 1 (F-016 MK1 ring 0.175, F-008 P2 NPTH 0.197) and the TPS62172 footprint adds a third of the same 0.175-ring kind (F-040).
 - **Zero-margin trace width is now residual** (73 mm, F-037), mostly justified by U4.
 - **F-041 and the SW1 pads are project-rule items, not fab items**; F-010 corrected to OK.
-- **New plausible:** silk stroke 0.12 mm vs an unverified 0.15 mm minimum (F-046).
+- **New (cosmetic):** 588 silk strokes at 0.12 mm vs JLCPCB's 0.15 mm legend minimum (F-046) — library default; expect faint outlines, not a rejection.
 - Carried to Pass 6: 10 B-paste flashes without matching mask openings (parser), silk artwork regions over pads.

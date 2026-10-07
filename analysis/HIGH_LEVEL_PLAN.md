@@ -97,7 +97,7 @@ Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026
 - **Open question:** Q-R2-1 — has this set been fabbed?
 
 ## R2 Pass 1 — Fab constraints
-**Status: COMPLETE** (2026-10-07) — one caveat: `jlcpcb.com` blocked by the session's network policy; thresholds = Round 1 fetch (2026-08-13) + 2026-10-07 search corroboration. Re-fetch when the domain is allowed.
+**Status: COMPLETE** (2026-10-07) — thresholds re-fetched live from jlcpcb.com the same day after the domain was allowed (archived in `baseline_2026-10/`); four extra rows added (PTH/via/NPTH-to-track, mask bridge), all pass; F-046 silk upgraded to cosmetic VIOLATION
 - [x] Full extraction from the Round 2 `.kicad_pcb` (pcbnew): widths, 225 vias, 138 PTH pads with rings, 29 NPTH, hole-to-hole, NPTH-to-copper, copper-to-edge (outline-only distance), hole-to-edge, slots, mask, silk — cross-checked against the Gerber parser (histograms match)
 - [x] 13-row limit table → `PASS1_FAB_CONSTRAINTS_2026-10.md`
 - [x] F-037 confirmed (0.1 mm residual 73 mm, ≈46 mm forced by U4); F-040 confirmed marginal (U6 thermal vias ring 0.175, hole 0.25 legal); F-041 downgraded to project-rule JUDGMENT; F-010 corrected (SW1 pads 0.414 mm, OK) → F-047; F-046 silk 0.12 mm plausible; F-048 passes list
