@@ -4,6 +4,7 @@ Start here: **`FINAL_REPORT.md`** — the tiered red-flag summary, including the
 
 ## Reports
 - `PASS0_BASELINE_2026-10.md` — **Round 2** (2026-10 files) Pass 0: provenance proof, parser validation, ERC/DRC baselines, old↔new delta
+- `PASS1_FAB_CONSTRAINTS_2026-10.md` — Round 2 Pass 1: 13-row limit table vs JLCPCB, F-037/040/041/046/047/048
 - `baseline_2026-10/` — Round 2 ERC/DRC JSON and parser output (stock rules + JLCPCB-minimum copy)
 - `FINAL_REPORT.md` — final summary, Tiers 1–4, questions for Trey
 - `FINDINGS.md` — full ledger: F-001…F-035 (Round 1), F-036… (Round 2)
