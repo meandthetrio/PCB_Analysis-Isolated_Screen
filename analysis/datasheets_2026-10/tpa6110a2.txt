@@ -1,0 +1,1780 @@
+                                                                                                                                            TPA6110A2
+www.ti.com                                                                                               SLOS314B – DECEMBER 2000 – REVISED MARCH 2011
+
+                                            150-mW STEREO AUDIO POWER AMPLIFIER
+                                                                    Check for Samples: TPA6110A2
+
+
+1FEATURES                                                                               •   Surface-Mount Packaging
+•
+2      150 mW Stereo Output                                                                 – PowerPAD™ MSOP
+•      PC Power Supply Compatible                                                       •   Pin Compatible With LM4881
+       – Fully Specified for 3.3 V and 5 V                                                                            DGN PACKAGE
+           Operation                                                                                                   (TOP VIEW)
+       – Operation to 2.5 V
+                                                                                                      BYPASS                 1    8        IN1–
+•      Pop Reduction Circuitry
+                                                                                                         GND                 2    7        VO1
+•      Internal Mid-Rail Generation
+                                                                                                   SHUTDOWN                  3    6        VDD
+•      Thermal and Short-Circuit Protection                                                              IN2–                4    5        VO2
+
+
+DESCRIPTION
+The TPA6110A2 is a stereo audio power amplifier packaged in an 8-pin PowerPAD™ MSOP package capable of
+delivering 150 mW of continuous RMS power per channel into 16-Ω loads. Amplifier gain is externally configured
+by means of two resistors per input channel and does not require external compensation for settings of 1 to 10.
+THD+N when driving a 16-Ω load from 5 V is 0.03% at 1 kHz, and less than 1% across the audio band of 20 Hz
+to 20 kHz. For 32-Ω loads, the THD+N is reduced to less than 0.02% at 1 kHz, and is less than 1% across the
+audio band of 20 Hz to 20 kHz. For 10-kΩ loads, the THD+N performance is 0.005% at 1 kHz, and less than
+0.5% across the audio band of 20 Hz to 20 kHz.
+
+                                                             TYPICAL APPLICATION CIRCUIT
+
+
+                                                                  325 kΩ    325 kΩ               VDD 6
+                                                                                                                            VDD
+                 Audio                               Rf                                                              C(S)
+                 Input                                                     VDD/2
+                                    Ri                    IN 1−
+                                                     8                                           VO1 7
+                                                                                   −
+                             Ci                                                    +
+                                                     1    BYPASS                                              C(C)
+
+                                         C(B)
+                Audio
+                Input
+                                    Ri                    IN 2−
+                                                     4                                           VO2 5
+                                                                                   −
+                            Ci                                                     +
+                                                                                                              C(C)
+
+                                                     3    SHUTDOWN                      Bias         2
+               From Shutdown
+                Control Circuit                                                        Control
+                                                Rf
+
+
+
+
+1
+
+
+
+
+           Please be aware that an important notice concerning availability, standard warranty, and use in critical applications of Texas
+           Instruments semiconductor products and disclaimers thereto appears at the end of this data sheet.
+2   PowerPAD is a trademark of Texas Instruments.
+PRODUCTION DATA information is current as of publication date.                                           Copyright © 2000–2011, Texas Instruments Incorporated
+Products conform to specifications per the terms of the Texas
+Instruments standard warranty. Production processing does not
+necessarily include testing of all parameters.
+TPA6110A2
+SLOS314B – DECEMBER 2000 – REVISED MARCH 2011                                                                                                  www.ti.com
+
+
+           These devices have limited built-in ESD protection. The leads should be shorted together or the device placed in conductive foam
+           during storage or handling to prevent electrostatic damage to the MOS gates.
+
+
+                                                                 AVAILABLE OPTIONS
+                                                        PACKAGED DEVICE
+                               TA                                                                 MSOP SYMBOLIZATION
+                                                               MSOP (1)
+                     -40°C to 85°C                         TPA6110A2DGN                                      TI AIZ
+
+                   (1)    The DGN package is available in left-ended tape and reel only (e.g., TPA6110A2DGNR).
+
+                                                                       PinFunctions
+             PIN
+                                    I/O                                                 DESCRIPTION
+NAME                     NO.
+                                           Tap to voltage divider for internal mid-supply bias supply. Connect to a 0.1 µF to 1 µF low ESR capacitor
+BYPASS                    1          I
+                                           for best performance.
+GND                       2          I     GND is the ground connection.
+IN1–                      8          I     IN1– is the inverting input for channel 1.
+IN2–                      4          I     IN2– is the inverting input for channel 2.
+SHUTDOWN                  3          I     Puts the device in a low quiescent current mode when held high.
+VDD                       6          I     VDD is the supply voltage terminal.
+VO1                       7         O      VO1 is the audio output for channel 1.
+VO2                       5         O      VO2 is the audio output for channel 2.
+
+
+
+ABSOLUTE MAXIMUM RATINGS (1)
+over operating free-air temperature range (unless otherwise noted)
+                                                                                                                            UNIT
+VDD            Supply voltage                                                                                                6V
+VI             Input voltage                                                                                    –0.3 V to VDD + 0.3 V
+               Continuous total power dissipation                                                                     Internally limited
+TJ             Operating junction temperature range                                                                   -40°C to 150°C
+Tstg           Storage temperature range                                                                              -65°C to 150°C
+
+(1)    Stresses beyond those listed under "absolute maximum ratings” may cause permanent damage to the device. These are stress ratings
+       only, and functional operation of the device at these or any other conditions beyond those indicated under "recommended operating
+       conditions” is not implied. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+
+DISSIPATION RATING TABLE
+                                      TA ≤ 25°C                     DERATING FACTOR                    TA = 70°C                      TA = 85°C
+        PACKAGE
+                                    POWER RATING                     ABOVE TA = 25°C                 POWER RATING                   POWER RATING
+           DGN                            2.14 W (1)                      17.1 mW/°C                      1.37 W                           1.11 W
+
+(1)    See the Texas Instruments document, PowerPAD Thermally Enhanced Package Application Report (SLMA002), for more information on
+       the PowerPAD™ package. The thermal data was measured on a PCB layout based on the information in the section entitled Texas
+       Instruments Recommended Board for PowerPAD on page 33 of the before mentioned document.
+
+RECOMMENDED OPERATING CONDITIONS
+                                                                                                                           MIN              MAX     UNIT
+VDD         Supply voltage                                                                                                  2.5              5.5     V
+TA          Operating free-air temperature                                                                                  -40               85     °C
+VIH         High-level input voltage (SHUTDOWN)                                                                  60% x VDD                           V
+VIL         Low-level input voltage (SHUTDOWN)                                                                                      25% x VDD        V
+
+
+
+
+2         Submit Documentation Feedback                                                             Copyright © 2000–2011, Texas Instruments Incorporated
+
+                                                              Product Folder Link(s): TPA6110A2
+                                                                                                                           TPA6110A2
+www.ti.com                                                                                  SLOS314B – DECEMBER 2000 – REVISED MARCH 2011
+
+DC ELECTRICAL CHARACTERISTICS
+at TA = 25°C, VDD = 2.5 V (unless otherwise noted)
+                              PARAMETER                                          TEST CONDITIONS           MIN      TYP MAX         UNIT
+VOO          Output offset voltage                                       Av = 2 V/V                                         15      mV
+PSRR         Power supply rejection ratio                                VDD = 3.2 V to 3.4 V                        83             dB
+IDD          Supply current                                              SHUTDOWN = 0 V                              1.5     3      mA
+IDD(SD)      Supply current in shutdown mode                             SHUTDOWN = VDD                               1     10      µA
+
+
+AC OPERATING CHARACTERISTICS
+VDD = 3.3 V, TA = 25°C, RL = 16 Ω
+                              PARAMETER                                       TEST CONDITIONS              MIN      TYP MAX         UNIT
+PO           Output power (each channel)                                THD≤ 0.1%, f = 1 kHz                         60             mW
+THD+N        Total harmonic distortion + noise                          PO = 40 mW, 20 - 20 kHz                    0.4%
+BOM          Maximum output power BW                                    G = 10, THD < 5%                            > 20            kHz
+             Phase margin                                               Open loop                                    96°
+             Supply ripple rejection ratio                              f = 1 kHz                                    71              dB
+             Channel/channel output separation                          f = 1 kHz, PO = 40 mW                        89              dB
+SNR          Signal-to-noise ratio                                      PO = 50 mW, AV = 1                          100              dB
+Vn           Noise output voltage                                       AV = 1                                       11          µV(rms)
+
+
+DC ELECTRICAL CHARACTERISTICS
+at TA = 25°C, VDD = 5.5 V (unless otherwise noted)
+                              PARAMETER                                           TEST CONDITIONS           MIN     TYP MAX         UNIT
+VOO          Output offset voltage                                       AV = 2 V/V                                         15      mV
+PSRR         Power supply rejection ratio                                VDD = 4.9 V to 5.1 V                        76             dB
+IDD          Supply current                                              SHUTDOWN = 0 V                              1.5     3      mA
+IDD(SD)      Supply current in shutdown mode                             SHUTDOWN = VDD                               1     10      µA
+| IIH |      High-level input current (SHUTDOWN)                         VDD = 5.5 V, VI = VDD                               1      µA
+| IIL |      Low-level input current (SHUTDOWN)                          VDD = 5.5 V, VI = 0 V                               1      µA
+Zi           Input impedance                                                                                         >1             MΩ
+
+
+AC OPERATING CHARACTERISTICS
+VDD = 5 V, TA = 25°C, RL = 16 Ω
+                              PARAMETER                                           TEST CONDITIONS           MIN     TYP MAX         UNIT
+PO           Output power (each channel)                                 THD≤ 0.1%, f = 1 kHz                       150             mW
+THD+N        Total harmonic distortion + noise                           PO = 100 mW, 20 - 20 kHz                  0.6%
+BOM          Maximum output power BW                                     G = 10, THD < 5%                          > 20             kHz
+             Phase margin                                                Open loop                                  96°
+             Supply ripple rejection ratio                               f = 1 kHz                                   61             dB
+             Channel/Channel output separation                           f = 1 kHz, PO = 100 mW                      90             dB
+SNR          Signal-to-noise ratio                                       PO = 100 mW, AV = 1                        100             dB
+Vn           Noise output voltage                                        AV = 1                                     11.7         µV(rms)
+
+
+AC OPERATING CHARACTERISTICS
+VDD = 3.3 V, TA = 25°C, RL = 32 Ω
+PARAMETER                                                                TEST CONDITIONS                    MIN    TYP MAX          UNIT
+PO           Output power (each channel)                                 THD≤ 0.1%, f = 1 kHz                        40             mW
+THD+N        Total harmonic distortion + noise                           PO = 30 mW, 20 - 20 kHz                   0.4%
+BOM          Maximum output power BW                                     AV = 10, THD < 2%                         > 20             kHz
+
+Copyright © 2000–2011, Texas Instruments Incorporated                                               Submit Documentation Feedback          3
+                                                        Product Folder Link(s): TPA6110A2
+TPA6110A2
+SLOS314B – DECEMBER 2000 – REVISED MARCH 2011                                                                                     www.ti.com
+
+AC OPERATING CHARACTERISTICS (continued)
+VDD = 3.3 V, TA = 25°C, RL = 32 Ω
+PARAMETER                                                             TEST CONDITIONS                     MIN      TYP MAX            UNIT
+           Phase margin                                               Open loop                                      96°
+           Supply ripple rejection ratio                              f = 1 kHz                                       71               dB
+           Channel/channel output separation                          f = 1 kHz                                       95               dB
+SNR        Signal-to-noise ratio                                      PO = 40 mW, AV = 1                            100                dB
+Vn         Noise output voltage                                       AV = 1                                          11             µV(rms)
+
+
+AC OPERATING CHARACTERISTICS
+VDD = 5 V, TA = 25°C, RL = 32 Ω
+PARAMETER                                                             TEST CONDITIONS                     MIN      TYP MAX            UNIT
+PO         Output power (each channel)                                THD≤ 0.1%, f = 1 kHz                            90              mW
+THD+N      Total harmonic distortion + noise                          PO = 60 mW, 20 - 20 kHz                      0.4%
+BOM        Maximum output power BW                                    AV = 10, THD < 2%                            > 20               kHz
+           Phase margin                                               Open loop                                      97°
+           Supply ripple rejection ratio                              f = 1 kHz                                       61               dB
+           Channel/channel output separation                          f = 1 kHz                                       98               dB
+SNR        Signal-to-noise ratio                                      PO = 90 mW, AV = 1                            100                dB
+Vn         Noise output voltage                                       AV = 1                                       11.7              µV(rms)
+
+Spacer
+                                                  TYPICAL CHARACTERISTICS
+
+                                                          Table of Graphs
+                                                                                                                 FIGURE
+                                                                vs Frequency                              1, 3, 5, 6, 7, 9, 11, 13
+THD+N      Total harmonic distortion plus noise
+                                                                vs Output power                             2, 4, 8, 10, 12, 14
+           Supply ripple rejection ratio                        vs Frequency                                      15, 16
+Vn         Output noise voltage                                 vs Frequency                                      17, 18
+           Crosstalk                                            vs Frequency                                      19–24
+           Shutdown attenuation                                 vs Frequency                                      25, 26
+           Open-loop gain and phase margin                      vs Frequency                                      27, 28
+           Output power                                         vs Load resistance                                29, 30
+IDD        Supply current                                       vs Supply voltage                                   31
+SNR        Signal-to-noise ratio                                vs Voltage gain                                     32
+           Power dissipation/amplifier                          vs Load power                                     33, 34
+
+
+
+
+4       Submit Documentation Feedback                                                   Copyright © 2000–2011, Texas Instruments Incorporated
+
+                                                    Product Folder Link(s): TPA6110A2
+                                                                                                                                                                                                                                    TPA6110A2
+www.ti.com                                                                                                                                                                                    SLOS314B – DECEMBER 2000 – REVISED MARCH 2011
+
+
+
+                                                                      TOTAL HARMONIC DISTORTION + NOISE                                                                                    TOTAL HARMONIC DISTORTION + NOISE
+                                                                                     vs                                                                                                                   vs
+                                                                                FREQUENCY                                                                                                           OUTPUT POWER
+                                                              10                                                                                                                   10
+                                                                      VDD = 3.3 V,
+
+
+
+
+                                                                                                                                 THD+N − Total Harmonic Distortion + Noise − %
+   THD+N − Total Harmonic Distortion + Noise − %
+
+
+
+
+                                                                                                                                                                                           VDD = 3.3 V,
+                                                                      PO = 25 mW,
+                                                                                                                                                                                           RL = 32 Ω,
+                                                                      CB = 1 µF,
+                                                                                                                                                                                           AV = −1 V/V,
+                                                                      RL = 32 Ω,
+                                                                                                                                                                                           CB = 1 µF
+                                                                1     AV = −1 V/V                                                                                                    1
+                                                                                                                                                                                                          20 kHz                  20 Hz
+
+
+                                                              0.1                                                                                                                  0.1
+                                                                                                                                                                                                                            1 kHz
+
+
+
+                                                             0.01                                                                                                                 0.01
+
+
+
+
+                                                            0.001                                                                                                                0.001
+                                                                 20         100                   1k                 10k 20k                                                          10                                     50           100
+                                                                                     f − Frequency − Hz                                                                                              PO − Output Power − mW
+                                                                                        Figure 1.                                                                                                             Figure 2.
+
+                                                                      TOTAL HARMONIC DISTORTION + NOISE                                                                                    TOTAL HARMONIC DISTORTION + NOISE
+                                                                                     vs                                                                                                                   vs
+                                                                                FREQUENCY                                                                                                           OUTPUT POWER
+                                                               10                                                                                                                  10
+                                                                      VDD = 5 V,
+            THD+N − Total Harmonic Distortion + Noise − %
+
+
+
+
+                                                                                                                                 THD+N − Total Harmonic Distortion + Noise − %
+
+
+
+
+                                                                      PO = 60 mW,                                                                                                          VDD = 5 V,
+                                                                      CB = 1 µF,                                                                                                           RL = 32 Ω,
+                                                                      RL = 32 Ω,                                                                                                           AV = −1 V/V,                       20 Hz
+                                                                1
+                                                                                                       AV = −5 V/V                                                                         CB = 1 µF
+                                                                                                                                                                                     1
+                                                                             AV = −1 V/V
+
+                                                                                                                                                                                                                            20 kHz
+                                                                                   AV = −10 V/V
+                                                              0.1                                                                                                                  0.1
+                                                             0.05                                                                                                                                                           1 kHz
+
+
+                                                             0.01                                                                                                                 0.01
+
+
+
+
+                                                            0.001                                                                                                                0.001
+                                                                 20          100                1k                   10k 20k                                                          10                              100                 500
+                                                                                     f − Frequency − Hz                                                                                              PO − Output Power − mW
+                                                                                        Figure 3.                                                                                                             Figure 4.
+
+
+
+
+Copyright © 2000–2011, Texas Instruments Incorporated                                                                                                                                                     Submit Documentation Feedback         5
+                                                                                                              Product Folder Link(s): TPA6110A2
+TPA6110A2
+SLOS314B – DECEMBER 2000 – REVISED MARCH 2011                                                                                                                                                                                           www.ti.com
+
+                                                              TOTAL HARMONIC DISTORTION + NOISE                                                                                            TOTAL HARMONIC DISTORTION + NOISE
+                                                                             vs                                                                                                                           vs
+                                                                        FREQUENCY                                                                                                                    FREQUENCY
+                                                      10                                                                                                                            10
+    THD+N − Total Harmonic Distortion + Noise − %
+
+
+
+
+                                                                                                                                 THD+N − Total Harmonic Distortion + Noise − %
+                                                              VDD = 3.3 V,                                                                                                                 VDD = 5 V,
+                                                              PO = 100 mW,                                                                                                                 PO = 100 mW,
+                                                              CB = 1 µF,                                                                                                                   CB = 1 µF,
+                                                              RL = 10 kΩ,                                                                                                                  RL = 10 kΩ
+                                                       1      AV = −1 V/V                                                                                                            1
+                                                                                                                                                                                                 AV = −5 V/V
+                                                                                                                                                                                                          AV = −1 V/V
+
+                                                      0.1                                                                                                                          0.1                      AV = −10 V/V
+
+
+
+
+                                                     0.01                                                                                                                         0.01
+
+
+
+
+                                                    0.001                                                                                                                        0.001
+                                                         20          100                1k             10k 20k                                                                        20           100               1k                 10k 20k
+                                                                             f − Frequency − Hz                                                                                                           f − Frequency − Hz
+                                                                               Figure 5.                                                                                                                     Figure 6.
+
+                                                              TOTAL HARMONIC DISTORTION + NOISE                                                                                            TOTAL HARMONIC DISTORTION + NOISE
+                                                                             vs                                                                                                                           vs
+                                                                        FREQUENCY                                                                                                                   OUTPUT POWER
+                                                      10                                                                                                                           10
+                                                                                                                                                                                           VDD = 3.3 V,
+    THD+N − Total Harmonic Distortion + Noise − %
+
+
+
+
+                                                                                                                     THD+N − Total Harmonic Distortion + Noise − %
+
+
+
+
+                                                              VDD = 3.3 V,
+                                                              PO = 60 mW,                                                                                                                  RL = 8 Ω,
+                                                              CB = 1 µF,                                                                                                                   AV = −1 V/V,
+                                                              RL = 8 Ω,                                                                                                                    CB = 1 µF
+                                                       1                                                                                                                             1
+                                                              AV = −1 V/V
+                                                                                                                                                                                                                                      20 Hz
+
+
+                                                                                                                                                                                               20 kHz
+                                                      0.1                                                                                                                          0.1
+
+                                                                                                                                                                                                                              1 kHz
+
+
+                                                     0.01                                                                                                                         0.01
+
+
+
+
+                                                    0.001                                                                                                                        0.001
+                                                         20          100                 1k            10k 20k                                                                        10                                100                   500
+                                                                             f − Frequency − Hz                                                                                                      PO − Output Power − mW
+                                                                               Figure 7.                                                                                                                     Figure 8.
+
+
+
+
+6                                                   Submit Documentation Feedback                                                                                                              Copyright © 2000–2011, Texas Instruments Incorporated
+
+                                                                                                  Product Folder Link(s): TPA6110A2
+                                                                                                                                                                                                                             TPA6110A2
+www.ti.com                                                                                                                                                                            SLOS314B – DECEMBER 2000 – REVISED MARCH 2011
+
+                                                                TOTAL HARMONIC DISTORTION + NOISE                                                                                  TOTAL HARMONIC DISTORTION + NOISE
+                                                                               vs                                                                                                                 vs
+                                                                          FREQUENCY                                                                                                         OUTPUT POWER
+                                                        10                                                                                                                 10
+      THD+N − Total Harmonic Distortion + Noise − %
+
+
+
+
+                                                                                                                         THD+N − Total Harmonic Distortion + Noise − %
+                                                                VDD = 5 V,                                                                                                         VDD = 5 V,
+                                                                PO = 150 mW,                                                                                                       RL = 8 Ω,
+                                                                CB = 1 µF,                                                                                                         AV = −1 V/V,                   1 kHz
+                                                                RL = 8 Ω                                                                                                           CB = 1 µF
+                                                         1                              AV = −5 V/V                                                                         1                           20 kHz
+                                                                     AV = −1 V/V
+
+
+
+                                                        0.1                                                                                                                0.1
+
+
+
+
+                                                                AV = −10 V/V                                                                                              0.01
+                                                       0.01                                                                                                                                                        20 Hz
+
+
+
+
+                                                      0.001                                                                                                              0.001
+                                                           20          100                 1k             10k 20k                                                             10                           100                    500
+                                                                               f − Frequency − Hz                                                                                            PO − Output Power − mW
+                                                                                  Figure 9.                                                                                                          Figure 10.
+
+                                                                TOTAL HARMONIC DISTORTION + NOISE                                                                                  TOTAL HARMONIC DISTORTION + NOISE
+                                                                               vs                                                                                                                 vs
+                                                                          FREQUENCY                                                                                                         OUTPUT POWER
+                                                        10                                                                                                                 10
+                                                                                                                                                                                   VDD = 3.3 V,
+   THD+N − Total Harmonic Distortion + Noise − %
+
+
+
+
+                                                                                                                         THD+N − Total Harmonic Distortion + Noise − %
+
+
+
+
+                                                                VDD = 3.3 V,
+                                                                PO = 40 mW,                                                                                                        RL =16 Ω,
+                                                                CB = 1 µF,                                                                                                         AV = −1 V/V,
+                                                                RL = 16 Ω,                                                                                                         CB = 1 µF
+                                                         1                                                                                                                  1
+                                                                AV = −1 V/V                                                                                                                                          20 Hz
+                                                                                                                                                                                         20 kHz
+
+
+
+                                                        0.1                                                                                                                0.1                                    1 kHz
+
+
+
+
+                                                       0.01                                                                                                               0.01
+
+
+
+
+                                                      0.001                                                                                                              0.001
+                                                           20          100                 1k             10k 20k                                                             10                            100                   500
+                                                                               f − Frequency − Hz                                                                                            PO − Output Power − mW
+                                                                                 Figure 11.                                                                                                          Figure 12.
+
+
+
+
+Copyright © 2000–2011, Texas Instruments Incorporated                                                                                                                                             Submit Documentation Feedback         7
+                                                                                                      Product Folder Link(s): TPA6110A2
+TPA6110A2
+SLOS314B – DECEMBER 2000 – REVISED MARCH 2011                                                                                                                                                                                                www.ti.com
+
+                                                                     TOTAL HARMONIC DISTORTION + NOISE                                                                                          TOTAL HARMONIC DISTORTION + NOISE
+                                                                                    vs                                                                                                                         vs
+                                                                               FREQUENCY                                                                                                                 OUTPUT POWER
+                                                           10                                                                                                                         10
+
+
+
+
+                                                                                                                                    THD+N − Total Harmonic Distortion + Noise − %
+    THD+N − Total Harmonic Distortion + Noise − %
+
+
+
+
+                                                                     VDD = 5 V,                                                                                                                 VDD = 5 V,
+                                                                     PO = 100 mW,                                                                                                               RL = 16 Ω,
+                                                                     CB = 1 µF,                                                                                                                 AV = −1 V/V,
+                                                                     RL = 16 Ω                                                                                                                  CB = 1 µF                  20 Hz
+                                                            1                                     AV = −5 V/V                                                                          1
+                                                                           AV = −1 V/V                                                                                                                             20 kHz
+
+
+                                                                                                                                                                                                                                        1 kHz
+                                                           0.1                                                                                                                        0.1
+
+
+
+                                                                     AV = −10 V/V
+                                                          0.01                                                                                                                       0.01
+
+
+
+
+                                                         0.001                                                                                                                      0.001
+                                                              20           100                  1k               10k   20k                                                               10                             100                       500
+                                                                                    f − Frequency − Hz                                                                                                    PO − Output Power − mW
+                                                                                       Figure 13.                                                                                                                 Figure 14.
+
+                                                                       SUPPLY RIPPLE REJECTION RATIO                                                                                              SUPPLY RIPPLE REJECTION RATIO
+                                                                                     vs                                                                                                                         vs
+                                                                                FREQUENCY                                                                                                                  FREQUENCY
+                                                            0                                                                                                                          0
+                                                                             0.1 µF                    VDD = 3.3 V,                                                                                      0.1 µF                    VDD = 5 V,
+            K SVR − Supply Ripple Rejection Ratio − dB
+
+
+
+
+                                                                                                                               K SVR − Supply Ripple Rejection Ratio − dB
+
+
+
+
+                                                          −10                                          RL = 16 Ω,                                                                    −10                                           RL = 16 Ω,
+                                                          −20                    0.47 µF               AV = −1 V/V                                                                   −20                       0.47 µF             AV = −1 V/V
+
+                                                                                           1 µF                                                                                                                          1 µF
+                                                          −30                                                                                                                        −30
+                                                          −40                                                                                                                        −40
+                                                          −50                                                                                                                        −50
+                                                          −60                                                                                                                        −60
+                                                          −70                                                                                                                        −70
+                                                          −80                                                                                                                        −80             Bypass = 2.5 V
+                                                          −90        Bypass = 1.65 V                                                                                                 −90
+                                                         −100                                                                                                                       −100
+                                                         −110                                                                                                                       −110
+                                                         −120                                                                                                                       −120
+                                                                20         100                  1k               10k 20k                                                                   20          100                1k                10k   20k
+                                                                                    f − Frequency − Hz                                                                                                         f − Frequency − Hz
+                                                                                       Figure 15.                                                                                                                 Figure 16.
+
+
+
+
+8                                                         Submit Documentation Feedback                                                                                                             Copyright © 2000–2011, Texas Instruments Incorporated
+
+                                                                                                            Product Folder Link(s): TPA6110A2
+                                                                                                                                                                                                            TPA6110A2
+www.ti.com                                                                                                                                                             SLOS314B – DECEMBER 2000 – REVISED MARCH 2011
+
+                                                             OUTPUT NOISE VOLTAGE                                                                                          OUTPUT NOISE VOLTAGE
+                                                                      vs                                                                                                            vs
+                                                                  FREQUENCY                                                                                                     FREQUENCY
+                                          100                                                                                                           100
+                                                      VDD = 3.3 V,
+  V n − Output Noise Voltage − µ V(RMS)
+
+
+
+
+                                                      BW = 10 Hz to 22 kHz
+
+
+
+
+                                                                                                                V n − Output Noise Voltage − µ V(RMS)
+                                                                                                                                                                                             AV = −10 V/V
+                                                      RL = 16 Ω
+                                                                                          AV = −10 V/V
+
+
+
+
+                                                                              AV = −1 V/V                                                                                                   AV = −1 V/V
+                                           10                                                                                                            10
+
+
+
+
+                                                                                                                                                                                           VDD = 5 V,
+                                                                                                                                                                                           BW = 10 Hz to 22 kHz
+                                                                                                                                                                                           RL = 16 Ω
+                                            1                                                                                                             1
+                                                 20          100                1k                10k 20k                                                      20         100                 1k                 10k 20k
+                                                                     f − Frequency − Hz                                                                                            f − Frequency − Hz
+                                                                       Figure 17.                                                                                                     Figure 18.
+
+                                                                      CROSSTALK                                                                                                     CROSSTALK
+                                                                          vs                                                                                                            vs
+                                                                      FREQUENCY                                                                                                     FREQUENCY
+                                             0                                                                                                             0
+                                                      VDD = 3.3 V,                                                                                                  VDD = 3.3 V,
+                                          −10         PO = 25 mW,                                                                                       −10         PO = 40 mW,
+                                          −20         CB = 1 µF,                                                                                        −20         CB = 1 µF,
+                                                      RL = 32 Ω,                                                                                                    RL = 16 Ω,
+                                          −30         AV = −1 V/V                                                                                       −30         AV = −1 V/V
+                                          −40                                                                                                           −40
+         Crosstalk − dB
+
+
+
+
+                                                                                                                      Crosstalk − dB
+
+
+
+
+                                          −50                                                                                                           −50
+                                          −60                                                                                                           −60
+
+                                          −70                                                                                                           −70
+                                          −80                                                                                                           −80
+                                                                                                                                                                                                   IN2− to VO1
+                                          −90                                  IN2− to VO1                                                              −90
+                                          −100                                                                                                          −100
+                                                                                                                                                                                IN1− to VO2
+                                          −110                       IN1− to VO2                                                                        −110
+
+                                          −120                                                                                                          −120
+                                                 20          100                1k                10k 20k                                                      20         100                 1k                 10k 20k
+                                                                     f − Frequency − Hz                                                                                            f − Frequency − Hz
+                                                                       Figure 19.                                                                                                     Figure 20.
+
+
+
+
+Copyright © 2000–2011, Texas Instruments Incorporated                                                                                                                           Submit Documentation Feedback              9
+                                                                                             Product Folder Link(s): TPA6110A2
+TPA6110A2
+SLOS314B – DECEMBER 2000 – REVISED MARCH 2011                                                                                                                         www.ti.com
+
+                                                  CROSSTALK                                                                              CROSSTALK
+                                                      vs                                                                                     vs
+                                                  FREQUENCY                                                                              FREQUENCY
+                         0                                                                                       0
+                                  VDD = 3.3 V,                                                                            VDD = 5 V,
+                       −10        PO = 60 mW,                                                                  −10        PO = 60 mW,
+                       −20        CB = 1 µF,                                                                   −20        CB = 1 µF,
+                                  RL = 8 Ω,                                                                               RL = 32 Ω,
+                       −30        AV = −1 V/V                                                                  −30        AV = −1 V/V
+                       −40                                                                                     −40
+     Crosstalk − dB
+
+
+
+
+                                                                                             Crosstalk − dB
+                       −50                                                                                     −50
+                       −60                                                                                     −60
+
+                       −70                                                                                     −70
+                                                            IN2− to VO1
+                       −80                                                                                     −80
+                                                                                                                                                        IN2− to VO1
+                       −90                                                                                     −90
+                      −100                        IN1− to VO2                                                 −100
+                                                                                                                             IN1− to VO2
+                      −110                                                                                    −110
+
+                      −120                                                                                    −120
+                             20         100                 1k                 10k 20k                               20         100                1k                 10k 20k
+                                                 f − Frequency − Hz                                                                     f − Frequency − Hz
+                                                   Figure 21.                                                                              Figure 22.
+
+                                                  CROSSTALK                                                                              CROSSTALK
+                                                      vs                                                                                     vs
+                                                  FREQUENCY                                                                              FREQUENCY
+                         0                                                                                       0
+                                  VDD = 5 V,                                                                              VDD = 5 V,
+                      −10         PO = 100 mW,                                                                −10         PO = 150 mW,
+                      −20         CB = 1 µF,                                                                  −20         CB = 1 µF,
+                                  RL = 16 Ω,                                                                              RL = 8 Ω,
+                      −30         AV = −1 V/V                                                                 −30         AV = −1 V/V
+                      −40                                                                                     −40
+     Crosstalk − dB
+
+
+
+
+                                                                                             Crosstalk − dB
+
+
+
+
+                      −50                                                                                     −50
+                      −60                                                                                     −60
+
+                      −70                                                                                     −70
+                                                                                                                                                        IN2− to VO1
+                      −80                                    IN2− to VO1                                      −80
+                      −90                                                                                     −90
+                      −100                                                                                    −100
+                                                                                                                                   IN1− to VO2
+                      −110                    IN1− to VO2                                                     −110
+
+                      −120                                                                                    −120
+                             20         100                 1k                10k 20k                                20        100                 1k                 10k 20k
+                                                 f − Frequency − Hz                                                                     f − Frequency − Hz
+                                                   Figure 23.                                                                              Figure 24.
+
+
+
+
+10                     Submit Documentation Feedback                                                                         Copyright © 2000–2011, Texas Instruments Incorporated
+
+                                                                          Product Folder Link(s): TPA6110A2
+                                                                                                                                                                                                                                    TPA6110A2
+www.ti.com                                                                                                                                                                                     SLOS314B – DECEMBER 2000 – REVISED MARCH 2011
+
+                                                                   SHUTDOWN ATTENUATION                                                                                                            SHUTDOWN ATTENUATION
+                                                                            vs                                                                                                                              vs
+                                                                        FREQUENCY                                                                                                                       FREQUENCY
+                                                       0                                                                                                                               0
+                                                            VDD = 3.3 V,                                                                                                                    VDD = 5 V,
+                                                   −10      RL = 16 Ω,                                                                                                                −10   RL = 16 Ω,
+                                                            CB = 1 µF                                                                                                                       CB = 1 µF
+                                                   −20                                                                                                                                −20
+
+
+
+
+                                                                                                                                                      Shutdown Attenuation − dB
+                       Shutdown Attenuation − dB
+
+
+
+
+                                                   −30                                                                                                                                −30
+
+                                                   −40                                                                                                                                −40
+
+                                                   −50                                                                                                                                −50
+
+                                                   −60                                                                                                                                −60
+
+                                                   −70                                                                                                                                −70
+
+                                                   −80                                                                                                                                −80
+
+                                                   −90                                                                                                                                −90
+
+                                                   −100                                                                                                                           −100
+                                                       10               100             1k                10 k 20 k                                                                   10                 100            1k            10 k 20 k
+                                                                        f − Frequency − Hz                                                                                                                 f − Frequency − Hz
+                                                                               Figure 25.                                                                                                                      Figure 26.
+
+                                                             OPEN-LOOP GAIN AND PHASE MARGIN                                                                                                OPEN-LOOP GAIN AND PHASE MARGIN
+                                                                            vs                                                                                                                             vs
+                                                                       FREQUENCY                                                                                                                      FREQUENCY
+                         120                                                                                  180                                              120                                                                      180
+                                                                                            VDD = 3.3 V                                                                                                                VDD = 5 V
+                                                                                                              150                                                                                                                       150
+                         100                                                                RL = 10 kΩ                                                         100                                                     RL = 10 kΩ
+                                                                                                                                                                                                           Gain
+                                                                                                              120                                                                                                                       120
+                                                                              Phase
+                                       80                                                                     90                                                             80                                                         90
+
+
+
+
+                                                                                                                                                                                                                                              Φm − Phase Margin − Deg
+                                                                                                                                               Open-Loop Gain − dB
+ Open-Loop Gain − dB
+
+
+
+
+                                                                                                                    Φ m − Phase Margin − Deg
+
+
+
+
+                                                                                                              60                                                                                                                        60
+                                       60                                                                                                                                    60
+                                                                                                              30                                                                                                                        30
+                                                                                Gain                                                                                                                   Phase
+                                       40                                                                     0                                                              40                                                         0
+                                                                                                              −30                                                                                                                       −30
+                                       20                                                                                                                                    20
+                                                                                                              −60                                                                                                                       −60
+
+                                                   0                                                          −90                                                                 0                                                     −90
+
+                                                                                                              −120                                                                                                                      −120
+                         −20                                                                                                                                   −20
+                                                                                                              −150                                                                                                                      −150
+                         −40                                                                                  −180                                             −40                                                                      −180
+                            1k                                   10 k          100 k          1M            10 M                                                  1k                           10 k            100 k        1M       10 M
+                                                                        f − Frequency − Hz                                                                                                            f − Frequency − Hz
+                                                                               Figure 27.                                                                                                                      Figure 28.
+
+
+
+
+Copyright © 2000–2011, Texas Instruments Incorporated                                                                                                                                                      Submit Documentation Feedback                      11
+                                                                                                    Product Folder Link(s): TPA6110A2
+TPA6110A2
+SLOS314B – DECEMBER 2000 – REVISED MARCH 2011                                                                                                                                                  www.ti.com
+
+                                                        OUTPUT POWER                                                                                            OUTPUT POWER
+                                                              vs                                                                                                      vs
+                                                       LOAD RESISTANCE                                                                                         LOAD RESISTANCE
+                                  100                                                                                                   250
+                                                                          VDD = 3.3 V,                                                                                            VDD = 5 V,
+                                                                          THD+N = 1%,                                                                                             THD+N = 1%,
+                                                                          AV = −1 V/V                                                                                             AV = −1 V/V
+                                                                                                                                        200
+                                   75
+         P − Output Power − mW
+
+
+
+
+                                                                                                     P − Output Power − mW
+                                                                                                                                        150
+
+                                   50
+
+                                                                                                                                        100
+          O
+
+
+
+
+                                   25
+
+
+
+
+                                                                                                      O
+                                                                                                                                        50
+
+
+
+                                    0                                                                                                    0
+                                        8 12 16 20 24 28 32 36 40 44 45 52 56 60 64                                                           8 12 16 20 24 28 32 36 40 44 48 52 56 60 64
+                                                      RL − Load Resistance − Ω                                                                                RL − Load Resistance − Ω
+                                                            Figure 29.                                                                                               Figure 30.
+
+                                                       SUPPLY CURRENT                                                                                    SIGNAL-TO-NOISE RATIO
+                                                             vs                                                                                                   vs
+                                                       SUPPLY VOLTAGE                                                                                        VOLTAGE GAIN
+                                  2.5                                                                                                   120
+                                                                                                                                                                                   VDD = 5 V
+
+                                                                                                                                        100
+                                                                                                     SNR − Signal-to-Noise Ratio − dB
+
+
+
+
+                                    2
+     I DD − Supply Current − mA
+
+
+
+
+                                                                                                                                         80
+                                  1.5
+
+                                                                                                                                         60
+
+                                    1
+                                                                                                                                         40
+
+                                  0.5
+                                                                                                                                         20
+
+
+                                    0                                                                                                     0
+                                        0   0.5   1   1.5 2 2.5 3 3.5 4           4.5   5   5.5                                               1   2       3      4      5    6    7      8     9     10
+                                                      VDD − Supply Voltage − V                                                                                 AV − Voltage Gain − V/V
+                                                            Figure 31.                                                                                               Figure 32.
+
+
+
+
+12                                Submit Documentation Feedback                                                                                       Copyright © 2000–2011, Texas Instruments Incorporated
+
+                                                                                 Product Folder Link(s): TPA6110A2
+                                                                                                                                                                                       TPA6110A2
+www.ti.com                                                                                                                                              SLOS314B – DECEMBER 2000 – REVISED MARCH 2011
+
+                                                    POWER DISSIPATION/AMPLIFIER                                                                         POWER DISSIPATION/AMPLIFIER
+                                                                vs                                                                                                  vs
+                                                           LOAD POWER                                                                                          LOAD POWER
+                                     80                                                                                                  180
+                                              VDD = 3.3 V                                                                                          VDD = 5 V
+                                                                     8Ω                                                                  160                             8Ω
+                                     70
+
+
+
+
+                                                                                                      Power Dissipation/Amplifier − mW
+  Power Dissipation/Amplifier − mW
+
+
+
+
+                                                                                                                                         140
+                                     60
+                                                                                                                                         120
+                                     50
+                                                                                                                                         100
+                                     40                   16 Ω                                                                                                          16 Ω
+                                                                                                                                          80
+                                     30
+                                                                                                                                         60
+
+                                     20             32 Ω
+                                                                                                                                          40                             32 Ω
+                                               64 Ω
+                                     10                                                                                                   20                  64 Ω
+
+                                      0                                                                                                    0
+                                          0    20    40     60    80 100 120 140 160 180     200                                               0   20    40    60     80 100 120 140 160 180     200
+                                                                 Load Power − mW                                                                                     Load Power − mW
+                                                                 Figure 33.                                                                                           Figure 34.
+
+
+
+
+Copyright © 2000–2011, Texas Instruments Incorporated                                                                                                            Submit Documentation Feedback         13
+                                                                                   Product Folder Link(s): TPA6110A2
+TPA6110A2
+SLOS314B – DECEMBER 2000 – REVISED MARCH 2011                                                                                www.ti.com
+
+                                              APPLICATION INFORMATION
+
+GAIN SETTING RESISTORS, Rf and Ri                                  INPUT CAPACITOR, Ci
+The gain for the TPA6110A2 is set by resistors Rf                  In the typical application, an input capacitor, Ci, is
+and Ri according to Equation 1.                                    required to allow the amplifier to bias the input signal
+                                                                   to the proper dc level for optimum operation. In this
+                                                                   case, Ci and Ri form a high-pass filter with the corner
+      Gain + *     ǒǓ  Rf
+                       Ri
+                                                          (1)
+                                                                   frequency determined in Equation 4.
+
+
+                                                                          f c(highpass) +         1
+Given that the TPA6110A2 is a MOS amplifier, the                                               2p R i Ci
+input impedance is very high. Consequently input                                                                                      (4)
+leakage currents are not generally a concern.                      The value of Ci directly affects the bass (low
+However, noise in the circuit increases as the value               frequency) performance of the circuit. Consider the
+of Rf increases. In addition, a certain range of Rf                example where Ri is 20 kΩ and the specification calls
+values is required for proper start-up operation of the            for a flat bass response down to 20 Hz. Equation 4 is
+amplifier.   Considering    these     factors,   it   is           reconfigured as Equation 5.
+recommended that the effective impedance seen by
+the inverting node of the amplifier be set between 5
+kΩ and 20 kΩ. The effective impedance is calculated                       Ci +                 1
+using Equation 2.                                                                   2p R i f c(highpass)
+                                                                                                                                      (5)
+
+                                     R fR i                        In this example, Ci is 0.40 µF, so one would likely
+     Effective Impedance +                                         choose a value in the range of 0.47 µF to 1 µF. A
+                                    Rf ) Ri                        further consideration for this capacitor is the leakage
+                                                          (2)
+                                                                   path from the input source through the input network
+For example, if the input resistance is 20 kΩ and the              formed by Ri, Ci, and the feedback resistor (Rf) to the
+feedback resistor is 20 kΩ, the gain of the amplifier is           load. This leakage current creates a dc offset voltage
+-1, and the effective impedance at the inverting                   at the input to the amplifier that reduces useful
+terminal is 10 kΩ, a value within the recommended                  headroom, especially in high-gain applications (gain
+range.                                                             >10). For this reason a low-leakage tantalum or
+For high performance applications, metal-film                      ceramic capacitor is the best choice. When polarized
+resistors are recommended because they tend to                     capacitors are used, connect the positive side of the
+have lower noise levels than carbon resistors. For                 capacitor to the amplifier input in most applications.
+values of Rf above 50 kΩ, the amplifier tends to                   The dc level there is held at VDD/2—likely higher than
+become unstable due to a pole formed from Rf and                   the source dc level. It is important to confirm the
+the inherent input capacitance of the MOS input                    capacitor polarity in the application.
+structure. For this reason, a small compensation
+capacitor of approximately 5 pF should be placed in                POWER SUPPLY DECOUPLING, C(S)
+parallel with Rf. This, in effect, creates a low-pass              The TPA6110A2 is a high-performance CMOS audio
+filter network with the cutoff frequency defined by                amplifier that requires adequate power-supply
+Equation 3.                                                        decoupling to minimize the output total harmonic
+                                                                   distortion (THD). Power-supply decoupling also
+                                                                   prevents oscillations when long lead lengths are used
+      f c(lowpass) +       1
+                                                                   between the amplifier and the speaker. The optimum
+                        2p R f CF
+                                                          (3)      decoupling is achieved by using two capacitors of
+                                                                   different types that target different types of noise on
+For example, if Rf is 100 kΩ and CF is 5 pF then                   the power supply leads. For higher frequency
+fc(lowpass) is 318 kHz, which is well outside the audio            transients, spikes, or digital hash on the line, a good
+range.                                                             low equivalent-series-resistance (ESR) ceramic
+                                                                   capacitor, typically 0.1 µF, placed as close as
+                                                                   possible to the device VDD lead, works best. For
+                                                                   filtering lower-frequency noise signals, a larger
+                                                                   aluminum electrolytic capacitor of 10 µF or greater
+                                                                   placed near the power amplifier is recommended.
+
+
+
+14     Submit Documentation Feedback                                                 Copyright © 2000–2011, Texas Instruments Incorporated
+
+                                                Product Folder Link(s): TPA6110A2
+                                                                                                                                     TPA6110A2
+www.ti.com                                                                                  SLOS314B – DECEMBER 2000 – REVISED MARCH 2011
+
+MIDRAIL BYPASS CAPACITOR, C(B)                                                 Table 1. Common Load Impedances vs Low-
+                                                                              Frequency Output Characteristics in SE Mode
+The midrail bypass capacitor, C(B), serves several
+important functions. During start up, C(B) determines                            RL             C(C)                 LOWEST FREQUENCY
+the rate at which the amplifier starts up. This helps to                        32 Ω            68 µF                            73 Hz
+push the start-up pop noise into the subaudible range                         10,000 Ω          68 µF                           0.23 Hz
+(so low it can not be heard). The second function is to                       47,000 Ω          68 µF                           0.05 Hz
+reduce noise produced by the power supply caused
+by coupling into the output drive signal. This noise is                    As Table 1 indicates, headphone response is
+from the midrail generation circuit internal to the                        adequate, and drive into line level inputs (a home
+amplifier. The capacitor is fed from a 230-kΩ source                       stereo for example) is very good.
+inside the amplifier. To keep the start-up pop as low
+as possible, maintain the relationship shown in                            The output coupling capacitor required in
+Equation 6.                                                                single-supply SE mode also places additional
+                                                                           constraints on the selection of other components in
+                                                                           the amplifier circuit. With the rules described earlier
+                 1              v      1                                   still valid, add the following relationship:
+       ǒC(B)       230 kΩ   Ǔ       ǒC i R iǓ
+                                                                  (6)
+                                                                                            1               v      1        Ơ     1
+Consider an example circuit where C(B) is 1 µF, Ci is                             ǒC(B)      230 kΩ     Ǔ       ǒC i R iǓ       RLC (C)
+1 µF, and Ri is 20 kΩ. Subsitituting these values into                                                                                      (8)
+the equation 9 results in: 6.25 ≤ 50 which satisfies the
+rule. Bypass capacitor, C(B), values of 0.1 µF to 1 µF                     USING LOW-ESR CAPACITORS
+ceramic or tantalum low-ESR capacitors are
+recommended for the best THD and noise                                     Low-ESR capacitors are recommended throughout
+performance.                                                               this application. A real capacitor can be modeled
+                                                                           simply as a resistor in series with an ideal capacitor.
+OUTPUT COUPLING CAPACITOR, C(C)                                            The voltage drop across this resistor minimizes the
+                                                                           beneficial effects of the capacitor in the circuit. The
+In a typical single-supply, single-ended (SE)                              lower the equivalent value of this resistance, the
+configuration, an output coupling capacitor (C(C)) is                      more the real capacitor behaves like an ideal
+required to block the dc bias at the output of the                         capacitor.
+amplifier, thus preventing dc currents in the load. As
+with the input coupling capacitor, the output coupling                     5-V VERSUS 3.3-V OPERATION
+capacitor and impedance of the load form a
+high-pass filter governed by Equation 7.                                   The TPA6110A2 was designed for operation over a
+                                                                           supply range of 2.5 V to 5.5 V. This data sheet
+                                                                           provides full specifications for 5-V and 3.3-V
+       fc +         1                                                      operation, since these are considered to be the two
+                2p R L C(C)                                                most common supply voltages. There are no special
+                                                                  (7)      considerations for 3.3-V versus 5-V operation as far
+The main disadvantage, from a performance                                  as supply bypassing, gain setting, or stability. The
+standpoint, is that the typically-small load impedance                     most important consideration is that of output power.
+drives the low-frequency corner higher. Large values                       Each amplifier in theTPA6110A2 can produce a
+of C(C) are required to pass low frequencies into the                      maximum voltage swing of VDD – 1 V. This means,
+load. Consider the example where a C(C) of 68 µF is                        for 3.3-V operation, clipping starts to occur when
+chosen and loads vary from 32 Ω to 47 kΩ. Table 1                          VO(PP) = 2.3 V as opposed when VO(PP) = 4 V while
+summarizes the frequency response characteristics                          operating at 5 V. The reduced voltage swing
+of each configuration.                                                     subsequently reduces maximum output power into
+                                                                           the load before distortion becomes significant.
+
+
+
+
+Copyright © 2000–2011, Texas Instruments Incorporated                                                  Submit Documentation Feedback        15
+                                                        Product Folder Link(s): TPA6110A2
+TPA6110A2
+SLOS314B – DECEMBER 2000 – REVISED MARCH 2011                                                                                                                               www.ti.com
+
+
+                                                                          REVISION HISTORY
+
+Changes from Original (December 2000) to Revision A                                                                                                                                Page
+
+•    Change the DC ELECTRICAL CHARACTERISTICS table From TA = 25°C, VDD = 3.3 V To: TA = 25°C, VDD = 2.5 V,
+     updated values ...................................................................................................................................................................... 3
+•    Change the DC ELECTRICAL CHARACTERISTICS table From TA = 25°C, VDD = 5 V To: TA = 25°C, VDD = 5.5 V,
+     updated values ...................................................................................................................................................................... 3
+•    Changed Figure 8, From: RL = 8kΩ To: RL = 8Ω .................................................................................................................. 6
+•    Changed Figure 24, From: frequency limit at 1M To: frequency limit at 20K ..................................................................... 10
+•    Changed Figure 25, From: frequency limit at 1M To: frequency limit at 20K ..................................................................... 11
+
+
+Changes from Revision A (September 2004) to Revision B                                                                                                                             Page
+
+•    Changed the DC Electrical Characteristice (VDD = 2.5V) for IDD(SD) From: Typ = 10 Max = 50 To: Typ = 1 Max = 10 ........ 3
+•    Changed the DC Electrical Characteristice (VDD = 5.5V) for IDD(SD) From: Typ = 60 Max = 100 To: Typ = 1 Max = 10 ...... 3
+
+
+
+
+16        Submit Documentation Feedback                                                                                  Copyright © 2000–2011, Texas Instruments Incorporated
+
+                                                                      Product Folder Link(s): TPA6110A2
+                                                                                                                                                                      PACKAGE OPTION ADDENDUM
+
+       www.ti.com                                                                                                                                                                                                   11-Nov-2025
+
+
+
+
+PACKAGING INFORMATION
+
+       Orderable part number          Status     Material type      Package | Pins      Package qty | Carrier        RoHS             Lead finish/              MSL rating/               Op temp (°C)          Part marking
+                                        (1)            (2)                                                             (3)            Ball material             Peak reflow                                           (6)
+                                                                                                                                            (4)                      (5)
+
+          TPA6110A2DGN                Active      Production      HVSSOP (DGN) | 8            80 | TUBE               Yes        NIPDAU | NIPDAUAG Level-1-260C-UNLIM                       -40 to 85                AIZ
+         TPA6110A2DGN.A               Active      Production      HVSSOP (DGN) | 8            80 | TUBE               Yes                NIPDAU            Level-1-260C-UNLIM               -40 to 85                AIZ
+         TPA6110A2DGNG4               Active      Production      HVSSOP (DGN) | 8            80 | TUBE               Yes                NIPDAU            Level-1-260C-UNLIM               -40 to 85                AIZ
+         TPA6110A2DGNR                Active      Production      HVSSOP (DGN) | 8       2500 | LARGE T&R             Yes        NIPDAU | NIPDAUAG Level-1-260C-UNLIM                       -40 to 85                AIZ
+        TPA6110A2DGNR.A               Active      Production      HVSSOP (DGN) | 8       2500 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM               -40 to 85                AIZ
+
+(1)
+      Status: For more details on status, see our product life cycle.
+
+(2)
+   Material type: When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3)
+      RoHS values: Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4)
+   Lead finish/Ball material: Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5)
+  MSL rating/Peak reflow: The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6)
+      Part marking: There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+
+
+
+                                                                                                          Addendum-Page 1
+                                                                               PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                                                    10-Aug-2026
+
+
+
+TAPE AND REEL INFORMATION
+
+       REEL DIMENSIONS                                                                      TAPE DIMENSIONS
+                                                                                       K0       P1
+
+
+
+                                                                                                                      B0 W
+                                         Reel
+                                       Diameter
+                                                                                    Cavity           A0
+                                                                A0   Dimension designed to accommodate the component width
+                                                                B0   Dimension designed to accommodate the component length
+                                                                K0   Dimension designed to accommodate the component thickness
+                                                                W    Overall width of the carrier tape
+                                                                P1   Pitch between successive cavity centers
+
+
+                                        Reel Width (W1)
+                              QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+
+                                                                                                     Sprocket Holes
+
+
+                                                  Q1       Q2          Q1    Q2
+
+                                                  Q3       Q4          Q3    Q4                  User Direction of Feed
+
+
+
+                                                            Pocket Quadrants
+
+
+*All dimensions are nominal
+             Device           Package Package Pins              SPQ       Reel   Reel   A0                  B0         K0     P1     W     Pin1
+                               Type Drawing                             Diameter Width (mm)                (mm)       (mm)   (mm)   (mm) Quadrant
+                                                                          (mm) W1 (mm)
+    TPA6110A2DGNR             HVSSOP     DGN           8        2500        330.0        12.4        5.3    3.4       1.4    8.0    12.0    Q1
+    TPA6110A2DGNR             HVSSOP     DGN           8        2500        330.0        12.4        5.3    3.4       1.4    8.0    12.0    Q1
+
+
+
+
+                                                                      Pack Materials-Page 1
+                                                                PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                              10-Aug-2026
+
+
+
+ TAPE AND REEL BOX DIMENSIONS
+
+
+
+
+                                                               Width (mm)
+                                                                              H
+                      W
+
+
+
+
+                                                          L
+
+
+
+
+*All dimensions are nominal
+             Device           Package Type   Package Drawing   Pins         SPQ    Length (mm)   Width (mm)   Height (mm)
+    TPA6110A2DGNR               HVSSOP            DGN           8           2500      358.0        335.0         35.0
+    TPA6110A2DGNR               HVSSOP            DGN           8           2500      364.0        364.0         27.0
+
+
+
+
+                                                        Pack Materials-Page 2
+                                                                  PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                    10-Aug-2026
+
+
+
+TUBE
+
+       T - Tube
+        height                                                      L - Tube length
+
+
+                      W - Tube
+                       width
+
+
+         B - Alignment groove width
+
+*All dimensions are nominal
+             Device           Package Name   Package Type    Pins       SPQ     L (mm)   W (mm)   T (µm)   B (mm)
+     TPA6110A2DGN                 DGN          HVSSOP         8          80      330      6.55     500      2.88
+    TPA6110A2DGN.A                DGN          HVSSOP         8          80      330      6.55     500      2.88
+    TPA6110A2DGNG4                DGN          HVSSOP         8          80      330      6.55     500      2.88
+
+
+
+
+                                                        Pack Materials-Page 3
+                                                                  GENERIC PACKAGE VIEW
+                                                                  TM
+DGN 8                                              PowerPAD            HVSSOP - 1.1 mm max height
+3 x 3, 0.65 mm pitch                                                                 SMALL OUTLINE PACKAGE
+
+
+
+
+               This image is a representation of the package family, actual package may vary.
+                             Refer to the product data sheet for package details.
+
+
+
+
+                                                                                                   4225482/B
+
+
+
+
+                                                    www.ti.com
+                                                                                                         PACKAGE OUTLINE
+                                                                                             TM
+DGN0008D                                                  SCALE 4.000
+                                                                          PowerPAD VSSOP - 1.1 mm max height
+                                                                                                                  SMALL OUTLINE PACKAGE
+
+
+
+                                                                                                                     C
+                                          5.05
+          A                                    TYP
+                                          4.75                                                                  0.1 C
+                                             PIN 1 INDEX AREA                                                                          SEATING
+                                                                                                                                       PLANE
+                                                                                          6X 0.65
+                                                                               8
+                1
+
+
+                                                                                             2X
+       3.1
+                                                                                            1.95
+       2.9
+      NOTE 3
+
+
+                4
+                                                                              5                  0.38
+                                                                                            8X
+                                                                                                 0.25
+                                           3.1                                                    0.13   C A B
+                     B
+                                           2.9
+                                          NOTE 4
+
+
+
+
+                                                                                          0.23
+                                                                                          0.13
+
+
+
+                                       SEE DETAIL A
+
+                                                                        EXPOSED THERMAL PAD
+
+
+                4
+                                                                               5
+
+                                                                                                     0.25
+                                                                                                     GAGE PLANE
+         1.89
+         1.63                                9                                                                                           1.1 MAX
+
+
+
+                                                                               8
+                1                                                                                         0.7                              0.15
+                                                                                   0 -8                   0.4                              0.05
+                                                                                                                     DETAIL A
+                                                                                                                          A 20
+
+
+
+
+                                            1.57
+                                                                                                                        TYPICAL
+                                            1.28
+
+                                                                                                                                 4225481/A 11/2019
+                                                                                                  PowerPAD is a trademark of Texas Instruments.
+NOTES:
+
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+   per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+   exceed 0.15 mm per side.
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm per side.
+5. Reference JEDEC registration MO-187.
+
+
+
+
+                                                                        www.ti.com
+                                                                                            EXAMPLE BOARD LAYOUT
+                                                                                                 TM
+DGN0008D                                                                             PowerPAD VSSOP - 1.1 mm max height
+                                                                                                                      SMALL OUTLINE PACKAGE
+
+
+
+
+                                                                     (2)
+                                                                   NOTE 9
+                             METAL COVERED
+                             BY SOLDER MASK                                  (1.57)
+                                                                             SYMM                SOLDER MASK
+                                                                                                 DEFINED PAD
+                                        8X (1.4)                                                                        (R0.05) TYP
+
+
+                                                                                                               8
+                 8X (0.45)       1
+
+                                                                                                                                   (3)
+                                                                                9                                     SYMM       NOTE 9
+
+                                                                                                                            (1.89)
+
+                        6X (0.65)                                                                                  (1.22)
+                                                                                                               5
+                                    4
+
+                         ( 0.2) TYP
+                                 VIA                                                    (0.55)                     SEE DETAILS
+
+                                                                             (4.4)
+
+                                                       LAND PATTERN EXAMPLE
+                                                           EXPOSED METAL SHOWN
+                                                                SCALE: 15X
+
+
+
+
+                   SOLDER MASK                                                          METAL UNDER                   SOLDER MASK
+                                                      METAL
+                       OPENING                                                          SOLDER MASK                   OPENING
+
+
+          EXPOSED METAL                                                                                                      EXPOSED METAL
+
+                                        0.05 MAX                                                         0.05 MIN
+                                        ALL AROUND                                                       ALL AROUND
+
+                                NON-SOLDER MASK                                                       SOLDER MASK
+                                    DEFINED                                                             DEFINED
+                                  (PREFERRED)
+                                                           SOLDER MASK DETAILS
+                                                                    15.000
+
+
+
+
+                                                                                                                               4225481/A 11/2019
+NOTES: (continued)
+
+6. Publication IPC-7351 may have alternate designs.
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+8. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown
+   on this view. It is recommended that vias under paste be filled, plugged or tented.
+9. Size of metal pad may vary due to creepage requirement.
+
+
+
+
+                                                                               www.ti.com
+                                                                              EXAMPLE STENCIL DESIGN
+                                                                                     TM
+DGN0008D                                                            PowerPAD VSSOP - 1.1 mm max height
+                                                                                                         SMALL OUTLINE PACKAGE
+
+
+
+
+                                                                 (1.57)
+                                                               BASED ON
+                                                              0.125 THICK
+                                                                STENCIL
+                                                                SYMM
+
+                                       8X (1.4)                                                             (R0.05) TYP
+
+                                                                                                     8
+                   8X (0.45)       1
+
+
+                                                                                                                    (1.89)
+                                                                                                         SYMM     BASED ON
+                                                                                                                 0.125 THICK
+                                                                                                                   STENCIL
+                       6X (0.65)
+
+                                   4                                                                 5
+
+
+                 METAL COVERED                                                                      SEE TABLE FOR
+                 BY SOLDER MASK                                                                     DIFFERENT OPENINGS
+                                                                 (4.4)                              FOR OTHER STENCIL
+                                                                                                    THICKNESSES
+
+
+                                                   SOLDER PASTE EXAMPLE
+                                                        EXPOSED PAD 9:
+                                            100% PRINTED SOLDER COVERAGE BY AREA
+                                                          SCALE: 15X
+
+
+
+
+                                                   STENCIL         SOLDER STENCIL
+                                                  THICKNESS           OPENING
+                                                      0.1              1.76 X 2.11
+                                                    0.125         1.57 X 1.89 (SHOWN)
+                                                     0.15              1.43 X 1.73
+                                                    0.175              1.33 X 1.60
+
+
+
+
+                                                                                                                  4225481/A 11/2019
+NOTES: (continued)
+
+10. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.
+11. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+                                                                 www.ti.com
+                                                                                                         PACKAGE OUTLINE
+                                                                                         TM
+DGN0008G                                                 SCALE 4.000
+                                                                       PowerPAD                 HVSSOP - 1.1 mm max height
+                                                                                                                   SMALL OUTLINE PACKAGE
+
+
+
+                                                                                                                      C
+                                          5.05
+          A                                    TYP
+                                          4.75                                                                   0.1 C
+                                             PIN 1 INDEX AREA                                                                            SEATING
+                                                                                                                                         PLANE
+                                                                                         6X 0.65
+                                                                              8
+                1
+
+
+                                                                                              2X
+       3.1
+                                                                                              1.95
+       2.9
+      NOTE 3
+
+
+                4
+                                                                             5                  0.38
+                                                                                           8X
+                                                                                                0.25
+                                           3.1                                                   0.13     C A B
+                     B
+                                           2.9
+                                          NOTE 4
+
+
+
+
+                                                                                         0.23
+                                                                                         0.13
+
+
+
+                                       SEE DETAIL A
+
+                                                                       EXPOSED THERMAL PAD
+
+
+                4
+                                                                              5
+
+                                                                                                      0.25
+                                                                                                      GAGE PLANE
+         2.15
+         1.95                                9                                                                                             1.1 MAX
+
+
+
+                                                                              8
+                1                                                                                          0.7                               0.15
+                                                                                  0 -8                     0.4                               0.05
+                                                                                                                      DETAIL A
+                                                                                                                            A 20
+
+
+
+
+                                           1.846
+                                                                                                                          TYPICAL
+                                           1.646
+
+                                                                                                                                   4225480/C 11/2024
+                                                                                                   PowerPAD is a trademark of Texas Instruments.
+NOTES:
+
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+   per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+   exceed 0.15 mm per side.
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm per side.
+5. Reference JEDEC registration MO-187.
+
+
+
+
+                                                                       www.ti.com
+                                                                                            EXAMPLE BOARD LAYOUT
+                                                                                                TM
+DGN0008G                                                                      PowerPAD                HVSSOP - 1.1 mm max height
+                                                                                                                          SMALL OUTLINE PACKAGE
+
+
+
+
+                                                                     (2)
+                                                                   NOTE 9
+                             METAL COVERED
+                             BY SOLDER MASK                                  (1.57)
+                                                                             SYMM                    SOLDER MASK
+                                                                                                     DEFINED PAD
+                                        8X (1.4)                                                                            (R0.05) TYP
+
+
+                                                                                                                   8
+                 8X (0.45)       1
+
+                                                                                                                                       (3)
+                                                                                9                                         SYMM       NOTE 9
+
+                                                                                                                                (1.89)
+
+                        6X (0.65)                                                                                      (1.22)
+                                                                                                                   5
+                                    4
+
+                         ( 0.2) TYP
+                                 VIA                                                   (0.55)                          SEE DETAILS
+
+                                                                             (4.4)
+
+                                                       LAND PATTERN EXAMPLE
+                                                           EXPOSED METAL SHOWN
+                                                                SCALE: 15X
+
+
+
+
+                   SOLDER MASK                                                        METAL UNDER                         SOLDER MASK
+                                                      METAL
+                       OPENING                                                        SOLDER MASK                         OPENING
+
+
+          EXPOSED METAL                                                                                                          EXPOSED METAL
+
+                                        0.05 MAX                                                             0.05 MIN
+                                        ALL AROUND                                                           ALL AROUND
+
+                                NON-SOLDER MASK                                                          SOLDER MASK
+                                    DEFINED                                                                DEFINED
+                                  (PREFERRED)
+                                                           SOLDER MASK DETAILS
+                                                                    15.000
+
+
+
+
+                                                                                                                                   4225480/C 11/2024
+NOTES: (continued)
+
+6. Publication IPC-7351 may have alternate designs.
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+8. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown
+   on this view. It is recommended that vias under paste be filled, plugged or tented.
+9. Size of metal pad may vary due to creepage requirement.
+
+
+
+
+                                                                               www.ti.com
+                                                                              EXAMPLE STENCIL DESIGN
+                                                                                  TM
+DGN0008G                                                         PowerPAD              HVSSOP - 1.1 mm max height
+                                                                                                         SMALL OUTLINE PACKAGE
+
+
+
+
+                                                                 (1.57)
+                                                               BASED ON
+                                                              0.125 THICK
+                                                                STENCIL
+                                                                SYMM
+
+                                       8X (1.4)                                                             (R0.05) TYP
+
+                                                                                                     8
+                   8X (0.45)       1
+
+
+                                                                                                                    (1.89)
+                                                                                                         SYMM     BASED ON
+                                                                                                                 0.125 THICK
+                                                                                                                   STENCIL
+                       6X (0.65)
+
+                                   4                                                                 5
+
+
+                 METAL COVERED                                                                      SEE TABLE FOR
+                 BY SOLDER MASK                                                                     DIFFERENT OPENINGS
+                                                                 (4.4)                              FOR OTHER STENCIL
+                                                                                                    THICKNESSES
+
+
+                                                   SOLDER PASTE EXAMPLE
+                                                        EXPOSED PAD 9:
+                                            100% PRINTED SOLDER COVERAGE BY AREA
+                                                          SCALE: 15X
+
+
+
+
+                                                   STENCIL         SOLDER STENCIL
+                                                  THICKNESS           OPENING
+                                                      0.1              1.76 X 2.11
+                                                    0.125         1.57 X 1.89 (SHOWN)
+                                                     0.15              1.43 X 1.73
+                                                    0.175              1.33 X 1.60
+
+
+
+
+                                                                                                                  4225480/C 11/2024
+NOTES: (continued)
+
+10. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.
+11. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+                                                                 www.ti.com
+                                         IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+
+                                                Copyright © 2026, Texas Instruments Incorporated
+                                                                Last updated 10/2025
+

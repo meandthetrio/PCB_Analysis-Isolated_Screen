@@ -133,7 +133,13 @@ Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026
 - **Question:** Q-R2-5 (U5 intent)
 
 ## R2 Pass 5 — Signal-specific
-**Status: NOT STARTED** — SPI bus 88–124 mm (replaces I2C); USB pair; SD; MIDI; audio incl. new Headphones1 pot; U4 fan-out at 0.1 mm
+**Status: COMPLETE** (2026-10-07) — TPA6110A2 SLOS314B fetched and archived; MAX9814 values from datasheet copies (analog.com not allowed)
+- [x] SPI display bus: 89–124 mm, 0.3 mm, point-to-point — PASS (F-067)
+- [x] USB pair re-measured: 130.2/130.6 mm, 0.4 mm skew, 0.3 mm — F-028 fixed; SD 27–49 mm; MIDI unchanged — all PASS (F-068)
+- [x] Headphone amp vs SLOS314B: gain, HPF, Eq. 6, coupling cap all PASS; **F-031 (no ≥ 10 µF bulk) persists**; F-069 no 5 pF compensation cap
+- [x] Mic amp = MAX9814 EV-kit configuration (F-068)
+- [x] Analog/digital proximity scan: F-070 (AUDIO_OUT_R 0.20 mm from TAC_SWITCH_2 for 25 mm; AUDIO_IN_L beside the UART for 43 mm); analog runs 25–70 % shorter and 3× wider than Round 1 (F-030 improved)
+- **Deliverable:** ✅ `PASS5_SIGNALS_2026-10.md`; findings F-067…F-070
 
 ## R2 Pass 6 — Mechanical & assembly
 **Status: NOT STARTED** — silk artwork now on B.Silkscreen (28 MB); paste vs BOM; J8 display mounting vs `screen mounting solution.md`; one-spoke thermals (F-042) solderability; 10 B-paste flashes without mask openings (parser)
