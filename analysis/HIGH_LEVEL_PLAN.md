@@ -124,7 +124,13 @@ Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026
 - **Headlines:** connectivity is clean; only judgments remain — FB1 is a no-op (both pins GND), SPI1_MISO pin reused as a button (firmware TX-only), no external pull-ups/debounce
 
 ## R2 Pass 4 — Three-way BOM cross-check
-**Status: NOT STARTED** — U5 phantom (F-045), S1/S2 (F-003), LEDs (F-002/F-034), new lines U6/L1/C25/C26/R29–R34/D6/FB5–7; hand-solder list (F-026)
+**Status: COMPLETE** (2026-10-07)
+- [x] Full join: 37 BOM lines / 84 designators ↔ 100 sch ↔ 100 pcb; every row dispositioned; LCSC listing titles fetched for all 37 part numbers (archived)
+- [x] Values audit: 80/80 shared designators consistent (F-066)
+- [x] NEW F-063: C17 on two BOM lines (100 nF and 100 µF) — stale entry; F-064: U5 = L7805 DPAK + S1/S2 with no positions; F-065: L1 footprint is 0805 for a 2.0 × 1.6 mm inductor
+- [x] F-002/F-034 (LEDs), F-003, F-026 persist; F-025 closed
+- **Deliverable:** ✅ `PASS4_BOM_2026-10.md`; findings F-063…F-066
+- **Question:** Q-R2-5 (U5 intent)
 
 ## R2 Pass 5 — Signal-specific
 **Status: NOT STARTED** — SPI bus 88–124 mm (replaces I2C); USB pair; SD; MIDI; audio incl. new Headphones1 pot; U4 fan-out at 0.1 mm
