@@ -142,7 +142,14 @@ Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026
 - **Deliverable:** ✅ `PASS5_SIGNALS_2026-10.md`; findings F-067…F-070
 
 ## R2 Pass 6 — Mechanical & assembly
-**Status: NOT STARTED** — silk artwork now on B.Silkscreen (28 MB); paste vs BOM; J8 display mounting vs `screen mounting solution.md`; one-spoke thermals (F-042) solderability; 10 B-paste flashes without mask openings (parser)
+**Status: COMPLETE** (2026-10-07)
+- [x] Side assignment mapped: 8 parts front (display, encoders, main buttons, LEDs, mic), 92 back (everything else incl. all connectors and the artwork)
+- [x] NHD module projected from the Newhaven drawing: x 131–213 / y 77–124, clear of every front part; **no holes for its four Ø2.5 mounts → F-071**
+- [x] Silk decomposed: artwork on B.Silk overprints 63 back-side refdes → F-072; F-046 0.12 mm strokes
+- [x] Paste/mask: all three exposed pads stencilled (the 10 "paste-without-mask" flashes are KiCad EP sub-pads), top stencil = LEDs only (F-034 persists), 0 courtyard overlaps, no fiducials (F-073)
+- [x] F-032 persists (no chassis holes); F-042 closed as accepted
+- **Deliverable:** ✅ `PASS6_MECHANICAL_2026-10.md`; findings F-071…F-073
+- **Questions:** Q-R2-6 (which side faces the user), Q-R2-7 (module mounting)
 
 ## R2 Final — Synthesis
 **Status: NOT STARTED**

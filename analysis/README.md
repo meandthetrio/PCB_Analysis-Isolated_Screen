@@ -9,6 +9,7 @@ Start here: **`FINAL_REPORT.md`** — the tiered red-flag summary, including the
 - `PASS3_CONNECTIVITY_2026-10.md` — Round 2 Pass 3: netlist parity, pin-by-pin Daisy/Newhaven check, ERC disposition, F-056…F-062
 - `PASS4_BOM_2026-10.md` — Round 2 Pass 4: three-way BOM join + LCSC identity check, F-063…F-066
 - `PASS5_SIGNALS_2026-10.md` — Round 2 Pass 5: SPI/USB/SD/MIDI/audio, F-067…F-070
+- `PASS6_MECHANICAL_2026-10.md` — Round 2 Pass 6: sides, display-module projection, silk, paste/mask, holes, F-071…F-073
 - `datasheets_2026-10/` — archived PDFs + text: TPS6217x, Daisy Seed v1.2.0, Cree CLS6B-FKW, NHD-2.7-12864WDW3 (fetched 2026-10-07)
 - `baseline_2026-10/` — Round 2 ERC/DRC JSON and parser output (stock rules + JLCPCB-minimum copy)
 - `FINAL_REPORT.md` — final summary, Tiers 1–4, questions for Trey

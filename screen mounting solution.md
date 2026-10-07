@@ -1,3 +1,5 @@
+> **Superseded (2026-10-07):** the Round 2 files use a Newhaven NHD-2.7-12864WDW3 module on a 20-pin header (J8), not the Crystalfontz COG panel described here. See `analysis/PASS6_MECHANICAL_2026-10.md` §3 and finding F-071 for the module's footprint projection and mounting-hole positions. This note is kept for the COG alternative only.
+
 # Screen Mounting Solution — Crystalfontz CFAL12864G-024W OLED
 
 **Module:** [CFAL12864G-024W](https://www.crystalfontz.com/product/cfal12864g024w-128x64-2-4inch-white-oled-module) — 128×64 2.4" white OLED
