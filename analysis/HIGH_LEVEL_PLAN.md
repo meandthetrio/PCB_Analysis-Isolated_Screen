@@ -105,7 +105,7 @@ Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026
 - **Carried to Pass 6:** 10 B-paste flashes without mask openings; silk artwork regions
 
 ## R2 Pass 2 — Power distribution
-**Status: COMPLETE** (2026-10-07) — caveat: all datasheet hosts blocked by the session network policy; thresholds from search-engine extracts + LCSC listings (see report §7)
+**Status: COMPLETE** (2026-10-07) — datasheets fetched the same day after the hosts were allowed and archived in `analysis/datasheets_2026-10/` (TPS6217x Rev E, Daisy v1.2.0, Cree Rev 5, NHD Rev 6); F-050/F-051 upgraded to confirmed, Cree pinout verified for F-052
 - [x] Rail topology mapped from the netlist: bridge → FB3–FB6 → D6 → two 3.3 Ω/100 µF RC ladders (Daisy branch, display+LED branch) → TPS62172 buck → OLED
 - [x] Current/voltage budget: display 345/375 mA at 3.3 V dominates; main path ≈ 0.30–0.49 A; Daisy VIN ≈ 5.8 V worst case (in range)
 - [x] Decoupling audit (nearest same-net cap per IC power pin) and rail copper/IPC-2221 table

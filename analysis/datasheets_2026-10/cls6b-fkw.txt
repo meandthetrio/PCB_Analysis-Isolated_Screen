@@ -1,0 +1,495 @@
+                    PRODUCT FAMILY DATA SHEET
+
+
+
+
+CLS6B-FKW: PLCC6 3 in 1 SMD LED
+
+
+
+
+PRODUCT DESCRIPTION                                                FEATURES                                                            APPLICATIONS
+These SMD LEDs are packaged in an                                  •    Size (mm): 4.7 x 1.5 x 1.3                                     •    Full-Color Video Screen
+industry standard PLCC6 package. These                             •    Dominant Wavelength                                            •    Decorative Lighting
+high performance tricolor SMT LEDs                                      Red (619 - 624nm)                                              •    Amusement
+                                                                        Green (520 - 535nm)
+are designed to work in a wide range of
+                                                                        Blue (462.5 - 475nm)
+applications. A wide viewing angle and
+high brightness make these LEDs suitable
+                                                                   •    Luminous Intensity (mcd)
+for indoor signage applications.                                        Red (560 - 1120)
+                                                                        Green (1120 - 2240)
+                                                                        Blue (252 - 505)
+
+
+                                                                   •    Moisture Sensitivity Level: 3
+                                                                   •    Lead-Free
+                                                                   •    RoHS Compliant
+
+
+
+
+                  Cree LED / 4001 E. Hwy. 54, Suite 2000 / Durham, NC 27713 USA / +1.919.313.5330 / www.cree-led.com
+
+
+                                                                                                                                                                                   1
+© 2021-2025 Cree LED. The information in this document is subject to change without notice. Cree®, the Cree logo and the Cree LED logo are registered                 CLD-CT1475
+trademarks of Cree LED.                                                                                                                                                    REV 5
+                    CLS6B-FKW: PLCC6 3 IN 1 SMD LED
+
+
+
+
+ABSOLUTE MAXIMUM RATINGS (TA = 25°C)
+
+                                                                                                              Absolute Maximum Rating
+                         Items                                 Symbol                                                                                                        Unit
+                                                                                               R                              G                         B
+
+    Forward Current Note 1                                         IF                         30                              20                        20                    mA
+
+    Peak Forward Current     Note 2
+                                                                   IFP                       200                              100                       100                   mA
+
+    Reverse Voltage                                                VR                          5                              5                         5                     V
+
+    Power Dissipation                                              PD                         78                              76                        76                   mW
+
+    Operation Temperature                                         Topr                                                   -40 ~ +85                                            °C
+
+    Storage Temperature                                           Tstg                                                  -40 ~ +100                                            °C
+
+    Junction Temperature                                           TJ                        110                              110                       110                   °C
+
+    Junction/ambient 1 chip on                                   RTHJA                       360                              475                       450                  °C/W
+
+    Junction/solder point 1 chip on                              RTHJS                       200                              330                       300                  °C/W
+
+    Junction/ambient 3 chip on                                   RTHJA                       510                              675                       690                  °C/W
+
+    Junction/solder point 3 chip on                              RTHJS                       280                              470                       420                  °C/W
+
+Note:
+1.      Single-color light
+2.      Pulse width ≤0.1 msec, duty ≤1/10.
+
+
+
+
+TYPICAL ELECTRICAL & OPTICAL CHARACTERISTICS (TA = 25°C)
+
+                                                                                                                                              Values
+                    Characteristics                               Condition                  Symbol                                                                                 Unit
+                                                                                                                         R                        G              B
+
+    Dominant Wavelength                                           IF = 20mA                    λDOM                 619~624                  520~535          462.5~475             nm
+
+    Spectral bandwidth at 50% IREL max                            IF = 20mA                     Δλ                      16                       30              22                 nm
+
+                                                                                               VF(avg)                  2.1                      3.1             3.1                 V
+    Forward Voltage                                               IF = 20 mA
+                                                                                              VF(max)                   2.6                      3.8             3.8                 V
+                                                                                               IV(min)                 560                      1120            252                 mcd
+    Luminous Intensity                                            IF = 20 mA
+                                                                                               IV(avg)                 770                      1500            350                 mcd
+    Reverse Current (max)                                          VR = 5 V                        IR                   10                       10              10                 μA
+
+*       Continuous reverse voltage can cause LED damage.
+
+
+
+
+                                                                                                                                                                                           2
+© 2021-2025 Cree LED. The information in this document is subject to change without notice. Cree®, the Cree logo and the Cree LED logo are registered                  CLD-CT1475
+trademarks of Cree LED.                                                                                                                                                     REV 5
+                    CLS6B-FKW: PLCC6 3 IN 1 SMD LED
+
+
+
+
+INTENSITY BIN LIMIT
+
+                 Red (20 mA)                                       Green (20 mA)                                       Blue (20 mA)
+
+    Bin Code       Min.(mcd)       Max.(mcd)         Bin Code        Min.(mcd)        Max.(mcd)         Bin Code        Min.(mcd)        Max.(mcd)
+
+       K               560              710               P              1120             1400              de              252              318
+      np               635              805              vw              1260             1600               G              280              355
+       M               710              900               Q              1400             1800              fg              318              403
+       qr              805             1010              xy              1600             2020               H              355              450
+       N               900             1120               R              1800             2240               hj             403              505
+
+*     Tolerance of measurement of luminous intensity is ±10%.
+
+
+
+
+COLOR BIN LIMIT
+
+                 Red (20 mA)                                       Green (20 mA)                                       Blue (20 mA)
+
+    Bin Code       Min.(nm)         Max.(nm)         Bin Code         Min.(nm)         Max.(nm)         Bin Code         Min.(nm)         Max.(nm)
+
+      RB               619              624              G7              520              525              B23             462.5            467.5
+                                                        G23             522.5            527.5              B4              465              470
+                                                         G8              525              530              B45             467.5            472.5
+                                                        G45             527.5            532.5              B5              470              475
+                                                         G9              530              535
+
+*     Tolerance of measurement of dominant wavelength is ±1 nm.
+
+
+
+
+                                                                                                                                                                     3
+© 2021-2025 Cree LED. The information in this document is subject to change without notice. Cree®, the Cree logo and the Cree LED logo are registered   CLD-CT1475
+trademarks of Cree LED.                                                                                                                                      REV 5
+                    CLS6B-FKW: PLCC6 3 IN 1 SMD LED
+
+
+
+
+ORDER CODE TABLE
+
+                                                                                  Luminous Intensity (mcd)                                Dominant Wavelength (nm)
+                      Kit Number                            Color                                                                                                              Package
+                                                                                                                                  Color                  Color       Max.
+                                                                                 Min.                        Max.                             Min.(nm)
+                                                                                                                                   Bin                    Bin        (nm)
+
+                                                             Red                 560                         1120                  RB            619      RB          624           Reel
+
+       CLS6B-FKW-CKNPRdehjBB792353                          Green                1120                        2240                  G7            520      G9          535           Reel
+                                                             Blue                252                         505                   B23          462.5      B5         475           Reel
+                                                                                    Any 1 Intensity bin from
+                                                             Red                                                                   RB            619      RB          624           Reel
+                                                                                       K(560) - N(1120)
+                                                                                    Any 1 Intensity bin from
+       CLS6B-FKW-CK1P1de1BB7C23R3                           Green                                                                    Any 1 hue bin from G7(520)-G9(535)             Reel
+                                                                                      P(1120) - R(2240)
+                                                                                    Any 1 Intensity bin from
+                                                             Blue                                                                    Any 1 hue bin from B23(462)-B5(475)            Reel
+                                                                                       de(252) - hj(505)
+
+
+
+
+Notes:
+•     The above kit numbers represent order codes that include multiple intensity-bin and color-bin codes. Only one intensity-bin code and one color-bin
+      code will be shipped on each bulk. Single intensity-bin code and single color-bin codes will not be orderable.
+•     Please refer to the HB LED Lamp Reliability Test Standards document for reliability test conditions.
+•     Please refer to the HB LED Lamp Soldering & Handling document for information about how to use this LED product safely.
+
+
+
+
+                                                                                                                                                                                           4
+© 2021-2025 Cree LED. The information in this document is subject to change without notice. Cree®, the Cree logo and the Cree LED logo are registered                  CLD-CT1475
+trademarks of Cree LED.                                                                                                                                                     REV 5
+                    CLS6B-FKW: PLCC6 3 IN 1 SMD LED
+
+
+
+
+GRAPHS
+
+The data below are collected from statistical figures that do not necessarily correspond to the actual parameters of each single LED.
+Hence, these data will be changed without further notice.
+
+
+
+
+                                                                                                                                                                     5
+© 2021-2025 Cree LED. The information in this document is subject to change without notice. Cree®, the Cree logo and the Cree LED logo are registered   CLD-CT1475
+trademarks of Cree LED.                                                                                                                                      REV 5
+                    CLS6B-FKW: PLCC6 3 IN 1 SMD LED
+
+
+
+
+GRAPHS
+
+The data below are collected from statistical figures that do not necessarily correspond to the actual parameters of each single LED.
+Hence, these data will be changed without further notice.
+
+
+
+
+                                                                                                                                                        °
+                                                                                                                                                        C
+                                                                                            °
+                                                                                            C
+                                                                                            °
+                                                                                            C
+
+
+
+
+                                                                                                                                                        °
+                                                                                                                                                        C
+
+
+
+
+                                                                                                                                                                         6
+© 2021-2025 Cree LED. The information in this document is subject to change without notice. Cree®, the Cree logo and the Cree LED logo are registered       CLD-CT1475
+trademarks of Cree LED.                                                                                                                                          REV 5
+                    CLS6B-FKW: PLCC6 3 IN 1 SMD LED
+
+
+
+
+CAUTIONS
+
+1. Cleaning
+
+•     When necessary, cleaning should occur only with isopropyl alcohol (IPA) at room temperature (25ºC) for a duration of no more than
+      one minute. Dry at room temperature for 15 minutes before use.
+•     The influence of ultrasonic cleaning on the SMD LED depends on factors such as ultrasonic power and the way the SMD LEDs are
+      mounted. Ultrasonic cleaning should be pre-qualified to ensure this will not cause damage to the SMD LEDs.
+
+
+2. Moisture-Proof Packing
+
+•     To prevent moisture absorption into SMD LEDs during the transportation and storage, the LEDs are packed in a moisture-barrier
+      bag. Desiccants and a humidity indicator are packed together with the LEDs as secondary protection.
+•     A humidity-indicator card inside the packing indicates the humidity level.
+
+
+3. Storage
+
+•     The shelf life of LEDs stored in the original sealed bag at <40ºC and <90%RH is 12 months. Baking is required if the shelf life has
+      expired.
+•     Before openning the packaging, check for air leaks in the bag.
+•     After the bag is opened, the SMD LEDs must be stored at < 30ºC and < 60% RH. Under these conditions, SMD LEDs must be used
+      (subject to reflow) within 168 hours. If the LEDs are not within 168 hours after removal from the bag, baking is required.
+•     To bake, place the SMD LEDs in an oven at 80ºC ±5ºC and relative humidity ≤10% RH for 24 hours.
+•     Take the material out of the packaging bag before baking. Do not open the oven door frequently during the baking process.
+
+
+4. Soldering
+
+a. Manual Soldering with a Soldering Iron
+
+•     Use of a soldering iron of less than 25 watts is recommended. The iron temperature must be kept below 315ºC and soldering time
+      no more than 2 seconds.
+•     The epoxy resin of an SMD LED should not contact the tip of the soldering iron.
+•     No mechanical stress should be exerted on the resin portion of an SMD LED during soldering.
+•     Handling of an SMD LED should be done only when the package has been cooled down to below 40ºC or less. This is to prevent
+      SMD LED failures due to thermal-mechanical stress during handling.
+
+
+
+
+                                                                                                                                                                     7
+© 2021-2025 Cree LED. The information in this document is subject to change without notice. Cree®, the Cree logo and the Cree LED logo are registered   CLD-CT1475
+trademarks of Cree LED.                                                                                                                                      REV 5
+                    CLS6B-FKW: PLCC6 3 IN 1 SMD LED
+
+
+
+
+CAUTIONS
+
+b. Reflow Soldering
+
+Temperature (top surface of the SMD LED) profile:
+
+
+
+
+                                                                                                      ℃
+                                                                                                      ℃
+
+                                               ℃
+                                                                                                     
+                                                                                                     ℃
+                                                                   
+                                                                   ℃℃
+                                 
+
+
+
+
+                                                                                                                          ℃
+
+
+                                                                       
+                                                                       
+
+
+
+
+                                                                                    
+
+
+
+NOTES
+
+•     SMD LEDs should not be modified after soldering. If modification cannot be avoided, the modifications must be pre-qualified to
+      avoid damaging the SMD LEDs.
+•     In case of 2 times reflow process, 2nd reflow process must be performed as soon as possible after the 1st reflow.
+                                                                                                                      Document No.: CREE-05
+•     No stress should be exerted on the package during soldering.
+                                                                                                                                                             Rev. NO.     :   16
+•     The PCB should not be wrapped after soldering; allow the PCB board and SMD LED to cool naturally.
+                                                        pick up SMD products during the process of SMT production . If handling is necessary, it should
+                                                        careful to pick up these products. The following two methods are necessary :
+
+NOTES
+
+•     The packaging sizes of these SMD products are very small and the resin is still soft after solidification. Users are required to handle with care.
+      Never touch the resin surface of SMD products.
+•     To avoid damaging the product’s surface and interior device, it is recommended to choose a special nozzle to pick up the SMD products during the
+                                                        Fig. 1a: For Small Top SMD                                    Fig. 1b: For Mini side 0.8mm SMD
+      process of SMT production. If handling is necessary, take special care when picking up these products. The following method is necessary:
+
+
+
+
+                                                       For Small Top SMD series , it is recommended to use rubber material Nozzle to pick up SMD prod
+                                                                                                                                                                              8
+© 2021-2025 Cree LED. The information in this document is subject to change without notice. Cree®, the Cree logo and the Cree LED logo are registered        CLD-CT1475
+trademarks of Cree LED.                                 figure size for reference :                                                                               REV 5
+
+                                                       a.) Circular Nozzle: inner diameter: Ø1.8mm+/-0.05mm, outer diameter: Ø2.3mm+/-0.05mm.
+                    CLS6B-FKW: PLCC6 3 IN 1 SMD LED
+
+
+
+
+MECHANICAL DIMENSIONS
+
+All dimensions are in mm.
+Tolerance of measurement of the dimension is ±0.1.
+
+
+
+
+NOTES
+
+RoHS Compliance
+The levels of RoHS restricted materials in this product are below the maximum concentration values (also referred to as the threshold
+limits) permitted for such substances, or are used in an exempted application, in accordance with EU Directive 2011/65/EC (RoHS2), as
+implemented January 2, 2013. RoHS Declarations for this product can be obtained from your Cree LED representative or from the Product
+Ecology section of the Cree LED website.
+
+
+Vision Advisory
+WARNING: Do not look at an exposed lamp in operation. Eye injury can result.
+
+
+
+
+                                                                                                                                                                     9
+© 2021-2025 Cree LED. The information in this document is subject to change without notice. Cree®, the Cree logo and the Cree LED logo are registered   CLD-CT1475
+trademarks of Cree LED.                                                                                                                                      REV 5
+                    CLS6B-FKW: PLCC6 3 IN 1 SMD LED
+
+
+
+
+KIT NUMBER SYSTEM
+
+
+Cree LED lamps are tested and sorted into performance bins. A bin is specified by ranges of color, forward voltage, and brightness.
+
+
+Cree LEDs are sold by order codes in combinations of bins called kits. Order codes are configured in the following manner:
+
+
+
+
+                                                                         C C C C C – Product Series
+
+                                                                                  D – Color
+                                                                                          G – Option
+                                                                                          S : Standoff
+                                                                                          N : No Standoff                                    T – Packaging Type
+                                                                                          B : Black Face                                     1 : Bulk Pack
+                                                                                          W : White Face                                     2 : Ammo Pack
+                                                                                          A : Black Body                                     3 : Tape & Reel (Roll Pack)
+                                                                                          C : Black Face and Black Side Wall                 4 : Tube Pack
+
+             CCCCC–DXG–XHHJJKKLLMMNNT
+                       H – Red Color Min. Intensity Range                                                                                N – Blue Color Max. Wavelength Range
+                       H – Red Color Max. Intensity Range                                                                                N – Blue Color Min. Wavelength Range
+
+                     J – Green Color Min. Intensity Range                                                                                M – Green Color Max. Wavelength Range
+
+                     J – Green Color Max. Intensity Range                                                                                M – Green Color Min. Wavelength Range
+                      K – Blue Color Min. Intensity Range                                                                                L – Red Color Max. Wavelength Range
+                      K – Blue Color Max. Intensity Range                                                                                L – Red Color Min. Wavelength Range
+
+
+
+
+                                                                                                                                                                                        10
+© 2021-2025 Cree LED. The information in this document is subject to change without notice. Cree®, the Cree logo and the Cree LED logo are registered                      CLD-CT1475
+trademarks of Cree LED.                                                                                                                                                         REV 5
+                    CLS6B-FKW: PLCC6 3 IN 1 SMD LED
+
+
+
+
+PACKAGING
+
+•     The boxes are not water resistant and they must be kept away from water and moisture.
+•     The LEDs are packed in cardboard boxes after packaging in normal or anti-electrostatic bags.
+•     Cardboard boxes will be used to protect the LEDs from mechanical shocks during transportation.
+•     The reel pack is applied in SMD LED.
+•     Max 3000 pcs per reel.
+
+
+
+
+                                                                           
+
+                                                                                                                        
+                                                                                                                         
+                                                     A
+                                                     v
+                                                    oi
+                                                    d
+                                                    M
+                                                   et
+                                                   a
+                                                   l
+                                                       AAA C
+                                                       vo
+                                                      oint
+                                                      dc
+                                                      Mt
+                                                     et
+                                                     a
+                                                     l
+
+
+
+
+                                                                           
+                                                           a
+                                                            CCC
+                                                            o
+                                                           nt
+                                                           a
+                                                           c
+                                                           t
+
+
+
+
+                                                                                              CC oba
+                                                                                                 obaltlt Free
+                                                                                                         Free
+
+                                                                                        
+
+
+
+
+                                                                                                                                                                     11
+© 2021-2025 Cree LED. The information in this document is subject to change without notice. Cree®, the Cree logo and the Cree LED logo are registered   CLD-CT1475
+trademarks of Cree LED.                                                                                                                                      REV 5
+

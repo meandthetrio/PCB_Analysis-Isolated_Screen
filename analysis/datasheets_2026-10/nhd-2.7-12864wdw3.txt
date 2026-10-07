@@ -1,0 +1,542 @@
+Product Speciﬁcation
+
+
+
+
+NHD-2.7-12864WDW3
+
+
+
+
+Newhaven Display International, Inc.
+2661 Galvin Court, Elgin, IL 60124 USA
+                                         REACH       RoHS
+Ph: 847.844.8795 | Fx: 847.844.8796      Compliant   Compliant
+www.newhavendisplay.com
+ Table of Contents
+Document Revision History .......................................................................................................................... 2
+Mechanical Drawing .................................................................................................................................... 3
+Pin Description ............................................................................................................................................ 4
+Interface Selection....................................................................................................................................... 5
+On-Board Jumper Options ........................................................................................................................... 5
+Electrical Characteristics .............................................................................................................................. 6
+Optical Characteristics ................................................................................................................................. 7
+Controller Information................................................................................................................................. 7
+Table of Commands ..................................................................................................................................... 8
+Timing Characteristics – OLED .................................................................................................................... 11
+Example Software Routines ....................................................................................................................... 15
+Quality Information ................................................................................................................................... 16
+
+
+
+
+Additional Resources
+     ➢ Support Forum: https://support.newhavendisplay.com/hc/en-us/community/topics
+     ➢ GitHub: https://github.com/newhavendisplay
+     ➢ Example Code: https://support.newhavendisplay.com/hc/en-us/categories/4409527834135-Example-Code/
+     ➢    Knowledge Center: https://www.newhavendisplay.com/knowledge_center.html
+     ➢ Quality Center: https://www.newhavendisplay.com/quality_center.html
+     ➢ Precautions for using LCDs/LCMs: https://www.newhavendisplay.com/specs/precautions.pdf
+     ➢ Warranty / Terms & Conditions: https://www.newhavendisplay.com/terms.html
+
+
+
+
+                                                                                                                                                            1
+Document Revision History
+ Revision     Date                               Description                           Changed By
+
+    -       06/09/2017                          Initial Release                           ML
+
+    1       07/25/2017                Update Storage Temperature range                    ML
+
+    2       05/12/2020       Included Additional Dimensions on Mechanical Drawing          AS
+
+    3       02/04/2021          Bezel Redesign; Updated 2D Mechanical Drawing              AS
+
+    4       02/26/2021          Rectified error in MPU Pin Assignment Summary              AS
+
+    5       08/17/2023        Minimum Supply Voltage Updated from 2.8V to 3.0V             KL
+
+    6       07/31/2024   Maximum Supply Voltage for Boost Converter Updated from 12V       KL
+                                                   to 5.5V
+
+
+
+
+                                                                                                    2
+          1                        2                               3                                    4                  5                         6                                      7                                             8
+
+    Mechanical Drawing
+A                                                                                                                                                                                                                                                              A
+
+
+
+
+                                                                                                                                                 1                                         20
+
+B                                                                                                                                                                                                                                                              B
+                                                       Active Area 2.7"
+                                                       128 x 64 Pixels
+
+
+
+
+C                                                                                                                                                                                                                                                              C
+
+
+
+                                                                                                                                                                                                                       Pin No.        Symbol
+                                                                                                                                                                                                                          1             Vss
+                          (0,28)                                                                                                                                                                                          2             Vdd
+                                            Detail A                                           Driver IC Memory Mapping               0.48                                                                                3         NC (BC_VDD)
+                        (0,0)                                                                  ( 256 x 64 in 480 x 128 )              0.45                                                                                4             D/C
+                                                                                                                                                                                                                          5             R/W
+                                                                                                                                                                                                                          6               E
+D                                                                                                                                                                                                                                                              D
+                                                                                                                                                                                                                          7             DB0
+
+
+
+
+                                                                                                                               0.45
+                                                                                                                               0.48
+                                                                                                                                                                                                                          8             DB1
+                                                                                                                                                                                                                          9             DB2
+                                                                                                                                                                                                                         10             DB3
+                                                                                                                                                                                                                         11             DB4
+                                                                                                                                                                                                                         12             DB5
+                                         Segment 366,367               Segment 112,113
+                                                                                                                                                                                                                         13             DB6
+                                                                                             (91, 63)
+                                         ( Column 1 )                    ( Column 128 )                                                                                                                                  14             DB7
+                                       Common 64                               Common 0                                               Detail A                                                                           15           N.C. (Vcc)
+                                       ( Row 64 )                              ( Row 64 )                                                                                                                                16             /RES
+E                                  Common 127                                  Common 63                                                                                                                                 17              /CS                   E
+                                   ( Row 1 )                                     ( Row 1 )
+                                                                                                                                                                                                                         18         /SHDN (N.C.)
+                                                                                                                                                                                                                         19              BS1
+                                                                                                                                                                                                                         20              BS0
+
+    Product Descrip�on: 2.7” 128x64 Graphic OLED                                                                                                          Standard Tolerance:
+
+    1. Driver IC: SSD1322                                                                                                                                 (Unless otherwise specified)
+                                                                                                                                                                                            Drawing/Part Number:                                   Revision:
+
+    2. Interface: 8-bit 6800/8080 Parallel, 3/4-wire SPI
+                                                                                                                                                           Linear:      ±0.3mm
+                                                                                                                                                                                                    NHD-2.7-12864WDW3                                    -
+
+
+    3. Power Requirement: 3.3V OLED
+                                                                                                                                                         Unless otherwise specified:        Drawn By:                    Approved By:
+                                                                                                                                                                                                        K. Lewis                        K. Lewis
+                                                                                                                                                         • Dimensions are in Millimeters
+                                                                                                                                                                                            Drawn Date:                  Approved Date:
+                                                                                                                                                         • Third Angle Projection                         08/18/2023                      08/18/2023
+F   4. Op�cal Features: White Color, An�-Glare, Full View                                                                                                 This drawing is solely the property of Newhaven Display International, Inc.
+                                                                                                                                                                                                                                                               F
+
+    5. Recommended Pin Header: 1x20pin 2.54mm pitch                                                                                                       The information it contains is not to be disclosed, reproduced or copied in
+                                                                                                                                                          whole or part without written approval from Newhaven Display.
+          1                        2                               3                                    4                  5                         6                                      7                                             8
+Pin Description
+Parallel Interface:
+ Pin No.     Symbol    External Connection Function Description
+    1           VSS        Power Supply    Ground
+    2          VDD         Power Supply    Supply Voltage for OLED module
+    3          NC               -          No Connect by default. Can be configured to power the boost converter
+            (BC_VDD)                       independently. (refer to On-Board Jumper Options section)
+    4          D/C            MPU          Data/Command select signal, D/C=0: Command; D/C=1: Data
+    5         R/W             MPU          6800 mode: Read/Write select signal, R/W=1: Read, R/W=0: Write
+              /WR                          8080 mode: Active LOW Write signal
+    6            E            MPU          6800 mode: Operation Enable signal. Falling edge triggered.
+               /RD                         8080 mode: Active LOW Read signal
+   7-14    DB0 – DB7          MPU          8-bit bi-directional Data Bus
+    15         NC              -           No Connect by default. Can be configured to power VCC independently.
+              (VCC)                        (refer to On-Board Jumper Options section)
+   16         /RES            MPU          Active LOW Reset signal
+   17          /CS            MPU          Active LOW Chip Select signal
+   18        /SHDN            MPU          Active LOW Shutdown signal for boost converter (internally pulled HIGH).
+   19          BS1            MPU          MPU Interface select signal
+   20          BS0            MPU          MPU Interface select signal
+
+Serial Interface:
+ Pin No.     Symbol    External Connection Function Description
+    1          VSS         Power Supply    Ground
+    2         VDD          Power Supply    Supply Voltage for OLED module
+    3          NC               -          No Connect by default. Can be configured to power the boost converter
+            (BC_VDD)                       independently. (refer to On-Board Jumper Options section)
+    4         D/C             MPU          Data/Command select signal, D/C=0: Command; D/C=1: Data
+                                           Tie LOW for 3-wire SPI
+   5-6        VSS          Power Supply    Ground
+    7        SCLK             MPU          Serial Clock signal
+    8        SDIN             MPU          Serial Data Input signal
+    9         NC                -          No Connect
+  10-14       VSS          Power Supply    Ground
+   15         NC                -          No Connect by default. Can be configured to power VCC independently.
+             (VCC)                         (refer to On-Board Jumper Options section)
+   16        /RES             MPU          Active LOW Reset signal
+   17         /CS             MPU          Active LOW Chip Select signal
+   18       /SHDN             MPU          Active LOW Shutdown signal for boost converter (internally pulled HIGH).
+
+   19         BS1             MPU          MPU Interface select signal
+   20         BS0             MPU          MPU Interface select signal
+
+
+
+
+                                                                                                                      4
+Interface Selection
+MPU Interface Pin Selections
+  Pin    6800 Parallel     8080 Parallel             3-wire Serial      4-wire Serial
+ Name 8-bit interface 8-bit interface                  Interface          Interface
+  BS1             1                  1                    0                    0
+  BS0             1                  0                    1                    0
+
+MPU Interface Pin Assignment Summary
+    Bus                    Data/Command Interface                                                   Control Signals
+ Interface   D7     D6     D5    D4    D3      D2                    D1        D0         E      R/W    /CS      D/C           /RES
+ 8-bit 6800                                 D[7:0]                                         E      R/W       /CS       D/C      /RES
+ 8-bit 8080                                 D[7:0]                                        /RD     /WR       /CS       D/C      /RES
+ 3-wire SPI                   Tie LOW                         NC     SDIN      SCLK         Tie LOW         /CS     Tie LOW    /RES
+ 4-wire SPI                   Tie LOW                         NC     SDIN      SCLK         Tie LOW         /CS       D/C      /RES
+
+
+
+On-Board Jumper Options
+Default Jumper Setting
+    R4        R5             R7                                             Description
+                                     OLED controller + Boost converter + OLED panel are powered from VDD (pin #2). This
+   Close       Open        Open
+                                     allows the full module to be powered by a single low-voltage supply.
+
+
+Jumper Option #1 - Independent Supply Voltage for Boost Converter (BC_VDD)
+   R4         R5         R7                                 Description
+                                     Boost converter + OLED panel are powered from BC_VDD (pin #3). OLED controller is
+   Open        Close       Open      still powered from VDD (pin #2). This allows for increased efficiency through the boost
+                                     converter by allowing a higher supply voltage at its input, BC_V DD (pin #3).
+
+
+Jumper Option #2 – External Supply Voltage for OLED Panel (VCC)
+   R4         R5         R7                                  Description
+                                     OLED panel is powered from VCC (pin #15) – boost converter is not used. OLED
+   Open        Open        Close     controller is still powered from VDD (pin #2). This allows for maximum module
+                                     efficiency, and drastically reduced total current consumption.
+
+
+        Default Jumper Setting                        Jumper Option #1                           Jumper Option #2
+
+
+
+
+For detailed electrical information on each jumper option, please see the Electrical Characteristics table below.
+
+
+
+                                                                                                                               5
+Electrical Characteristics
+                Item                    Symbol              Condition               Min.         Typ.       Max.        Unit
+ Operating Temperature Range               TOP             Absolute Max               -40          -         +85         ⁰C
+ Storage Temperature Range                 TST             Absolute Max               -40          -         +85         ⁰C
+                                                    Default Jumper Setting
+ Supply Voltage for Module                VDD                    -                    3.0        3.3         3.5         V
+ Supply Current for Module                IDD          VDD=3.3V, 100% ON               -         345         375        mA
+                                                      Jumper Option #1
+ Supply Voltage for Module                 VDD                   -                    3.0        3.3         3.5         V
+ Supply Current for Module                  IDD              VDD=3.3V                  -         190         305        µA
+ Supply Voltage for Boost Converter      BC_VDD                  -                    3.0        5.0         5.5         V
+ Supply Current for Boost Converter       IDD_BC     BC_VDD=5.0V, 100% ON              -         200         215        mA
+                                                      Jumper Option #2
+ Supply Voltage for Module                VDD                    -                   3.0         3.3         3.5         V
+ Supply Current for Module                IDD                VDD=3.3V                 -          180         300        µA
+ Supply Voltage for OLED Panel            VCC                    -                   14.5         15         15.5        V
+ Supply Current for OLED Panel            ICC           VCC=15V, 100% ON              -           60          70        mA
+
+  Sleep Mode Current                     IDD_SLEEP               -                     -          25           120        µA
+  “H” Level input                           VIH                  -                 0.8 * VDD       -           VDD         V
+  “L” Level input                           VIL                  -                    VSS          -        0.2 * VDD      V
+  “H” Level output                         VOH                   -                 0.9 * VDD       -           VDD         V
+  “L” Level output                         VOL                   -                    VSS          -        0.1 * VDD      V
+Note: The electrical characteristics shown above for Jumper Option #1 and Jumper Option #2 apply only when the on-board
+jumpers are configured accordingly. By default, only Default Jumper Setting supply voltage and current (in bold) need to be
+considered. For details, see On-Board Jumper Options section on previous page.
+
+
+
+
+                                                                                                                               6
+Optical Characteristics
+                Item                     Symbol               Condition                 Min.        Typ.        Max.     Unit
+                Top                         ϕY+                                             -           85          -       ⁰
+    Optimal
+                Bottom                       ϕY-                                            -           85          -       ⁰
+    Viewing                                                         -
+                Left                         θX-                                            -           85          -       ⁰
+    Angles
+                Right                       θX+                                             -           85          -       ⁰
+ Contrast Ratio                               Cr                    -                 >10,000:1          -          -       -
+                     Rise                     TR                    -                       -           10          -      µs
+ Response Time
+                     Fall                     TF                    -                       -           10          -      µs
+ Brightness                                   LV           50% Checkerboard                60           80          -    cd/m2
+                                               -         TOP =25°C, LV=80cd/m2          30,000           -          -     hrs
+ Lifetime
+                                               -         TOP =25°C, LV=60cd/m2          50,000           -          -     hrs
+Note: Lifetime at typical temperature is based on accelerated high-temperature operation. Lifetime is tested at
+average 50% pixels on and is rated as Hours until Half-Brightness. To extend the life of the display, lower values may
+be used for the contrast setting registers – see below table of commands for details.
+
+
+Controller Information
+Built-in SSD1322 Controller: https://support.newhavendisplay.com/hc/en-us/articles/4414477846679-SSD1322
+
+
+
+
+                                                                                                                                 7
+Table of Commands
+                                                  Code                                                                                           RESET
+   Instruction                                                                                                    Description
+                       D/C    HEX     DB7   DB6   DB5    DB4   DB3   DB2   DB1   DB0                                                             value
+Enable Grayscale        0      00      0     0     0      0     0     0     0     0    Enable the Grayscale table settings. (see command 0xB8)
+Table
+Set Column              0      15      0     0     0      1     0     1     0     1    Set column start and end address
+Address                 1    A[6:0]    *    A6    A5     A4    A3    A2    A1    A0    A[6:0]: Column start address. Range: 0-119d                 0
+                        1    B[6:0]    *    B6    B5     B4    B3    B2    B1    B0    B[6:0]: Column end address. Range: 0-119d                 119d
+Write RAM               0      5C      0     1     0      1     1     1     0     0    Enable MCU to write Data into RAM
+Command
+Read RAM                0     5D       0     1     0      1     1     1     0     1    Enable MCU to read Data from RAM
+Command
+Set Row Address         0      75      0     1     1      1     0     1     0     1    Set row start and end address
+                        1    A[6:0]    *    A6    A5     A4    A3    A2    A1    A0    A[6:0]: Row start address. Range: 0-127d                    0
+                        1    B[6:0]    *    B6    B5     B4    B3    B2    B1    B0    B[6:0]: Row end address. Range: 0-127d                    127d
+Set Re-map              0      A0      1     0     1      0     0     0     0     0    A[0] = 0; Horizontal Address Increment                      0
+                        1    A[5:0]    0     0    A5     A4     0    A2    A1    A0    A[0] = 1; Vertical Address Increment
+                        1     B[4]     *     *     0     B4     0     0     0     1    A[1] = 0; Disable Column Address remap                      0
+                                                                                       A[1] = 1; Enable Column Address remap
+                                                                                       A[2] = 0; Disable Nibble remap                              0
+                                                                                       A[2] = 1; Enable Nibble remap
+                                                                                       A[4] = 0; Scan from COM0 to COM[N-1]                        0
+                                                                                       A[4] = 1; Scan from COM[N-1] to COM0
+                                                                                       A[5] = 0; Disable COM split Odd/Even                        0
+                                                                                       A[5] = 1; Enable COM split Odd/Even
+                                                                                       B[4] = 0; Disable Dual COM mode                             0
+                                                                                       B[4] = 1; Enable Dual COM mode
+                                                                                       Note: A[5] must be 0 if B[4] is 1.
+Set Display Start       0     A1       1     0     1      0     0     0     0     1    Set display RAM display start line register from 0-127.     0
+Line                    1    A[6:0]    *    A6    A5     A4    A3    A2    A1    A0
+Set Display Offset      0     A2       1     0     1      0     0     0     1     0    Set vertical shift by COM from 0~127.                       0
+                        1    A[6:0]    *    A6    A5     A4    A3    A2    A1    A0
+Display Mode            0    A4~A7     1     0     1      0     0    X2    X1    X0    0xA4 = Entire display OFF                                 0xA6
+                                                                                       0xA5 = Entire display ON, all pixels Grayscale level 15
+                                                                                       0xA6 = Normal display
+                                                                                       0xA7 = Inverse display
+Enable Partial          0     A8       1     0     1      0     1     0     0     0    Turns ON partial mode.
+Display                 1    A[6:0]    0    A6    A5     A4    A3    A2    A1    A0    A[6:0] = Address of start row
+                        1    B[6:0]    0    B6    B5     B4    B3    B2    B1    B0    B[6:0] = Address of end row (B[6:0] > A[6:0])
+Exit Partial Display    0     A9       1     0     1      0     1     0     0     1    Exit Partial Display mode
+Function Selection      0     AB       1     0     1      0     1     0     1     1    A[0] = 0; External VDD
+                                                                                       A[0] = 1; Internal VDD regulator                            1
+
+
+                                                                                                                                                        8
+                    1     A[0]      0      0      0      0      0      0      0     A0
+Set Sleep Mode      0    AE~AF      1      0      1      0      1      1      1     X0     0xAE = Sleep Mode ON (display OFF)
+ON/OFF                                                                                     0xAF = Sleep Mode OFF (display ON)
+Set Phase Length    0     B1        1      0      1      1      0      0      0      1     A[3:0] = P1. Phase 1 period of 5-31 DCLK clocks                         9
+                    1    A[7:0]    A7     A6     A5     A4     A3     A2     A1     A0     A[7:4] = P2. Phase 2 period of 3-15 DCLK clocks                         7
+Set Display Clock   0     B3        1      0      1      1      0      0      1      1     A[3:0] = 0000; divide by 1                                              0
+Divide Ratio /      1    A[7:0]    A7     A6     A5     A4     A3     A2     A1     A0     A[3:0] = 0001; divide by 2
+Oscillator                                                                                 A[3:0] = 0010; divide by 4
+                                                                                           A[3:0] = 0011; divide by 8
+Frequency
+                                                                                           A[3:0] = 0100; divide by 16
+                                                                                           A[3:0] = 0101; divide by 32
+                                                                                           A[3:0] = 0110; divide by 64
+                                                                                           A[3:0] = 0111; divide by 128
+                                                                                           A[3:0] = 1000; divide by 256
+                                                                                           A[3:0] = 1001; divide by 512
+                                                                                           A[3:0] = 1010; divide by 1024
+                                                                                           A[3:0] >= 1011; invalid                                               1100b
+                                                                                           A[7:4] = Set the Oscillator Frequency. Frequency increases with the
+                                                                                           value of A[7:4]. Range 0000b~1111b.
+VSL / Display       0     B4        1      0      1      1      0      1      0      0     A[1:0] = 00b; Enable external VSL
+Enhancement         1    A[1:0]     1      0      1      0      0      0     A1     A0     A[1:0] = 10b; Internal VSL                                             10b
+                    1    B[7:3]    B7     B6     B5     B4     B3      1      0      1     B[7:3] = 11111b; Enhanced low GS display quality
+                                                                                           B[7:3] = 10110b; Normal                                               10110b
+
+Set GPIO            0     B5        1      0      1      1      0      1      0      1     A[1:0] = 00; GPIO0 input disabled
+                    1    A[3:0]     *      *      *      *     A3     A2     A1     A0     A[1:0] = 01; GPIO0 input enabled
+                                                                                           A[1:0] = 10; GPIO0 output LOW                                          10b
+                                                                                           A[1:0] = 11; GPIO0 output HIGH
+                                                                                           A[3:2] = 00; GPIO1 input disabled
+                                                                                           A[3:2] = 01; GPIO1 input enabled
+                                                                                           A[3:2] = 10; GPIO1 output LOW                                          10b
+                                                                                           A[3:2] = 11; GPIO1 output HIGH
+
+Set Second Pre-     0     B6        1      0      1      1       0      1      1      0    Sets the second precharge period                                      1000b
+charge Period       1    A[3:0]     *      *      *      *      A3     A2     A1     A0    A[3:0] = DCLKs
+Set Grayscale       0     B8        1      0      1      1       1      0      0      0    Sets the gray scale pulse width in units of DCLK. Range 0-180d.
+Table               1   A1[7:0]    A17    A16    A15    A14    A13    A12    A11    A10    A1[7:0] = Gamma Setting for GS1
+                    1   A2[7:0]    A27    A26    A25    A24    A23    A22    A21    A20    A2[7:0] = Gamma Setting for GS2
+                    1      .        .      .      .      .       .      .      .      .    .
+                    1      .        .      .      .      .       .      .      .      .    .
+                                                                                           .
+                    1      .        .      .      .      .       .      .      .      .
+                    1   A14[7:0]   A147   A146   A145   A144   A143   A142   A141   A140   A14[7:0] = Gamma Setting for GS14
+                    1   A15[7:0]   A157   A156   A155   A154   A153   A152   A151   A150   A15[7:0] = Gamma Setting for GS15
+
+                                                                                           Note: 0 < GS1 < GS2 < GS3 … < GS14 < GS15
+
+
+                                                                                                                                                                         9
+                                                                                    The setting must be followed by command 0x00.
+ Select Default      0    B9       1     0     1      1     1     0      0     1    Sets Linear Grayscale table
+ Linear Gray Scale                                                                  GS0 pulse width = 0
+ Table                                                                              GS0 pulse width = 0
+                                                                                    GS0 pulse width = 8
+                                                                                    GS0 pulse width = 16
+                                                                                    .
+                                                                                    .
+                                                                                    .
+                                                                                    GS0 pulse width = 104
+                                                                                    GS0 pulse width = 112
+ Set Pre-charge      0    BB       1     0     1      1     1      0     1     1    Set precharge voltage level.                                 0x17
+ Voltage             1   A[4:0]    *     *     *     A4    A3     A2    A1    A0    A[4:0] = 0x00; 0.20*VCC
+                                                                                    .
+                                                                                    .
+                                                                                    A[4:0] = 0x3E; 0.60*VCC
+ Set VCOMH           0    BE       1     0     1      1     1      1     1     0    Sets the VCOMH voltage level                                 0x04
+ Voltage             1   A[3:0]    *     *     *      *    A3     A2    A1    A0    A[3:0] = 0x00; 0.72*VCC
+                                                                                    .
+                                                                                    .
+                                                                                    A[3:0] = 0x04; 0.8*VCC
+                                                                                    .
+                                                                                    .
+                                                                                    A[3:0] = 0x07; 0.86*VCC
+ Set Contrast        0    C1       1      1     0     0     0      0     0     1    Double byte command to select 1 out of 256 contrast steps.   0x7F
+ Control             1   A[7:0]   A7     A6    A5    A4    A3     A2    A1    A0    Contrast increases as the value increases.
+ Master Contrast     0    C7       1      1     0     0     0      1     1     1    A[3:0] = 0x00; Reduce output for all colors to 1/16          0x0f
+ Control             1   A[3:0]    *      *     *     *    A3     A2    A1    A0    A[3:0] = 0x01; Reduce output for all colors to 2/16
+                                                                                    .
+                                                                                    .
+                                                                                    A[3:0] = 0x0E; Reduce output for all colors to 15/16
+                                                                                    A[3:0] = 0x0F; no change
+ Set Multiplex       0     CA      1      1     0     0     1      0     1     0    Set MUX ratio to N+1 MUX                                     127d
+ Ratio               1   A[6:0]    *     A6    A5    A4    A3     A2    A1    A0    N=A[6:0]; from 16MUX to 128MUX (0 to 14 are invalid)
+ Set Command         0     FD      1      1     1     1     1      1     0     1    A[2] = 0; Unlock OLED to enable commands                     0x12
+ Lock                1    A[2]     0      0     0     1     0     A2     1     0    A[2] = 1; Lock OLED from entering commands
+
+
+For detailed instruction information, view full SSD1322 datasheet here (pages 32-47):
+http://www.newhavendisplay.com/app_notes/SSD1322.pdf
+
+
+
+
+                                                                                                                                                        10
+Timing Characteristics – OLED
+6800-MPU Parallel Interface
+
+
+
+
+                                11
+8080-MPU Parallel Interface
+
+
+
+
+                              12
+Serial Interface (4-wire)
+
+
+
+
+                            13
+Serial Interface (3-wire)
+
+
+
+
+                            14
+Example Software Routines
+Code to initialize OLED:
+void NHD12864WDY3_Init(void){
+        digitalWrite(RES, LOW);    //pull /RES (pin #16) low
+        delayUS(200);              //keep /RES low for minimum 200µs
+        digitalWrite(RES, HIGH);   //pull /RES high
+        delayUS(200);              //wait minimum 200µs before sending commands
+        writeCommand(0xAE);        //display OFF
+        writeCommand(0xB3);        //set CLK div. & OSC freq.
+        writeData(0x91);
+        writeCommand(0xCA);        //set MUX ratio
+        writeData(0x3F);
+        writeCommand(0xA2);        //set offset
+        writeData(0x00);
+        writeCommand(0xAB);        //function selection
+        writeData(0x01);
+        writeCommand(0xA0);        //set re-map
+        writeData(0x16);
+        writeData(0x11);
+        writeCommand(0xC7);        //master contrast current
+        writeData(0x0F);
+        writeCommand(0xC1);        //set contrast current
+        writeData(0x9F);
+        writeCommand(0xB1);        //set phase length
+        writeData(0xF2);
+        writeCommand(0xBB);        //set pre-charge voltage
+        writeData(0x1F);
+        writeCommand(0xB4);        //set VSL
+        writeData(0xA0);
+        writeData(0xFD);
+        writeCommand(0xBE);        //set VCOMH
+        writeData(0x04);
+        writeCommand(0xA6);        //set display mode
+        writeCommand(0xAF);        //display ON
+}
+
+
+
+
+                                                                                  15
+Quality Information
+         Test Item                       Content of Test                          Test Condition            Note
+ High Temperature storage    Endurance test applying the high storage      +85⁰C, 240hrs                    2
+                             temperature for a long time.
+ Low Temperature storage     Endurance test applying the low storage       -40⁰C, 240hrs                    1,2
+                             temperature for a long time.
+ High Temperature            Endurance test applying the electric stress   +85⁰C, 240hrs                    2
+ Operation                   (voltage & current) and the high thermal
+                             stress for a long time.
+ Low Temperature             Endurance test applying the electric stress   -40⁰C, 240hrs                    1,2
+ Operation                   (voltage & current) and the low thermal
+                             stress for a long time.
+ High Temperature /          Endurance test applying the electric stress   +60⁰C, 90% RH, 240hrs            1,2
+ Humidity Storage            (voltage & current) and the high thermal
+                             with high humidity stress for a long time.
+ Thermal Shock resistance    Endurance test applying the electric stress   -40⁰C, 30min -> +25⁰C, 5min ->
+                             (voltage & current) during a cycle of low     +85⁰C, 30min = 1 cycle
+                             and high thermal stress.                      100 cycles
+
+ Vibration test              Endurance test applying vibration to          10-22Hz, 15mm amplitude.         3
+                             simulate transportation and use.              22-500Hz, 1.5G
+                                                                           30min in each of 3 directions
+                                                                           X, Y, Z
+
+ Atmospheric Pressure Test   Test the endurance of the display by          115mbar, 40hrs                   3
+                             applying atmospheric pressure to simulate
+                             transportation by air.
+ Static electricity test     Endurance test applying electric static       Air: ±8KV; 300Ω, 150pF
+                             discharge.                                    Contact: ±4KV; 300Ω, 150pF
+Note 1: No condensation to be observed.
+Note 2: Conducted after 2 hours of storage at 25⁰C, 0%RH.
+Note 3: Test performed on product itself, not inside a container.
+
+
+
+
+                                                                                                                   16
+
