@@ -115,7 +115,13 @@ Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026
 - **Questions:** Q-R2-2, Q-R2-3, Q-R2-4
 
 ## R2 Pass 3 — Connectivity
-**Status: NOT STARTED** — sch↔pcb netlist diff (110 sch nets vs 103 pcb); encoder clicks pin check (F-039); J8 NC pins vs NHD-2.7-12864WDW3 pinout; which LED2 wiring won (F-014); SWA (F-022); ERC 20 errors dispositioned
+**Status: COMPLETE** (2026-10-07)
+- [x] Full sch↔pcb netlist diff: 0 membership differences across 102 shared nets; 8 sch-only = USB-C SS pins absent from the 16-pin footprint (F-056)
+- [x] Encoder clicks confirmed routed + internal pull-up model verified in libDaisy source (F-057, closes F-007)
+- [x] Every input checked against the Daisy v1.2.0 pinout and the Newhaven 4-wire SPI table; TAC_SWITCH wiring verified against footprint pad geometry (F-062)
+- [x] All 20 ERC errors dispositioned (F-059); F-022 SWA persists; F-024 hygiene carries over
+- **Deliverable:** ✅ `PASS3_CONNECTIVITY_2026-10.md`; findings F-056…F-062
+- **Headlines:** connectivity is clean; only judgments remain — FB1 is a no-op (both pins GND), SPI1_MISO pin reused as a button (firmware TX-only), no external pull-ups/debounce
 
 ## R2 Pass 4 — Three-way BOM cross-check
 **Status: NOT STARTED** — U5 phantom (F-045), S1/S2 (F-003), LEDs (F-002/F-034), new lines U6/L1/C25/C26/R29–R34/D6/FB5–7; hand-solder list (F-026)
