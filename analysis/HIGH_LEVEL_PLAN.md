@@ -78,3 +78,41 @@ Governed by `SOURCE_OF_TRUTH.md`. Update the status line of each pass when it co
 - **Deliverable:** ✅ `FINAL_REPORT.md`
 
 **ALL PASSES COMPLETE.**
+
+---
+
+# Round 2 — 2026-10 file set
+Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026-10/`, root `.kicad_pcb/.kicad_sch/.kicad_pro`, and a 2026-10-06 BOM (Round 1 design files archived in `archive/rev1_2026-08/`). Same pass structure; same rules. One pass per session, reviewed between passes.
+
+## R2 Pass 0 — Environment & baselines
+**Status: COMPLETE** (2026-10-07)
+- [x] Inventory: Gerber set complete (9 layers + 2 drills + job); KiCad files + BOM received on request
+- [x] **Provenance proven**: re-plot from the new `.kicad_pcb` is byte-identical to the supplied Gerbers (copper/mask/paste/edge/drills) → single truth, F-036
+- [x] Parser `gerber_analyze.py` re-validated on the new set (hole/aperture/region counts vs raw file); now takes a directory argument
+- [x] ERC baseline 46 (20 errors) → `analysis/baseline_2026-10/erc_2026-10.json`
+- [x] DRC baseline 558 + **0 unconnected** (stock) and identical with JLCPCB minimums on a scratchpad copy → `drc_stock_2026-10.json`, `drc_jlcpcb_min_2026-10.json`
+- [x] Old↔new delta table (footprints, nets, widths, vias, pour, silkscreen, BOM)
+- **Deliverable:** ✅ `PASS0_BASELINE_2026-10.md`; findings F-036…F-045
+- **Headlines:** GND pour present and consistent; dup R21 gone; encoder clicks routed; 0.1 mm trace length 3850 → 73 mm; display moved from I2C to SPI with a new TPS62172 buck; new project-rule DRC errors (0.25 mm drills at U6, 3V3_D tracks 0.451 mm from edge, 9 one-spoke thermals); BOM adds a U5 that is not in the design
+- **Open question:** Q-R2-1 — has this set been fabbed?
+
+## R2 Pass 1 — Fab constraints
+**Status: NOT STARTED** — re-fetch JLCPCB capabilities live; measure F-040 (0.25 mm drills), F-041 (edge clearance), F-008 (P2 NPTH), annular rings (min 0.150 mm per parser), remaining 0.1 mm traces (F-037)
+
+## R2 Pass 2 — Power distribution
+**Status: NOT STARTED** — new topology (F-044): DSY_VIN / +9V_FLAG / D6 / 3.3 Ω series / 100 µF bank; TPS62172 buck (F-043) vs datasheet; LED drive re-derivation (F-001/F-018 not carried forward); starved thermals (F-042) on return paths
+
+## R2 Pass 3 — Connectivity
+**Status: NOT STARTED** — sch↔pcb netlist diff (110 sch nets vs 103 pcb); encoder clicks pin check (F-039); J8 NC pins vs NHD-2.7-12864WDW3 pinout; which LED2 wiring won (F-014); SWA (F-022); ERC 20 errors dispositioned
+
+## R2 Pass 4 — Three-way BOM cross-check
+**Status: NOT STARTED** — U5 phantom (F-045), S1/S2 (F-003), LEDs (F-002/F-034), new lines U6/L1/C25/C26/R29–R34/D6/FB5–7; hand-solder list (F-026)
+
+## R2 Pass 5 — Signal-specific
+**Status: NOT STARTED** — SPI bus 88–124 mm (replaces I2C); USB pair; SD; MIDI; audio incl. new Headphones1 pot; U4 fan-out at 0.1 mm
+
+## R2 Pass 6 — Mechanical & assembly
+**Status: NOT STARTED** — silk artwork now on B.Silkscreen (28 MB); paste vs BOM; J8 display mounting vs `screen mounting solution.md`; one-spoke thermals (F-042) solderability; 10 B-paste flashes without mask openings (parser)
+
+## R2 Final — Synthesis
+**Status: NOT STARTED**

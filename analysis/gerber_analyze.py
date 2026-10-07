@@ -3,7 +3,9 @@
 import re, math, sys, json
 from collections import defaultdict
 
-GDIR = "/Users/kyleriche/Desktop/PCB Analysis/Manifold_Gerb_LedFix"
+# Gerber directory: first CLI argument, else the fabbed LedFix set next to this script.
+import os
+GDIR = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Manifold_Gerb_LedFix")
 PFX = GDIR + "/WavetableController-"
 
 def parse_gerber(path):

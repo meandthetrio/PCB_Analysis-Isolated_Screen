@@ -1,24 +1,35 @@
 # PCB Analysis — WavetableController (Daisy Seed synth)
 
-**Read this first.** This folder holds a completed design review of Trey's "WavetableController" board — an Electrosmith Daisy Seed–based wavetable synth controller, 2-layer, 165×102 mm, designed in KiCad 9. The board has been fabbed twice at JLCPCB and the physical boards mostly work. The analysis (all passes complete, 2026-08-13) found several real defects and produced a rev-2 plan.
+**Read this first.** This folder holds a design review of Trey's "WavetableController" board — an Electrosmith Daisy Seed–based wavetable synth controller, 2-layer, 165×102 mm, designed in KiCad 9 — in two rounds:
 
-**If you are Claude opening this fresh:** the authoritative output is [analysis/FINAL_REPORT.md](analysis/FINAL_REPORT.md) (tiered red flags + open questions for Trey), backed by the full findings ledger F-001…F-035 in [analysis/FINDINGS.md](analysis/FINDINGS.md). Do not re-derive anything before checking those. Methodology and which-file-is-truth rules are in [analysis/SOURCE_OF_TRUTH.md](analysis/SOURCE_OF_TRUTH.md).
+- **Round 1 (2026-08, complete):** review of the boards that were fabbed twice at JLCPCB (`Manifold_Gerb_LedFix/`). Output: [analysis/FINAL_REPORT.md](analysis/FINAL_REPORT.md) + findings F-001…F-035 in [analysis/FINDINGS.md](analysis/FINDINGS.md).
+- **Round 2 (2026-10, in progress — Pass 0 complete):** review of a new, revised file set Trey sent on 2026-10-07 (`Manifold_Gerbs_2026-10/`, the root KiCad files, and a 2026-10-06 BOM). Output so far: [analysis/PASS0_BASELINE_2026-10.md](analysis/PASS0_BASELINE_2026-10.md) + findings F-036…F-045. Pass plan and status: [analysis/HIGH_LEVEL_PLAN.md](analysis/HIGH_LEVEL_PLAN.md) (Round 2 section at the end).
+
+**If you are Claude opening this fresh:** check `analysis/HIGH_LEVEL_PLAN.md` for the next NOT STARTED Round 2 pass and run exactly that one. Do not re-derive anything that is already in `FINDINGS.md`. Methodology and which-file-is-truth rules are in [analysis/SOURCE_OF_TRUTH.md](analysis/SOURCE_OF_TRUTH.md).
 
 ## Folder contents
 
 | Path | What it is |
 |---|---|
-| `WavetableController.kicad_pro` / `.kicad_sch` / `.kicad_pcb` | KiCad 9 design files, sent by Trey piecemeal (see provenance below) |
-| `Manifold_Gerb_LedFix/` | The Gerbers + drill files actually sent to JLCPCB ("LedFix" round, 2nd proto). **Fab truth for copper.** |
-| `ManifoldRe_BOM_NEW - Excel Format.xls` | JLCPCB-format BOM |
-| `analysis/` | The full review: FINAL_REPORT, findings ledger, SOURCE_OF_TRUTH, PASS1–6 reports, REV2 OLED plan, routing CSVs extracted from Gerbers, board SVG, parser script. Has its own [README](analysis/README.md) index. |
-| `screen mounting solution.md` | Mechanical mounting guide for the rev-2 Crystalfontz CFAL12864G-024W COG OLED (tape+gasket sandwich, plus 3D-printed bezel alternative) |
+| `WavetableController.kicad_pro` / `.kicad_sch` / `.kicad_pcb` | **Round 2** KiCad 9 design files (received 2026-10-07). Verified to be the exact source of `Manifold_Gerbs_2026-10/` (re-plot is byte-identical). The `.kicad_pcb` is 31.7 MB because the front-panel artwork lives on B.Silkscreen as ~3,900 polygons |
+| `Manifold_Gerbs_2026-10/` | **Round 2** Gerbers + drills, plotted 2026-10-07 from the files above. Whether this set has gone to fab is an open question (Q-R2-1) |
+| `ManifoldRe_BOM_NEW - Excel Format.xls` | **Round 2** JLCPCB-format BOM, saved 2026-10-06 (37 lines) |
+| `Manifold_Gerb_LedFix/` | **Round 1** Gerbers + drills actually sent to JLCPCB ("LedFix" round, 2nd proto, plotted 2026-07-22). **Fab truth for the boards that physically exist.** |
+| `archive/rev1_2026-08/` | Round 1 KiCad files + BOM, kept for reference. The `.kicad_pcb` there is the stale no-pour copy described below — never plot from it |
+| `analysis/` | Both rounds: FINAL_REPORT (Round 1), findings ledger, SOURCE_OF_TRUTH, PASS1–6 reports (Round 1), PASS0_BASELINE_2026-10 (Round 2), `baseline_2026-10/` ERC/DRC JSON, REV2 OLED plan, routing CSVs, board SVG, parser script. Has its own [README](analysis/README.md) index. |
+| `screen mounting solution.md` | Mechanical mounting guide for the Round-1-planned Crystalfontz CFAL12864G-024W COG OLED. Note: Round 2 files use a Newhaven NHD-2.7-12864WDW3 on SPI instead (F-043) — this guide needs revisiting |
 
-## Critical provenance warning
+## Critical provenance warning (Round 1 files — historical)
+
+**Resolved for Round 2:** the 2026-10 `.kicad_pcb` re-plots to byte-identical Gerbers, so the Round 2 set is a single consistent truth (F-036). The paragraph below describes the Round 1 files now in `archive/rev1_2026-08/`.
 
 Trey sent files reluctantly and in stages: Gerbers+BOM first, then .pro/.sch, then the .kicad_pcb last. File mtimes are transfer times, not edit times. The `.kicad_pcb` in this folder matches the LedFix Gerbers ~97% **but contains NO GND pour** (only 5 keepout zones), while the fabbed B.Cu Gerber has a 164×100 mm filled pour covering 44/63 GND pads. It is a stale/wrong version — **never regenerate Gerbers from this copy.** Standing ask: get Trey's real working .kicad_pcb (the one that shows a filled B.Cu pour when opened). Where sch and pcb disagree (e.g. LED2 wiring), the pcb matches the fabbed boards, so the schematic is the outlier.
 
-## Headline findings (details + evidence in analysis/)
+## Round 2 (2026-10) status after Pass 0
+
+What the new files show versus the fabbed board (details in `analysis/PASS0_BASELINE_2026-10.md`): GND pour present on both layers; duplicate R21 gone; encoder clicks routed; 0.1 mm trace length cut from 3850 mm to 73 mm; display moved from I2C to a Newhaven NHD-2.7-12864WDW3 on SPI with its own TPS62172 buck; power entry reworked. New project-rule DRC errors to size against JLCPCB in Pass 1: two 0.25 mm drills under U6, three +3V3_D tracks 0.451 mm from the board edge, nine single-spoke GND thermals. BOM adds a U5 that does not exist in the design.
+
+## Round 1 headline findings (fabbed LedFix boards; details + evidence in analysis/)
 
 - **Encoder push-buttons dead** — ENCL_CLICK / ENCR_CLICK have zero copper in the Gerbers (floating inputs; ENCR lands on a 3.3V-only Daisy pin). Fab-confirmed.
 - **RGB LEDs triple-broken** — LED1/LED2 (CLS6B-FKW) are unplaced (missing from BOM, though the paste stencil expects them), reverse-biased via 300Ω to +9V_FILT (never light either polarity), and three LED pins sit on Daisy's 3.3V-only pins 24/25/30.
@@ -44,5 +55,5 @@ Board changes either way: add 2.2k I2C pull-ups, remove J2/FB4/C14/C17/both R21s
 - **KiCad 9.0.9 (Linux / Claude Code on the web):** `kicad-cli` and the `pcbnew` Python module are on PATH. `.claude/hooks/session-start.sh` (a SessionStart hook) runs `tools/kicad_env_setup.sh` automatically in web sessions; run it by hand with `sudo tools/kicad_env_setup.sh` elsewhere. It installs the stock symbol/footprint libs and seed the user library tables (otherwise ERC/DRC add ~190 "library not found" warnings). `tools/kicad_check.sh` runs ERC, DRC, netlist, Gerber, SVG and PDF exports into `kicad_out/` (git-ignored) as a smoke test.
 - **Freerouting 2.4.1 autorouter** is installed by the same setup script (needs Java 25, installed alongside the system Java 21; `freerouting` wrapper on PATH runs it headless with analytics off). `tools/autoroute.py IN.kicad_pcb OUT.kicad_pcb [--passes N]` does DSN export → route → SES import. It temporarily renames the duplicate R21, because the Specctra exporter refuses boards with duplicate refdes (an independent confirmation of that finding). On the stale checked-in board, 2 passes took 53 unrouted connections to 5. Remaining lib warnings name Trey's private libs (`Retroactive_Custom_Parts`, `Jack_3.5mm_CUI_RetroactiveCustom`, `SOP-6_...(RetroactiveCustom)`), which only exist on his machine; footprints are embedded in the `.kicad_pcb`, so they are harmless. Note `pcbnew.LoadBoard(...).Zones()` returns 0 here because the 6 keepout zones live inside footprints, not at board level.
 - On Trey's Mac, KiCad 10.0.5 lives at `/Applications/KiCad.app` (kicad-cli at `Contents/MacOS/kicad-cli`; brew cask fails without sudo).
-- `analysis/gerber_analyze.py` is the Gerber parser/net-matcher that produced the routing CSVs. Other scratch scripts (pcb_parse.py, pcb_audit.py, DRC/ERC reports) lived in a session scratchpad and may be gone — regenerate from gerber_analyze.py patterns if needed.
+- `analysis/gerber_analyze.py DIR` is the Gerber parser that produced the routing CSVs (`DIR` defaults to `Manifold_Gerb_LedFix/`; pass `Manifold_Gerbs_2026-10` for Round 2). Other scratch scripts (pcb_parse.py, pcb_audit.py, DRC/ERC reports) lived in a session scratchpad and may be gone — regenerate from gerber_analyze.py patterns if needed.
 - Net names in the routing CSVs are geometrically inferred (anchored at Daisy pins, 6/6 validated on LED nets), not authoritative; `island_*` = unidentified copper.

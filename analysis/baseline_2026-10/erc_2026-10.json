@@ -1,0 +1,718 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-07T19:18:51+0000",
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "9.0.9",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/0f9c9f3c-9723-4215-9a6c-31cb29e9adf7",
+            "violations": [
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol A1 Pin 39 [VIN, Power input, Line]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 0.4699
+                            },
+                            "uuid": "f841ef08-9a49-44c5-a908-0d35814b5514"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol P2 Pin B10 [RX1-, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 2.0701
+                            },
+                            "uuid": "100fe132-e044-47d6-b771-7392867baa3c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol P2 Pin B11 [RX1+, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 2.0955
+                            },
+                            "uuid": "7e637da7-bd40-491a-8074-016bdd3e0a8d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol P2 Pin A3 [TX1-, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 2.1463
+                            },
+                            "uuid": "fbad0bf3-efb0-46e4-a359-081ead5a6a94"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol P2 Pin A2 [TX1+, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 2.1717
+                            },
+                            "uuid": "dd21e004-4cd3-4038-93ac-414db2d89201"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol P2 Pin A10 [RX2-, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 2.2225
+                            },
+                            "uuid": "7b2a26ad-a923-42b4-9e4f-7935acd9f895"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol P2 Pin A11 [RX2+, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 2.2479
+                            },
+                            "uuid": "197cca7b-3c60-48a3-b8c7-af2677550d8a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol P2 Pin B3 [TX2-, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 2.2987
+                            },
+                            "uuid": "0013f9fc-f7c0-4ad6-b6d3-52f640121aaa"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol P2 Pin B2 [TX2+, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 2.3241
+                            },
+                            "uuid": "5d331aaf-bac7-4054-b967-25996cb9c322"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol P2 Pin A8 [SBU1, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 2.3749
+                            },
+                            "uuid": "9e01dd57-d91e-49bb-8392-1b583c9e2251"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol P2 Pin B8 [SBU2, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 2.4003
+                            },
+                            "uuid": "3a2977b2-3d95-4b0d-8404-d3699571e42c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol J8 Pin 3 [Pin_3, Passive, Line]",
+                            "pos": {
+                                "x": 2.6035,
+                                "y": 1.2954
+                            },
+                            "uuid": "39c52e39-a4e0-41fb-85d3-39c47e6b94b0"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol J8 Pin 9 [Pin_9, Passive, Line]",
+                            "pos": {
+                                "x": 2.6035,
+                                "y": 1.4478
+                            },
+                            "uuid": "af1e713d-c021-4055-be44-f2c041879c89"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol J8 Pin 15 [Pin_15, Passive, Line]",
+                            "pos": {
+                                "x": 2.6035,
+                                "y": 1.6002
+                            },
+                            "uuid": "a349166d-c0e2-4c68-8635-7ec8c0d1a65b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol J8 Pin 18 [Pin_18, Passive, Line]",
+                            "pos": {
+                                "x": 2.6035,
+                                "y": 1.6764
+                            },
+                            "uuid": "6d356622-614b-4b84-b06f-180b345c6d80"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U4 Pin 5 [VDD, Power input, Line]",
+                            "pos": {
+                                "x": 0.9398,
+                                "y": 3.2258
+                            },
+                            "uuid": "55438945-4bd8-4bf7-9ac9-083da0abb157"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Label not connected to anything",
+                    "items": [
+                        {
+                            "description": "Label 'SWA'",
+                            "pos": {
+                                "x": 2.1844,
+                                "y": 3.5052
+                            },
+                            "uuid": "e66d6e82-d5e3-4e06-82f3-e16949fcab78"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR01 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 2.1209,
+                                "y": 3.6576
+                            },
+                            "uuid": "0a4d3404-4a63-4eef-a222-5a6a22c6552a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U6 Pin 2 [VIN, Power input, Line]",
+                            "pos": {
+                                "x": 4.3688,
+                                "y": 1.905
+                            },
+                            "uuid": "493da0db-d931-4585-bfbc-71993bc69c96"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U6 Pin 8 [PG, Open collector, Line]",
+                            "pos": {
+                                "x": 4.3688,
+                                "y": 2.0066
+                            },
+                            "uuid": "5a12fa35-108e-4f26-9712-b501a0cac3d5"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Retroactive_Custom_Parts'.",
+                    "items": [
+                        {
+                            "description": "Symbol A1 [Electrosmith_Daisy_Seed_Rev4]",
+                            "pos": {
+                                "x": 0.9144,
+                                "y": 0.8509
+                            },
+                            "uuid": "d2a33053-1032-47d5-aa19-1a2437187b2f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'SOP-6_3.8x4.1mm_P2.54mm(RetroactiveCustom)' not found in library 'Package_SO'.",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [H11L1]",
+                            "pos": {
+                                "x": 2.6162,
+                                "y": 0.4953
+                            },
+                            "uuid": "ae2af946-1302-4d26-8d6f-c61f18640074"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Retroactive_Custom_Parts'.",
+                    "items": [
+                        {
+                            "description": "Symbol J8 [Conn_01x20_Pin]",
+                            "pos": {
+                                "x": 2.5527,
+                                "y": 1.4732
+                            },
+                            "uuid": "57f84067-f5ff-4438-a120-f075a3c5afe8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Retroactive_Custom_Parts'.",
+                    "items": [
+                        {
+                            "description": "Symbol Headphones1 [R_Potentiometer_Dual]",
+                            "pos": {
+                                "x": 1.9558,
+                                "y": 2.3368
+                            },
+                            "uuid": "08965029-14ec-43e1-b77c-b2aab31b4303"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'MAX9814' doesn't match copy in library 'Amplifier_Audio'",
+                    "items": [
+                        {
+                            "description": "Symbol U4 [MAX9814]",
+                            "pos": {
+                                "x": 0.9398,
+                                "y": 3.3782
+                            },
+                            "uuid": "5b1b8b66-1598-4333-a61a-cc2398b0e2f0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Retroactive_Custom_Parts'.",
+                    "items": [
+                        {
+                            "description": "Symbol J1 [Barrel_Jack]",
+                            "pos": {
+                                "x": 3.6449,
+                                "y": 0.762
+                            },
+                            "uuid": "af8d346a-b82b-46ac-af57-233755c83c64"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'Barrel_Jack' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J1 [Barrel_Jack]",
+                            "pos": {
+                                "x": 3.6449,
+                                "y": 0.762
+                            },
+                            "uuid": "af8d346a-b82b-46ac-af57-233755c83c64"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Retroactive_Custom_Parts'.",
+                    "items": [
+                        {
+                            "description": "Symbol SW1 [SW_SPST]",
+                            "pos": {
+                                "x": 3.8227,
+                                "y": 0.7366
+                            },
+                            "uuid": "37a6e6f9-cae5-4d84-ae59-861de0f36b2c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Both GND and SWB are attached to the same items; GND will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR023 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 5.2832,
+                                "y": 2.6797
+                            },
+                            "uuid": "d2bda276-d5ee-4a6f-91d5-65d59d4136b8"
+                        },
+                        {
+                            "description": "Label 'SWB'",
+                            "pos": {
+                                "x": 2.1844,
+                                "y": 3.5306
+                            },
+                            "uuid": "555997f7-eaaa-4a5b-89fd-5ad113cd77af"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                },
+                {
+                    "description": "Footprint 'Jack_3.5mm_CUI_RetroactiveCustom' not found in library 'Connector_Audio'.",
+                    "items": [
+                        {
+                            "description": "Symbol J4 [AudioJack3]",
+                            "pos": {
+                                "x": 3.4417,
+                                "y": 3.0861
+                            },
+                            "uuid": "069ca55b-f20a-47ba-aac5-e874ca87bf07"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'Jack_3.5mm_CUI_RetroactiveCustom' not found in library 'Connector_Audio'.",
+                    "items": [
+                        {
+                            "description": "Symbol J5 [AudioJack3]",
+                            "pos": {
+                                "x": 3.4417,
+                                "y": 3.2766
+                            },
+                            "uuid": "188ea326-8762-4032-b79e-cc9ccc169f7c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'Jack_3.5mm_CUI_RetroactiveCustom' not found in library 'Connector_Audio'.",
+                    "items": [
+                        {
+                            "description": "Symbol J6 [AudioJack3]",
+                            "pos": {
+                                "x": 3.4417,
+                                "y": 3.4671
+                            },
+                            "uuid": "0b74f73c-94db-4d22-bd0d-93eab8a5af86"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'Jack_3.5mm_CUI_RetroactiveCustom' not found in library 'Connector_Audio'.",
+                    "items": [
+                        {
+                            "description": "Symbol J3 [AudioJack3]",
+                            "pos": {
+                                "x": 3.4417,
+                                "y": 3.6703
+                            },
+                            "uuid": "e598a0e6-45f7-4090-b549-02560d0b8496"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Footprint 'Jack_3.5mm_CUI_RetroactiveCustom' not found in library 'Connector_Audio'.",
+                    "items": [
+                        {
+                            "description": "Symbol J7 [AudioJack3]",
+                            "pos": {
+                                "x": 3.429,
+                                "y": 3.8735
+                            },
+                            "uuid": "06e193ee-d709-4309-9b64-0c9e59ae03c9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Retroactive_Custom_Parts'.",
+                    "items": [
+                        {
+                            "description": "Symbol TAC_SHIFT_R1 [SW_Push]",
+                            "pos": {
+                                "x": 4.5593,
+                                "y": 2.667
+                            },
+                            "uuid": "cb4af301-60ba-44d4-bd65-25572578463b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Retroactive_Custom_Parts'.",
+                    "items": [
+                        {
+                            "description": "Symbol TAC_SHIFT_L1 [SW_Push]",
+                            "pos": {
+                                "x": 4.5593,
+                                "y": 2.794
+                            },
+                            "uuid": "14fb3330-6574-47ad-98ff-f6b418501d96"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''.",
+                    "items": [
+                        {
+                            "description": "Symbol LED1 [CLS6B-FKW]",
+                            "pos": {
+                                "x": 4.5847,
+                                "y": 2.9972
+                            },
+                            "uuid": "aa0e7c08-0087-438e-a501-db63bd64aeb2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'CLS6B-FKW' doesn't match copy in library 'LED'",
+                    "items": [
+                        {
+                            "description": "Symbol LED1 [CLS6B-FKW]",
+                            "pos": {
+                                "x": 4.5847,
+                                "y": 2.9972
+                            },
+                            "uuid": "aa0e7c08-0087-438e-a501-db63bd64aeb2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Retroactive_Custom_Parts'.",
+                    "items": [
+                        {
+                            "description": "Symbol ENCL1 [RotaryEncoder_Switch]",
+                            "pos": {
+                                "x": 4.6863,
+                                "y": 3.2385
+                            },
+                            "uuid": "0faa46c6-bee7-49a8-bf73-8aadd3d4c18b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Retroactive_Custom_Parts'.",
+                    "items": [
+                        {
+                            "description": "Symbol ENCR1 [RotaryEncoder_Switch]",
+                            "pos": {
+                                "x": 4.6863,
+                                "y": 3.429
+                            },
+                            "uuid": "fb01982f-878e-4541-b69a-e4303139a7b8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Retroactive_Custom_Parts'.",
+                    "items": [
+                        {
+                            "description": "Symbol TAC_SWITCH_1 [SW_MEC_5E]",
+                            "pos": {
+                                "x": 5.1943,
+                                "y": 2.6924
+                            },
+                            "uuid": "8a065be5-e6fa-44fa-bb0d-e9895cc3056d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'SW_MEC_5E' doesn't match copy in library 'Switch'",
+                    "items": [
+                        {
+                            "description": "Symbol TAC_SWITCH_1 [SW_MEC_5E]",
+                            "pos": {
+                                "x": 5.1943,
+                                "y": 2.6924
+                            },
+                            "uuid": "8a065be5-e6fa-44fa-bb0d-e9895cc3056d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library ''.",
+                    "items": [
+                        {
+                            "description": "Symbol LED2 [CLS6B-FKW]",
+                            "pos": {
+                                "x": 5.08,
+                                "y": 2.9972
+                            },
+                            "uuid": "7bcf4c88-f698-40da-9407-edfd3e6819f2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'CLS6B-FKW' doesn't match copy in library 'LED'",
+                    "items": [
+                        {
+                            "description": "Symbol LED2 [CLS6B-FKW]",
+                            "pos": {
+                                "x": 5.08,
+                                "y": 2.9972
+                            },
+                            "uuid": "7bcf4c88-f698-40da-9407-edfd3e6819f2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Retroactive_Custom_Parts'.",
+                    "items": [
+                        {
+                            "description": "Symbol TAC_SWITCH_2 [SW_MEC_5E]",
+                            "pos": {
+                                "x": 5.1943,
+                                "y": 2.8575
+                            },
+                            "uuid": "aa3fa414-5be8-440a-b17a-e1285d34e172"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'SW_MEC_5E' doesn't match copy in library 'Switch'",
+                    "items": [
+                        {
+                            "description": "Symbol TAC_SWITCH_2 [SW_MEC_5E]",
+                            "pos": {
+                                "x": 5.1943,
+                                "y": 2.8575
+                            },
+                            "uuid": "aa3fa414-5be8-440a-b17a-e1285d34e172"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                }
+            ]
+        }
+    ],
+    "source": "WavetableController.kicad_sch"
+}

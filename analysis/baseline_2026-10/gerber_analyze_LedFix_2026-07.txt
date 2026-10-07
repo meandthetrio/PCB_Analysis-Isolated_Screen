@@ -1,0 +1,46 @@
+
+== F_Cu ==
+  apertures: 20, flashes: 215, draw segments: 303, regions: 0
+  bbox: X 92.50..244.00  Y -161.90..-62.76  (151.5 x 99.1 mm)
+  track widths used (mm: segment count): {0.1: 271, 0.2: 32}
+
+== B_Cu ==
+  apertures: 46, flashes: 385, draw segments: 512, regions: 2
+  bbox: X 91.09..249.40  Y -162.10..-61.70  (158.3 x 100.4 mm)
+  track widths used (mm: segment count): {0.1: 278, 0.2: 234}
+
+== F_Mask ==
+  apertures: 20, flashes: 151, draw segments: 0, regions: 0
+  bbox: X 104.90..244.00  Y -160.62..-62.75  (139.1 x 97.9 mm)
+
+== B_Mask ==
+  apertures: 46, flashes: 321, draw segments: 0, regions: 0
+  bbox: X 91.09..249.40  Y -161.25..-62.75  (158.3 x 98.5 mm)
+
+== F_Paste ==
+  apertures: 1, flashes: 12, draw segments: 0, regions: 0
+  bbox: X 144.60..199.40  Y -138.70..-135.05  (54.8 x 3.7 mm)
+
+== B_Paste ==
+  apertures: 29, flashes: 192, draw segments: 0, regions: 0
+  bbox: X 91.09..249.40  Y -161.25..-63.50  (158.3 x 97.8 mm)
+
+== Edge_Cuts ==
+  apertures: 1, flashes: 0, draw segments: 132, regions: 0
+  bbox: X 89.58..254.68  Y -162.70..-61.10  (165.1 x 101.6 mm)
+  track widths used (mm: segment count): {0.2: 132}
+
+== Drills ==
+  PTH: 170 holes {0.3: 93, 0.65: 2, 1.0: 18, 1.1: 48, 1.3: 4, 1.85: 5}, slots: 33
+  NPTH: 28 holes {0.65: 2, 1.2: 25, 2.0: 1}, slots: 1 [((150.15, -65.75), (149.65, -65.75), 1.5)]
+
+  Edge bbox: (89.580609, -162.699998, 254.68058499999998, -61.099999999999994)
+  sample PTH: [(92.5, -157.5, 0.3), (97.25, -159.084, 0.3), (98.0, -161.75, 0.3)]
+
+== PTH vs F_Cu: matched 170/170, min annular ring 0.150 mm
+
+== PTH vs B_Cu: matched 170/170, min annular ring 0.150 mm
+
+PTH 0.3mm (via) count: 93
+F paste flashes: 12, without matching mask opening: 0; mask flashes: 151
+B paste flashes: 192, without matching mask opening: 8; mask flashes: 321
