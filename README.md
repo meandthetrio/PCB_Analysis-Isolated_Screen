@@ -3,7 +3,7 @@
 **Read this first.** This folder holds a design review of Trey's "WavetableController" board — an Electrosmith Daisy Seed–based wavetable synth controller, 2-layer, 165×102 mm, designed in KiCad 9 — in two rounds:
 
 - **Round 1 (2026-08, complete):** review of the boards that were fabbed twice at JLCPCB (`Manifold_Gerb_LedFix/`). Output: [analysis/FINAL_REPORT.md](analysis/FINAL_REPORT.md) + findings F-001…F-035 in [analysis/FINDINGS.md](analysis/FINDINGS.md).
-- **Round 2 (2026-10, all passes complete, final report in draft):** review of the revised file set Trey sent on 2026-10-07 (`Manifold_Gerbs_2026-10/`, the root KiCad files, and a 2026-10-06 BOM). Output: [analysis/FINAL_REPORT_2026-10.md](analysis/FINAL_REPORT_2026-10.md) + findings F-036…F-073, backed by `PASS0…PASS6_*_2026-10.md`. Pass plan and status: [analysis/HIGH_LEVEL_PLAN.md](analysis/HIGH_LEVEL_PLAN.md) (Round 2 section at the end).
+- **Round 2 (2026-10, complete):** review of the revised file set Trey sent on 2026-10-07 (`Manifold_Gerbs_2026-10/`, the root KiCad files, and a 2026-10-06 BOM). Output: [analysis/FINAL_REPORT_2026-10.md](analysis/FINAL_REPORT_2026-10.md) + findings F-036…F-073, backed by `PASS0…PASS6_*_2026-10.md`. Pass plan and status: [analysis/HIGH_LEVEL_PLAN.md](analysis/HIGH_LEVEL_PLAN.md) (Round 2 section at the end).
 
 **If you are Claude opening this fresh:** Round 2 is complete; the next step is whatever the user asks after reviewing `analysis/FINAL_REPORT_2026-10.md` (likely edits to the asks, then a shareable version for Trey, then Round 3 on his revised files). Do not re-derive anything that is already in `FINDINGS.md`. Methodology and which-file-is-truth rules are in [analysis/SOURCE_OF_TRUTH.md](analysis/SOURCE_OF_TRUTH.md).
 

@@ -1,4 +1,6 @@
-# WavetableController Round 2 — Final Red-Flag Report (DRAFT for review)
+# WavetableController Round 2 — Final Red-Flag Report (technical version)
+
+> **Shared version for Trey:** the plain-language report, reviewed with the user on 2026-10-07, is the Claude Doc "WavetableController Rev 2 Design Review" (https://claude.ai/code/artifact/6e30a194-1011-47d6-9039-bcceaed10b4a). It drops the back-silk artwork item (ruled irrelevant), treats the display, encoders and LEDs as hand-assembled, and omits finding IDs. This file remains the traceable technical version.
 **Date:** 2026-10-07 · **Files reviewed:** the 2026-10-07 KiCad set (`WavetableController.kicad_sch/.kicad_pcb/.kicad_pro`), `Manifold_Gerbs_2026-10/` (proven byte-identical to a re-plot of that board, F-036) and the 2026-10-06 BOM · **Scope:** Round 2 Passes 0–6 complete (`HIGH_LEVEL_PLAN.md`), ledger entries F-036…F-073 (`FINDINGS.md`), every measurement scripted, every threshold fetched and archived (`datasheets_2026-10/`, `baseline_2026-10/`) per `SOURCE_OF_TRUTH.md`.
 **Verification state:** 37 of 38 Round 2 findings confirmed; 1 plausible (F-065, Murata land pattern not fetched). Seven questions need Trey (⏳).
 **Status of this set:** treated as the **pre-fab candidate** (⏳ Q1). Nothing below is "fabbed OK twice" — that only applies to the Round 1 boards.
