@@ -60,6 +60,19 @@ Round 1's original complaint was display noise. Rev 2 fixed the structural cause
 
 No noise effect: F-063/F-064 BOM, F-071 mounting, Tier 3 margins, F-065 pads (weak joint → intermittent at most). Fixing F-052 removes six resistors from the 9 V ladder.
 
+## SD card 4-bit mode (asked 2026-10-07)
+Nothing on the Rev 2 layout prevents SDMMC 4-bit; the Round 1 failure most likely came from power at the card, which is unchanged.
+
+| Requirement | Rev 2 | Round 1 |
+|---|---|---|
+| D0–D3, CMD, CLK on SDMMC1 pins (Daisy 2–7) and the right microSD pads | ✓ | ✓ |
+| 47 k pull-ups on CMD, D0–D3 (Daisy Fig 1.6) | ✓ R7–R11 | ✓ |
+| Length / skew | 27–49 mm @ 0.3 mm, skew 22 mm ≈ 150 ps vs 20 ns bit at 50 MHz | 89–108 mm, mostly 0.1 mm |
+| Crosstalk | no SD line within 0.6 mm of another trace for > 2 mm | — |
+| **Power at P1 VDD** | **120 mm to the only cap (C1 100 nF)** — F-054 | same, over 0.1 mm |
+
+4-bit HS bursts ≥ 100 mA with no local cap → rail dips at the card → CRC errors → fallback/failure. Fix: 100 nF + 10 µF at P1. libDaisy `SdmmcHandler::Config::Defaults()` = `BITS_4`, `FAST` (50 MHz), so a Round 1 build that only worked at 1-bit points at the board. Bench test on a Round 1 board: 10 µF across P1 VDD/VSS, retry 4-bit.
+
 ## What passed (verified, cited)
 Provenance: board file ↔ Gerbers byte-identical; sch ↔ pcb 0 differences; DRC 0 unconnected. Power: AGND/DGND tied; VIN in range; 35 V electrolytics on 9 V nodes; rail copper 0.5 mm (1.45 A) / 0.3 mm (1.0 A); GND zone on both layers with 225 stitching vias; local caps at every IC within 6 mm; buck LC per TI reference; EN/VOS/PG per datasheet. Connectivity: every Daisy pin on the right function; display connector matches Newhaven's 4-wire SPI table exactly (BS1/BS0, D/C, SCLK, SDIN, /RES, /CS, N/C pins); tactile switches wired correctly for the footprint; USB CC 5.1 k; SD 47 k pull-ups; MIDI in = TRS type A with the opto's own 270 Ω test-condition pull-up, out = 10/33 Ω 3.3 V practice; mic amp = MAX9814 EV-kit configuration pin for pin; USB ESD pinout correct. Fab: vias 0.6/0.3; copper spacing 0.15 vs 0.10; hole-to-hole 0.50; PTH/via/NPTH-to-track all above minimum; mask bridges 0.15 vs 0.10; drills in range. BOM: 80/80 shared designators match the LCSC listings. Mechanical: 0 courtyard overlaps; all three exposed pads stencilled; outline identical to the fabbed board; nothing under the display on the front.
 
