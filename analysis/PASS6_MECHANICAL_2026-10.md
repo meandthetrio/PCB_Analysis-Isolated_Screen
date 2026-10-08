@@ -56,6 +56,7 @@ DRC: 199 `silk_overlap` = 135 footprint-outline-segment × artwork + **63 refere
 - **F-071 (JUDGMENT, strong):** display module has four Ø2.5 mounting holes and the board provides none — 82 × 47 mm glass module on a 20-pin solder cantilever. Add four NPTH at (135.0, 79.3), (209.2, 79.3), (135.0, 121.8), (209.2, 121.8) ±0.3 mm and standoffs matching the header height; retire `screen mounting solution.md` or re-point it at this module.
 - **F-072 (JUDGMENT → VIOLATION if the back is not the legend side):** panel artwork moved to B.Silkscreen and overprints 63 of the 92 back-side reference designators.
 - **F-073 (PASS):** all three exposed pads stencilled; mask bridges ≥ 0.15 mm vs 0.10 mm min; courtyards 0 overlaps; nothing under the display on the front; module projection clear of every part by ≥ 7.5 mm.
+- **F-074 (VIOLATION of the F-071 fix as first written, added 2026-10-08):** the projected top-left hole (135.0, 79.3) is 1.44 mm from SW1 pad 3. Resolution: shift J8 down 5 mm → holes (135.0, 84.3), (209.2, 84.3), (135.0, 126.8), (209.2, 126.8), Ø2.4 for M2; U1/R2 move ≈ 3 mm from the top-right hole; reroute TAC_SHIFT_L, ENCR_A, USART1_RX/TX; module lower edge 0.9 mm from TAC_SWITCH_1/2; trim SW1/C23/C24 tails. Full scan in `FINDINGS.md`.
 - Persisting: F-032 (no chassis holes), F-034 (top stencil = missing LEDs), F-026 (hand-solder list), F-046 (0.12 mm silk).
 - Closed: F-010 (corrected in Pass 1), F-042 (accepted).
 

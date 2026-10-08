@@ -145,6 +145,7 @@ Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026
 **Status: COMPLETE** (2026-10-07)
 - [x] Side assignment mapped: 8 parts front (display, encoders, main buttons, LEDs, mic), 92 back (everything else incl. all connectors and the artwork)
 - [x] NHD module projected from the Newhaven drawing: x 131–213 / y 77–124, clear of every front part; **no holes for its four Ø2.5 mounts → F-071**
+- [x] 2026-10-08 follow-up: projected top-left hole sits on SW1 pad 3 → **F-074**; fix = J8 down 5 mm, holes at (135.0, 84.3) (209.2, 84.3) (135.0, 126.8) (209.2, 126.8), U1/R2 move, four tracks reroute
 - [x] Silk decomposed: artwork on B.Silk overprints 63 back-side refdes → F-072; F-046 0.12 mm strokes
 - [x] Paste/mask: all three exposed pads stencilled (the 10 "paste-without-mask" flashes are KiCad EP sub-pads), top stencil = LEDs only (F-034 persists), 0 courtyard overlaps, no fiducials (F-073)
 - [x] F-032 persists (no chassis holes); F-042 closed as accepted
