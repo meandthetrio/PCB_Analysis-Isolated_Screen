@@ -35,6 +35,8 @@ The NHD-2.7-12864WDW3 is an 82 × 47 mm glass-on-PCB module with four Ø2.5 mm m
 **7. Two part/footprint mismatches on the new regulator.** (F-053, F-065)
 The BOM's TPS62172 is the **fixed** 3.3 V part, but the schematic carries the **adjustable** TPS62170's 47 k/15 k feedback divider (TI: "connect FB to AGND on fixed output voltage versions"). Harmless today, but pick one (⏳ Q3). The inductor L1 is a Murata 2.0 × 1.6 mm part on an 0805 (2.0 × 1.25) land pattern — terminals overhang the pads by 0.35 mm (plausible; Murata drawing not fetched). *Fix: 0806/2016 land.* Also: SW → L1 is 8.3 mm (TI: keep the inductor close to SW); the 22 µF 0603 6.3 V output cap loses much of its capacitance at 3.3 V bias (TI uses 0805).
 
+**7a. Encoder inputs need an RC filter (F-058, promoted to a fix on 2026-10-08).** ENCL/ENCR A and B go straight to Daisy pins on internal pull-ups over 80–146 mm; the user requires exactly one count per detent on heavy encoders. *Fix: 10 k pull-up to 3V3 + 10 nF to GND on each of the four A/B lines, placed near the Daisy; state-table quadrature decoder in firmware.*
+
 ## Tier 3 — Fab margins (JLCPCB capabilities fetched 2026-10-07)
 
 **8. Three marginal annular-ring / clearance items, 3–5 µm under the absolute minimum** (F-016, F-008, F-040) — MK1 pads 0.175 mm ring vs 0.18; USB-C NPTH-to-copper 0.197 vs 0.20; the TPS62172 footprint's two 0.25 mm thermal vias with a 0.175 mm ring (and below the project's own 0.30 mm hole rule). All one-line footprint edits. The first two fabbed OK twice.
@@ -46,13 +48,13 @@ The BOM's TPS62172 is the **fixed** 3.3 V part, but the schematic carries the **
 - **Crosstalk:** AUDIO_OUT_R runs 25 mm at 0.20 mm from the TAC_SWITCH_2 line; AUDIO_IN_L runs 43 mm beside the MIDI UART (F-070). Slow aggressors; move 0.5 mm.
 - **FB1 has both pins on GND** — a no-op part (F-060). Delete, or use it as the AGND/DGND bridge.
 - **Firmware note:** Daisy pin 10 is SPI1_MISO and is used as the TAC_SHIFT_R button while SPI1 drives the display — open SPI1 TX-only (F-061).
-- No external pull-ups or debounce on the eight switch/encoder inputs (F-058, works on Round 1 boards); SD card-detect still half-wired (F-022); ERC hygiene — 14 no-connect flags + 4 PWR_FLAGs would take ERC to zero (F-059); no chassis mounting holes (F-032); no fiducials; no hand-assembly list for 18 THT parts incl. the two THT caps at the display connector (F-026); nine single-spoke GND pads (F-042, accepted).
+- SD card-detect half-wired (F-022) — **not needed**, card is never hot-swapped; ERC hygiene — 14 no-connect flags + 4 PWR_FLAGs would take ERC to zero (F-059); no chassis mounting holes (F-032); no fiducials; no hand-assembly list for 18 THT parts incl. the two THT caps at the display connector (F-026); nine single-spoke GND pads (F-042, accepted).
 
 ## Noise — which items matter, ranked
 Round 1's original complaint was display noise. Rev 2 fixed the structural cause (display off the shared 3V3 rail onto its own buck + two-stage RC ladder; GND plane on both layers with 225 stitching vias; 0.3 mm 3V3_D; shorter, wider analog runs). Of the findings above, these still move the noise floor, biggest first:
 
 1. **F-050 saturated beads.** FB3–FB6 (200 mA) at 0.3–0.5 A are inert — the protection they were added for is absent. One ≥ 1 A bead restores it. The 3.3 Ω / 100 µF stages (f_c ≈ 480 Hz each, two in series per branch) are the real filter and are good.
-2. **F-049 / F-053 buck layout.** SW → L1 8.3 mm (loop antenna); 22 µF 0603 Cout ≈ half value at 3.3 V (display-rail ripple); 6.3 V Cin on 8 V (input ripple pushed back into the ladder). Audio parts 33 mm and nearest audio trace 60 mm from the SW node — adequate.
+2. **F-049 / F-053 buck (Tier 1 item 1 and Tier 2 item 7).** Three simple actions: 16 V input cap; L1 moved next to the SW pin (now 8.3 mm, a loop antenna); 0805 output cap (22 µF 0603 ≈ half value at 3.3 V). Audio parts 33 mm and nearest audio trace 60 mm from the SW node — adequate.
 3. **F-054 3V3_D single 100 nF.** SD bursts, 120 mm to the nearest cap; rail also feeds the MIDI opto. 100 nF + 10 µF at P1.
 4. **F-031 / F-069 headphone amp.** +3V3_A (headphone + mic amps) carries one 100 nF; TI's ≥ 10 µF bulk cap is against THD/oscillation with long leads; the 5 pF compensation cap is a stability item (hiss/whine if marginal).
 5. **F-070 trace neighbours.** AUDIO_OUT_R 0.20 mm from TAC_SWITCH_2 for 25 mm; AUDIO_IN_L beside USART1_RX for 43 mm. Slow aggressors → click on button press / tick on MIDI traffic. Move 0.5 mm.
