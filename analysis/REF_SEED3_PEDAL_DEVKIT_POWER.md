@@ -1,7 +1,7 @@
 # Reference: Electrosmith Seed3 Pedal Dev Kit — 9 V power input chain
 **Date:** 2026-10-08 · **Source:** https://github.com/daisyaudio/Seed3-DevKit-Pedal (CERN-OHL-P-2.0), Rev3 netlist exported with kicad-cli 9.0.9 (Rev4 files are KiCad 10 format; BOM and sheet symbol list confirmed identical power section) · **Cross-check:** Daisy Seed3 datasheet, Power section, Figure 1.1 "+9V Power Supply Input" (same circuit, same refdes).
 
-Context: Trey copied this circuit into the WavetableController Rev 2 schematic (FB3–FB6, R29–R32, C17–C22). The Rev 2 Design Review doc, item 2, flags the four series beads as over-current. This note records what Electrosmith actually built so the comparison is not re-derived.
+Context: Trey copied this circuit into the WavetableController Rev 2 schematic (FB3–FB6, R29–R32, C17–C22; Rev 2 files live on this branch, rev 1 under `archive/rev1_2026-08/`). The Rev 2 Design Review doc, item 2, flags the four series beads as over-current. This note records what Electrosmith actually built so the comparison is not re-derived.
 
 ## Electrosmith's chain (Rev2/Rev3/Rev4, unchanged since Rev2)
 ```
@@ -31,3 +31,12 @@ The topology is sound and is Electrosmith's published reference. The defect in R
 2. **Simplify:** one ≥1 A bead at the FB3 position, delete FB4–FB6 (the review's current recommendation). Loses ~10 dB of >30 MHz attenuation that the extra two input beads provided, which the 3R3/100 µF stages (fc ≈ 480 Hz) do not cover but which has no identified victim on this board.
 
 Both keep the 3R3 + 100 µF RC stages, which are the filter that actually matters here and are identical to Electrosmith's.
+
+## Every bead on WavetableController Rev 2 (netlist 2026-10-08; all seven are the same 200 mA / 450 mΩ C1002 part)
+| Bead | Between | Branch current | Within 200 mA? |
+|---|---|---|---|
+| FB1 | GND ↔ GND | none | no-op (F-060) |
+| FB2 | /+3V3_A → U4 MAX9814 VDD | 3.1 mA typ, 6 mA max (datasheet) | yes, 30× margin |
+| FB3, FB4, FB5 | bridge → D6 anode (trunk) | 0.30 A typ / 0.49 A worst | **no** (F-050) |
+| FB6 | D6 cathode → C19 node (trunk) | 0.30 A typ / 0.49 A worst | **no** (F-050) |
+| FB7 | /+9V_FLAG → U6 TPS62172 VIN | 0.19–0.26 A | **no / marginal** (F-076, new) |
