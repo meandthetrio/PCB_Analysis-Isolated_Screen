@@ -1,0 +1,406 @@
+                                                                     Features
+                                                                     n Push switch option
+                                                                     n Compact, rugged design
+                                                                     n High reliability
+                                                                     n Metal bushing/shaft
+                                                                     n RoHS compliant*
+
+
+
+
+                                                                     PEC11R Series - 12 mm Incremental Encoder
+
+   Electrical Characteristics                                           Additional Information
+Output���������������������������� 2-bit quadrature code            Click these links for more information:
+Contact Rating����������������������� 10 mA @ 5 VDC
+Insulation Resistance
+  �������������������������� 100 megohms @ 250V DC
+Dielectric Withstanding Voltage
+  Sea Level��������������������������������300 VAC min.                                                   PRODUCT TECHNICAL INVENTORY SAMPLES               CONTACT
+Electrical Travel����������������������������� Continuous                                                  LIBRARY LIBRARY
+Contact Bounce (15 RPM)�������� 2.0 ms max.**
+RPM (Operating)������������������������������60 max.**
+                                                                        Product Dimensions
+   Environmental Characteristics
+                                                                     PEC11R-1xxxF-Nxxxx
+Operating Temperature Range
+  ������������ -30 °C to +70 °C (-22 °F to +158 °F)                                        L                      C: 0.5                                                                   13.0
+                                                                                                                     (.020)                 12.5
+                                                                         5.5                                                                                                               (.512)
+Storage Temperature Range                                              (.217)
+                                                                                          LB                                               (.492)                          2 +0.2/-0
+                                                                                                                     4.5 +0/-.05
+  ������������ -40 °C to +85 °C (-40 °F to +185 °F)                                                              (.177 +0/-.002)                                       (.071 +.008/-0)
+Humidity                                                               7.0
+                                                                                                                                                                            2 PLCS.
+  ����MIL-STD-202, Method 103B, Condition B                          (.28)
+                                                                                                                                                       13.4
+                                                                                                                                                      (.529)                                A C B
+Vibration                                                                                                                                                              2.1 +0.2/-0
+                                                                                                                 6.0 ± 0.1
+  ��� 10~55~10 Hz / 1 min. / Amplitude 1.5 mm                                                    F
+                                                                                                              (.236 ± .004)                                         (.083 +.008/-0)
+                                                                                                                                                                        2 PLCS.                       5.0
+Shock�����������������������������������������������������100 G                                M7 x  0.75         DIA.                    A C B       A CHANNEL
+                                                                                                                                                       C COMMON                                     (.197)
+                                                                       1.9                           (.030)
+IP Rating�������������������������������������������������� IP 40   (.075)
+                                                                                                                             0.8                       B CHANNEL            1.0 +0.1/-0
+                                                                                                MOUNTING SURFACE           (.032)                                        (.039 +.004/-0)
+                                                                       2.1           3.5
+   Mechanical Characteristics                                        (.102)        (.118)
+                                                                                                                             5.0                                          DIA. 3 PLCS.
+                                                                                                                           (.197)
+Mechanical Angle�����������������360 ° Continuous                                                                                         14.0
+Torque                                                                                                                                     (.56)
+  Detent�� 30 to 90 gf-cm (0.41 to 1.25 oz.-in.)
+  Running��� 10-70 gf-cm (0.14 to 0.97 oz.-in.)
+                                                                     PEC11R-1xxxF-Sxxxx
+  Mounting�������10.2 kgf-cm (8.83 lb.-in.) max.                                                                                                                                           13.0
+                                                                                                L                   C: 0.5                                                                 (.512)
+Shaft Side Load (Static)                                                                                              (.020)               12.5
+                                                                         6.5                                                                                              2 +0.2/-0
+                                                                                            LB                                            (.492)
+  ����������������������������������2.04 kgf (4.5 lbs.) min.          (.256)                                        4.5 +0/-.05                                       (.071 +.008/-0)
+                                                                                                                  (.177 +0/-.002)                                          2 PLCS.
+Weight���������������������������� 5 gm (0.17 oz.) max.
+                                                                      7.0
+Terminals����������Printed circuit board terminals                                                                                                    13.4
+                                                                     (.28)
+Soldering Condition                                                                                                                                   (.529)          2.1 +0.2/-0          A C B
+
+  Wave Soldering����������� Sn95.5/Ag2.8/Cu0.7                                                     F                 6.0 ± 0.1                                    (.083 +.008/-0)
+  solder with no-clean flux: 260 °C max. for                                                                  0.5 (.236 ± .004)                                        2 PLCS.                        5.0
+                                                                                                                                           A C B      A CHANNEL
+                                                                                                            (.020)      DIA.                                                                        (.197)
+  3 ± 1 sec.                                                           1.9                              SWITCH TRAVEL             0.8
+                                                                                                                                                      C COMMON
+                                                                                                                                                      B CHANNEL            1.0 +0.1/-0
+  Hand Soldering���������������Not recommended                      (.075)                                                     (.032)                                  (.039 +.004/-0)
+                                                                                                         M7 x 0.75
+Hardware�� One flat washer and one mounting                           2.5                                     (.030)             5.0                                    DIA. 5 PLCS.
+                                                                     (.098)                                                     (.197)
+  nut supplied with each encoder                                                                                                           14.0
+                                                                                                          MOUNTING
+Rotational Life��������������������30,000 cycles min.                 1.9            4.7
+                                                                                                          SURFACE                         (.551)
+                                                                     (.075)         (.185)
+Switch Life��������������������������20,000 cycles min.
+
+   Switch Characteristics
+                                                                     PEC11R-2xxxF-Nxxxx
+Switch Type
+                                                                                                                   C: 0.5
+  ������������ Contact Push ON Momentary SPST                                              L
+                                                                                                                     (.020)               12.5
+                                                                         5.5
+Power Rating (Resistive Load)                                          (.217)
+                                                                                            LB
+                                                                                                                    4.5 +0/-.05          (.492)                           2 +0.2/-0         10.8
+  ��������������������������������������������10 mA at 5 VDC                                                                                                          (.071 +.008/-0)     (.425)
+                                                                                                                 (.177 +0/-.002)                                           2 PLCS.
+Switch Travel������������������������������ 0.5 ± 0.3 mm              10
+Switch Actuation Force                                               (.394)
+                                                                                                                                                     13.4
+                                                                                                                                                    (.529)                                 A C B
+  ������������������ 610 ± 306 gf (8.47 ± 4.24 oz.in.)                                                               6.0 ± 0.1                                       2.1 +0.2/-0
+                                                                                                    F
+Contact Resistance��� 100 milliohms @ 5 VDC                                                                        (.236 ± .004)                                  (.083 +.008/-0)
+                                                                                                                                                                                                      5.0
+                                                                                                M7 x 0.75               DIA.             A C B      A CHANNEL          2 PLCS.
+                                                                                                                                                                                                    (.197)
+                                                                       3.5                           (.030)                                         C COMMON
+        CALIFORNIA WARNING: Can expose you to lead,                                                                                                 B CHANNEL              1.0 +0.1/-0
+                                                                     (.138)                                                      0.8                                     (.039 +.004/-0)
+         a carcinogen and reproductive toxicant.                                      MOUNTING SURFACE
+                                                                        1.9                                                    (.032)                                     DIA. 3 PLCS.
+           See www.P65Warnings.ca.gov
+                                                                      (.075)                                                     5.0
+*RoHS Directive 2015/863, Mar 31, 2015 and Annex.                       2.6          3.0                                       (.197)
+                                                                                                                                          10.2                                                 MM
+                                                                      (.102)       (.118)                                                                                   DIMENSIONS:
+**Devices are tested using standard noise reduction                                                                                      (.402)                                             (INCHES)
+filters. For optimum performance, designers should use
+                                                                                                                                                                                              <10
+noise reduction filters in their circuits.                                                                                                                                 TOLERANCE:               = ±0.3
+Specifications are subject to change without notice.                                                                                                                                        (<.400)   (±.012)
+Users should verify actual device performance in their                                                                                                                                        ≥10
+specific applications. The products described herein and                                                                                                                                            = ±0.5
+                                                                                                                                                                                            (≥.400)   (±.020)
+this document are subject to specific legal disclaimers as                      CAUTION
+set forth on the last page of this document, and at                             Do not store product in high temperature and humidity, direct sunlight and/or places where corrosive gases
+www.bourns.com/docs/legal/disclaimer.pdf.                                       may be generated. Please use product within 6 months from the date of delivery and promptly after unpacking.
+Applications
+Level control, tuning and timer settings in:
+n Audio-visual equipment
+n Consumer electric appliances
+n Radios
+n Musical instrumentation
+n Communications equipment
+
+
+
+             PEC11R Series - 12 mm Incremental Encoder
+
+  Product Dimensions (continued)
+
+PEC11R-2xxxF-Sxxxx
+                               L                  C: 0.5
+                                                    (.020)                  12.5
+     6.5                                                                                                  2 +0.2/-0              10.8
+                              LB                  4.5 +0/-.05              (.492)
+   (.256)                                                                                              (.071 +.008/-0)          (.425)
+                                                (.177 +0/-.002)                                            2 PLCS.
+  10
+                                                                                          13.4
+(.394)
+                                                                                         (.529)         2.1 +0.2/-0             A C B
+                                                    6.0 ± 0.1                                        (.083 +.008/-0)                          2.5
+                                    F                                                                                                       (.098)                                                MM
+                                            0.5 (.236 ± .004)                                            2 PLCS.                                                           DIMENSIONS:
+                                          (.020)      DIA.                 A C B         A CHANNEL
+                                                                                                                                           5.0
+                                                                                                                                                                                               (INCHES)
+                                                                                         C COMMON
+                                      SWITCH TRAVEL            0.8                       B CHANNEL         1.0 +0.1/-0                   (.197)
+                                                                                                                                                                                                 <10
+    1.9                                M7 x 0.75
+                                                             (.032)                                     (.039 +.004/-0)
+                                                                                                         DIA. 5 PLCS.                                                      TOLERANCE:                  = ±0.3
+  (.075)                                     (.030)            5.0                                                                                                                             (<.400)   (±.012)
+                                                             (.197)                      10.2                                                                                                    ≥10
+    2.5                                 MOUNTING                                        (.402)                                                                                                         = ±0.5
+  (.098)                                SURFACE                                                                                                                                                (≥.400)   (±.020)
+    2.4                 4.2
+  (.094)              (.165)
+
+
+
+PEC11R-4xxxF-Nxxxx
+                              MOUNTING
+                              SURFACE
+                                     L                    C: 0.5                          12.5
+              6.5                                           (.020)
+                                     LB                                                  (.492)
+            (.256)                                        4.5 +0/-.05
+                                                        (.177 +0/-.002)                                                                                             2.6 +0.2/-0              13.2
+                                                                                                                                                                                            (.520)              7.5
+                                                                                                                                                                 (.101 +.008/-0)
+                                                                                                                                                                                                              (.295)
+                                                                                                       13.4                                                          2 PLCS.
+                                                                                                      (.528)
+     2.5                                                                                                                                                                1.8 +0.2/-0
+   (.098)                                  F                 6.0 ± 0.1
+                                                           (.236 ± .004)                                                                                             (.071 +.008/-0)
+                                                                                                                                                                         2 PLCS.
+     7.5               3.7                M7 x 0.75            DIA.                      A C B A CHANNEL
+                                                                                                                                                                                     5.0
+   (.295)                                      (.030)                            5.0           C COMMON
+                     (.146)                                                                                                                            0.8 3 PLCS.                 (.197)                   1.0 +0.1/-0
+                                                                               (.197)          B CHANNEL
+                                                                                                                         5.0                         (.031)                                               (.039 +.004/-0)
+                                                                                                                       (.197)                                                                              DIA. 3 PLCS.
+                                                                                                                                    14.0
+                                                                                                                                   (.551)
+
+
+
+
+PEC11R-4xxxF-Sxxxx
+                                   MOUNTING SURFACE
+                                     L
+                                                    0.5 SWITCH                            12.5
+              6.5                                 (.020) TRAVEL                          (.492)
+                                     LB                                                                                                                                                      13.2
+            (.256)
+     7.0                                                  C: 0.5                                        5.0                                                                                 (.520)              7.0
+                                                            (.020)                                    (.197)
+   (.276)                                                                                                                                                                                                     (.276)
+                                                                                         1       2
+                                                          4.5 +0/-.05
+                                                        (.177 +0/-.002)                                                                                             2.6 +0.2/-0
+                                                                                                                                                                 (.101 +.008/-0)
+                                                                                                       13.4                                                          2 PLCS.
+                                                                                                      (.528)
+     2.5                                                                                                                                                                1.8 +0.2/-0
+   (.098)                                  F                 6.0 ± 0.1
+                                                           (.236 ± .004)                                                                                             (.071 +.008/-0)
+                                                                                                                                                                         2 PLCS.
+     7.5               3.7                M7 x 0.75            DIA.                      A C B A CHANNEL
+                                                                                                                                                                                     5.0
+                                                                                                                                                                                                                7.5
+   (.295)                                      (.030)                            5.0           C COMMON                                                                                                       (.295)
+                     (.146)                                                                                                                            0.8 5 PLCS.                 (.197)
+                                                                               (.197)          B CHANNEL
+                                                                                                                         5.0                         (.031)                                                  1.0 +0.1/-0
+                                                                                                                       (.197)                                                                             (.039 +.004/-0)
+                                                                                                                                    14.0                                                                   DIA. 5 PLCS.
+                                                                                                                                   (.551)
+
+
+
+
+Specifications are subject to change without notice.
+Users should verify actual device performance in their specific applications.
+The products described herein and this document are subject to specific legal disclaimers as set forth on the last page of this document, and at www.bourns.com/docs/legal/disclaimer.pdf.
+             PEC11R Series - 12 mm Incremental Encoder
+
+     Shaft Dimensions                                                                                                                         Hardware
+Flatted Shaft                                                      Knurled Shaft                                                             M7 x 0.75
+                                                                                                                                                  (.030)
+                        L                                                               L
+         LB                             C: 0.5                               LB        P
+                                          (.020)                                                     1
+                                                                                       A          (.039)      6.0 ± 0.1
+                                                                                                           (.236 ± .004)                       10.0 ± 0.5                              2.0 ± 0.2
+                                                                                                                DIA.                         (.394 ± .020)                          (.079 ± .008)
+                                                                                                                                                                   NUT
+
+                             F          6.0 ± 0.1                                                    C: 0.5
+                                     (.236 ± .004)                                  M7 x 0.75          (.020)                                                                          7.1 ± 0.3
+                                                                                         (.030)                                                                                     (.280 ± .012)
+                    M7 x 0.75             DIA.                                                     18 TEETH
+                         (.030)                                                                                                              12.0 ± 0.3                                  DIA.
+                                                                                                                                           (.472 ± .012)
+                                                                                                                                                DIA.
+         L                   LB                      F             Knurled Shaft Without Switch
+                                                                                                                                                                                                         0.5
+        15                     5                  7                                                                                                          WASHER                                    (.020)
+                                                                         L             LB              P                   A
+      (.591)                (.197)             (.276)
+                                                                         15             5              8                  6
+        20                     7                 10                    (.591)        (.197)         (.315)             (.236)                 Quadrature Output Table
+      (.787)                (.276)             (.394)
+                                                                         20             7              7                  6                                        D
+        25                     7                 12                    (.787)        (.276)         (.276)             (.236)
+                                                                                                                                                   OFF
+      (.984)                (.276)             (.472)
+                                                   O                     25             7             12                 10
+                                                                                                                                                   ON
+         30                    7                 12                    (.984)        (.276)         (.472)             (.394)
+      (1.181)               (.276)             (.472)
+                                                                         30             7             16                 12                        OFF
+                                                                      (1.181)        (.276)         (.630)             (.472)                      ON
+
+                                                                    Knurled Shaft With Switch                                                                  CW
+
+                                MM                                       L             LB              P                   A
+         DIMENSIONS:
+                             (INCHES)                                    15             5              7                  6                   Suggested Filter Circuit
+                                                                       (.591)        (.197)         (.276)             (.236)
+                               <10                                                                                                                                                 5 VDC
+         TOLERANCE:                  = ±0.3                              20             7              7                  6
+                             (<.400)   (±.012)
+                                                                       (.787)        (.276)         (.276)             (.236)                      10K OHMS                      10K OHMS
+                               ≥10
+                                     = ±0.5                                                                                                             10K OHMS                            10K OHMS
+                             (≥.400)   (±.020)                           25             7             12                 10
+                                                                       (.984)        (.276)         (.472)             (.394)              TERMINAL A                                               TERMINAL B
+
+                                                                         30             7             16                 12                   0.01 μF                                                 0.01 μF
+                                                                      (1.181)        (.276)         (.630)             (.472)                                            ENCODER
+
+                                                                                                                                                                                    TERMINAL C
+
+
+ How To Order
+                                                                                  PEC11R 4 0 20 F - S 0012
+                                                                                                                                              Switch Circuit
+Model
+Terminal Configuration
+  1 = PC Pin Vertical / Side Facing 7 mm                 4 = PC Pin Horizontal / Rear Facing                                                                       1         2
+  2 = PC Pin Vertical / Side Facing 10 mm                                                                                                                                1          2
+
+Detent Option
+  0 = No Detents (12, 18, 24 pulses)                     2 = 24 Detents (12, 24 pulses)                                              CW
+  1 = 18 Detents (18 pulses)                             3 = 12 Detents (12, 24 pulses)
+Standard Shaft Length
+                                                                                                                                             OFF
+  15 = 15.0 mm        25 = 25.0 mm                                                                                              A Signal                ON
+  20 = 20.0 mm        30 = 30.0 mm
+Shaft Style                                                                                                                     B Signal
+  F = Metal Flatted Shaft                 K = Metal Knurled Shaft1
+Switch Configuration                                                                                                                       REV.D04/26
+  S = Push Momentary Switch               N = No Switch                                                                                    Specifications are subject to change without notice.
+                                                                                                                                           Users should verify actual device performance in their
+Resolution                                                                                                                                 specific applications.
+  0012 = 12 Pulses per 360 ° Rotation                    0024 = 24 Pulses per 360 ° Rotation                                               The products described herein and this document are
+  0018 = 18 Pulses per 360 ° Rotation                                                                                                      subject to specific legal disclaimers as set forth on the
+ Metal knurled shaft without switch is available in 15, 20 and 30 mm shaft lengths.
+1                                                                                                                                         last page of this document, and at www.bourns.com/
+ Metal knurled shaft with push momentary switch is available in 15 and 20 mm shaft lengths.                                                docs/legal/disclaimer.pdf.
+        Legal Disclaimer Notice
+
+This legal disclaimer applies to purchasers and users of Bourns® products manufactured by or on behalf of Bourns, Inc. and its affiliates (collectively,
+“Bourns”).
+
+Unless otherwise expressly indicated in writing, Bourns® products and data sheets relating thereto are subject to change without notice. Users should check
+for and obtain the latest relevant information and verify that such information is current and complete before placing orders for Bourns® products.
+
+The characteristics and parameters of a Bourns® product set forth in its data sheet are based on laboratory conditions, and statements regarding the
+suitability of products for certain “typical” applications are based on Bourns’ knowledge of typical requirements in generic applications. Bourns assumes
+that “typical” applications include failsafe/backup features to address critical risks to users and are designed to allow rework of Bourns® product to
+avoid scrap of a device solely due to malfunctioning Bourns® product. The characteristics and parameters of a Bourns® product in a user application
+may vary from the data sheet characteristics and parameters due to (i) the combination of the Bourns® product with other components in the user’s
+application, or (ii) the environment of the user application itself. The characteristics and parameters of a Bourns® product also can and do vary in
+different applications and actual performance may vary over time. Thus, users should always verify the actual performance of the Bourns® product in
+their specific devices and applications and make their own independent judgments regarding the suitability of Bourns® product and the amount of
+additional test margin to design into their device or application to compensate for differences between laboratory and real-world conditions.
+
+Unless Bourns has explicitly designated an individual Bourns® product as meeting the requirements of a particular industry standard (e.g., IATF
+16949) or a particular qualification (e.g., UL listed or recognized), Bourns is not responsible for any failure of an individual Bourns® product to meet
+the requirements of such industry standard or particular qualification even if such industry standard or qualification is a “state of art”. Users of Bourns®
+products are responsible for ensuring compliance with safety-related requirements and standards applicable to their devices or applications.
+
+Bourns® products are not recommended, authorized or intended for use in applications where failure or malfunction may result in personal injury,
+death, or severe property or environmental damage, such as without limitation nuclear, life-critical medical and certain automotive and aviation
+applications. Except as set forth in the bullet points below or unless expressly and specifically approved in writing on a case-by-case basis by an
+authorized Bourns’ representative, use of any Bourns® products in such unauthorized high-risk applications is at the user’s sole risk.
+
+     • Bourns considers implantable/invasive devices and devices/procedures designed as life-supporting or life-sustaining by the U.S. Food and Drug
+       Administration or equivalent organizations outside of the United States as “life-critical” medical applications. Bourns expressly identifies those
+       Bourns® standard products that are suitable for use in typical medical applications that are not life-critical in its publication entitled “Bourns
+       Medical Grade Component Guide.”
+
+     • Bourns expressly identifies those Bourns® standard products that are suitable for use in typical automotive applications associated with any
+       Automate Safety Integrity Level (ASIL) in its publication entitled “Bourns Automotive Grade Component Guide.” Bourns’ designation of Bourns®
+       product as compliant with the AEC-Q standard does not by itself mean that Bourns has approved such product for use in an automotive
+       application.
+
+     • Bourns expressly identifies Bourns® standard products that are suitable for use in the typical aviation applications/systems requiring System
+       Design Assurance Level (RTCA DO-254 DAL) of C, D or E in its publication entitled “Bourns Civilian Aerospace/Aviation Grade Component Guide.”
+       Bourns does not test its products for compliance with United States Federal Aviation Administration standards or any other generally equivalent
+       governmental organization standard applicable to products designed or manufactured for use in aviation applications. Use of Bourns® standard
+       components in aviation applications associated with RTCA DO-254 DAL A or B without proper approval noted above shall be at the user’s sole
+       risk.
+
+     • Bourns will review and authorize on a case-by-case basis the use of Bourns® standard products which are at least AEC-Q compliant in space-
+       related civil applications (rockets, satellites) with a negotiated cross-waiver and indemnity agreement.
+
+The use and level of testing applicable to Bourns® custom products shall be negotiated on a case-by-case basis by Bourns and the user for which such
+Bourns® custom products are specially designed. Absent a written agreement between Bourns and the user regarding the use and level of such testing,
+the above provisions applicable to Bourns® standard products shall also apply to such Bourns® custom products.
+
+Use of Bourns® products or Bourns’ technology in military/defense applications must be reviewed with Bourns for compliance with applicable export
+control laws and embargoes. Users shall not sell, transfer, export or re-export (which includes transfers within a country) any Bourns® products or
+technology or technical data for use in activities which involve the design, development, production, use or stockpiling of nuclear, chemical or
+biological weapons or missiles, nor shall they use Bourns® products or technology or technical data in any facility which engages in activities relating
+to such devices. Further, Bourns® products and Bourns’ technology and technical data may not under any circumstance be exported or re-exported to
+countries subject to international sanctions or embargoes. Bourns® products and technology may not, without prior authorization from Bourns and/or
+the Government of a country where such product/technology is designed and/or manufactured, be resold, transferred, or re-exported (including within
+the same country) to any party not eligible to receive commodities, software, and technical data originating in such country.
+
+To the maximum extent permitted by applicable law, Bourns disclaims (i) any and all liability for special, punitive, consequential, incidental or indirect
+damages or lost revenues or lost profits, and (ii) any and all implied warranties (those not based on parameters specified in Bourns’ data sheets and/or
+specifications), including implied warranties of fitness for particular purpose, non-infringement and merchantability.
+
+For your convenience, copies of this Legal Disclaimer Notice with German, Spanish, Japanese, Traditional Chinese and Simplified Chinese bilingual versions are
+available at:
+                                         Web Page: https://www.bourns.com/legal/disclaimers-terms-and-policies
+                                                PDF: https://www.bourns.com/docs/Legal/disclaimer.pdf
+
+
+
+
+                                                                                                                                                    K2540 05/26R
+
