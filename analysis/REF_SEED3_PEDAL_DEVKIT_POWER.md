@@ -40,3 +40,6 @@ Both keep the 3R3 + 100 µF RC stages, which are the filter that actually matter
 | FB3, FB4, FB5 | bridge → D6 anode (trunk) | 0.30 A typ / 0.49 A worst | **no** (F-050) |
 | FB6 | D6 cathode → C19 node (trunk) | 0.30 A typ / 0.49 A worst | **no** (F-050) |
 | FB7 | /+9V_FLAG → U6 TPS62172 VIN | 0.19–0.26 A | **no / marginal** (F-076, new) |
+
+## Decision 2026-10-08 — all beads go to 2 A
+Beads are always specified at 100 MHz; the parameter to pick is the impedance. Keep 600 Ω @ 100 MHz (the class the current part and Electrosmith's part are in: ≈ 50–100 Ω at 10 MHz, ≈ 200 Ω at 30 MHz, useful 10–300 MHz; below ~5 MHz every bead is a few ohms and the 3R3/100 µF stages do the work). A stocked 600 Ω / 2 A bead does not exist in 0603, so FB3–FB7 move to **0805: TDK MPZ2012S601AT000** (600 Ω, 2 A, 0.1 Ω max). 0603 alternative at 2 A is 220 Ω (TDK MPZ1608S221ATA00, 2.2 A, 0.05 Ω). Voltage drop at 0.49 A through four 0.1 Ω beads: 0.2 V (was 0.9 V). The one 0603 600 Ω/2 A part found (Eaton MFBA2V1608P-601-R) showed zero stock and a 19-week lead time.
