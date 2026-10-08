@@ -27,3 +27,5 @@ Extracted from the fabbed Gerbers, with net names assigned by geometrically cros
 - `routing_vias.csv` — vias: position, drill, pad, net
 - `wavetable_board.svg` — rendered board view from the Gerbers
 - `gerber_analyze.py` — the parser/matcher script that produced the above
+- `POWER_RATINGS_2026-10.md` — every designator vs its BOM rating (2026-10-08 sweep; adds F-076, F-077, F-078)
+- `REF_SEED3_PEDAL_DEVKIT_POWER.md` — Electrosmith Seed3 Pedal Dev Kit power chain, the circuit Rev 2 copied
