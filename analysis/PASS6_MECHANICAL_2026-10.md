@@ -63,3 +63,4 @@ DRC: 199 `silk_overlap` = 135 footprint-outline-segment × artwork + **63 refere
 ## 8. Questions for Trey
 - **Q-R2-6:** which side faces the user? The artwork is on the back silk; the display/encoders are on the front; pot, switches and jacks are on the back.
 - **Q-R2-7:** how is the NHD module meant to be held — socketed on the header only, or with standoffs through its four holes?
+- **Q-R2-8 (added 2026-10-08):** which encoder exactly (MPN, shaft-length code)? The footprint is the Alps EC11E pattern; Bourns PEC11R lugs (13.2 mm) do not fit its 11.2 mm slots (F-075); the thread length sets the panel distance.

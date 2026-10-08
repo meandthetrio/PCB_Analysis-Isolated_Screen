@@ -88,6 +88,7 @@ Provenance: board file ↔ Gerbers byte-identical; sch ↔ pcb 0 differences; DR
 5. **What is BOM U5 (L7805)?** A plan the buck replaced, or is a 5 V rail still intended somewhere?
 6. **Which side faces the user?** The artwork is on the back silk; the display is on the front.
 7. **How is the Newhaven module held** — header only, or standoffs through its four holes?
+8. **Which encoder exactly, and which shaft length?** The ENCL1/ENCR1 footprint is the Alps EC11E lug pattern (11.2 mm); a Bourns PEC11R (13.2 mm lugs) will not seat in it (F-075). The bushing thread length from the MPN sets the panel-to-board distance and therefore the display header choice (fix 5).
 
 ---
 *Supporting detail: `PASS0_BASELINE_2026-10.md` … `PASS6_MECHANICAL_2026-10.md`; ledger `FINDINGS.md` (F-036…F-073); thresholds in `datasheets_2026-10/` and `baseline_2026-10/`.*
