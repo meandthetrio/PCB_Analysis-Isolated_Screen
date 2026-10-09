@@ -15,7 +15,7 @@ But **the LED subsystem is still broken, just differently**, and it would ship b
 ## Tier 1 — Will fail on the next build as the files stand
 
 **1. LEDs still cannot light, and the part/footprint don't match.** (R3-P2-01 ✔, R3-P2-02 ⏳, R3-P2-03, R3-P4-01 ✔, R3-P6-04 ✔)
-The new NPN low-side drivers (Q1–Q6, 1 k base resistors) fixed the 3.3V-only-pin exposure, but the diode orientation was carried over unchanged: the Cree CLS6B-FKW anodes (pads 1/3/5) sit on the transistor collectors and the cathodes go through 300 Ω to the +9V rail. Current can never flow; when a transistor turns on the die sees 5.5–8.7 V reverse against a 5 V rating. Separately, the custom `LED_RGB_5050-6_Retroactive Pin Out` footprint is a two-column 5050 pattern, while CLS6B-FKW is a 4.7 × 1.5 mm single-row part that cannot be placed on it. And the BOM still has no LED line while the paste layer has exactly their 12 apertures. *Fix: decide which LED is really being bought (⏳ Trey); use its real footprint; wire supply → 300 Ω → anode → cathode → collector; relabel the symbol pins; add the BOM line; resize the 300 Ω for the real ≈5.8 V rail (R3-P2-04).*
+The new NPN low-side drivers (Q1–Q6, 1 k base resistors) fixed the 3.3V-only-pin exposure, but the diode orientation was carried over unchanged: the Cree CLS6B-FKW anodes (pads 1/3/5) sit on the transistor collectors and the cathodes go through 300 Ω to the +9V rail. Current can never flow; when a transistor turns on the die sees about 5.5 V reverse against a 5 V rating. Separately, the custom `LED_RGB_5050-6_Retroactive Pin Out` footprint is a two-column 5050 pattern, while CLS6B-FKW is a 4.7 × 1.5 mm single-row part that cannot be placed on it. And the BOM still has no LED line while the paste layer has exactly their 12 apertures. *Fix: decide which LED is really being bought (⏳ Trey); use its real footprint; wire supply → 300 Ω → anode → cathode → collector; relabel the symbol pins; add the BOM line; resize the 300 Ω for the real ≈5.8 V rail (R3-P2-04).*
 
 **2. The display module has nowhere to mount.** (R3-P6-05 ✔, R3-P6-06 ⏳)
 The NHD-2.7-12864WDW3 has four Ø2.5 mm holes on a 74.2 × 42.5 mm pattern. With J8 where it is, those holes land on R2, R5 and U1 and 0.7 mm from C22. The module only fits with its body toward +y; the other orientation overhangs the board edge by 24.7 mm (orientation inferred from the datasheet views — confirm against the STEP). `screen mounting solution.md` still describes the earlier Crystalfontz COG panel, not this module. *Fix: move/clear the four hole sites, add the holes, update the mounting doc.*
@@ -27,7 +27,7 @@ The Murata DFE201610P (2.0 × 1.6 mm) sits on `L_0805_2012Metric`: pads 0.4 mm n
 
 **4. No ground stitching vias.** (R3-P1-08 ✔) The F.Cu pour is 15 fragments joined to the B.Cu plane only through component holes; three fragments hang on a single pad, and ten bottom-side GND pads on U2/U3/U4/U6 reach ground through one thin track. Eight GND pads have a single thermal spoke (R3-P1-06). *Fix: stitch every fragment and the IC grounds with vias.*
 
-**5. Power entry: no inrush limit, and more series parts than needed.** (R3-P2-05, R3-P2-06 ✔) The buck, the 3.3 Ω/100 µF ladder and the bead chain were already in the design the 7 October review covered, and that review asked for 2 A beads, ½ W resistors and a 25 V C25, all of which were done. What it did not cover: 700 µF of bulk capacitance sits behind only Schottkys and bead DCR: ≈26–36 A peak at plug-in through diodes rated 9 A surge and 2 A beads. D6 duplicates the bridge's protection for another 0.4 V and ≈0.2 W; four identical beads are in series; the two 3.3 Ω π-filters make DSY_VIN ≈6.4–7.1 V and the "+9V" LED/OLED rail ≈5.8 V at 9 V in (all still within limits, R3-P2-07 ✔). *Fix: NTC or series R before C15, drop D6, consolidate beads, rename +9V_FLAG.*
+**5. Power entry: no inrush limit, and more series parts than needed.** (R3-P2-05, R3-P2-06 ✔) The buck, the 3.3 Ω/100 µF ladder and the bead chain were already in the design the 7 October review covered, and that review asked for 2 A beads, ½ W resistors and a 25 V C25, all of which were done. What it did not cover: 700 µF of bulk capacitance sits behind only Schottkys and bead DCR: ≈26 A peak at plug-in through diodes rated 9 A surge and 2 A beads. D6 duplicates the bridge's protection for another 0.4 V and ≈0.2 W; four identical beads are in series; the two 3.3 Ω π-filters make DSY_VIN ≈6.4–7.1 V and the "+9V" LED/OLED rail ≈5.8 V at 9 V in (all still within limits, R3-P2-07 ✔). *Fix: NTC or series R before C15, drop D6, consolidate beads, rename +9V_FLAG.*
 
 **6. Decoupling left half-done.** (R3-P2-10, R3-P2-11 ✔) The 3V3_D trunk is now 0.3 mm (good) but still has one 100 nF for SD + MIDI + pull-ups, 111–120 mm from both the Daisy and the SD socket. The headphone amp still lacks its datasheet ≥10 µF. *Fix: 100 nF + 10 µF at P1, 10 µF at A1.38, 10 µF at U3.*
 
@@ -42,6 +42,8 @@ The Murata DFE201610P (2.0 × 1.6 mm) sits on `L_0805_2012Metric`: pads 0.4 mm n
 
 ## Tier 4 — Hygiene (ERC/BOM/docs)
 
+LED resistors: within rating at 9 V, but the LEDs would only reach 8–12 mA because the rail behind R31/R32 is ≈5.8 V (R3-P2-04).
+
 ERC: 14 missing no-connect flags + 4 PWR_FLAGs, all false positives (R3-P3-06, R3-P2-14). BOM: still no hand-assembly sheet, now 18 THT parts including the OLED-rail caps C23/C24 (R3-P4-03); "exclude from position" set on only 5 of 18 THT parts (R3-P4-04); file coerced/mojibaked by hand editing (R3-P4-05); C14/C15/C17 were silently repurposed so rev-2 notes naming them are stale (R3-P4-06); R35–R40 are an avoidable Extended part (R3-P4-07). SD card-detect still half-wired and all 40 Daisy pins are now used (R3-P3-10). The headphone pot is a linear taper used as a volume control (R3-P3-07 ⏳) and its bushing exits 9 mm outside the outline (R3-P6-07). Two dangling vias to delete (R3-P1-07).
 
 ## What passed (verified, cited)
@@ -50,10 +52,11 @@ Schematic ↔ PCB 110/110 parts, 0 net diffs, 0 duplicate refdes · GND pour fil
 
 ## The questions for Trey (⏳)
 
+Design case confirmed by Kyle 2026-10-09: 9 V from the barrel jack. 12 V figures in the pass reports are the jack's ceiling, not a design case.
+
 1. **Which RGB LED are you actually buying?** The schematic says Cree CLS6B-FKW (4.7 × 1.5 mm, single row) but the footprint is a two-column 5050. The polarity fix depends on the answer.
-2. **9 V or 12 V adapter?** At 12 V the 300 Ω 0603 LED resistors exceed 100 mW and Daisy VIN is ≈10 V (fine); at 9 V the LEDs run at 40–60 % of rated current.
-3. **Module orientation and mounting:** does the STEP (`Newhaven2.7_12864WDX3.STEP`) put the module body toward +y, and how will the module and the board be fastened?
-4. **Headphone pot:** is CW = louder with the PTD902 terminal order as wired, and is a linear taper intended?
+2. **Module orientation and mounting:** does the STEP (`Newhaven2.7_12864WDX3.STEP`) put the module body toward +y, and how will the module and the board be fastened?
+3. **Headphone pot:** is CW = louder with the PTD902 terminal order as wired, and is a linear taper intended?
 
 ## Threshold-source caveats
 daisy.audio and its mirrors, cree-led.com (text) and murata.com were blocked from this session; Daisy pin facts come from the stock KiCad symbol, libDaisy source and the rev-2 datasheet citation, and the Cree pinout from the datasheet PDF fetched via a mirror and read from its page-9 drawing. These are the first items to re-verify when the primary documents are to hand.

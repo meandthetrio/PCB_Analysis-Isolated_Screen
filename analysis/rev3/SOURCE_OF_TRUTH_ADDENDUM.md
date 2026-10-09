@@ -5,4 +5,5 @@
 2. **Rev-2 finding scoring.** Every rev-2 finding F-001…F-035 gets exactly one of: FIXED (evidence in rev 3), STILL OPEN, REGRESSED (worse), N/A (the circuit no longer exists). Scores live in `FINDINGS.md` here. Nothing silently evaporates.
 3. **New findings** keep their per-pass ids (R3-P1-01 … R3-P6-nn) in `FINDINGS.md`; the pass reports hold the full evidence, the ledger is the index.
 4. **Blocked sources.** daisy.audio, electrokit.com, cree-led.com and api.github.com are blocked by the session's egress proxy. Where a threshold came from a secondary source (KiCad library symbol, libDaisy source, rev-2 citation, forum), the finding says so. These are the first candidates for re-verification when the primary datasheet is available.
-5. **Scratch outputs** live in `kicad_out/rev3/` (git-ignored) and the session scratchpad; reproducible scripts are copied to `analysis/rev3/scripts/`.
+5. **Design case.** Power is 9 V from the barrel jack J1 (Kyle, 2026-10-09). Findings are classified at 9 V; a 12 V figure is only ever the jack's rated ceiling.
+6. **Scratch outputs** live in `kicad_out/rev3/` (git-ignored) and the session scratchpad; reproducible scripts are copied to `analysis/rev3/scripts/`.
