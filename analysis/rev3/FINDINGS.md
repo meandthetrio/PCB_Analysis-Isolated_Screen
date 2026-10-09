@@ -9,10 +9,10 @@ Class: VIOLATION (measured fact breaks a cited rule) · ZERO-MARGIN · JUDGMENT 
 
 | ID | Class | Status | Finding | Threshold source |
 |----|-------|--------|---------|------------------|
-| R3-P2-01 | **VIOLATION** | **confirmed** (netlist chain + Cree p.9 pin drawing, verified twice: Pass 2 script and coordinator's independent netlist/drawing check) | **LEDs still reverse-biased.** Cree CLS6B-FKW pads 1/3/5 are anodes; the netlist puts exactly those pads on the Q1–Q6 collectors and pads 2/4/6 (cathodes) through 300 Ω to /+9V_FLAG. A low-side NPN switch needs supply→R→anode→cathode→collector. As drawn the LEDs can never light and see 5.5 V reverse vs VR max 5 V. The rev-2 F-001/F-018 polarity bug was carried through the new transistor stage unchanged. **Disposition 2026-10-09 (Kyle):** Trey hand-solders the LEDs and will mount them rotated 180° from the silk mark; on the three-row footprint that corrects the polarity for a row-paired 5050 (red/blue swap, firmware). The files remain wrong and should be fixed when convenient. | Cree CLD-CT1475 rev 5 |
-| R3-P2-02 | **VIOLATION** | plausible — needs Trey (which LED is actually bought) | **The actual LED part is unknown to this review.** **LED footprint ≠ named package.** CLS6B-FKW is a 4.7 × 1.5 mm single-row 6-lead part (pads at x = ±2.02/±1.21/±0.53); the custom `LED_RGB_5050-6_Retroactive Pin Out` is a two-column 5050 pattern (1.1 × 2.0 pads at x = ±2.40, y = 0/±1.70). The named part cannot be placed on it. With no LED BOM line (R3-P4-01) the physical part is unknown; if it is a generic 5050, R3-P2-01/03 must be re-checked against that part's pinout. | Cree datasheet mechanical; stock KiCad `LED_Cree-PLCC6_4.7x1.5mm` |
-| R3-P2-03 | JUDGMENT | confirmed | Custom LED symbol pin labels are wrong for the named part (pad 1 "AR" is blue anode, pad 3 "AG" is red anode, pad 5 "AB" is green anode; pad 4 labelled "KR" twice). Nets were wired so colours come out right (/LED_x_R → pad 3 = red …): two errors cancel. Fix the labels so a future edit doesn't "correct" one of them. | Cree p.9 |
-| R3-P2-04 | JUDGMENT | confirmed | 300 Ω 0603 LED resistors are within rating at the 9 V design case (43/24/22 mW of 100 mW) but the LEDs only get 11–12 / 8–9 mA because /+9V_FLAG is really ≈5.8 V (R31/R32 π-filter) and shared with the OLED buck input: dim LEDs. Re-value for the real rail, or feed the LEDs from the C19 node. (The 7 Oct ask for 1206 bodies only matters if a 12 V adapter, the jack's ceiling, were ever used.) | Cree Vf/IF; BOM 0603 rating |
+| R3-P2-01 | — | **REFUTED 2026-10-09** (actual part identified) | **LED polarity is correct for the part actually used.** The schematic names a Cree CLS6B-FKW (odd pads = anodes), and against that pinout the netlist is reverse-biased. Trey's real part is a **Würth WL-SFTW 150505M173300** (datasheet rev 003.000, 2022-10-25, supplied by Kyle): pins 1/3/5 are **cathodes** (B/R/G), pins 2/4/6 **anodes**. The board puts pads 1/3/5 on the Q1–Q6 collectors and pads 2/4/6 through 300 Ω to the supply, which is exactly right. Colours also land correctly (/LED_x_B → pad 1 = blue, /LED_x_R → pad 3 = red, /LED_x_G → pad 5 = green). No reverse-voltage exposure. Rev-2 F-001/F-018 polarity items are therefore FIXED. The earlier "180° hand placement" workaround is withdrawn: with this part it would reverse-bias the LEDs. | Würth 150505M173300 datasheet p.1 (schematic + pin drawing) |
+| R3-P2-02 | — | **REFUTED** (actual part identified) | The custom `LED_RGB_5050-6_Retroactive Pin Out` footprint matches the Würth land pattern: pads 2.0 × 1.1 at x ±2.4, rows ±1.7 (Würth: 1.6 × 1.0 at x ±2.2, rows ±1.5; inner pad edges both at 1.4), chamfer at the pin-1/cathode-mark corner, part on F.Cu. What is wrong is the **schematic Value field** ("CLS6B-FKW") and the **symbol pin labels** (R3-P2-03). | Würth datasheet p.1 land pattern; `power_geom.py §D` |
+| R3-P2-03 | JUDGMENT | confirmed (re-based on the Würth part) | Symbol pin labels are wrong for the real part: pad 1 is labelled "AR" but is the **blue cathode**, pad 2 "KR" is the blue anode, pad 3 "AG" is the red cathode, pad 4 "KR" (duplicate) is the red anode, pad 5 "AB" is the green cathode, pad 6 "KB" is the green anode. Nets were wired correctly for the Würth part, so the labels are the only error. Fix: set Value to 150505M173300, relabel pins per the datasheet, add the hand-solder BOM line. | Würth datasheet p.1 |
+| R3-P2-04 | JUDGMENT | confirmed (Würth Vf: R 2.0 V, G/B 3.2 V typ) | 300 Ω 0603 LED resistors at the 9 V design case: /+9V_FLAG ≈ 5.8 V → red 12 mA / G/B 8 mA, 43/19 mW (within rating, **dim**). If the R31/R32/C20–C22 block is removed and the LEDs move to the ≈7.7 V C19 node: red 18 mA at **101 mW** (at the 0603 rating), G/B 14 mA at 62 mW → use 1206 bodies, or 390 Ω (red 14 mA / 78 mW, G/B 11 mA / 47 mW). | Würth datasheet (Vf, IF 30 mA) |
 | R3-P2-05 | JUDGMENT | confirmed | **No inrush limit:** 200 µF (C15 + C19) behind ≈0.2 Ω of bead DCR + Schottkys → ≈26 A peak from a stiff adapter through diodes rated 9 A surge and 2 A beads; 700 µF total, 23–44 mJ per plug-in or SW1 flip. NTC/series R before C15, or fewer bulk caps. | computed; BOM C727114 |
 | R3-P2-06 | JUDGMENT | confirmed | Series-element audit: D6 is redundant (bridge already protects both polarities; third ≈0.4 V drop, ≈0.2 W SOD-323 at 0.5 A); four identical beads FB3/4/5/6 in series; the two 3.3 Ω π-filters make both rails load-dependent (DSY_VIN 6.4–7.1 V, /+9V_FLAG 5.7–5.9 V at 9 V). All within limits — simplify. | — |
 | R3-P2-07 | PASS | confirmed | Daisy VIN 6.4–7.1 V at the 9 V design case, within 4–17 V; AGND/DGND tied; reverse polarity by D2–D5; 5 × 47k SD pull-ups unchanged. F-021 re-verified. | Daisy datasheet v1.0.5 as recorded in rev-2 PASS2 (host blocked) |
@@ -105,7 +105,7 @@ Class: VIOLATION (measured fact breaks a cited rule) · ZERO-MARGIN · JUDGMENT 
 
 | Rev-2 ID | Rev-2 finding (short) | Rev-3 status | Evidence / rev-3 ref |
 |---|---|---|---|
-| F-001 | LED drive broken (300 Ω to +9V, GPIO anodes) | **STILL OPEN** | polarity unchanged through Q1–Q6 → R3-P2-01 |
+| F-001 | LED drive broken (300 Ω to +9V, GPIO anodes) | **FIXED** (with the actual Würth part; R3-P2-01 refuted) | NPN low-side drivers; anodes to 300 Ω/supply, cathodes to collectors |
 | F-002 | LEDs missing from BOM | **STILL OPEN** | R3-P4-01 |
 | F-003 | BOM S1/S2 phantom switches | **FIXED** | line removed, 0 BOM-only designators |
 | F-004 | 3.85 m of 0.10 mm trace | **IMPROVED 98 %** (74.9 mm remains, still zero-margin) | R3-P1-01 |
@@ -122,7 +122,7 @@ Class: VIOLATION (measured fact breaks a cited rule) · ZERO-MARGIN · JUDGMENT 
 | F-015 | Version/provenance timeline | **RESOLVED** | rev 3 sch and pcb are one generation (PASS0 §1) |
 | F-016 | MK1 annular ring 0.175 mm | **STILL OPEN** | R3-P1-02 |
 | F-017 | Gerber 93 vs pcb 94 vias | N/A | no rev-3 Gerbers |
-| F-018 | LEDs reverse-biased, 3.3V-only pins exposed | **OPEN (items 1–2)** / item 3 **FIXED** | R3-P2-01 / R3-P2-13 |
+| F-018 | LEDs reverse-biased, 3.3V-only pins exposed | **FIXED** (all three items, given the actual Würth part) | R3-P2-01 refuted / R3-P2-13 |
 | F-019 | 3V3_D impedance / single 100 nF | **PARTIAL** | trunk 0.3 mm; still one cap → R3-P2-10 |
 | F-020 | PCB-only 10 Ω damper not in sch | **RESOLVED by redesign** | OLED_HOT branch removed |
 | F-021 | Power checks that pass | **PASS re-verified** | R3-P2-07/12 |
@@ -147,8 +147,8 @@ Class: VIOLATION (measured fact breaks a cited rule) · ZERO-MARGIN · JUDGMENT 
 
 | Outcome | Count | IDs |
 |---|---|---|
-| FIXED / RESOLVED | 10 | F-003, F-006, F-007, F-010, F-013, F-014, F-015, F-020, F-023, F-025 |
+| FIXED / RESOLVED | 12 | F-001, F-003, F-006, F-007, F-010, F-013, F-014, F-015, F-018, F-020, F-023, F-025 |
 | PASS re-verified | 4 | F-012, F-021, F-029, F-035 |
-| IMPROVED / PARTIAL | 5 | F-004, F-018 (1 of 3), F-019, F-028, F-030 |
-| STILL OPEN | 13 | F-001, F-002, F-005, F-008, F-009, F-016, F-022, F-024, F-026, F-031, F-032, F-033, F-034 |
+| IMPROVED / PARTIAL | 4 | F-004, F-019, F-028, F-030 |
+| STILL OPEN | 12 | F-002, F-005, F-008, F-009, F-016, F-022, F-024, F-026, F-031, F-032, F-033, F-034 |
 | N/A in rev 3 | 3 | F-011, F-017, F-027 |
