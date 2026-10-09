@@ -67,7 +67,39 @@ Class: VIOLATION (measured fact breaks a cited rule) · ZERO-MARGIN · JUDGMENT 
 | R3-P5-08 | PASS | confirmed | LED GPIO → 1 k → base nets clean 2-node, 2.6 mA base drive. | — |
 
 ### Pass 1 — Fab constraints and Pass 6 — Mechanical
-<!-- PASS1_6_ROWS -->
+#### Pass 1 — Fab constraints (`PASS1_FAB_CONSTRAINTS.md`)
+
+| ID | Class | Status | Finding | Threshold source |
+|----|-------|--------|---------|------------------|
+| R3-P1-01 | ZERO-MARGIN (F-004 carry) | confirmed | 0.10 mm copper down from 3,850 mm to **74.9 mm / 68 segments**: U4 MAX9814 DFN fan-out (54 segs), U6 thermal stitching, USB fan-out (5), one 5.9 mm /USART1_TX run under LED2. All trunks are now 0.3 mm. Still exactly at JLCPCB's minimum where it remains. | JLCPCB caps 2026-10-09 (0.10/0.10, ±20 %) |
+| R3-P1-02 | VIOLATION (marginal, F-016 carry) | confirmed | MK1 pads 1/2 annular ring 0.175 mm (1.0 pad / 0.65 drill) vs JLC absolute minimum 0.18; ENC posts and P2 shield at 0.20 (below the 0.25 recommended). Reproduced within 3 µm of rev 2 by an independent polygon method. | JLCPCB caps |
+| R3-P1-03 | VIOLATION (marginal, F-008 carry) | confirmed | P2 USB-C GND pads 0.197 mm from the footprint's own 0.65 mm NPTH vs 0.20 minimum. Footprint-level defect, unchanged. | JLCPCB caps |
+| R3-P1-04 | JUDGMENT | confirmed | U6 thermal vias 0.25 mm hole / 0.60 pad: legal at JLC (dia ≥ hole + 0.1, no surcharge at ≥ 0.45 dia) but trip the project's 0.30 min-hole rule (2 DRC errors) and add a drill tool. Make them 0.30. | JLCPCB caps; .kicad_pro |
+| R3-P1-05 | JUDGMENT | confirmed | Copper-to-edge: SW1 pads 0.414 mm, /+3V3_D track 0.451 mm — both above JLC 0.2; the 5 DRC errors come only from the project's 0.5 rule. The SW1 outline notch is gone (F-010 FIXED). | JLCPCB caps |
+| R3-P1-06 | JUDGMENT | confirmed | The 8 starved-thermal GND pads (TAC_SWITCH_1.3, U1.5, P2 A12/B1, R18.1, C9.1, U3.3, C10.1) are all connected — one 0.5 mm spoke each, U3.3 via one 0.3 mm track; 0 unconnected. Robustness only: reduce thermal gap or add GND tracks. | DRC |
+| R3-P1-07 | JUDGMENT | confirmed | 2 dangling vias /LED_2_R (167.75, 145.9) and /LED_2_B (168.53, 145.74): leftovers with no F.Cu connection; nets fully routed elsewhere. Delete. | DRC |
+| R3-P1-08 | JUDGMENT (strong) | confirmed | **Zero GND stitching vias.** F.Cu pour is 15 fragments (7,990 mm²) tied to the one-piece 12,852 mm² B.Cu plane only through component through-holes; 3 fragments hang on a single pad (TAC_SWITCH_1.3, MK1.1, ENCR1.C); 10 B-side GND pads (U2, U3, U4, U6) reach GND only by one thin track. Add stitching vias (every ~10–15 mm and at every F.Cu fragment). | — |
+| R3-P1-09 | PASS | confirmed | No copper islands: all 19 fill fragments touch a GND pad (island removal = always). | — |
+| R3-P1-10 | PASS | confirmed | Hole-to-hole via–via 0.50, pad–pad 0.75; NPTH-to-track 0.251, NPTH-to-pour 0.2505 (P2 aside, R3-P1-03). | JLCPCB caps |
+| R3-P1-11 | PASS | confirmed | Via-hole-to-other-net copper 0.35; PTH-hole-to-other-net track ≥ 0.45. | JLCPCB caps |
+| R3-P1-12 | PASS (F-012 re-confirmed) | confirmed | Min copper clearance 0.15 (U3/U4 pad gaps), else 0.20; DRC at 0.1/0.1 with netclass 0.1 → 0 errors. The 17 as-is clearance errors are F-009 netclass noise. | JLCPCB caps |
+| R3-P1-13 | PASS | confirmed | Mask 1:1, min sliver 0.15 ≥ 0.10; all 244 vias one size (0.6/0.3), tented both sides; drill file = 244 × 0.3 + 2 × 0.25. | JLCPCB caps |
+| R3-P1-14 | JUDGMENT (F-005 carry) | confirmed | .kicad_pro still has min_track_width 0.0 and min_clearance 0.0 — KiCad will not guard the 0.10 mm margin. Set to JLC values. | .kicad_pro |
+
+#### Pass 6 — Mechanical & assembly (`PASS6_MECHANICAL.md`)
+
+| ID | Class | Status | Finding | Threshold source |
+|----|-------|--------|---------|------------------|
+| R3-P6-01 | JUDGMENT (F-033 carry, changed) | confirmed | All 447 silk warnings are the **back-side artwork** (3,900 zero-stroke polygons running off all four edges; rev 2 had 88 polygons on F.Silk): over copper 199, over refdes 59, over outlines 138, edge-mounted outlines beyond the edge 25, art into J1's NPTH 2. No refdes lands on a pad. 97/102 B-side refdes are buried in the art — assembly unaffected, inspection/rework harder. | DRC at 0.15 silk clearance |
+| R3-P6-02 | ZERO-MARGIN | confirmed | All 110 refdes are 1.0 mm / 0.15 mm — exactly JLC's legend minimum; footprint outlines are 0.12 mm stroke (below 0.15). | JLCPCB caps |
+| R3-P6-03 | PASS | confirmed | 0 courtyard overlaps, 0 missing; 10 protrude past the outline (all panel-mounted parts; Headphones1 by 9.0 mm); C19/C20, C15/R29, C22/R32 courtyards touch at 0.00 mm. | — |
+| R3-P6-04 | VIOLATION (F-034/F-002 carry) | confirmed | F.Paste = exactly LED1 + LED2's 12 apertures; LEDs absent from the BOM; B.Paste 260 apertures all covered. | — |
+| R3-P6-05 | JUDGMENT (F-032 carry, widened) | confirmed | **No mounting holes at all, and none for the NHD module's 74.2 × 42.5 mm Ø2.5 pattern.** Projected hole sites (135.0, 81.3) / (209.2, 81.3) / (135.0, 123.8) / (209.2, 123.8) collide with R2/R5/U1 and sit 0.7 mm from C22. `screen mounting solution.md` describes a different display (Crystalfontz COG/ZIF). | NHD datasheet mechanical |
+| R3-P6-06 | JUDGMENT | plausible (orientation inferred from datasheet views; confirm against Trey's STEP) | J8 (straight 1×20, pin 1 at (196.26, 81.30), pin 20 at (148.0, 81.30), F side) fits only with the module body toward +y: footprint x 131.1–213.1, y 78.8–126.3, clear of all F parts (≥ 3.9 mm to TAC_SWITCH_1/2, ≥ 13.7 mm to encoders); the −y orientation overhangs the top edge by 24.7 mm. Header, buck (U6/L1/C25/C26/FB7) and rail caps C23/C24 sit inside the x 165–200 audio corridor the rev-2 plan reserved. | NHD datasheet; REV2_OLED_PLAN |
+| R3-P6-07 | JUDGMENT | confirmed | Headphones1 (Alps RK097-style dual, B side at (224.75, 146.5)) bushing exits the bottom edge 9 mm outside the outline, 16.75 mm from the PHONES jack J7 — panel cut-out needed. Pads 1.0/1.8 fine. | — |
+| R3-P6-08 | JUDGMENT (F-026 carry) | confirmed | Hand-assembly list still missing; 18 THT parts incl. new C23, C24, J8, Headphones1. | — |
+| R3-P6-09 | PASS | confirmed | Edge.Cuts = one closed 132-vertex polygon, 165.30 × 101.80 mm, R≈9 corners, no notches, no stray items. | — |
+| R3-P6-10 | PASS | confirmed | Back texts correctly mirrored; front refdes unobstructed. | — |
 
 ## Part B — Status of every rev-2 finding in rev 3
 
@@ -76,19 +108,19 @@ Class: VIOLATION (measured fact breaks a cited rule) · ZERO-MARGIN · JUDGMENT 
 | F-001 | LED drive broken (300 Ω to +9V, GPIO anodes) | **STILL OPEN** | polarity unchanged through Q1–Q6 → R3-P2-01 |
 | F-002 | LEDs missing from BOM | **STILL OPEN** | R3-P4-01 |
 | F-003 | BOM S1/S2 phantom switches | **FIXED** | line removed, 0 BOM-only designators |
-| F-004 | 3.85 m of 0.10 mm trace | see Part A Pass 1 | 0.07 m remains |
-| F-005 | DRC minimums zeroed in .kicad_pro | see Part A Pass 1 | rules block unchanged |
+| F-004 | 3.85 m of 0.10 mm trace | **IMPROVED 98 %** (74.9 mm remains, still zero-margin) | R3-P1-01 |
+| F-005 | DRC minimums zeroed in .kicad_pro | **STILL OPEN** | R3-P1-14 |
 | F-006 | .kicad_pcb has no GND pour | **FIXED** | board-level GND zone filled on F.Cu + B.Cu; DRC 0 unconnected |
 | F-007 | Encoder clicks unrouted | **FIXED** (on paper, pre-fab) | R3-P3-03 |
-| F-008 | USB-C NPTH-to-copper 0.194 mm | see Part A Pass 1 | |
+| F-008 | USB-C NPTH-to-copper 0.194 mm | **STILL OPEN** (0.197) | R3-P1-03 |
 | F-009 | U3/U4 fine-pitch clearance DRC noise | **STILL OPEN** (config noise) | 17 identical clearance errors in drc_asis.json |
-| F-010 | SW1 edge copper in notch | see Part A Pass 1 | |
+| F-010 | SW1 edge copper in notch | **FIXED** (notch removed; 0.414 mm) | R3-P1-05 |
 | F-011 | ERC triage list | N/A (superseded by F-024) | |
 | F-012 | DRC at JLC minimums: 0 width/spacing violations | **PASS again** | drc_jlc.json |
 | F-013 | Duplicate refdes R21 | **FIXED** | 110 unique refs; R3-P3-01 |
 | F-014 | LED2 wiring sch ≠ pcb | **FIXED** | 0 pad-level diffs |
 | F-015 | Version/provenance timeline | **RESOLVED** | rev 3 sch and pcb are one generation (PASS0 §1) |
-| F-016 | MK1 annular ring 0.175 mm | see Part A Pass 1 | |
+| F-016 | MK1 annular ring 0.175 mm | **STILL OPEN** | R3-P1-02 |
 | F-017 | Gerber 93 vs pcb 94 vias | N/A | no rev-3 Gerbers |
 | F-018 | LEDs reverse-biased, 3.3V-only pins exposed | **OPEN (items 1–2)** / item 3 **FIXED** | R3-P2-01 / R3-P2-13 |
 | F-019 | 3V3_D impedance / single 100 nF | **PARTIAL** | trunk 0.3 mm; still one cap → R3-P2-10 |
@@ -104,9 +136,19 @@ Class: VIOLATION (measured fact breaks a cited rule) · ZERO-MARGIN · JUDGMENT 
 | F-029 | MIDI passes | **PASS unchanged** | R3-P5-05 |
 | F-030 | Long thin audio runs | **IMPROVED** (judgment residual) | R3-P5-06 |
 | F-031 | TPA6110A2 ≥10 µF bulk missing | **STILL OPEN** | R3-P2-11 |
-| F-032 | No chassis mounting holes | see Part A Pass 6 | |
-| F-033 | Silk warnings cosmetic | see Part A Pass 6 | |
+| F-032 | No chassis mounting holes | **STILL OPEN, widened** (no module holes either) | R3-P6-05 |
+| F-033 | Silk warnings cosmetic | **CHANGED** (art moved F→B, 143 → 447, still cosmetic) | R3-P6-01 |
 | F-034 | Paste expects LEDs the BOM lacks | **STILL OPEN** | R3-P4-01 |
-| F-035 | Mechanical passes | see Part A Pass 6 | |
+| F-035 | Mechanical passes | **PASS re-verified** | R3-P6-03/09/10 |
 
 **Not-a-finding register (carry from rev 2):** USB-C is data-only by design; 9 V barrel power.
+
+## Part C — Rev-2 scorecard (35 findings)
+
+| Outcome | Count | IDs |
+|---|---|---|
+| FIXED / RESOLVED | 10 | F-003, F-006, F-007, F-010, F-013, F-014, F-015, F-020, F-023, F-025 |
+| PASS re-verified | 4 | F-012, F-021, F-029, F-035 |
+| IMPROVED / PARTIAL | 5 | F-004, F-018 (1 of 3), F-019, F-028, F-030 |
+| STILL OPEN | 13 | F-001, F-002, F-005, F-008, F-009, F-016, F-022, F-024, F-026, F-031, F-032, F-033, F-034 |
+| N/A in rev 3 | 3 | F-011, F-017, F-027 |

@@ -4,6 +4,10 @@
 
 **If you are Claude opening this fresh:** the authoritative output is [analysis/FINAL_REPORT.md](analysis/FINAL_REPORT.md) (tiered red flags + open questions for Trey), backed by the full findings ledger F-001…F-035 in [analysis/FINDINGS.md](analysis/FINDINGS.md). Do not re-derive anything before checking those. Methodology and which-file-is-truth rules are in [analysis/SOURCE_OF_TRUTH.md](analysis/SOURCE_OF_TRUTH.md).
 
+## Rev 3 review (2026-10-09)
+
+Trey's rev-3 files are in `rev3/` (the `.kicad_pcb` there **does** carry the GND pour) and the review is in [analysis/rev3/FINAL_REPORT.md](analysis/rev3/FINAL_REPORT.md) with the ledger in [analysis/rev3/FINDINGS.md](analysis/rev3/FINDINGS.md). Headlines: pour, encoder clicks, duplicate R21, I2C hack and 0.1 mm traces are fixed; the **LEDs are still reverse-biased**, on a footprint that doesn't fit the named part, and still off the BOM; the new OLED module has no mounting holes; there are no GND stitching vias. Rev-2 scorecard: 10 fixed, 4 re-pass, 5 improved, 13 open, 3 no longer apply.
+
 ## Folder contents
 
 | Path | What it is |
@@ -11,7 +15,9 @@
 | `WavetableController.kicad_pro` / `.kicad_sch` / `.kicad_pcb` | KiCad 9 design files, sent by Trey piecemeal (see provenance below) |
 | `Manifold_Gerb_LedFix/` | The Gerbers + drill files actually sent to JLCPCB ("LedFix" round, 2nd proto). **Fab truth for copper.** |
 | `ManifoldRe_BOM_NEW - Excel Format.xls` | JLCPCB-format BOM |
-| `analysis/` | The full review: FINAL_REPORT, findings ledger, SOURCE_OF_TRUTH, PASS1–6 reports, REV2 OLED plan, routing CSVs extracted from Gerbers, board SVG, parser script. Has its own [README](analysis/README.md) index. |
+| `rev3/` | Rev-3 KiCad project + BOM (2026-10-09); copper truth for rev 3 |
+| `analysis/rev3/` | The rev-3 review (final report, ledger, passes 0–6, scripts) |
+| `analysis/` | The rev-2 review: FINAL_REPORT, findings ledger, SOURCE_OF_TRUTH, PASS1–6 reports, REV2 OLED plan, routing CSVs extracted from Gerbers, board SVG, parser script. Has its own [README](analysis/README.md) index. |
 | `screen mounting solution.md` | Mechanical mounting guide for the rev-2 Crystalfontz CFAL12864G-024W COG OLED (tape+gasket sandwich, plus 3D-printed bezel alternative) |
 
 ## Critical provenance warning

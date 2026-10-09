@@ -2,8 +2,10 @@
 
 Design review + rev-2 planning for Trey's WavetableController board (KiCad 9,
 2-layer, Daisy Seed synth controller). Read `README.md` first, then
-`analysis/FINAL_REPORT.md`. Do not re-derive findings that are already in
-`analysis/FINDINGS.md`.
+`analysis/FINAL_REPORT.md` (rev 2) and `analysis/rev3/FINAL_REPORT.md` (rev 3).
+Do not re-derive findings that are already in `analysis/FINDINGS.md` or
+`analysis/rev3/FINDINGS.md`. Rev-3 design files live in `rev3/` and, unlike the
+root copy, that `.kicad_pcb` contains the filled GND pour.
 
 ## Tooling (already installed in Claude Code on the web sessions)
 
