@@ -25,7 +25,7 @@ Both KiCad files are `version 20241229`, generator `pcbnew` 9.0. The schematic a
 - Buck regulator **U6** TPS62172DSG + **L1** 2.2µH + **C25** 10µF + **C26** 22µF + **R33** 100k; nets `/DSY_VIN`, `/+9V_FLAG`, `Net-(U6-EN)`, `Net-(U6-PG)`, `Net-(U6-SW)`.
 - **D6** Schottky; ferrites **FB5–FB7**; electrolytics **C15, C17–C22** (100µF SMD) + **C24** (100µF THT) + **C23** (100nF axial THT); **R29–R32** 3.3Ω 1W 2512.
 - LED drivers **Q1–Q6** MMBT3904 + **R35–R40** 1k; LED1/LED2 moved to custom footprint `LED_RGB_5050-6_Retroactive Pin Out`; six new `Net-(LEDx-Ay)` anode nets and `Net-(Qx-B)` base nets.
-- Dual-gang pot **Headphones1** (B10k, `DualGang_Headphone_PTD902-2015K-B103`); schematic symbol is unannotated (`RV`).
+- Dual-gang pot **Headphones1** (B10k, `DualGang_Headphone_PTD902-2015K-B103`) in schematic, netlist and PCB.
 - Encoder click nets `/ENCL_CLICK` → A1.22 and `/ENCR_CLICK` → A1.29 are now routed (22 and 24 segments respectively).
 - Previously-unconnected A1 pins 1 (USB_ID), 22 (ADC_0), 28 (ADC_6) are now used (RES_SPI, ENCL_CLICK, DC_SPI).
 
@@ -45,7 +45,7 @@ Both KiCad files are `version 20241229`, generator `pcbnew` 9.0. The schematic a
 
 ## 4. ERC / DRC baselines (`kicad_out/rev3/`)
 
-ERC (51): 19 footprint_link_issues + 12 lib_symbol_mismatch (library noise, expected), **14 pin_not_connected** (10 × P2 USB-C SS/SBU pins, 4 × J8 pins 3/9/15/18), **4 power_pin_not_driven** (A1 VIN, U4 VDD, #PWR01, U6 VIN), **1 label_dangling** (`SWA`), 1 multiple_net_names (GND/SWB). Note: ERC reported **no `unannotated` errors** even though the schematic contains symbols with references `U` ×5, `L`, `RV`, `Q` — dispositioned in Pass 3.
+ERC (51): 19 footprint_link_issues + 12 lib_symbol_mismatch (library noise, expected), **14 pin_not_connected** (10 × P2 USB-C SS/SBU pins, 4 × J8 pins 3/9/15/18), **4 power_pin_not_driven** (A1 VIN, U4 VDD, #PWR01, U6 VIN), **1 label_dangling** (`SWA`), 1 multiple_net_names (GND/SWB). Note: an early grep suggested unannotated symbols (`U` ×5, `L`, `RV`, `Q`); Pass 4 showed those are the `lib_symbols` default reference properties, not placed instances. ERC's zero `unannotated` count is correct; the schematic is fully annotated (110/110 refs match the PCB).
 
 DRC as-is (569): 199 silk_overlap, 199 silk_over_copper, 49 silk_edge_clearance, 69+19 lib footprint warnings, **17 clearance errors** (U3/U4 fine-pitch pad-to-pad 0.15 mm vs 0.2 netclass — same as rev-2 F-009), **8 starved_thermal**, **5 copper_edge_clearance** (3 × `/+3V3_D` track at 0.451 mm, 2 × SW1 pads at 0.41 mm, vs the project's 0.5 mm rule), **2 drill_out_of_range** (U6 thermal vias 0.25 mm vs project min 0.3), 2 via_dangling (`/LED_2_R`, `/LED_2_B`).
 

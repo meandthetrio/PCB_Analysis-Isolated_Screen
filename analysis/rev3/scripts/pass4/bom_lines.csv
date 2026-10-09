@@ -1,0 +1,39 @@
+row,lcsc,fp,fp_note,designator_raw,n_desig,spacing_oddity,mojibake,comment
+2,C385198,SOD-323,,D1,1,False,False,1 Independent 1A 20V 40uA@15V 540mV@1A 5A SOD-323 Schottky Diodes ROHS
+3,C727114,SOD-323,,"D2,D3,D4,D5,D6",5,False,True,-55_~+150_ 1A 1mA 20V 750mV@3A 9A Independent SOD-323 Schottky Diodes ROHS
+4,C21189,0603,numeric-cell,"R2,R3",2,False,True,-55‚ÑÉ~+155‚ÑÉ 0Œ© 100mW 75V Thick Film Resistor ¬±1% 0603 Chip Resistor - Surface Mount ROHS
+5,C1226,0603,numeric-cell,R5,1,False,False,-55℃~+155℃ 100mW 220Ω 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS
+6,C20082,SOP-6-2.54mm,,U1,1,False,True,-40‚ÑÉ~+85‚ÑÉ 0.4V 1 1.2V 1.6mA 1Mbit/s 250mW 30mA 3V~15V 4.17kV 4us 4us 50mA 6V DC SOP-6-2.54mm Logic Output Optoisolators ROHS
+7,C22966,0603,numeric-cell,R6,1,False,True,-55‚ÑÉ~+155‚ÑÉ 100mW 270Œ© 75V Thick Film Resistor ¬±1% ¬±100ppm/‚ÑÉ 0603 Chip Resistor - Surface Mount ROHS
+8,C1590,0603,numeric-cell,"C1, C4, C5, C8, C11,C14,C16",7,True,True,100nF 25V X7R ¬±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+9,C114218,SMD,,P1,1,False,True,-25‚ÑÉ~+85‚ÑÉ 1.68mm Connector and Ejector MicroSD Card (TF Card) No Push-Push SMD SD Card / Memory Card Connector ROHS
+10,C25600,0603,numeric-cell,"R7,R8,R9,R10,R11",5,False,True,-55‚ÑÉ~+155‚ÑÉ 100mW 47kŒ© 75V Thick Film Resistor ¬±100ppm/‚ÑÉ ¬±5% 0603 Chip Resistor - Surface Mount ROHS
+11,C130212,MSOP-8-EP,,U3,1,False,True,-40‚ÑÉ~+85‚ÑÉ 0.6% 1.5mA 100dB 150mWx2@16Œ© 2-Channel 2.5V~5.5V 76dB Automatic mute/no-noise switch„ÄÅESD protection Class AB MSOP-8-EP Audio Amplifiers ROHS
+12,C23344,0603,numeric-cell,"R12, R13",2,True,True,-55‚ÑÉ~+155‚ÑÉ 100mW 22kŒ© 75V Thick Film Resistor ¬±100ppm/‚ÑÉ ¬±5% 0603 Chip Resistor - Surface Mount ROHS
+13,C1623,0603,numeric-cell,"C2, C3, C10",3,True,True,25V 470nF X7R ¬±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+14,C4216,0603,numeric-cell,"R14, R15",2,True,True,-55‚ÑÉ~+155‚ÑÉ 100mW 33kŒ© 75V Thick Film Resistor ¬±1% ¬±100ppm/‚ÑÉ 0603 Chip Resistor - Surface Mount ROHS
+15,C3339,"SMD,D6.3xL7.7mm",,"C6, C7,C15,C17,C18,C19,C20,C21,C22",9,True,True,"-55‚ÑÉ~+105‚ÑÉ 100uF 2000hrs@105‚ÑÉ 35V 6.3mm 7.7mm ¬±20% SMD,D6.3xL7.7mm Aluminum Electrolytic Capacitors - SMD ROHS"
+16,C53059594,SOT-666,,U2,1,False,False,SOT-666 ESD and Surge Protection (TVS/ESD) ROHS
+17,C393939,SMD,,P2,1,False,True,"-40‚ÑÉ~+85‚ÑÉ 1 10,000 Cycles 16P 30V 3A Black Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS"
+18,C23186,0603,numeric-cell,"R16, R17",2,True,False,-55℃~+155℃ 100mW 5.1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+19,C41714,TDFN-14-EP(3x3),,U4,1,False,True,"
+-40‚ÑÉ~+85‚ÑÉ 0.04% 1-Channel 2.7V~5.5V 50dB 61dB Class AB Enable/disable function„ÄÅDigital programmable gain TDFN-14-EP(3x3) Audio Amplifiers ROHS"
+20,C14709,0603,numeric-cell,"FB2,FB3,FB4,FB5,FB6,FB7",6,False,False,-55℃~+125℃ 1 120Ω@100MHz 2A 50mΩ ±25% 0603 Ferrite Beads ROHS
+21,C1607,0603,numeric-cell,"C9, C13",2,True,True,10V 2.2uF X5R ¬±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+22,C14675,0603,numeric-cell,"R18,R33",2,False,False,-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+23,C22807,0603,numeric-cell,R19,1,False,True,"
+-55‚ÑÉ~+155‚ÑÉ 100mW 150kŒ© 75V Thick Film Resistor ¬±1% ¬±100ppm/‚ÑÉ 0603 Chip Resistor - Surface Mount ROHS"
+24,C4190,0603,numeric-cell,R20,1,False,True,-55‚ÑÉ~+155‚ÑÉ 100mW 2.2kŒ© 75V Thick Film Resistor ¬±1% ¬±100ppm/‚ÑÉ 0603 Chip Resistor - Surface Mount ROHS
+25,C1705,0603,numeric-cell,C12,1,False,True,10V 4.7uF X5R ¬±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+26,C114916,SMD,,J1,1,False,True,"-35_~+75_ 12V 2mm 3A 6.4mm DC Power Jack Surface Mount, Right Angle SMD DC Power Connectors ROHS"
+27,C22369937,0603,numeric-cell,"R22, R23",2,True,True,-55_~+155_ 100mW 10kΩ 75V Thick Film Resistor ±100ppm/_ ±5% 0603 Chip Resistor - Surface Mount ROHS
+28,C22859,0603,numeric-cell,R1,1,False,False,-55℃~+155℃ 100mW 10Ω 75V Thick Film Resistor ±1% ±400ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+29,C2907549,1210,numeric-cell,R4,1,False,False,-55℃~+155℃ 200V 33Ω 500mW Thick Film Resistor ±100ppm/℃ ±5% 1210 Chip Resistor - Surface Mount ROHS
+30,C23025,0603,numeric-cell,"R21, R24,R25,R26,R27,R28",6,True,False,-55℃~+155℃ 100mW 300Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+31,C2960677,2512,numeric-cell,"R29,R30,R31,R32",4,False,False,-55℃~+155℃ 1W 200V 3.3Ω Thick Film Resistor ±200ppm/℃ ±5% 2512 Chip Resistor - Surface Mount ROHS
+32,C59873,WSON-8-EP(2x2),,U6,1,False,False,-40℃~+85℃@(TA) 1 17uA 2.25MHz 3.3V 3V~17V 500mA Buck Built-in Fixed Overcurrent Protection、Light load efficient mode、Operating status indication Step-down type Yes WSON-8-EP(2x2) DC-DC Converters ROHS
+33,C237554,0806,numeric-cell,L1,1,False,False,1.4A 168mΩ 2.2uH 2A ±20% 0806 Power Inductors ROHS
+34,C15850,0805,numeric-cell,C25,1,False,False,10uF 25V X5R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+35,C45783,0805,numeric-cell,C26,1,False,False,22uF 25V X5R ±20% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+36,C14676,0603,numeric-cell,"R35,R36,R37,R38,R39,R40",6,False,False,-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS
+37,C20526,SOT-23,,"Q1,Q2,Q3,Q4,Q5,Q6",6,False,False,-55℃~+150℃ 1 NPN 100 100nA 200mA 200mW 300MHz 300mV 40V 6V NPN SOT-23 Bipolar (BJT) ROHS
