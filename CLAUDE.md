@@ -43,4 +43,8 @@ these are harmless. Everything else ERC/DRC reports is a real finding.
   not. `tools/autoroute.py` still carries the temporary rename for the archived
   file.
 - Round 2 baselines (ERC/DRC JSON) live in `analysis/baseline_2026-10/`.
+- `rev2b_2026-10-09/` holds Trey's post-review board + BOM (no sch/pro/Gerbers yet);
+  its diff is `analysis/REV2B_DIFF_2026-10-09.md`. The shared plain-language doc is
+  exported to `analysis/REV2_DESIGN_REVIEW_shared_doc.md`; never edit the live doc
+  without the user's approval.
   `analysis/gerber_analyze.py DIR` takes the Gerber folder as an argument.

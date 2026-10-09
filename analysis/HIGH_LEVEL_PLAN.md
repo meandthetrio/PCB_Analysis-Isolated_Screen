@@ -152,6 +152,15 @@ Trey supplied a new, mutually consistent set on 2026-10-07: `Manifold_Gerbs_2026
 - **Deliverable:** ✅ `PASS6_MECHANICAL_2026-10.md`; findings F-071…F-073
 - **Questions:** Q-R2-6 (which side faces the user), Q-R2-7 (module mounting)
 
+## R2b — Trey's 2026-10-09 revision (diff check, 2026-10-09)
+- [x] BOM diffed line by line; every new LCSC number resolved (`REV2B_DIFF_2026-10-09.md` §1)
+- [x] Board diffed with pcbnew (footprints, positions, nets, holes); DRC with Round 2 rules → `baseline_2026-10/drc_rev2b_2026-10-09.json`
+- [x] Closed: F-049, F-050, F-051, F-053, F-060, F-063, F-064, doc item 8 · Partial: L1 move · Open: R21/R24–R28 size, F-071/F-074 holes, F-075, D6
+- [x] New: **F-076** (CLS6B-FKW cannot fit the 5050 footprint — pre-existing miss), **F-077** (rev2b switches sink the anodes; still reverse-biased)
+- [ ] ERC + netlist parity — waiting on `.kicad_sch` / `.kicad_pro` (iCloud placeholders received instead)
+- [ ] Q-R2-9 (physical LED part + pinout) to Trey
+- Files: `rev2b_2026-10-09/` (board + BOM). Root files stay the Round 2 / Gerber-verified set.
+
 ## R2 Final — Synthesis
 **Status: COMPLETE** (2026-10-07) — asks reviewed with the user; plain-language version published for Trey as a Claude Doc (link in `FINAL_REPORT_2026-10.md`); F-072 (back-silk artwork) dropped from the shared version as irrelevant
 - [x] Verification sweep: 37/38 confirmed, F-065 plausible; Round 1 closures and persistences listed in `FINDINGS.md`

@@ -3,6 +3,7 @@
 **Read this first.** This folder holds a design review of Trey's "WavetableController" board — an Electrosmith Daisy Seed–based wavetable synth controller, 2-layer, 165×102 mm, designed in KiCad 9 — in two rounds:
 
 - **Round 1 (2026-08, complete):** review of the boards that were fabbed twice at JLCPCB (`Manifold_Gerb_LedFix/`). Output: [analysis/FINAL_REPORT.md](analysis/FINAL_REPORT.md) + findings F-001…F-035 in [analysis/FINDINGS.md](analysis/FINDINGS.md).
+- **Rev 2b (2026-10-09, partial):** Trey's revised board + BOM after the Round 2 review, stored in `rev2b_2026-10-09/`, diffed in [analysis/REV2B_DIFF_2026-10-09.md](analysis/REV2B_DIFF_2026-10-09.md); schematic still outstanding. The plain-language review shared with Trey is exported at [analysis/REV2_DESIGN_REVIEW_shared_doc.md](analysis/REV2_DESIGN_REVIEW_shared_doc.md).
 - **Round 2 (2026-10, complete):** review of the revised file set Trey sent on 2026-10-07 (`Manifold_Gerbs_2026-10/`, the root KiCad files, and a 2026-10-06 BOM). Output: [analysis/FINAL_REPORT_2026-10.md](analysis/FINAL_REPORT_2026-10.md) + findings F-036…F-073, backed by `PASS0…PASS6_*_2026-10.md`. Pass plan and status: [analysis/HIGH_LEVEL_PLAN.md](analysis/HIGH_LEVEL_PLAN.md) (Round 2 section at the end).
 
 **If you are Claude opening this fresh:** Round 2 is complete; the next step is whatever the user asks after reviewing `analysis/FINAL_REPORT_2026-10.md` (likely edits to the asks, then a shareable version for Trey, then Round 3 on his revised files). Do not re-derive anything that is already in `FINDINGS.md`. Methodology and which-file-is-truth rules are in [analysis/SOURCE_OF_TRUTH.md](analysis/SOURCE_OF_TRUTH.md).
@@ -15,6 +16,7 @@
 | `Manifold_Gerbs_2026-10/` | **Round 2** Gerbers + drills, plotted 2026-10-07 from the files above. Whether this set has gone to fab is an open question (Q-R2-1) |
 | `ManifoldRe_BOM_NEW - Excel Format.xls` | **Round 2** JLCPCB-format BOM, saved 2026-10-06 (37 lines) |
 | `Manifold_Gerb_LedFix/` | **Round 1** Gerbers + drills actually sent to JLCPCB ("LedFix" round, 2nd proto, plotted 2026-07-22). **Fab truth for the boards that physically exist.** |
+| `rev2b_2026-10-09/` | Trey's **2026-10-09** board (31.9 MB) + BOM (90 designators), received after the Round 2 review. No Gerbers, no schematic yet. Not the Gerber-verified set — see `analysis/REV2B_DIFF_2026-10-09.md` |
 | `archive/rev1_2026-08/` | Round 1 KiCad files + BOM, kept for reference. The `.kicad_pcb` there is the stale no-pour copy described below — never plot from it |
 | `analysis/` | Both rounds: FINAL_REPORT (Round 1), findings ledger, SOURCE_OF_TRUTH, PASS1–6 reports (Round 1), PASS0_BASELINE_2026-10 (Round 2), `baseline_2026-10/` ERC/DRC JSON, REV2 OLED plan, routing CSVs, board SVG, parser script. Has its own [README](analysis/README.md) index. |
 | `screen mounting solution.md` | Mechanical mounting guide for the Round-1-planned Crystalfontz CFAL12864G-024W COG OLED. Note: Round 2 files use a Newhaven NHD-2.7-12864WDW3 on SPI instead (F-043) — this guide needs revisiting |
