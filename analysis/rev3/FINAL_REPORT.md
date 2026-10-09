@@ -1,10 +1,12 @@
 # WavetableController Rev 3 — Final Red-Flag Report
-**Date:** 2026-10-09 · **Inputs:** the rev-3 KiCad project + BOM Trey sent 2026-10-09 (`rev3/`) · **Scope:** Passes 0–6 complete (`HIGH_LEVEL_PLAN.md`), 65 ledger entries (`FINDINGS.md`), every rev-2 finding F-001…F-035 re-scored · **Truth:** the rev-3 `.kicad_pcb` carries the filled GND pour and is copper truth; nothing has been fabbed from these files yet.
+**Date:** 2026-10-09 · **Inputs:** the rev-3 KiCad project + BOM Trey sent 2026-10-09 (`rev3/`) · **Baselines:** the August review of the LedFix fab files (`analysis/`, F-001…F-035) and Kyle's 7 October "Rev 2 Design Review" doc of the intermediate files, scored item by item in `OCT7_REVIEW_STATUS.md` · **Scope:** Passes 0–6 complete (`HIGH_LEVEL_PLAN.md`), 65 ledger entries (`FINDINGS.md`), every rev-2 finding F-001…F-035 re-scored · **Truth:** the rev-3 `.kicad_pcb` carries the filled GND pour and is copper truth; nothing has been fabbed from these files yet.
 **Verification state:** 60 of 65 entries confirmed by an independent method; 4 plausible, each blocked on information only Trey has (marked ⏳); 1 not applicable (I2C removed). The headline LED finding was verified three ways (Pass 2 script, Pass 3 script, coordinator's own netlist + datasheet-drawing check).
 
 ---
 
 ## The short version
+
+Against the 7 October review (the list Trey was actually working from): 9 of its 19 fix items are done, 2 done with a different part, 7 not done, and the one that matters most, turning the LEDs around, is among the not-done. Full table in `OCT7_REVIEW_STATUS.md`.
 
 Rev 3 is a real step forward: the ground pour is in the file, the 0.1 mm traces are 98 % gone, the encoder clicks are routed, the duplicate R21 and the whole I2C noise-fix thicket are gone, the schematic and PCB agree pad-for-pad, and the new SPI OLED header matches its datasheet pin-for-pin. Of the 35 rev-2 findings, 10 are fixed, 4 re-pass, 5 improved, 3 no longer apply.
 
@@ -25,7 +27,7 @@ The Murata DFE201610P (2.0 × 1.6 mm) sits on `L_0805_2012Metric`: pads 0.4 mm n
 
 **4. No ground stitching vias.** (R3-P1-08 ✔) The F.Cu pour is 15 fragments joined to the B.Cu plane only through component holes; three fragments hang on a single pad, and ten bottom-side GND pads on U2/U3/U4/U6 reach ground through one thin track. Eight GND pads have a single thermal spoke (R3-P1-06). *Fix: stitch every fragment and the IC grounds with vias.*
 
-**5. Power entry: no inrush limit, and more series parts than needed.** (R3-P2-05, R3-P2-06 ✔) 700 µF of new bulk capacitance sits behind only Schottkys and bead DCR: ≈26–36 A peak at plug-in through diodes rated 9 A surge and 2 A beads. D6 duplicates the bridge's protection for another 0.4 V and ≈0.2 W; four identical beads are in series; the two 3.3 Ω π-filters make DSY_VIN ≈6.4–7.1 V and the "+9V" LED/OLED rail ≈5.8 V at 9 V in (all still within limits, R3-P2-07 ✔). *Fix: NTC or series R before C15, drop D6, consolidate beads, rename +9V_FLAG.*
+**5. Power entry: no inrush limit, and more series parts than needed.** (R3-P2-05, R3-P2-06 ✔) The buck, the 3.3 Ω/100 µF ladder and the bead chain were already in the design the 7 October review covered, and that review asked for 2 A beads, ½ W resistors and a 25 V C25, all of which were done. What it did not cover: 700 µF of bulk capacitance sits behind only Schottkys and bead DCR: ≈26–36 A peak at plug-in through diodes rated 9 A surge and 2 A beads. D6 duplicates the bridge's protection for another 0.4 V and ≈0.2 W; four identical beads are in series; the two 3.3 Ω π-filters make DSY_VIN ≈6.4–7.1 V and the "+9V" LED/OLED rail ≈5.8 V at 9 V in (all still within limits, R3-P2-07 ✔). *Fix: NTC or series R before C15, drop D6, consolidate beads, rename +9V_FLAG.*
 
 **6. Decoupling left half-done.** (R3-P2-10, R3-P2-11 ✔) The 3V3_D trunk is now 0.3 mm (good) but still has one 100 nF for SD + MIDI + pull-ups, 111–120 mm from both the Daisy and the SD socket. The headphone amp still lacks its datasheet ≥10 µF. *Fix: 100 nF + 10 µF at P1, 10 µF at A1.38, 10 µF at U3.*
 
