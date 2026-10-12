@@ -8,7 +8,9 @@ Do not re-derive findings that are already in `analysis/FINDINGS.md` or
 root copy, that `.kicad_pcb` contains the filled GND pour. Electrosmith's Daisy Pod
 Rev5 reference files and their review are in `reference/electrosmith/` and
 `analysis/daisy_pod/` (KiCad conversion of the Eagle board: see its README for
-what the conversion lost; never fabricate from it).
+what the conversion lost; never fabricate from it); the Seed 3 Eurorack and Pedal
+dev-kit reviews are in `analysis/seed3_eurorack_devkit/` and
+`analysis/seed3_pedal_devkit/`.
 
 ## Tooling (already installed in Claude Code on the web sessions)
 

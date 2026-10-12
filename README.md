@@ -10,7 +10,7 @@ Trey's rev-3 files are in `rev3/` (the `.kicad_pcb` there **does** carry the GND
 
 ## Reference designs (2026-10-12)
 
-Electrosmith's Daisy Pod Rev5 files (Eagle sch/brd, BOM, PDF) are in `reference/electrosmith/` with a KiCad conversion, and the same six-pass review was run on them with a side-by-side against rev 3: [analysis/daisy_pod/FINAL_REPORT.md](analysis/daisy_pod/FINAL_REPORT.md). Headlines: two real errors in Electrosmith's BOM (DNI MIDI jumpers ordered, one Seed socket where two are needed) and an encoder-click/MIDI-TX pin conflict with libDaisy's defaults; the SD-socket, bulk-cap, headphone-amp and encoder-filter habits on Trey's board are inherited from the reference; rev 3's ground stitching, rail length and signal runs are where it falls behind it. The Daisy Field schematic could not be fetched from this environment (see `reference/electrosmith/README.md`).
+Electrosmith's Daisy Pod Rev5 files (Eagle sch/brd, BOM, PDF) are in `reference/electrosmith/` with a KiCad conversion, and the same six-pass review was run on them with a side-by-side against rev 3: [analysis/daisy_pod/FINAL_REPORT.md](analysis/daisy_pod/FINAL_REPORT.md). Headlines: two real errors in Electrosmith's BOM (DNI MIDI jumpers ordered, one Seed socket where two are needed) and an encoder-click/MIDI-TX pin conflict with libDaisy's defaults; the SD-socket, bulk-cap, headphone-amp and encoder-filter habits on Trey's board are inherited from the reference; rev 3's ground stitching, rail length and signal runs are where it falls behind it. The same review was then run on the two current Electrosmith reference kits, both native KiCad projects: [analysis/seed3_eurorack_devkit/FINAL_REPORT.md](analysis/seed3_eurorack_devkit/FINAL_REPORT.md) and [analysis/seed3_pedal_devkit/FINAL_REPORT.md](analysis/seed3_pedal_devkit/FINAL_REPORT.md). The Pedal report settles the bead-chain question: Trey's power entry is the Pedal kit's Seed 3 datasheet Figure 1.1 circuit copied exactly, with a 1 A 600 Ω bead in the kit; the bridge is Trey's addition and the OLED buck is the load that makes the copy sag. The Daisy Field schematic could not be fetched from this environment (see `reference/electrosmith/README.md`). Tooling moved to KiCad 10.0.7 on 2026-10-12.
 
 ## Folder contents
 
@@ -22,6 +22,7 @@ Electrosmith's Daisy Pod Rev5 files (Eagle sch/brd, BOM, PDF) are in `reference/
 | `rev3/` | Rev-3 KiCad project + BOM (2026-10-09); copper truth for rev 3 |
 | `reference/electrosmith/` | Daisy Pod Rev5 / Seed Rev7 / Field databrief reference files |
 | `analysis/daisy_pod/` | The Pod reference review (six passes, ledger, report) |
+| `analysis/seed3_eurorack_devkit/`, `analysis/seed3_pedal_devkit/` | The Seed 3 dev-kit reference reviews |
 | `analysis/rev3/` | The rev-3 review (final report, ledger, passes 0–6, scripts) |
 | `analysis/` | The rev-2 review: FINAL_REPORT, findings ledger, SOURCE_OF_TRUTH, PASS1–6 reports, REV2 OLED plan, routing CSVs extracted from Gerbers, board SVG, parser script. Has its own [README](analysis/README.md) index. |
 | `screen mounting solution.md` | Mechanical mounting guide for the rev-2 Crystalfontz CFAL12864G-024W COG OLED (tape+gasket sandwich, plus 3D-printed bezel alternative) |
