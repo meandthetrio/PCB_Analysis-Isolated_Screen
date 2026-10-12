@@ -26,4 +26,4 @@ Found via the daisyaudio GitHub organisation (the daisy.audio product pages them
 | seed3_pedal_devkit/Rev3 | KiCad 9-format project (loads here), review PDFs | github.com/daisyaudio/ES-Seed3-DevKit-Pedal @ f79f932 (2026-10-06) |
 | daisy_seed3/Daisy_Seed3_datasheet.pdf | Seed 3 datasheet v1.0 (2026-07-23), 38 pp; 3.3 V-only pins 24, 25, 28, 29, 30 | CDN `products/seed3/` |
 
-Production folders (Gerber zips, STEP, EasyEDA JSON) were left out to keep the repo small; the clones live in the session scratchpad. Both repos are MIT-licensed open-source hardware (LICENSE.txt copied).
+Production folders were left out except the Eurorack Rev3 production set (Gerbers, drill, BOM, centroid, dated 2026-06-18), which is the fab truth for Rev3 and the only Rev3 copper readable without KiCad 10. Other production zips, STEP and EasyEDA JSON were left out to keep the repo small; the clones live in the session scratchpad. Both repos are MIT-licensed open-source hardware (LICENSE.txt copied).
