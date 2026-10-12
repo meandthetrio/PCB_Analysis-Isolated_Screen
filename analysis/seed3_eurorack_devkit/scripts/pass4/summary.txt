@@ -1,0 +1,36 @@
+== EU: production BOM Seed3-DevKit-Eurorack-Rev3_bom.csv: 43 lines, 130 designators, header ['Value', 'Reference', 'Footprint', 'Qty', 'AVL_Part_Number']
+   designators on two lines: none; Qty != n_refs: none; lines with 2 footprints: none
+== CDN BOM Seed3-DevKit-Eurorack_Rev3-bom.csv: 42 lines, 130 designators, header ['Designators', 'Qty', 'Value', 'Description', 'Package', 'CPN', 'MPN', 'MFG', 'VPN', 'Vendor', 'Sub OK', 'DNP', 'Assembly']
+   designators on two lines: none; Qty != n_refs: none
+   DNP column values: {'FALSE': 42}; Assembly: {'SMT': 31, 'PTH': 11}; Vendor: {'LCSC': 29, 'Digi-Key': 2, 'CIXI LANLING ELECTRONIC CO.,LTD.': 1, 'TI': 3, 'Mouser': 3, 'Alpha': 1, 'QingPu': 2, '': 1}; Sub OK: {'YES': 21, 'NO': 21}
+   VPN not an LCSC C-number while Vendor=LCSC: [(15, '0603WAF2001T5E')]
+   empty Value cells: 20; empty Description: 7; "Unknown Manufacturer": [37]; MFG with trailing space: []
+   designators in CDN but not production BOM: none
+   designators in production BOM but not CDN: none
+   value differs between CDN and production BOM: none
+   CDN Package/Assembly/DNP checks not OK (cdn_chk column): [('VR1', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR2', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR3', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR4', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR5', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR6', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR7', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR8', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)')]
+== schematic (netlist): 139 components; exclude_from_bom: ['FD1', 'FD2', 'FD3', 'H1', 'H2', 'H3', 'H4', 'LOGO1', 'QR1']; dnp: []; exclude_from_board: []
+   sheets: {'Peripherals': 49, 'Daisy': 72, 'Power': 18}
+   symbols with empty Footprint field: none
+== board (pcbnew): 139 footprints; duplicate refs: none; tech: {'SMD': 101, 'THT': 36, 'no-pads': 2}; sides: {'top': 139}
+   footprint attribute vs pad type: {('SMD', 'SMD'): 101, ('SMD', 'THT'): 4, ('unspec', 'no-pads'): 2, ('unspec', 'THT'): 28, ('THT', 'THT'): 4}
+   unspec-attribute footprints: ['J_AUDIO_IN_L1', 'J_AUDIO_IN_R1', 'J_AUDIO_OUT_L1', 'J_AUDIO_OUT_R1', 'J_CV_IN_1', 'J_CV_IN_2', 'J_CV_IN_3', 'J_CV_IN_4', 'J_CV_OUT_1', 'J_CV_OUT_2', 'J_GATE_IN_1', 'J_GATE_IN_2', 'J_MIDI_IN1', 'J_MIDI_OUT1', 'J_MIDI_THRU1', 'LOGO1', 'P1', 'QR1', 'SW1', 'SW2', 'SW3', 'SW4', 'VR1', 'VR2', 'VR3', 'VR4', 'VR5', 'VR6', 'VR7', 'VR8']
+   exclude_from_bom: ['FD1', 'FD2', 'FD3', 'H1', 'H2', 'H3', 'H4', 'LOGO1', 'QR1']; exclude_from_pos: []; DNP: []
+   sch ex_bom vs pcb ex_bom disagree: none
+== pos.csv (kicad-cli, session): 139 rows; production centroid: 139 rows, header ['Designator', 'Val', 'Package', 'Mid X', 'Mid Y', 'Rotation', 'Layer']
+   pos refs not in centroid: none; centroid refs not in pos: none
+   centroid rows with no production-BOM line: ['FD1', 'FD2', 'FD3', 'H1', 'H2', 'H3', 'H4', 'LOGO1', 'QR1']
+   production-BOM designators missing from centroid: none
+   centroid Layer values: {'top': 139}
+   centroid-vs-pcb XY offset (Mid X - pcb x, Mid Y + pcb y): [((-50.0, 155.0), 111), ((-50.001, 155.0), 24), ((-49.999, 155.0), 3)] (constant => same drill/place origin for all)
+== buckets
+   ALL THREE (130): A1 C1 C2 C3 C4 C5 C6 C13 C14 C15 C16 C17 C18 C19 C20 C21 C22 C33 C39 C44 C46 C47 C49 C50 C51 D1 D2 D3 FB2 FB3 J7 J_AUDIO_IN_L1 J_AUDIO_IN_R1 J_AUDIO_OUT_L1 J_AUDIO_OUT_R1 J_CV_IN_1 J_CV_IN_2 J_CV_IN_3 J_CV_IN_4 J_CV_OUT_1 J_CV_OUT_2 J_GATE_IN_1 J_GATE_IN_2 J_MIDI_IN1 J_MIDI_OUT1 J_MIDI_THRU1 LED1 LED2 P1 Q1 Q2 R1 R2 R3 R4 R5 R6 R9 R10 R17 R18 R19 R23 R24 R25 R28 R29 R30 R31 R32 R33 R34 R35 R36 R37 R38 R39 R40 R41 R42 R43 R44 R45 R46 R47 R48 R49 R50 R51 R52 R53 R54 R55 R56 R57 R59 R60 R61 R62 R63 R64 R65 R66 R67 R68 R73 R78 R79 R80 SW1 SW2 SW3 SW4 U1 U2 U3 U7 U11 U12 U13 U14 U15 VR1 VR2 VR3 VR4 VR5 VR6 VR7 VR8
+   SCH+PCB not BOM: exclude-from-BOM flag (9): FD1 FD2 FD3 H1 H2 H3 H4 LOGO1 QR1
+== value checks not OK: [('J_AUDIO_IN_L1', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_AUDIO_IN_R1', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_AUDIO_OUT_L1', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_AUDIO_OUT_R1', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_CV_IN_1', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_CV_IN_2', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_CV_IN_3', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_CV_IN_4', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_CV_OUT_1', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_CV_OUT_2', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_GATE_IN_1', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_GATE_IN_2', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_MIDI_IN1', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_MIDI_OUT1', 'OK (no value: sch/pcb "~", BOM empty)'), ('J_MIDI_THRU1', 'OK (no value: sch/pcb "~", BOM empty)'), ('P1', 'OK (no value: sch/pcb "~", BOM empty)')]
+== package checks not OK: none
+== paste pads but no production-BOM line: none
+== production-BOM lines whose parts have no paste pads (THT / hand): ['A1', 'J_AUDIO_IN_L1', 'J_AUDIO_IN_R1', 'J_AUDIO_OUT_L1', 'J_AUDIO_OUT_R1', 'J_CV_IN_1', 'J_CV_IN_2', 'J_CV_IN_3', 'J_CV_IN_4', 'J_CV_OUT_1', 'J_CV_OUT_2', 'J_GATE_IN_1', 'J_GATE_IN_2', 'J_MIDI_IN1', 'J_MIDI_OUT1', 'J_MIDI_THRU1', 'LED1', 'LED2', 'P1', 'SW1', 'SW2', 'SW3', 'SW4', 'U11', 'VR1', 'VR2', 'VR3', 'VR4', 'VR5', 'VR6', 'VR7', 'VR8']
+== THT parts on production BOM: ['A1', 'J_AUDIO_IN_L1', 'J_AUDIO_IN_R1', 'J_AUDIO_OUT_L1', 'J_AUDIO_OUT_R1', 'J_CV_IN_1', 'J_CV_IN_2', 'J_CV_IN_3', 'J_CV_IN_4', 'J_CV_OUT_1', 'J_CV_OUT_2', 'J_GATE_IN_1', 'J_GATE_IN_2', 'J_MIDI_IN1', 'J_MIDI_OUT1', 'J_MIDI_THRU1', 'LED1', 'LED2', 'P1', 'SW1', 'SW2', 'SW3', 'SW4', 'U11', 'VR1', 'VR2', 'VR3', 'VR4', 'VR5', 'VR6', 'VR7', 'VR8']
+== SMD parts on production BOM: 98
+== pad-geometry class per BOM footprint: {('C_0603_1608Metric', '0603'): 18, ('CP_Elec_6.3x7.7', '1.6x3.5'): 4, ('C_0805_2012Metric', '0805'): 2, ('D_SOD-323', '0.45x0.6'): 3, ('R_0603_1608Metric', '0603'): 58, ('R_1206_3216Metric', '1206'): 2}
+== A1 (Seed module): {'disp': 'ALL THREE', 'bom_value': 'Electrosmith_Daisy_Seed_Rev4', 'bom_fp': 'Module:Electrosmith_Daisy_Seed', 'cdn_value': '', 'cdn_pkg': 'SOM', 'cdn_cpn': 'Seed3', 'cdn_mpn': 'Seed3', 'cdn_mfg': 'Qu-Bit Electronix, Inc.', 'cdn_asm': 'PTH', 'sch_value': 'Electrosmith_Daisy_Seed_Rev4', 'sch_fp': 'Module:Electrosmith_Daisy_Seed', 'pcb_fp': 'Module:Electrosmith_Daisy_Seed', 'pcb_tech': 'THT', 'pcb_pads': 40, 'pcb_geom': 'PTH drill 1.1'}

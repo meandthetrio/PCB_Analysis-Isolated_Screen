@@ -1,0 +1,74 @@
+## Capacitor_SMD:CP_Elec_4x5.8  (e.g. C29, 2 pads, paste F 2)
+   1:SMD (-1.80,0.00) 2.60x1.60 | 2:SMD (1.80,-0.00) 2.60x1.60
+## Capacitor_SMD:CP_Elec_6.3x7.7  (e.g. C27, 2 pads, paste F 2)
+   1:SMD (-2.70,0.00) 3.50x1.60 | 2:SMD (2.70,-0.00) 3.50x1.60
+## Capacitor_SMD:C_0805_2012Metric  (e.g. C26, 2 pads, paste F 2)
+   1:SMD (-0.95,0.00) 1.00x1.45 | 2:SMD (0.95,-0.00) 1.00x1.45
+## Connector_Audio:Jack_6.35mm_Neutrik_NMJ6HCD2_Horizontal  (e.g. J5, 6 pads, paste F 0)
+   R:PTH (6.35,-0.00) 3.00x3.00 drill 1.40 | RN:PTH (6.35,16.23) 3.00x3.00 drill 1.40 | S:PTH (12.70,-0.00) 3.00x3.00 drill 1.40 | SN:PTH (12.70,16.23) 3.00x3.00 drill 1.40 | T:PTH (0.00,0.00) 3.00x3.00 drill 1.40 | TN:PTH (0.00,16.23) 3.00x3.00 drill 1.40
+## Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002  (e.g. J8, 3 pads, paste F 0)
+   1:PTH (-0.00,0.00) 4.40x1.80 drill 3.40x0.80 | 2:PTH (0.00,5.80) 4.00x1.80 drill 3.00x0.80 | 3:PTH (4.80,3.00) 4.00x1.80 drill 3.00x0.80
+## Diode_SMD:D_SOD-323  (e.g. D5, 2 pads, paste F 2)
+   1:SMD (-1.05,0.00) 0.60x0.45 | 2:SMD (1.05,-0.00) 0.60x0.45
+## Fiducial:Fiducial_1mm_Mask2mm  (e.g. FD3, 1 pads, paste F 0)
+   :SMD (0.00,0.00) 1.00x1.00
+## LED_THT:LED_D5.0mm  (e.g. LED1, 2 pads, paste F 0)
+   1:PTH (0.00,0.00) 1.80x1.80 drill 0.90 | 2:PTH (2.54,-0.00) 1.80x1.80 drill 0.90
+## LED_THT:LED_D5.0mm-4_RGB_Wide_Pins  (e.g. LED2, 4 pads, paste F 0)
+   1:PTH (0.00,0.00) 1.80x1.80 drill 0.90 | 2:PTH (2.16,0.00) 1.80x1.80 drill 0.90 | 3:PTH (4.32,0.00) 1.80x1.80 drill 0.90 | 4:PTH (6.48,0.00) 1.80x1.80 drill 0.90
+## Module:Electrosmith_Daisy_Seed  (e.g. A1, 40 pads, paste F 0)
+   1:PTH (0.00,0.00) 1.70x1.70 drill 1.10 | 2:PTH (0.00,2.54) 1.70x1.70 drill 1.10 | 3:PTH (0.00,5.08) 1.70x1.70 drill 1.10 | 4:PTH (0.00,7.62) 1.70x1.70 drill 1.10 | 5:PTH (0.00,10.16) 1.70x1.70 drill 1.10 | 6:PTH (0.00,12.70) 1.70x1.70 drill 1.10 | 7:PTH (0.00,15.24) 1.70x1.70 drill 1.10 | 8:PTH (0.00,17.78) 1.70x1.70 drill 1.10 | 9:PTH (0.00,20.32) 1.70x1.70 drill 1.10 | 10:PTH (0.00,22.86) 1.70x1.70 drill 1.10 | 11:PTH (0.00,25.40) 1.70x1.70 drill 1.10 | 12:PTH (0.00,27.94) 1.70x1.70 drill 1.10 | 13:PTH (0.00,30.48) 1.70x1.70 drill 1.10 | 14:PTH (0.00,33.02) 1.70x1.70 drill 1.10 | 15:PTH (0.00,35.56) 1.70x1.70 drill 1.10 | 16:PTH (0.00,38.10) 1.70x1.70 drill 1.10 | 17:PTH (0.00,40.64) 1.70x1.70 drill 1.10 | 18:PTH (0.00,43.18) 1.70x1.70 drill 1.10 | 19:PTH (0.00,45.72) 1.70x1.70 drill 1.10 | 20:PTH (0.00,48.26) 1.70x1.70 drill 1.10 | 21:PTH (15.24,48.26) 1.70x1.70 drill 1.10 | 22:PTH (15.24,45.72) 1.70x1.70 drill 1.10 | 23:PTH (15.24,43.18) 1.70x1.70 drill 1.10 | 24:PTH (15.24,40.64) 1.70x1.70 drill 1.10 ...
+## MountingHole:MountingHole_3.5mm_Pad  (e.g. H1, 1 pads, paste F 0)
+   1:PTH (0.00,0.00) 7.00x7.00 drill 3.50
+## Package_DIP:DIP-6_W7.62mm  (e.g. U11, 6 pads, paste F 0)
+   1:PTH (0.00,0.00) 1.60x1.60 drill 0.80 | 2:PTH (0.00,2.54) 1.60x1.60 drill 0.80 | 3:PTH (0.00,5.08) 1.60x1.60 drill 0.80 | 4:PTH (7.62,5.08) 1.60x1.60 drill 0.80 | 5:PTH (7.62,2.54) 1.60x1.60 drill 0.80 | 6:PTH (7.62,0.00) 1.60x1.60 drill 0.80
+## Package_SO:SOIC-8_3.9x4.9mm_P1.27mm  (e.g. U3, 8 pads, paste F 8)
+   1:SMD (-2.48,-1.90) 1.95x0.60 | 2:SMD (-2.48,-0.63) 1.95x0.60 | 3:SMD (-2.48,0.64) 1.95x0.60 | 4:SMD (-2.47,1.91) 1.95x0.60 | 5:SMD (2.48,1.90) 1.95x0.60 | 6:SMD (2.48,0.63) 1.95x0.60 | 7:SMD (2.48,-0.64) 1.95x0.60 | 8:SMD (2.47,-1.91) 1.95x0.60
+## Package_TO_SOT_SMD:SOT-23-5  (e.g. U2, 5 pads, paste F 5)
+   1:SMD (-1.14,-0.95) 1.32x0.60 | 2:SMD (-1.14,-0.00) 1.32x0.60 | 3:SMD (-1.14,0.95) 1.32x0.60 | 4:SMD (1.14,0.95) 1.32x0.60 | 5:SMD (1.14,-0.95) 1.32x0.60
+## Package_TO_SOT_SMD:SOT-23-6  (e.g. U14, 6 pads, paste F 6)
+   1:SMD (-1.14,-0.95) 1.32x0.60 | 2:SMD (-1.14,0.00) 1.32x0.60 | 3:SMD (-1.14,0.95) 1.32x0.60 | 4:SMD (1.14,0.95) 1.32x0.60 | 5:SMD (1.14,0.00) 1.32x0.60 | 6:SMD (1.14,-0.95) 1.32x0.60
+## Resistor_SMD:R_1206_3216Metric  (e.g. R57, 2 pads, paste F 2)
+   1:SMD (-1.46,-0.00) 1.12x1.75 | 2:SMD (1.46,0.00) 1.12x1.75
+## TF-01A:TF-01A  (e.g. U7, 15 pads, paste F 13)
+   :NPTH (-5.00,3.53) 1.00x1.00 drill 1.00 | :NPTH (2.97,3.53) 1.00x1.00 drill 1.00 | 1:SMD (2.23,-7.17) 0.70x1.30 | 2:SMD (1.13,-7.17) 0.70x1.30 | 3:SMD (0.03,-7.17) 0.70x1.30 | 4:SMD (-1.07,-7.17) 0.70x1.30 | 5:SMD (-2.17,-7.17) 0.70x1.30 | 6:SMD (-3.27,-7.17) 0.70x1.30 | 7:SMD (-4.37,-7.17) 0.70x1.30 | 8:SMD (-5.47,-7.17) 0.70x1.30 | CD1:SMD (-6.57,-7.17) 0.70x1.30 | MP1:SMD (-7.99,-6.40) 1.45x1.65 | MP2:SMD (-7.99,3.30) 1.45x2.44 | MP3:SMD (7.84,3.30) 1.45x2.44 | MP4:SMD (7.06,-6.40) 1.85x1.65
+## USB4110GFA:GCT_USB4110GFA  (e.g. J7, 18 pads, paste F 16)
+   :NPTH (-2.89,-0.00) 0.65x0.65 drill 0.65 | :NPTH (2.89,0.00) 0.65x0.65 drill 0.65 | A1/B12:SMD (-3.20,-1.08) 0.60x1.15 | A4/B9:SMD (-2.40,-1.08) 0.60x1.15 | A5:SMD (-1.25,-1.07) 0.30x1.15 | A6:SMD (-0.25,-1.07) 0.30x1.15 | A7:SMD (0.25,-1.07) 0.30x1.15 | A8:SMD (1.25,-1.07) 0.30x1.15 | B1/A12:SMD (3.20,-1.07) 0.60x1.15 | B4/A9:SMD (2.40,-1.07) 0.60x1.15 | B5:SMD (1.75,-1.07) 0.30x1.15 | B6:SMD (0.75,-1.07) 0.30x1.15 | B7:SMD (-0.75,-1.07) 0.30x1.15 | B8:SMD (-1.75,-1.07) 0.30x1.15 | S1:SMD (-5.11,-0.50) 2.18x2.00 | S2:SMD (5.11,-0.50) 2.18x2.00 | S3:SMD (-5.11,3.43) 2.18x2.00 | S4:SMD (5.11,3.43) 2.18x2.00
+## parts-for-kicad:57PC5F  (e.g. J11, 9 pads, paste F 0)
+   GND1:PTH (-2.50,10.00) 2.02x2.02 drill 1.35 | GND2:PTH (2.50,10.00) 2.02x2.02 drill 1.35 | P$6:PTH (-7.50,5.00) 3.41x3.41 drill 2.39 | P$7:PTH (7.50,5.00) 3.41x3.41 drill 2.39 | P1:PTH (7.50,-0.00) 2.02x2.02 drill 1.35 | P2:PTH (0.00,0.00) 2.02x2.02 drill 1.35 | P3:PTH (-7.50,0.00) 2.02x2.02 drill 1.35 | P4:PTH (5.00,-2.49) 2.02x2.02 drill 1.35 | P5:PTH (-5.00,-2.49) 2.02x2.02 drill 1.35
+## parts-for-kicad:9MM_SNAP-IN_POT_SILK  (e.g. VR3, 5 pads, paste F 0)
+   1:PTH (-2.50,7.00) 1.65x1.65 drill 1.10 | 2:PTH (0.00,7.00) 1.65x1.65 drill 1.10 | 3:PTH (2.50,7.00) 1.65x1.65 drill 1.10 | CHASSIS1:PTH (-4.50,0.00) 3.12x3.12 drill 2.10 | CHASSIS2:PTH (4.50,0.00) 3.12x3.12 drill 2.10
+## parts-for-kicad:S02P  (e.g. FSW_1, 2 pads, paste F 0)
+   1:PTH (1.25,0.00) 3.05x1.52 drill 1.02 | 2:PTH (-1.25,0.00) 3.05x1.52 drill 1.02
+## parts-for-kicad:TL1105SPF250Q_SILK  (e.g. SW5, 4 pads, paste F 0)
+   1:PTH (-3.25,-2.26) 1.88x1.88 drill 1.02 | 2:PTH (3.25,-2.26) 1.88x1.88 drill 1.02 | 3:PTH (-3.25,2.26) 1.88x1.88 drill 1.02 | 4:PTH (3.25,2.26) 1.88x1.88 drill 1.02
+## parts-for-kicad:TOGGLE_ON_OFF_ON  (e.g. SW1, 3 pads, paste F 0)
+   1:PTH (-2.54,0.00) 2.84x1.42 drill 1.10 | 2:PTH (0.00,0.00) 2.84x1.42 drill 1.10 | 3:PTH (2.54,0.00) 2.84x1.42 drill 1.10
+## parts-for-kicad:TOGGLE_ON_ON_2  (e.g. SW2, 3 pads, paste F 0)
+   1:PTH (-2.54,0.00) 1.78x1.78 drill 1.10 | 2:PTH (0.00,0.00) 1.78x1.78 drill 1.10 | 3:PTH (2.54,0.00) 1.78x1.78 drill 1.10
+## pad nets
+   R50 47K 1=SDMMC_D2 2=+3V3
+   R2 5K1 1=Net-(J7-CC2) 2=GND
+   R51 47K 1=SDMMC_D3 2=+3V3
+   R52 47K 1=SDMMC_CMD 2=+3V3
+   R54 47K 1=SDMMC_D1 2=+3V3
+   D5 NSR1020MW2T3G 1=Net-(D5-K) 2=Net-(D5-A)
+   C26 10UF 1=Net-(U2-ON{slash}~{OFF}) 2=GND
+   FB5 FERRITE_BEAD_0603 1=Net-(FB4-Pad2) 2=Net-(D5-A)
+   R1 5K1 1=Net-(J7-CC1) 2=GND
+   FB1 FERRITE_BEAD_0603 1=+5V_A 2=+5V
+   U11 H11L1 1=Net-(R4-Pad2) 2=MIDI_IN_5 3=unconnected-(U11-Pad3) 4=MIDI_RX 5=GND 6=+3V3
+   R53 47K 1=SDMMC_D0 2=+3V3
+   J7 USB4110GFA = = A1/B12=GND A4/B9=/Daisy/+5V_USB A5=Net-(J7-CC1) A6=/Daisy/USB_IN_P A7=/Daisy/USB_IN_N A8=unconnected-(J7-SBU1-PadA8) B1/A12=GND B4/A9=/Daisy/+5V_USB B5=Net-(J7-CC2) B6=/Daisy/USB_IN_P B7=/Daisy/USB_IN_N B8=unconnected-(J7-SBU2-PadB8) S1=GND S2=GND S3=GND S4=GND
+   U14 USBLC6-2SC6 1=/Daisy/USB_IN_P 2=GND 3=/Daisy/USB_IN_N 4=/Daisy/USB_OTG_HS_N 5=/Daisy/+5V_USB 6=/Daisy/USB_OTG_HS_P
+   FB9 FERRITE_BEAD_0603 1=Net-(D5-K) 2=+9V
+   C15 10UF 1=+5V 2=GND
+   FB10 FERRITE_BEAD_0603 1=Net-(C20-Pad1) 2=Net-(FB10-Pad2)
+   R3 270R 1=MIDI_RX 2=+3V3
+   C18 10UF 1=+5V 2=GND
+   U7 MICRO_SD_CARD = = 1=SDMMC_D2 2=SDMMC_D3 3=SDMMC_CMD 4=+3V3 5=SDMMC_CK 6=GND 7=SDMMC_D0 8=SDMMC_D1 CD1=SDMMC_DETECT MP1=GND MP2=GND MP3=GND MP4=GND
+   J8 Barrel_Jack_Switch 1=GND 2=Net-(C20-Pad1) 3=unconnected-(J8-Pad3)
+   U2 LP2985-5.0 1=Net-(U2-ON{slash}~{OFF}) 2=GND 3=Net-(U2-ON{slash}~{OFF}) 4=Net-(U2-BP) 5=+5V
+   C19 10UF 1=+5V_A 2=GND
+   FB4 FERRITE_BEAD_0603 1=Net-(FB10-Pad2) 2=Net-(FB4-Pad2)
+   R4 220R 1=MIDI_IN_4 2=Net-(R4-Pad2)

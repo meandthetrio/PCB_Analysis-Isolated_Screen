@@ -1,0 +1,48 @@
+Seed3-DevKit-Pedal_Rev4-bom.csv: 6095 bytes; UTF-8 BOM marker: True; CRLF lines: 47; LF-only lines: 0
+  row 2 [C1 C16 C17 C2 C20 C22 ]: designators not in natural order: C1 C16 C17 C2 C20 C22 C25 C31 C33 C34 C4 C47 (string-sorted: True); CPN names a different part than MPN: '100NF C0603' vs 'TCC0603X7R104K500CT'
+  row 3 [C28 C38 C5 C8]: designators not in natural order: C28 C38 C5 C8 (string-sorted: True); CPN names a different part than MPN: '100PF C0603' vs 'CGA0603COG101J500JT'
+  row 4 [R13 R16 R27 R46 R72 R7]: designators not in natural order: R13 R16 R27 R46 R72 R76 R8 (string-sorted: True)
+  row 5 [C13 C14 C21 C23 C24 C2]: Description non-ASCII: ±
+  row 6 [R10 R14 R17 R19 R22 R2]: Description non-ASCII: ±Ω; designators not in natural order: R10 R14 R17 R19 R22 R26 R5 R64 R65 R68 R69 R70 R77 (string-sorted: True); CPN names a different part than MPN: '10K R0603' vs 'FRC0603F1002TS'
+  row 7 [C40 C46]: Description non-ASCII: ±; CPN names a different part than MPN: '10NF C0603' vs '0603B103K500NT'
+  row 8 [R28 R29 R59 R61]: Description non-ASCII: ±Ω; CPN names a different part than MPN: '10R R0603' vs '0603WAF100JT5E'
+  row 9 [C15 C26]: Description non-ASCII: ±
+  row 10 [J2 J3 J4 J5 J6]: VPN == MPN (Mouser): no vendor SKU
+  row 11 [R11 R74]: Description non-ASCII: ±Ω; CPN names a different part than MPN: '15K R0603' vs '0603WAF1502T5E'
+  row 12 [R43]: Description non-ASCII: ±Ω; CPN names a different part than MPN: '1K R0603' vs 'FRC0603F1001TS'
+  row 13 [R15 R18 R7]: Description non-ASCII: ±Ω; designators not in natural order: R15 R18 R7 (string-sorted: True); CPN names a different part than MPN: '1M R0603' vs 'FRC0603F1004TS'
+  row 14 [C30 C9]: designators not in natural order: C30 C9 (string-sorted: True); CPN names a different part than MPN: '1NF C0603' vs 'TCC0603X7R102M500CTS'
+  row 15 [C55]: Description non-ASCII: ±; CPN names a different part than MPN: '1UF C0603' vs 'CGA0603X5R105K160JT'
+  row 16 [R60]: Description non-ASCII: ±Ω; CPN names a different part than MPN: '20K R0603' vs 'FRC0603F2002TS'
+  row 17 [R4]: Description non-ASCII: ±Ω; CPN names a different part than MPN: '220R R0603' vs 'FRC0603F2200TS'
+  row 18 [C11 C32]: CPN names a different part than MPN: '270PF C0603' vs 'CC0603JRNPO9BN271'
+  row 19 [R3]: Description non-ASCII: ±Ω; CPN names a different part than MPN: '270R R0603' vs 'FRC0603F2700TS'
+  row 20 [R25 R40 R44]: Description non-ASCII: ±Ω; Vendor=LCSC but VPN='0603WAF2001T5E'; CPN names a different part than MPN: '2K R0603' vs '0603WAF2001T5E'
+  row 21 [SW1]: VPN == MPN (Digi-Key): no vendor SKU; CPN names a different part than MPN: '2M-SPDT-101-STD-T' vs '2MS3T1B1M2QE'
+  row 22 [SW2 SW3]: VPN == MPN (Digi-Key): no vendor SKU; Package='UnknownPackagePTH'; CPN names a different part than MPN: '2M-SPDT-11-STD-T' vs '2MS1T1B1M2QE'
+  row 23 [R12 R75]: Description non-ASCII: ±Ω℃; CPN names a different part than MPN: '33K R0603' vs '0603WAF3302T5E'
+  row 24 [C12 C37]: CPN names a different part than MPN: '33NF C0603' vs 'TCC0603X7R333M500CT'
+  row 25 [R20 R58]: Description non-ASCII: ±Ω; CPN names a different part than MPN: '3K3 R0603' vs 'FRC0603F3301TS'
+  row 26 [R30 R48 R55 R57 R6]: Description non-ASCII: ±Ω; designators not in natural order: R30 R48 R55 R57 R6 (string-sorted: True); tolerance CPN 5% vs Description ±1%
+  row 27 [R50 R51 R52 R53 R54]: Description non-ASCII: ±Ω; CPN names a different part than MPN: '47K R0603' vs '0603WAF4702T5E'
+  row 28 [R21 R71]: Description non-ASCII: ±Ω℃; CPN names a different part than MPN: '4K7 R0603' vs 'FRC0603F4701TS'
+  row 29 [R1 R2]: Description non-ASCII: ±Ω; CPN names a different part than MPN: '5K1 R0603' vs 'FRC0603F5101TS'
+  row 32 [J1 J10 J11]: VPN == MPN (Digi-Key): no vendor SKU; Package='UnknownPackagePTH'
+  row 33 [FB1 FB10 FB4 FB5 FB9]: Description non-ASCII: ±Ω; designators not in natural order: FB1 FB10 FB4 FB5 FB9 (string-sorted: True)
+  row 34 [U2]: VPN == MPN (TI): no vendor SKU
+  row 35 [FSW_1 FSW_2]: CPN has double space 'M12 SPST  Footswitch Assembly'; VPN == MPN (Suntsu): no vendor SKU; CPN names a different part than MPN: 'M12 SPST  Footswitch Assembly' vs 'SSWFS-S01-AE11-HWH-C25'
+  row 36 [U1]: VPN == MPN (Digi-Key): no vendor SKU; MFG='Unknown Manufacturer'
+  row 37 [SW4 SW5]: VPN == MPN (Mouser): no vendor SKU
+  row 38 [D5 D6]: CPN names a different part than MPN: 'NSR1020MW2T3G' vs 'B5817WS'
+  row 39 [VR1 VR2 VR3 VR4 VR5 VR]: VPN == MPN (Alpha): no vendor SKU
+  row 41 [LED2]: VPN == MPN (Mouser): no vendor SKU; MFG='Unknown Manufacturer'
+  row 42 [U10 U3 U9]: designators not in natural order: U10 U3 U9 (string-sorted: True)
+  row 43 [J7]: Description non-ASCII: ℃
+  row 45 [A1]: MFG has leading/trailing whitespace 'Qu-Bit Electronix, Inc. '; empty VPN; empty Vendor; CPN == MPN
+  row 46 [C10 C18 C19 C29 C3 C35]: Description non-ASCII: ±; designators not in natural order: C10 C18 C19 C29 C3 C35 C42 C48 C6 C7 (string-sorted: True)
+  Package vocabulary: ['0603', '1/4" Jack', '1206', '5mm LED PTH', 'Barrel Jack PTH', 'C0603', 'C0805', 'DIP-6', 'Header PTH 2', 'PTH LED 4', 'PTH Pot 5', 'PTH Tac Switch 4', 'R0603', 'SMD,D6.3xL7.7mm', 'SO-8', 'SOD-323', 'SOM', 'SOT-23-5', 'SOT-23-6L', 'USB C Connector', 'UnknownPackagePTH', 'Vertical Toggle Switch', 'electrolytic 4x5.8', 'microSD SMT 13']
+  MFG vocabulary: ['Alpha (Taiwan)', 'CCTC', 'Chilisin', 'Dailywell', 'E-Switch', 'EVERLIGHT', 'FH (Guangdong Fenghua Advanced Tech)', 'FOJAN', 'HOAUC', 'HRE', 'HXY MOSFET', 'KOA Speer', 'Kingbright', 'Korean Hroparts Elec', 'Neutrik', 'Panasonic', 'Qu-Bit Electronix, Inc. ', 'ROQANG', 'Shikues', 'Suntsu', 'Switchcraft', 'Texas Instruments', 'UNI-ROYAL(Uniroyal Elec)', 'Unknown Manufacturer', 'XUNPU', 'YAGEO']
+ES-Seed3-DevKit-Pedal-Rev3_bom.csv: 46 lines; columns ['Value', 'Reference', 'Footprint']
+  empty Value cells: []
+  lines with 2+ footprints: [('10UF', 'Capacitor_SMD:CP_Elec_4x5.8,Capacitor_SMD:C_0805_2012Metric')]
+  line order (sort_field Value, asc): ['Electrosmith_Daisy_Seed_Rev4', '100NF', '10uF', '100PF', '1NF', '270PF', '33NF', '100UF', '10UF', '10NF', '1UF', 'NSR1020MW2T3G'] ...

@@ -1,0 +1,184 @@
+keyword | match | LCSC | model | brand | package | Basic(base)/Extended(expand) | stock | description
+C14675 | EXACT | C14675 | RC0603FR-07100KL | YAGEO | 0603 | expand | 8971180 | -55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+RC0603FR-07100KL | EXACT | C14675 | RC0603FR-07100KL | YAGEO | 0603 | expand | 8971180 | -55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+100K R0603 | first-of-20 | C14675 | RC0603FR-07100KL | YAGEO | 0603 | expand | 8971180 | -55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+C282519 | EXACT | C282519 | TCC0603X7R104K500CT | CCTC | 0603 | expand | 128058 | 100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+TCC0603X7R104K500CT | EXACT | C282519 | TCC0603X7R104K500CT | CCTC | 0603 | expand | 128058 | 100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+100NF C0603 | first-of-20 | C1590 | CL10B104KA8NNNC | Samsung Electro-Mechanics | 0603 | expand | 1650178 | 100nF 25V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+C105588 | EXACT | C105588 | RC0603FR-07100RL | YAGEO | 0603 | expand | 2982319 | -55℃~+155℃ 100mW 100Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+RC0603FR-07100RL | EXACT | C105588 | RC0603FR-07100RL | YAGEO | 0603 | expand | 2982319 | -55℃~+155℃ 100mW 100Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+100R R0603 | first-of-20 | C22775 | 0603WAF1000T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 10203511 | -55℃~+155℃ 100mW 100Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+C72478 | EXACT | C72478 | RVT1V101M0607 | ROQANG | SMD,D6.3xL7.7mm | expand | 426619 | -40℃~+105℃ 100uF 2000hrs@105℃ 35V 6.3mm 69mA@120Hz 7.7mm ±20% SMD,D6.3xL7.7mm Aluminum Electrolytic Capacitors - SMD ROHS
+RVT1V101M0607 | EXACT | C3339 | RVT1V101M0607 | Honor Elec | SMD,D6.3xL7.7mm | expand | 54483 | -55℃~+105℃ 100uF 2000hrs@105℃ 35V 6.3mm 7.7mm ±20% SMD,D6.3xL7.7mm Aluminum Electrolytic Capacitors - SMD ROHS
+RVT1V101M0607 | EXACT | C72478 | RVT1V101M0607 | ROQANG | SMD,D6.3xL7.7mm | expand | 426619 | -40℃~+105℃ 100uF 2000hrs@105℃ 35V 6.3mm 69mA@120Hz 7.7mm ±20% SMD,D6.3xL7.7mm Aluminum Electrolytic Capacitors - SMD ROHS
+RVT1V101M0607 | EXACT | C82002 | RVT1V101M0607 | CX(Dongguan Chengxing Elec) | SMD,D6.3xL7.7mm | expand | 3332 | -45℃~+105℃ 100uF 2000hrs@105℃ 35V 6.3mm 7.7mm ±20% SMD,D6.3xL7.7mm Aluminum Electrolytic Capacitors - SMD ROHS
+100UF PANASONIC D8 | first-of-20 | C79109 | 6TPE100MAZB | PANASONIC | SMD,3.5x2.8mm | expand | 43761 | -55℃~+105℃ 100uF 35mΩ@100kHz 6.3V ±20% SMD,3.5x2.8mm Tantalum Capacitors ROHS
+C2906982 | EXACT | C2906982 | FRC0603F1002TS | FOJAN | 0603 | expand | 4590890 | -55℃~+155℃ 100mW 10kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+FRC0603F1002TS | EXACT | C2906982 | FRC0603F1002TS | FOJAN | 0603 | expand | 4590890 | -55℃~+155℃ 100mW 10kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+10K R0603 | first-of-20 | C15401 | 0603WAJ0103T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | expand | 1194469 | -55℃~+155℃ 100mW 10kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS
+C22859 | EXACT | C22859 | 0603WAF100JT5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 6696150 | -55℃~+155℃ 100mW 10Ω 75V Thick Film Resistor ±1% ±400ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+0603WAF100JT5E | EXACT | C22859 | 0603WAF100JT5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 6696150 | -55℃~+155℃ 100mW 10Ω 75V Thick Film Resistor ±1% ±400ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+0603WAF100JT5E | EXACT | C9900098376 | 0603WAF100JT5E | JLCPCB Assembly | 0603 | expand | 0 | 0603 New Arrivals ROHS
+10R R0603 | first-of-20 | C22859 | 0603WAF100JT5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 6696150 | -55℃~+155℃ 100mW 10Ω 75V Thick Film Resistor ±1% ±400ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+C6119887 | EXACT | C6119887 | CGA0805X5R106K250MT | HRE | 0805 | expand | 64421 | 10uF 25V X5R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+CGA0805X5R106K250MT | EXACT | C6119887 | CGA0805X5R106K250MT | HRE | 0805 | expand | 64421 | 10uF 25V X5R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+10UF C0805 | first-of-20 | C1713 | CL21A106KOQNNNE | Samsung Electro-Mechanics | 0805 | expand | 311263 | 10uF 16V X5R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+C25808 | EXACT | C25808 | 0603WAF1203T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 909849 | -55℃~+155℃ 100mW 120kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+0603WAF1203T5E | EXACT | C25808 | 0603WAF1203T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 909849 | -55℃~+155℃ 100mW 120kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+120K R0603 | first-of-20 | C25576 | 0603WAJ0124T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | expand | 24633 | -55℃~+155℃ 100mW 120kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS
+C2907003 | EXACT | C2907003 | FRC0603F1004TS | FOJAN | 0603 | expand | 5456795 | -55℃~+155℃ 100mW 1MΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+FRC0603F1004TS | EXACT | C2907003 | FRC0603F1004TS | FOJAN | 0603 | expand | 5456795 | -55℃~+155℃ 100mW 1MΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+1M R0603 | first-of-20 | C22935 | 0603WAF1004T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 6021985 | -55℃~+155℃ 100mW 1MΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+C5375733 | EXACT | C5375733 | TCC0603X7R102M500CTS | CCTC | 0603 | expand | 16709 | 1nF 50V X7R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+TCC0603X7R102M500CTS | EXACT | C5375733 | TCC0603X7R102M500CTS | CCTC | 0603 | expand | 16709 | 1nF 50V X7R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+1NF C0603 | first-of-20 | C1588 | CL10B102KB8NNNC | Samsung Electro-Mechanics | 0603 | base | 6948978 | 1nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+C25811 | EXACT | C25811 | 0603WAF2003T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 2737982 | -55℃~+155℃ 100mW 200kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+0603WAF2003T5E | EXACT | C25811 | 0603WAF2003T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 2737982 | -55℃~+155℃ 100mW 200kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+200K R0603 | first-of-20 | C25811 | 0603WAF2003T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 2737982 | -55℃~+155℃ 100mW 200kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+C2907014 | EXACT | C2907014 | FRC0603F2200TS | FOJAN | 0603 | expand | 717539 | -55℃~+155℃ 100mW 220Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+FRC0603F2200TS | EXACT | C2907014 | FRC0603F2200TS | FOJAN | 0603 | expand | 717539 | -55℃~+155℃ 100mW 220Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+220R R0603 | first-of-20 | C1226 | 0603WAJ0221T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | expand | 559002 | -55℃~+155℃ 100mW 220Ω 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS
+C2907020 | EXACT | C2907020 | FRC0603F2700TS | FOJAN | 0603 | expand | 1609258 | -55℃~+155℃ 100mW 270Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+FRC0603F2700TS | EXACT | C2907020 | FRC0603F2700TS | FOJAN | 0603 | expand | 1609258 | -55℃~+155℃ 100mW 270Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+270R R0603 | first-of-20 | C22966 | 0603WAF2700T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 813907 | -55℃~+155℃ 100mW 270Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+0603WAF2001T5E | EXACT | C22975 | 0603WAF2001T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 12452122 | -55℃~+155℃ 100mW 2kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+2K R0603 | first-of-20 | C22975 | 0603WAF2001T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 12452122 | -55℃~+155℃ 100mW 2kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+2MS3T1B1M2QE | first-of-1 | C9900203478 | 2MS3T1B1M2QES | JLCPCB Assembly | Through hole | expand | 0 | Through hole SMT ROHS
+2M-SPDT-101-STD-T | NO HIT
+2MS1T1B1M2QE | first-of-1 | C908280 | 2MS1T1B1M2QES-5 | Dailywell | Plugin | expand | 1549 | -40℃~+85℃ 30,000 Cycles 5.08mm 8.13mm Cylinder Lever PC Pin SPDT Through Hole 插件 Toggle Switches ROHS
+2M-SPDT-11-STD-T | NO HIT
+2.54mm 2*5 PIN MALE HEADER ST | NO HIT
+2X5 MALE PTH 2.54MM VERTICAL | NO HIT
+C1664 | EXACT | C1664 | CL10C331JB8NNNC | Samsung Electro-Mechanics | 0603 | base | 839184 | 330pF 50V C0G ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+CL10C331JB8NNNC | EXACT | C1664 | CL10C331JB8NNNC | Samsung Electro-Mechanics | 0603 | base | 839184 | 330pF 50V C0G ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+330PF C0603 | first-of-20 | C1612 | 0603B331K500NT | FH (Guangdong Fenghua Advanced Tech) | 0603 | expand | 58300 | 330pF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+C4216 | EXACT | C4216 | 0603WAF3302T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 3719615 | -55℃~+155℃ 100mW 33kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+0603WAF3302T5E | EXACT | C4216 | 0603WAF3302T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 3719615 | -55℃~+155℃ 100mW 33kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+0603WAF3302T5E | EXACT | C9900169011 | 0603WAF3302T5E | JLCPCB Assembly | 0603 | expand | 0 | 0603 SMT ROHS
+33K R0603 | first-of-20 | C4216 | 0603WAF3302T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 3719615 | -55℃~+155℃ 100mW 33kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+C2577888 | EXACT | C2577888 | SG73P2BTTD3R30F | KOA Speer Elec | 1206 | expand | 1513 | -55℃~+155℃ 3.3Ω 750mW Thick Film Resistor ±1% ±200ppm/℃ 1206 Chip Resistor - Surface Mount ROHS
+SG73P2BTTD3R30F | EXACT | C2577888 | SG73P2BTTD3R30F | KOA Speer Elec | 1206 | expand | 1513 | -55℃~+155℃ 3.3Ω 750mW Thick Film Resistor ±1% ±200ppm/℃ 1206 Chip Resistor - Surface Mount ROHS
+3R3 R1206 3/4W 5% | first-of-20 | C25381 | 1206W4J033JT5E | UNI-ROYAL(Uniroyal Elec) | 1206 | expand | 13723 | -55℃~+155℃ 200V 250mW 3.3Ω Thick Film Resistor ±200ppm/℃ ±5% 1206 Chip Resistor - Surface Mount ROHS
+C25819 | EXACT | C25819 | 0603WAF4702T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 2131204 | -55℃~+155℃ 100mW 47kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+0603WAF4702T5E | EXACT | C25819 | 0603WAF4702T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 2131204 | -55℃~+155℃ 100mW 47kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+47K R0603 | first-of-20 | C25600 | 0603WAJ0473T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | expand | 179743 | -55℃~+155℃ 100mW 47kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS
+C2907044 | EXACT | C2907044 | FRC0603F5101TS | FOJAN | 0603 | expand | 6002504 | -55℃~+155℃ 100mW 5.1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+FRC0603F5101TS | EXACT | C2907044 | FRC0603F5101TS | FOJAN | 0603 | expand | 6002504 | -55℃~+155℃ 100mW 5.1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+5K1 R0603 | first-of-20 | C14677 | RC0603JR-075K1L | YAGEO | 0603 | expand | 418389 | -55℃~+155℃ 100mW 5.1kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS
+C6926004 | EXACT | C6926004 | WP7113ID | Kingbright | Plugin,D=5mm | expand | 2168 | -40℃~+85℃ 20mA 2V 30° 40mcd 5mm round lamp head 617nm 627nm 75mW Red Red Lens 插件,D=5mm LED Indication - Discrete ROHS
+WP7113ID | EXACT | C6926004 | WP7113ID | Kingbright | Plugin,D=5mm | expand | 2168 | -40℃~+85℃ 20mA 2V 30° 40mcd 5mm round lamp head 617nm 627nm 75mW Red Red Lens 插件,D=5mm LED Indication - Discrete ROHS
+5mm Red Diffused | first-of-3 | C2999829 | L519IGW-CA-SS-MF | PARALIGHT | Plugin,D=5mm | expand | 1004 | -40℃~+85℃ 1.8V 110° 2.4mcd、2.9mcd 570nm、645nm 5mA 5mm round lamp head 70mW、85mW Common Cathode Green Diffused Lens Red, Yellow Green 插件,D=5m
+C23221 | NO FILE
+0603WAF6202T5E | EXACT | C23221 | 0603WAF6202T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | expand | 377082 | -55℃~+155℃ 100mW 62kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+62K R0603 | first-of-20 | C23221 | 0603WAF6202T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | expand | 377082 | -55℃~+155℃ 100mW 62kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+CD4051BM96 | EXACT | C21379 | CD4051BM96 | Texas Instruments | SOIC-16-150mil | expand | 117877 | -55℃~+125℃ 1 125Ω 20MHz 30pF 3V~20V 60ns 8:1 SOIC-16-150mil Analog Switches, Multiplexers ROHS
+CD4051 SO-16 | first-of-20 | C22357615 | CD4051S | GR | SOP-16 | expand | 1538 | 0.2pF 0℃~+60℃ 1 3V~15V 7ns 80Ω@10V 8:1 SOP-16 Analog Switches, Multiplexers ROHS
+C108301 | EXACT | C108301 | PBY160808T-601Y-N | Chilisin Elec | 0603 | expand | 1121524 | 1 1A 200mΩ 600Ω@100MHz ±25% 0603 Ferrite Beads ROHS
+PBY160808T-601Y-N | EXACT | C108301 | PBY160808T-601Y-N | Chilisin Elec | 0603 | expand | 1121524 | 1 1A 200mΩ 600Ω@100MHz ±25% 0603 Ferrite Beads ROHS
+PBY160808T-601Y-N | EXACT | C1512137 | PBY160808T-601Y-N | YAGEO | 0603 | expand | 0 | 1 1A 200mΩ 600Ω@100MHz ±25% 0603 Ferrite Beads ROHS
+PBY160808T-601Y-N | EXACT | C25619901 | PBY160808T-601Y-N | Pulse Elec | - | expand | 0 | - Lack of specifications ROHS
+FB R0603 | first-of-20 | C99875 | MR30-FB | Changzhou Amass Elec | - | expand | 58683 | -、Aviation Plug 3pin Female - Power connector / plug connector
+LM4040C10IDBZR | EXACT | C201738 | LM4040C10IDBZR | Texas Instruments | SOT-23 | expand | 8436 | -40℃~+85℃ 100ppm/℃ 10V 15mA 35uVrms 45uA 45uA Fixed Parallel ±0.5% SOT-23 Voltage Reference ROHS
+LM4040-10V | NO HIT
+MCP6004-I/SL | EXACT | C1346056 | MCP6004-I/SL | Microchip Tech | SOIC-14 | expand | 1455 | -40℃~+85℃ 1.8V~6V 100uA 1MHz 1pA 1pA 23mA 28nV/√Hz@1kHz 2uV/℃ 4 4.5mV 600V/ms 76dB Rail-to-Rail Input, Rail-to-Rail Output SOIC-14 Operation
+MCP6004 SO-14 | first-of-16 | C498113 | MCP6004-E/SL | Microchip Tech | SOP-14 | expand | 118 | -40℃~+125℃ 1.8V~6V 100uA 1MHz 1pA 1pA 23mA 28nV/√Hz@1kHz 2uV/℃ 4 4.5mV 600V/ms 76dB ESD protection Rail-to-Rail Input, Rail-to-Rail Output S
+TL1105SPF250Q | EXACT | C273486 | TL1105SPF250Q | E-Switch | Plugin | expand | 0 | -20℃~+70℃ 12V 2.5N 50mA 6mm 6mm 7.5mm PC Pin Rectangular Button SPST Through Hole 插件 Tactile Switches ROHS
+Mini Button PTH | NO HIT
+C7420353 | EXACT | C7420353 | MMBT3904 | hongjiacheng | SOT-23 | expand | 7067226 | -55℃~+150℃ 1 NPN 100 100nA 200mA 200mW 300MHz 300mV 40V 6V NPN SOT-23 Bipolar (BJT) ROHS
+MMBT3904 | EXACT | C84104 | MMBT3904 | ST(Semtech) | SOT-23 | expand | 25518 | -55℃~+150℃ 1 NPN 100 200mA 300MHz 300mV 350mW 40V 50nA 6V NPN SOT-23 Bipolar (BJT) ROHS
+MMBT3904 | EXACT | C111113 | MMBT3904 | Shikues | SOT-23 | expand | 192684 | -55℃~+150℃ 1 NPN 100 100nA 200mA 200mW 300MHz 300mV 40V 6V NPN SOT-23 Bipolar (BJT) ROHS
+MMBT3904 | EXACT | C181119 | MMBT3904 | Guangdong Hottech | SOT-23 | expand | 586369 | 1 NPN 100 100nA 200mA 200mW 300MHz 300mV 40V 6V NPN SOT-23 Bipolar (BJT) ROHS
+C122854 | EXACT | C122854 | B5817WS | Shikues | SOD-323 | expand | 17801 | 1A 1mA@20V 20A 20V 450mV@1A Independent SOD-323 Schottky Diodes ROHS
+B5817WS | EXACT | C114023 | B5817WS | MDD(Microdiode Semiconductor) | SOD-323 | expand | 63008 | -55℃~+125℃ 1A 1mA@20V 20V 25A 750mV@3A Independent SOD-323 Schottky Diodes ROHS
+B5817WS | EXACT | C122854 | B5817WS | Shikues | SOD-323 | expand | 17801 | 1A 1mA@20V 20A 20V 450mV@1A Independent SOD-323 Schottky Diodes ROHS
+B5817WS | EXACT | C123899 | B5817WS | Shandong Jingdao Microelectronics | SOD-323 | expand | 67481 | -55℃~+150℃ 1 Independent 1A 20V 450mV@1A 9A SOD-323 Schottky Diodes ROHS
+NSR1020MW2T3G | EXACT | C385198 | NSR1020MW2T3G | onsemi | SOD-323 | expand | 1 | 1 Independent 1A 20V 40uA@15V 540mV@1A 5A SOD-323 Schottky Diodes ROHS
+RV09AF-40-25K-B10K-0085 | EXACT | C9900166605 | RV09AF-40-25K-B10K-0085 | JLCPCB Assembly | Through hole | expand | 0 | Through hole SMT ROHS
+P-10K-B-R Pointer | NO HIT
+WQP-WQP419GR | EXACT | C9900079203 | WQP-WQP419GR | JLCPCB Assembly | Plugin | expand | 0 | Plugin New Arrivals ROHS
+Stereo Eurorack Jack | NO HIT
+TL072CDR | EXACT | C67473 | TL072CDR | Texas Instruments | SOIC-8 | expand | 37228 | -15V~-5V、5V~15V 0℃~+70℃ 1.4mA 100pA 13V/us 18nV/√Hz@1kHz 18uV/℃ 2 3MHz 3mV 65pA 80dB Short-Circuit  Protection、Built-in compensation、Latch-u
+TL072 SO-8 | first-of-20 | C5157710 | TL072 | Gcore | SOP-8 | expand | 2475 | -18V~18V 0℃~+70℃ 1.4mA 1.5nA 10V/us 10mV 2 2.5nA 3MHz 85dB SOP-8 Operational Amplifier ROHS
+C5261088 | EXACT | C5261088 | USBLC6-2SC6 | HXY MOSFET | SOT-23-6L | expand | 13761 | 0.5pF、0.8pF 14V 1uA 2 5V 6A 6V Bidirectional ESD IEC 61000-4-2 SOT-23-6L ESD and Surge Protection (TVS/ESD) ROHS
+USBLC6-2SC6 | EXACT | C7519 | USBLC6-2SC6 | STMicroelectronics | SOT-23-6L | expand | 45963 | -40℃~+125℃ 150nA 17V 2 3.5pF 5.25V 5A 6V ESD IEC 61000-4-2 Unidirectional SOT-23-6L ESD and Surge Protection (TVS/ESD) ROHS
+USBLC6-2SC6 | EXACT | C2687116 | USBLC6-2SC6 | UMW(Youtai Semiconductor Co., Ltd.) | SOT-23-6 | expand | 65166 | 0.35pF、0.8pF 100nA 150W@8/20us 15V 2 5V 6A@8/20us 6V ESD SOT-23-6 ESD and Surge Protection (TVS/ESD) ROHS
+USBLC6-2SC6 | EXACT | C2827654 | USBLC6-2SC6 | TECH PUBLIC | SOT-23-6 | expand | 70769 | -55℃~+125℃ 0.35pF 12V 150W 2 5V 6A 6V 80nA ESD IEC 61000-4-2、IEC 61000-4-5、IEC 61000-4-4 Unidirectional SOT-23-6 ESD and Surge Protection (T
+USBLC6 TVS SOT-23-6 | first-of-20 | C41398769 | PJUSBLC6-2 | PANJIT International | SOT23-6 | expand | 0 | SOT23-6 New Arrivals ROHS
+WP154A4SUREQBFZGW (PTH RGB 5MM Diffused LED) | NO HIT
+WP154A4SUREQBFZG | first-of-2 | C6751358 | WP154A4SUREQBFZGC | Kingbright | Plugin,D=5mm | expand | 1912 | 50° Common Cathode 插件,D=5mm RGB LEDs ROHS
+C107047 | EXACT | C107047 | CC0603JRNPO9BN330 | YAGEO | 0603 | expand | 3154382 | 33pF 50V NP0 ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+CC0603JRNPO9BN330 | EXACT | C107047 | CC0603JRNPO9BN330 | YAGEO | 0603 | expand | 3154382 | 33pF 50V NP0 ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+33PF C0603 | first-of-20 | C1663 | CL10C330JB8NNNC | Samsung Electro-Mechanics | 0603 | base | 864030 | 33pF 50V C0G ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+C42400246 | EXACT | C42400246 | HYCW445-USBC16-730B | HOAUC | SMD | expand | 1486 | -30℃~+85℃ 1 10,000 cycles 16P 3A 7.3mm Black Female Surface Mount, Right Angle Type-C USB 3.1 SMD USB Connectors ROHS
+HYCW445-USBC16-730B | EXACT | C42400246 | HYCW445-USBC16-730B | HOAUC | SMD | expand | 1486 | -30℃~+85℃ 1 10,000 cycles 16P 3A 7.3mm Black Female Surface Mount, Right Angle Type-C USB 3.1 SMD USB Connectors ROHS
+USB C USB4110-GF-A | first-of-1 | C5143397 | USB4110-GF-A | Global Connector Technology | SMD | expand | 3441 | -40℃~+85℃ 1 48V 5A Black Female Surface Mount, Right Angle Type-C USB 2.0 SMD USB Connectors ROHS
+WQP-WQP518MA | EXACT | C9900052034 | WQP-WQP518MA | JLCPCB Assembly | THrough hole | expand | 0 | THrough hole New Arrivals ROHS
+WQP-WQP518MA | EXACT | C9900079089 | WQP-WQP518MA | JLCPCB Assembly | Plugin | expand | 0 | Plugin New Arrivals ROHS
+WQP-WQP518MA | EXACT | C9900091464 | WQP-WQP518MA | JLCPCB Assembly | Thru hole | expand | 0 | Thru hole New Arrivals ROHS
+Eurorack Jack | NO HIT
+C91145 | EXACT | C91145 | TF-01A | Korean Hroparts Elec | SMD | expand | 193404 | 1.85mm Connector and Ejector MicroSD Card (TF Card) Push-Push With Locating Pins SMD SD Card / Memory Card Connector ROHS
+TF-01A | EXACT | C91145 | TF-01A | Korean Hroparts Elec | SMD | expand | 193404 | 1.85mm Connector and Ejector MicroSD Card (TF Card) Push-Push With Locating Pins SMD SD Card / Memory Card Connector ROHS
+TF-01A | EXACT | C2889258 | TF-01A | Yuandi | SMD | expand | 37156 | 2mm Connector and Ejector MicroSD Card (TF Card) No Push-Push SMD SD Card / Memory Card Connector ROHS
+TF-01A | EXACT | C41426929 | TF-01A | JXTCONN | SMD | expand | 2725 | -25℃~+90℃ 2mm Connector and Ejector MicroSD Card (TF Card) No Push-Push SMD SD Card / Memory Card Connector ROHS
+Micro SD SMT Horizontal | NO HIT
+Seed3 | NO HIT
+C78588 | EXACT | C78588 | H11L1 | Everlight Elec | DIP-6 | expand | 2879 | -55℃~+100℃ 1 1.6mA 1Mbit/s 250mW 3V~15V 5kV DC DIP-6 Logic Output Optoisolators ROHS
+H11L1 | EXACT | C78588 | H11L1 | Everlight Elec | DIP-6 | expand | 2879 | -55℃~+100℃ 1 1.6mA 1Mbit/s 250mW 3V~15V 5kV DC DIP-6 Logic Output Optoisolators ROHS
+H11L1 | EXACT | C255760 | H11L1 | Isocom Components | DIP-6 | expand | 37 | -55℃~+100℃ 1 1.15V 1.6mA 1Mbit/s 250mW 3V~16V 4us 4us 50mA 5kV 60mA 6V DC DIP-6 Logic Output Optoisolators ROHS
+H11L1 | EXACT | C55238981 | H11L1 | GOODWORK | DIP-6 | expand | 20 | DIP-6 Logic Output Optoisolators ROHS
+OPTO ISOLATOR PTH | NO HIT
+C7503509 | EXACT | C7503509 | CGA0603COG101J500JT | HRE | 0603 | expand | 0 | 100pF 50V C0G ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+CGA0603COG101J500JT | EXACT | C7503509 | CGA0603COG101J500JT | HRE | 0603 | expand | 0 | 100pF 50V C0G ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+100PF C0603 | first-of-20 | C1635 | 0603CG101J500NT | FH (Guangdong Fenghua Advanced Tech) | 0603 | expand | 329333 | 100pF 50V C0G ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+C57112 | EXACT | C57112 | 0603B103K500NT | FH (Guangdong Fenghua Advanced Tech) | 0603 | base | 6001259 | 10nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+0603B103K500NT | EXACT | C57112 | 0603B103K500NT | FH (Guangdong Fenghua Advanced Tech) | 0603 | base | 6001259 | 10nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+10NF C0603 | first-of-20 | C1589 | CL10B103KB8NNNC | Samsung Electro-Mechanics | 0603 | expand | 1669167 | 10nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+NMJ6HCD2 | EXACT | C368502 | NMJ6HCD2 | Neutrik | Plugin | expand | 1257 | 插件 Audio Connectors ROHS
+1/4" TRS Switching Jack Horizontal | NO HIT
+C22809 | EXACT | C22809 | 0603WAF1502T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 4285289 | -55℃~+155℃ 100mW 15kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+0603WAF1502T5E | EXACT | C22809 | 0603WAF1502T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 4285289 | -55℃~+155℃ 100mW 15kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+0603WAF1502T5E | EXACT | C9900273671 | 0603WAF1502T5E | JLCPCB Assembly | 0603 | expand | 0 | 0603 SMT ROHS
+15K R0603 | first-of-20 | C22809 | 0603WAF1502T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 4285289 | -55℃~+155℃ 100mW 15kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+C2907002 | EXACT | C2907002 | FRC0603F1001TS | FOJAN | 0603 | expand | 11365221 | -55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+FRC0603F1001TS | EXACT | C2907002 | FRC0603F1001TS | FOJAN | 0603 | expand | 11365221 | -55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+1K R0603 | first-of-20 | C14676 | RC0603JR-071KL | YAGEO | 0603 | expand | 6184246 | -55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±100ppm/℃ ±5% 0603 Chip Resistor - Surface Mount ROHS
+C6119849 | EXACT | C6119849 | CGA0603X5R105K160JT | HRE | 0603 | expand | 0 | 16V 1uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+CGA0603X5R105K160JT | EXACT | C6119849 | CGA0603X5R105K160JT | HRE | 0603 | expand | 0 | 16V 1uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+1UF C0603 | first-of-20 | C1592 | CL10A105KO8NNNC | Samsung Electro-Mechanics | 0603 | expand | 3005391 | 16V 1uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+C2907011 | EXACT | C2907011 | FRC0603F2002TS | FOJAN | 0603 | expand | 2705632 | -55℃~+155℃ 100mW 20kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+FRC0603F2002TS | EXACT | C2907011 | FRC0603F2002TS | FOJAN | 0603 | expand | 2705632 | -55℃~+155℃ 100mW 20kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+20K R0603 | first-of-20 | C4184 | 0603WAF2002T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 8225638 | -55℃~+155℃ 100mW 20kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+C107046 | EXACT | C107046 | CC0603JRNPO9BN271 | YAGEO | 0603 | expand | 162892 | 270pF 50V NP0 ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+CC0603JRNPO9BN271 | EXACT | C107046 | CC0603JRNPO9BN271 | YAGEO | 0603 | expand | 162892 | 270pF 50V NP0 ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+270PF C0603 | first-of-20 | C1608 | 0603B271K500NT | FH (Guangdong Fenghua Advanced Tech) | 0603 | expand | 106343 | 270pF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+C696862 | EXACT | C696862 | TCC0603X7R333M500CT | CCTC | 0603 | expand | 170748 | 33nF 50V X7R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+TCC0603X7R333M500CT | EXACT | C696862 | TCC0603X7R333M500CT | CCTC | 0603 | expand | 170748 | 33nF 50V X7R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+33NF C0603 | first-of-20 | C1614 | 0603B333K500NT | FH (Guangdong Fenghua Advanced Tech) | 0603 | expand | 67769 | 33nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS
+C2907023 | EXACT | C2907023 | FRC0603F3301TS | FOJAN | 0603 | expand | 1209027 | -55℃~+155℃ 100mW 3.3kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+FRC0603F3301TS | EXACT | C2907023 | FRC0603F3301TS | FOJAN | 0603 | expand | 1209027 | -55℃~+155℃ 100mW 3.3kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+3K3 R0603 | first-of-20 | C22978 | 0603WAF3301T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 6477106 | -55℃~+155℃ 100mW 3.3kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+C2907034 | EXACT | C2907034 | FRC0603F4701TS | FOJAN | 0603 | expand | 4834639 | -55℃~+155℃ 100mW 4.7kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+FRC0603F4701TS | EXACT | C2907034 | FRC0603F4701TS | FOJAN | 0603 | expand | 4834639 | -55℃~+155℃ 100mW 4.7kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+4K7 R0603 | first-of-20 | C23162 | 0603WAF4701T5E | UNI-ROYAL(Uniroyal Elec) | 0603 | base | 20556580 | -55℃~+155℃ 100mW 4.7kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS
+C720557 | EXACT | C720557 | DC-005-A200 | XUNPU | Plugin | expand | 42802 | -20℃~+70℃ 2mm 30V 3A 6.4mm DC Power Jack Right Angle Plugin DC Power Connectors ROHS
+DC-005-A200 | EXACT | C720557 | DC-005-A200 | XUNPU | Plugin | expand | 42802 | -20℃~+70℃ 2mm 30V 3A 6.4mm DC Power Jack Right Angle Plugin DC Power Connectors ROHS
+DC-005-A200 | EXACT | C9900244416 | DC-005-A200 | JLCPCB Assembly | Through hole | expand | 0 | Through hole SMT ROHS
+DC-005-A200 | EXACT | C9900323508 | DC-005-A200 | JLCPCB Assembly | Through hole | expand | 0 | Through hole SMT ROHS
+9MM DC Barrel Jack PTH | NO HIT
+57PC5F | EXACT | C6695054 | 57PC5F | Switchcraft | Plugin | expand | 5 | 34V 3A 5P Female Tin 插件 Circular Connectors & Cable Connectors ROHS
+DIN PTH RightAngle | NO HIT
+LP2985AIM5X-5.0/NOPB | EXACT | C311788 | LP2985AIM5X-5.0/NOPB | Texas Instruments | SOT-23-5 | expand | 15003 | -40℃~+125℃@(Tj) 1 150mA 16V 30uVrms 45dB@(1kHz) 575mV@(150mA) 5V 850uA Fixed Over Current Protection、Over Temperature Protection、Enable Posi
+LP2985-5V | NO HIT
+SSWFS-S01-AE11-HWH-C25 | NO HIT
+M12 SPST  Footswitch Assembly | NO HIT
+MCP6002T-I/SN | EXACT | C7377 | MCP6002T-I/SN | Microchip Tech | SOIC-8 | expand | 50975 | -40℃~+125℃ 1.8V~6V 100uA 1MHz 1pA 1pA 2 23mA 28nV/√Hz@1kHz 2uV/℃ 4.5mV 600V/ms 76dB Rail-to-Rail Input, Rail-to-Rail Output SOIC-8 Operation
+MCP6002 SO-8 | first-of-20 | C9900011929 | MCP6002I | JLCPCB Assembly | SOP-8 | expand | 0 | SOP-8 SMT ROHS
+595-OPA1652AIDR | NO HIT
+OPA1652AIDR | EXACT | C30025 | OPA1652AIDR | Texas Instruments | SOIC-8 | expand | 1020 | -18V~-2.25V、2.25V~18V -40℃~+85℃ 0.00005% 2-Channel 2mA SOIC-8 Audio Amplifiers ROHS
+OPA1652 SOIC-8 | first-of-3 | C9900232347 | OPA1652DR | JLCPCB Assembly | SOIC-8 | expand | 0 | SOIC-8 SMT ROHS
+C178531 | EXACT | C178531 | EEEFK1C100R | PANASONIC | SMD,D4xL5.8mm | expand | 3568 | -55℃~+105℃ 10uF 16V 2000hrs@105℃ 4mm 6.1mm 67.5mA@120Hz Polarized ±20% SMD,D4xL5.8mm Aluminum Electrolytic Capacitors - SMD ROHS
+EEEFK1C100R | EXACT | C178531 | EEEFK1C100R | PANASONIC | SMD,D4xL5.8mm | expand | 3568 | -55℃~+105℃ 10uF 16V 2000hrs@105℃ 4mm 6.1mm 67.5mA@120Hz Polarized ±20% SMD,D4xL5.8mm Aluminum Electrolytic Capacitors - SMD ROHS
+10UF Electrolytic 4x5.8mm | NO HIT
+USB4110-GF-A | EXACT | C5143397 | USB4110-GF-A | Global Connector Technology | SMD | expand | 3441 | -40℃~+85℃ 1 48V 5A Black Female Surface Mount, Right Angle Type-C USB 2.0 SMD USB Connectors ROHS
+WP154A4SUREQBFZGW | EXACT | C7117555 | WP154A4SUREQBFZGW | Kingbright | Plugin,D=5mm | expand | 0 | -40℃~+85℃ 1.9V~2.5V 102.5mW 120mW 120mcd~500mcd 20mA 20mA 20mA 3.3V~4.1V 3.3V~4V 400mcd~1000mcd 460nm 465nm 515nm 525nm 600mcd~1300mcd 60° 6
+C4294 | first-of-2 | C2764481 | S1C42944ZWJAC | JYJE | HC-49S | expand | 184 | -40℃~+85℃ 120Ω 20pF 4.2944MHz Through Hole Crystal Oscillator ±20ppm ±30ppm HC-49S Crystals ROHS

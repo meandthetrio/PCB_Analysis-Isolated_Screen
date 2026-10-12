@@ -1,0 +1,37 @@
+== PD: production BOM ES-Seed3-DevKit-Pedal-Rev3_bom.csv: 46 lines, 141 designators, header ['Value', 'Reference', 'Footprint']
+   designators on two lines: none; Qty != n_refs: none; lines with 2 footprints: [(10, '10UF', 'Capacitor_SMD:CP_Elec_4x5.8,Capacitor_SMD:C_0805_2012Metric')]
+== CDN BOM Seed3-DevKit-Pedal_Rev4-bom.csv: 46 lines, 142 designators, header ['Designators', 'Qty', 'Value', 'Description', 'Package', 'CPN', 'MPN', 'MFG', 'VPN', 'Vendor', 'Sub OK', 'DNP', 'Assembly']
+   designators on two lines: none; Qty != n_refs: none
+   DNP column values: {'FALSE': 46}; Assembly: {'SMT': 34, 'PTH': 12}; Vendor: {'LCSC': 33, 'JLCPCB': 1, 'Mouser': 4, 'Digi-Key': 4, 'TI': 1, 'Suntsu': 1, 'Alpha': 1, '': 1}; Sub OK: {'YES': 26, 'NO': 20}
+   VPN not an LCSC C-number while Vendor=LCSC: [(20, '0603WAF2001T5E')]
+   empty Value cells: 18; empty Description: 7; "Unknown Manufacturer": [36, 41]; MFG with trailing space: []
+   designators in CDN but not production BOM: ['D6']
+   designators in production BOM but not CDN: none
+   value differs between CDN and production BOM: ['U2: cdn 5V vs prod LP2985-5.0']
+   CDN Package/Assembly/DNP checks not OK (cdn_chk column): [('D6', 'CDN ref not on board'), ('U2', 'value cdn=5V sch=LP2985-5.0'), ('VR1', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR2', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR3', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR4', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR5', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)'), ('VR6', 'value cdn=10K within sch=P-10K-B-R (reviewed OK)')]
+== schematic (netlist): 150 components; exclude_from_bom: ['FD1', 'FD2', 'FD3', 'H1', 'H2', 'H3', 'H4', 'LOGO1', 'QR1']; dnp: []; exclude_from_board: []
+   sheets: {'Peripherals': 43, 'Audio IO': 58, 'Power': 31, 'Daisy': 18}
+   symbols with empty Footprint field: none
+== board (pcbnew): 150 footprints; duplicate refs: none; tech: {'SMD': 118, 'THT': 30, 'no-pads': 2}; sides: {'top': 150}
+   footprint attribute vs pad type: {('SMD', 'SMD'): 118, ('unspec', 'THT'): 20, ('unspec', 'no-pads'): 2, ('THT', 'THT'): 10}
+   unspec-attribute footprints: ['FSW_1', 'FSW_2', 'H1', 'H2', 'H3', 'H4', 'J1', 'J10', 'J11', 'LOGO1', 'QR1', 'SW1', 'SW2', 'SW3', 'SW4', 'SW5', 'VR1', 'VR2', 'VR3', 'VR4', 'VR5', 'VR6']
+   exclude_from_bom: ['FD1', 'FD2', 'FD3', 'H1', 'H2', 'H3', 'H4', 'LOGO1', 'QR1']; exclude_from_pos: ['H1', 'H2', 'H3', 'H4', 'LOGO1']; DNP: []
+   sch ex_bom vs pcb ex_bom disagree: none
+== pos.csv (kicad-cli, session): 145 rows; production centroid: 145 rows, header ['Designator', 'Val', 'Package', 'Mid X', 'Mid Y', 'Rotation', 'Layer']
+   pos refs not in centroid: none; centroid refs not in pos: none
+   centroid rows with no production-BOM line: ['FD1', 'FD2', 'FD3', 'QR1']
+   production-BOM designators missing from centroid: none
+   centroid Layer values: {'top': 145}
+   centroid-vs-pcb XY offset (Mid X - pcb x, Mid Y + pcb y): [((-50.0, 155.0), 145)] (constant => same drill/place origin for all)
+== buckets
+   ALL THREE (141): A1 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15 C16 C17 C18 C19 C20 C21 C22 C23 C24 C25 C26 C27 C28 C29 C30 C31 C32 C33 C34 C35 C36 C37 C38 C39 C40 C41 C42 C43 C46 C47 C48 C55 D5 FB1 FB4 FB5 FB9 FB10 FSW_1 FSW_2 J1 J2 J3 J4 J5 J6 J7 J8 J10 J11 LED1 LED2 R1 R2 R3 R4 R5 R6 R7 R8 R10 R11 R12 R13 R14 R15 R16 R17 R18 R19 R20 R21 R22 R25 R26 R27 R28 R29 R30 R40 R43 R44 R46 R48 R50 R51 R52 R53 R54 R55 R57 R58 R59 R60 R61 R64 R65 R68 R69 R70 R71 R72 R74 R75 R76 R77 SW1 SW2 SW3 SW4 SW5 U1 U2 U3 U7 U9 U10 U11 U14 VR1 VR2 VR3 VR4 VR5 VR6
+   CDN/pos/centroid-only (1): D6
+   SCH+PCB not BOM: exclude-from-BOM flag (9): FD1 FD2 FD3 H1 H2 H3 H4 LOGO1 QR1
+== value checks not OK: none
+== package checks not OK: [('C15', 'OK (BOM line lists 2 footprints)'), ('C18', 'OK (BOM line lists 2 footprints)'), ('C19', 'OK (BOM line lists 2 footprints)'), ('C26', 'OK (BOM line lists 2 footprints)')]
+== paste pads but no production-BOM line: none
+== production-BOM lines whose parts have no paste pads (THT / hand): ['A1', 'FSW_1', 'FSW_2', 'J1', 'J10', 'J11', 'J2', 'J3', 'J4', 'J5', 'J6', 'J8', 'LED1', 'LED2', 'SW1', 'SW2', 'SW3', 'SW4', 'SW5', 'U11', 'VR1', 'VR2', 'VR3', 'VR4', 'VR5', 'VR6']
+== THT parts on production BOM: ['A1', 'FSW_1', 'FSW_2', 'J1', 'J10', 'J11', 'J2', 'J3', 'J4', 'J5', 'J6', 'J8', 'LED1', 'LED2', 'SW1', 'SW2', 'SW3', 'SW4', 'SW5', 'U11', 'VR1', 'VR2', 'VR3', 'VR4', 'VR5', 'VR6']
+== SMD parts on production BOM: 115
+== pad-geometry class per BOM footprint: {('C_0603_1608Metric', '0603'): 25, ('CP_Elec_4x5.8', '1.6x2.6'): 10, ('CP_Elec_6.3x7.7', '1.6x3.5'): 10, ('C_0805_2012Metric', '0805'): 2, ('D_SOD-323', '0.45x0.6'): 1, ('R_0603_1608Metric', '0603'): 54, ('R_1206_3216Metric', '1206'): 5}
+== A1 (Seed module): {'disp': 'ALL THREE', 'bom_value': 'Electrosmith_Daisy_Seed_Rev4', 'bom_fp': 'Module:Electrosmith_Daisy_Seed', 'cdn_value': '', 'cdn_pkg': 'SOM', 'cdn_cpn': 'Seed3', 'cdn_mpn': 'Seed3', 'cdn_mfg': 'Qu-Bit Electronix, Inc.', 'cdn_asm': 'PTH', 'sch_value': 'Electrosmith_Daisy_Seed_Rev4', 'sch_fp': 'Module:Electrosmith_Daisy_Seed', 'pcb_fp': 'Module:Electrosmith_Daisy_Seed', 'pcb_tech': 'THT', 'pcb_pads': 40, 'pcb_geom': 'PTH drill 1.1'}

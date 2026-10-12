@@ -1,0 +1,93 @@
+source,row,value,footprint/package,qty,n_refs,qty_ok,refs,extra
+production,2,Electrosmith_Daisy_Seed_Rev4,Module:Electrosmith_Daisy_Seed,,1,True,A1,
+production,3,100NF,Capacitor_SMD:C_0603_1608Metric,,12,True,C1 C2 C4 C16 C17 C20 C22 C25 C31 C33 C34 C47,
+production,4,10uF,Capacitor_SMD:CP_Elec_4x5.8,,8,True,C3 C6 C7 C10 C29 C35 C42 C48,
+production,5,100PF,Capacitor_SMD:C_0603_1608Metric,,4,True,C5 C8 C28 C38,
+production,6,1NF,Capacitor_SMD:C_0603_1608Metric,,2,True,C9 C30,
+production,7,270PF,Capacitor_SMD:C_0603_1608Metric,,2,True,C11 C32,
+production,8,33NF,Capacitor_SMD:C_0603_1608Metric,,2,True,C12 C37,
+production,9,100UF,Capacitor_SMD:CP_Elec_6.3x7.7,,10,True,C13 C14 C21 C23 C24 C27 C36 C39 C41 C43,
+production,10,10UF,"Capacitor_SMD:CP_Elec_4x5.8,Capacitor_SMD:C_0805_2012Metric",,4,True,C15 C18 C19 C26,
+production,11,10NF,Capacitor_SMD:C_0603_1608Metric,,2,True,C40 C46,
+production,12,1UF,Capacitor_SMD:C_0603_1608Metric,,1,True,C55,
+production,13,NSR1020MW2T3G,Diode_SMD:D_SOD-323,,1,True,D5,
+production,14,FERRITE_BEAD_0603,Resistor_SMD:R_0603_1608Metric,,5,True,FB1 FB4 FB5 FB9 FB10,
+production,15,M12 SPST Footswitch Assembly,parts-for-kicad:S02P,,2,True,FSW_1 FSW_2,
+production,16,DIN_MIDI_5P,parts-for-kicad:57PC5F,,3,True,J1 J10 J11,
+production,17,JACK_TRS_SWITCHING,Connector_Audio:Jack_6.35mm_Neutrik_NMJ6HCD2_Horizontal,,5,True,J2 J3 J4 J5 J6,
+production,18,USB4110GFA,USB4110GFA:GCT_USB4110GFA,,1,True,J7,
+production,19,Barrel_Jack_Switch,Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002,,1,True,J8,
+production,20,LED,LED_THT:LED_D5.0mm,,1,True,LED1,
+production,21,LED_RKBG,LED_THT:LED_D5.0mm-4_RGB_Wide_Pins,,1,True,LED2,
+production,22,5K1,Resistor_SMD:R_0603_1608Metric,,2,True,R1 R2,
+production,23,270R,Resistor_SMD:R_0603_1608Metric,,1,True,R3,
+production,24,220R,Resistor_SMD:R_0603_1608Metric,,1,True,R4,
+production,25,10K,Resistor_SMD:R_0603_1608Metric,,13,True,R5 R10 R14 R17 R19 R22 R26 R64 R65 R68 R69 R70 R77,
+production,26,3R3,Resistor_SMD:R_1206_3216Metric,,5,True,R6 R30 R48 R55 R57,
+production,27,1M,Resistor_SMD:R_0603_1608Metric,,3,True,R7 R15 R18,
+production,28,100R,Resistor_SMD:R_0603_1608Metric,,7,True,R8 R13 R16 R27 R46 R72 R76,
+production,29,15K,Resistor_SMD:R_0603_1608Metric,,2,True,R11 R74,
+production,30,33K,Resistor_SMD:R_0603_1608Metric,,2,True,R12 R75,
+production,31,3K3,Resistor_SMD:R_0603_1608Metric,,2,True,R20 R58,
+production,32,4K7,Resistor_SMD:R_0603_1608Metric,,2,True,R21 R71,
+production,33,2K,Resistor_SMD:R_0603_1608Metric,,3,True,R25 R40 R44,
+production,34,10R,Resistor_SMD:R_0603_1608Metric,,4,True,R28 R29 R59 R61,
+production,35,1K,Resistor_SMD:R_0603_1608Metric,,1,True,R43,
+production,36,47K,Resistor_SMD:R_0603_1608Metric,,5,True,R50 R51 R52 R53 R54,
+production,37,20K,Resistor_SMD:R_0603_1608Metric,,1,True,R60,
+production,38,TOGGLE_ON_OFF_ON_PIP2,parts-for-kicad:TOGGLE_ON_OFF_ON,,1,True,SW1,
+production,39,TOGGLE_ON-ON_PIP3,parts-for-kicad:TOGGLE_ON_ON_2,,2,True,SW2 SW3,
+production,40,PTH Mini Button,parts-for-kicad:TL1105SPF250Q_SILK,,2,True,SW4 SW5,
+production,41,MCP6002-xSN,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,,1,True,U1,
+production,42,LP2985-5.0,Package_TO_SOT_SMD:SOT-23-5,,1,True,U2,
+production,43,OPA1652,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,,3,True,U3 U9 U10,
+production,44,MICRO_SD_CARD,TF-01A:TF-01A,,1,True,U7,
+production,45,H11L1,Package_DIP:DIP-6_W7.62mm,,1,True,U11,
+production,46,USBLC6-2SC6,Package_TO_SOT_SMD:SOT-23-6,,1,True,U14,
+production,47,P-10K-B-R,parts-for-kicad:9MM_SNAP-IN_POT_SILK,,6,True,VR1 VR2 VR3 VR4 VR5 VR6,
+cdn,2,100NF,0603,12,12,True,C1 C16 C17 C2 C20 C22 C25 C31 C33 C34 C4 C47,100NF C0603 | TCC0603X7R104K500CT | CCTC | C282519 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,3,100PF,0603,4,4,True,C28 C38 C5 C8,100PF C0603 | CGA0603COG101J500JT | HRE | C7503509 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,4,100R,0603,7,7,True,R13 R16 R27 R46 R72 R76 R8,100R R0603 | RC0603FR-07100RL | YAGEO | C105588 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,5,100UF,"SMD,D6.3xL7.7mm",10,10,True,C13 C14 C21 C23 C24 C27 C36 C39 C41 C43,100UF PANASONIC D8 | RVT1V101M0607 | ROQANG | C72478 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,6,10K,0603,13,13,True,R10 R14 R17 R19 R22 R26 R5 R64 R65 R68 R69 R70 R77,10K R0603 | FRC0603F1002TS | FOJAN | C2906982 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,7,10NF,C0603,2,2,True,C40 C46,10NF C0603 | 0603B103K500NT | FH (Guangdong Fenghua Advanced Tech) | C57112 | JLCPCB | sub=YES dnp=FALSE asm=SMT
+cdn,8,10R,0603,4,4,True,R28 R29 R59 R61,10R R0603 | 0603WAF100JT5E | UNI-ROYAL(Uniroyal Elec) | C22859 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,9,10UF,C0805,2,2,True,C15 C26,10UF C0805 | CGA0805X5R106K250MT | HRE | C6119887 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,10,,"1/4"" Jack",5,5,True,J2 J3 J4 J5 J6,"1/4"" TRS Switching Jack Horizontal | NMJ6HCD2 | Neutrik | NMJ6HCD2 | Mouser | sub=NO dnp=FALSE asm=PTH"
+cdn,11,15K,0603,2,2,True,R11 R74,15K R0603 | 0603WAF1502T5E | UNI-ROYAL(Uniroyal Elec) | C22809 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,12,1K,0603,1,1,True,R43,1K R0603 | FRC0603F1001TS | FOJAN | C2907002 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,13,1M,0603,3,3,True,R15 R18 R7,1M R0603 | FRC0603F1004TS | FOJAN | C2907003 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,14,1NF,0603,2,2,True,C30 C9,1NF C0603 | TCC0603X7R102M500CTS | CCTC | C5375733 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,15,1UF,0603,1,1,True,C55,1UF C0603 | CGA0603X5R105K160JT | HRE | C6119849 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,16,20K,0603,1,1,True,R60,20K R0603 | FRC0603F2002TS | FOJAN | C2907011 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,17,220R,0603,1,1,True,R4,220R R0603 | FRC0603F2200TS | FOJAN | C2907014 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,18,270PF,0603,2,2,True,C11 C32,270PF C0603 | CC0603JRNPO9BN271 | YAGEO | C107046 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,19,270R,0603,1,1,True,R3,270R R0603 | FRC0603F2700TS | FOJAN | C2907020 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,20,2K,0603,3,3,True,R25 R40 R44,2K R0603 | 0603WAF2001T5E | UNI-ROYAL(Uniroyal Elec) | 0603WAF2001T5E | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,21,,Vertical Toggle Switch,1,1,True,SW1,2M-SPDT-101-STD-T | 2MS3T1B1M2QE | Dailywell | 2MS3T1B1M2QE | Digi-Key | sub=NO dnp=FALSE asm=PTH
+cdn,22,,UnknownPackagePTH,2,2,True,SW2 SW3,2M-SPDT-11-STD-T | 2MS1T1B1M2QE | Dailywell | 2MS1T1B1M2QE | Digi-Key | sub=NO dnp=FALSE asm=PTH
+cdn,23,33K,0603,2,2,True,R12 R75,33K R0603 | 0603WAF3302T5E | UNI-ROYAL(Uniroyal Elec) | C4216 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,24,33NF,0603,2,2,True,C12 C37,33NF C0603 | TCC0603X7R333M500CT | CCTC | C696862 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,25,3K3,0603,2,2,True,R20 R58,3K3 R0603 | FRC0603F3301TS | FOJAN | C2907023 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,26,3R3,1206,5,5,True,R30 R48 R55 R57 R6,3R3 R1206 3/4W 5% | SG73P2BTTD3R30F | KOA Speer | C2577888 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,27,47K,0603,5,5,True,R50 R51 R52 R53 R54,47K R0603 | 0603WAF4702T5E | UNI-ROYAL(Uniroyal Elec) | C25819 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,28,4K7,0603,2,2,True,R21 R71,4K7 R0603 | FRC0603F4701TS | FOJAN | C2907034 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,29,5K1,0603,2,2,True,R1 R2,5K1 R0603 | FRC0603F5101TS | FOJAN | C2907044 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,30,,5mm LED PTH,1,1,True,LED1,5mm Red Diffused | WP7113ID | Kingbright | C6926004 | LCSC | sub=NO dnp=FALSE asm=PTH
+cdn,31,,Barrel Jack PTH,1,1,True,J8,9MM DC Barrel Jack PTH | DC-005-A200 | XUNPU | C720557 | LCSC | sub=NO dnp=FALSE asm=PTH
+cdn,32,,UnknownPackagePTH,3,3,True,J1 J10 J11,DIN PTH RightAngle | 57PC5F | Switchcraft | 57PC5F | Digi-Key | sub=NO dnp=FALSE asm=PTH
+cdn,33,,R0603,5,5,True,FB1 FB10 FB4 FB5 FB9,FB R0603 | PBY160808T-601Y-N | Chilisin | C108301 | LCSC | sub=NO dnp=FALSE asm=SMT
+cdn,34,5V,SOT-23-5,1,1,True,U2,LP2985-5V | LP2985AIM5X-5.0/NOPB | Texas Instruments | LP2985AIM5X-5.0/NOPB | TI | sub=NO dnp=FALSE asm=SMT
+cdn,35,,Header PTH 2,2,2,True,FSW_1 FSW_2,M12 SPST  Footswitch Assembly | SSWFS-S01-AE11-HWH-C25 | Suntsu | SSWFS-S01-AE11-HWH-C25 | Suntsu | sub=NO dnp=FALSE asm=PTH
+cdn,36,,SO-8,1,1,True,U1,MCP6002 SO-8 | MCP6002T-I/SN | Unknown Manufacturer | MCP6002T-I/SN | Digi-Key | sub=NO dnp=FALSE asm=SMT
+cdn,37,,PTH Tac Switch 4,2,2,True,SW4 SW5,Mini Button PTH | TL1105SPF250Q | E-Switch | TL1105SPF250Q | Mouser | sub=NO dnp=FALSE asm=PTH
+cdn,38,,SOD-323,2,2,True,D5 D6,NSR1020MW2T3G | B5817WS | Shikues | C122854 | LCSC | sub=NO dnp=FALSE asm=SMT
+cdn,39,10K,PTH Pot 5,6,6,True,VR1 VR2 VR3 VR4 VR5 VR6,P-10K-B-R Pointer | RV09AF-40-25K-B10K-0085 | Alpha (Taiwan) | RV09AF-40-25K-B10K-0085 | Alpha | sub=NO dnp=FALSE asm=PTH
+cdn,40,,SOT-23-6L,1,1,True,U14,USBLC6 TVS SOT-23-6 | USBLC6-2SC6 | HXY MOSFET | C5261088 | LCSC | sub=NO dnp=FALSE asm=SMT
+cdn,41,,PTH LED 4,1,1,True,LED2,WP154A4SUREQBFZG | WP154A4SUREQBFZGW (PTH RGB 5MM Diffused LED) | Unknown Manufacturer | WP154A4SUREQBFZGW (PTH RGB 5MM Diffused LED) | Mouser | sub=NO dnp=FALSE asm=PTH
+cdn,42,,SO-8,3,3,True,U10 U3 U9,OPA1652 SOIC-8 | OPA1652AIDR | Texas Instruments | 595-OPA1652AIDR | Mouser | sub=NO dnp=FALSE asm=SMT
+cdn,43,,USB C Connector,1,1,True,J7,USB C USB4110-GF-A | HYCW445-USBC16-730B | HOAUC | C42400246 | LCSC | sub=NO dnp=FALSE asm=SMT
+cdn,44,,microSD SMT 13,1,1,True,U7,Micro SD SMT Horizontal | TF-01A | Korean Hroparts Elec | C91145 | LCSC | sub=NO dnp=FALSE asm=SMT
+cdn,45,,SOM,1,1,True,A1,"Seed3 | Seed3 | Qu-Bit Electronix, Inc. |  |  | sub=NO dnp=FALSE asm=PTH"
+cdn,46,10UF,electrolytic 4x5.8,10,10,True,C10 C18 C19 C29 C3 C35 C42 C48 C6 C7,10UF Electrolytic 4x5.8mm | EEEFK1C100R | Panasonic | C178531 | LCSC | sub=YES dnp=FALSE asm=SMT
+cdn,47,,DIP-6,1,1,True,U11,OPTO ISOLATOR PTH | H11L1 | EVERLIGHT | C78588 | LCSC | sub=NO dnp=FALSE asm=PTH
