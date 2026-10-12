@@ -5,7 +5,10 @@ Design review + rev-2 planning for Trey's WavetableController board (KiCad 9,
 `analysis/FINAL_REPORT.md` (rev 2) and `analysis/rev3/FINAL_REPORT.md` (rev 3).
 Do not re-derive findings that are already in `analysis/FINDINGS.md` or
 `analysis/rev3/FINDINGS.md`. Rev-3 design files live in `rev3/` and, unlike the
-root copy, that `.kicad_pcb` contains the filled GND pour.
+root copy, that `.kicad_pcb` contains the filled GND pour. Electrosmith's Daisy Pod
+Rev5 reference files and their review are in `reference/electrosmith/` and
+`analysis/daisy_pod/` (KiCad conversion of the Eagle board: see its README for
+what the conversion lost; never fabricate from it).
 
 ## Tooling (already installed in Claude Code on the web sessions)
 

@@ -43,7 +43,7 @@
 | Item | Rev 3 | Fix | Potential consequence if left |
 |---|---|---|---|
 | 100 nF + 10 µF at the SD socket P1 | NOT DONE — still only C1, 120 mm away (R3-P2-10) | Add 100 nF + 10 µF across P1 VDD/VSS; 10 µF at A1.38 | Rail dips at the card on 100 mA write bursts: CRC errors, fallback to 1-bit, the likeliest cause of the Round 1 4-bit failure. MIDI opto shares the dip |
-| TPA6110A2 10 µF bulk + 5 pF across R14/R15 | NOT DONE (R3-P2-11) | 10 µF (or more) on 3V3_A at U3; 5 pF across R14 and R15 | Distortion or a faint whine with long headphone leads; mic amp on the same under-filtered rail |
+| TPA6110A2 10 µF bulk + 5 pF across R14/R15 | NOT DONE (R3-P2-11). Pod review 2026-10-12: SLOS314B asks for the 5 pF only when Rf > 50 kΩ; at 33 kΩ it is optional. The 10 µF stands (the Pod reference lacks it too) | 10 µF (or more) on 3V3_A at U3; 5 pF optional | Distortion or a faint whine with long headphone leads; mic amp on the same under-filtered rail |
 | AUDIO_IN_L beside USART1_RX; AUDIO_OUT_R beside TAC_SWITCH_2 | NOT DONE — UART still 49 mm at 0.41 mm from AUDIO_IN_L; now the closest pairing on the board (R3-P5-04) | Move the UART tracks ≥0.5 mm (ideally 3× width) from AUDIO_IN_L, or put them on the other layer | A tick on the audio input on MIDI traffic; a click on a button press |
 | Delete FB1 | DONE — FB1 removed | none | — |
 | Firmware: SPI1 transmit-only (MISO = TAC_SHIFT_R) | firmware, unchanged (pin 10 still TAC_SHIFT_R) | Open SPI1 as TX-only in libDaisy | Right shift button dies the moment the display driver initialises; looks like a hardware fault |

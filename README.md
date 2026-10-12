@@ -8,6 +8,10 @@
 
 Trey's rev-3 files are in `rev3/` (the `.kicad_pcb` there **does** carry the GND pour) and the review is in [analysis/rev3/FINAL_REPORT.md](analysis/rev3/FINAL_REPORT.md) with the ledger in [analysis/rev3/FINDINGS.md](analysis/rev3/FINDINGS.md). Headlines: pour, encoder clicks, duplicate R21, I2C hack and 0.1 mm traces are fixed; the **LEDs are still reverse-biased**, on a footprint that doesn't fit the named part, and still off the BOM; the new OLED module has no mounting holes; there are no GND stitching vias. Rev-2 scorecard: 10 fixed, 4 re-pass, 5 improved, 13 open, 3 no longer apply.
 
+## Reference designs (2026-10-12)
+
+Electrosmith's Daisy Pod Rev5 files (Eagle sch/brd, BOM, PDF) are in `reference/electrosmith/` with a KiCad conversion, and the same six-pass review was run on them with a side-by-side against rev 3: [analysis/daisy_pod/FINAL_REPORT.md](analysis/daisy_pod/FINAL_REPORT.md). Headlines: two real errors in Electrosmith's BOM (DNI MIDI jumpers ordered, one Seed socket where two are needed) and an encoder-click/MIDI-TX pin conflict with libDaisy's defaults; the SD-socket, bulk-cap, headphone-amp and encoder-filter habits on Trey's board are inherited from the reference; rev 3's ground stitching, rail length and signal runs are where it falls behind it. The Daisy Field schematic could not be fetched from this environment (see `reference/electrosmith/README.md`).
+
 ## Folder contents
 
 | Path | What it is |
@@ -16,6 +20,8 @@ Trey's rev-3 files are in `rev3/` (the `.kicad_pcb` there **does** carry the GND
 | `Manifold_Gerb_LedFix/` | The Gerbers + drill files actually sent to JLCPCB ("LedFix" round, 2nd proto). **Fab truth for copper.** |
 | `ManifoldRe_BOM_NEW - Excel Format.xls` | JLCPCB-format BOM |
 | `rev3/` | Rev-3 KiCad project + BOM (2026-10-09); copper truth for rev 3 |
+| `reference/electrosmith/` | Daisy Pod Rev5 / Seed Rev7 / Field databrief reference files |
+| `analysis/daisy_pod/` | The Pod reference review (six passes, ledger, report) |
 | `analysis/rev3/` | The rev-3 review (final report, ledger, passes 0–6, scripts) |
 | `analysis/` | The rev-2 review: FINAL_REPORT, findings ledger, SOURCE_OF_TRUTH, PASS1–6 reports, REV2 OLED plan, routing CSVs extracted from Gerbers, board SVG, parser script. Has its own [README](analysis/README.md) index. |
 | `screen mounting solution.md` | Mechanical mounting guide for the rev-2 Crystalfontz CFAL12864G-024W COG OLED (tape+gasket sandwich, plus 3D-printed bezel alternative) |
