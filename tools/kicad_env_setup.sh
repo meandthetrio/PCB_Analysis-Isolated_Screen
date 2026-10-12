@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Make KiCad 9 (+ Freerouting autorouter) usable headless on Ubuntu 24.04
+# Make KiCad 10 (+ Freerouting autorouter) usable headless on Ubuntu 24.04
 # (Claude Code on the web / CI).
 #
 # Installs kicad-cli + the pcbnew Python module (package "kicad"), the stock
@@ -23,7 +23,17 @@
 set -euo pipefail
 export DEBIAN_FRONTEND=noninteractive
 
-if ! command -v kicad-cli >/dev/null || [ ! -d /usr/share/kicad/symbols ] || [ ! -d /usr/share/kicad/footprints ]; then
+# KiCad 10 (needed since 2026-10-12: Electrosmith's Seed 3 dev-kit projects are
+# saved in KiCad 10 format; KiCad 10 reads the KiCad 9 files in this repo fine).
+if ! command -v kicad-cli >/dev/null || [ "$(kicad-cli version | cut -d. -f1)" -lt 10 ] \
+   || [ ! -d /usr/share/kicad/symbols ] || [ ! -d /usr/share/kicad/footprints ]; then
+  mkdir -p /etc/apt/keyrings
+  if [ ! -s /etc/apt/keyrings/kicad10.gpg ]; then
+    curl -fsSL --retry 3 "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x245D5502FAD7A805" \
+      | gpg --dearmor > /etc/apt/keyrings/kicad10.gpg
+  fi
+  echo "deb [signed-by=/etc/apt/keyrings/kicad10.gpg] https://ppa.launchpadcontent.net/kicad/kicad-10.0-releases/ubuntu noble main" \
+    > /etc/apt/sources.list.d/kicad10.list
   apt-get update -qq
   apt-get install -y --no-install-recommends kicad kicad-symbols kicad-footprints
 fi

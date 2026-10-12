@@ -14,7 +14,9 @@ what the conversion lost; never fabricate from it).
 
 The SessionStart hook runs `tools/kicad_env_setup.sh`, which provides:
 
-- `kicad-cli` 9.0.9 and the `pcbnew` Python module (`python3 -c "import pcbnew"`)
+- `kicad-cli` 10.0.7 and the `pcbnew` Python module (`python3 -c "import pcbnew"`); KiCad 10
+  since 2026-10-12 because the Seed 3 dev-kit reference projects are KiCad 10 files.
+  It reads this repo's KiCad 9 files unchanged.
 - stock KiCad symbol/footprint libraries and user lib tables
 - `freerouting` (headless autorouter, Java 25)
 
