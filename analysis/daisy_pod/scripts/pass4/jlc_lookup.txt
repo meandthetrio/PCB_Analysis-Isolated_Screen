@@ -1,0 +1,74 @@
+## RC0603FR-0747KL: 1 hit(s)
+    C105579 | RC0603FR-0747KL | YAGEO | 0603 | -55℃~+155℃ 100mW 47kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS | expand | stock 238205
+## 47589-0001: 2 hit(s)
+    C114094 | 475890001 | MOLEX | SMD | -30℃~+85℃ 1 10000 times 30V 5P Black Female Micro-B Surface Mount, Right Angle USB 2.0 SMD USB Connectors ROHS | expand | stock 2798
+    C9900013747 | JS_USB_0475890001_H2P8_R | JLCPCB Assembly | USBMICRO | USBMICRO SMT ROHS | expand | stock 0
+## 47590-0001: 2 hit(s)
+    C136001 | 475900001 | MOLEX | SMD | -30℃~+85℃ 1 10000 times 30V 5.2mm 5P Black Female Micro-AB Surface Mount, Right Angle SMD USB Connectors ROHS | expand | stock 3742
+    C3197914 | 0475900001 | MOLEX | SMD | -35℃~+85℃ 1 5P Micro-AB SMD USB Connectors ROHS | expand | stock 0
+## TL3301SPF160QJ: 1 hit(s)
+    C2886856 | TL3301SPF160QJ | E-Switch | SMD,6x6mm | -20℃~+70℃ 1.6N 12V 2.8mm 50mA 6mm 6mm J-Lead Round Button SPST-NO Surface Mount,Vertical SMD,6x6mm Tactile Swi | expand | stock 0
+## RC0603FR-07220RL: 1 hit(s)
+    C107696 | RC0603FR-07220RL | YAGEO | 0603 | -55℃~+155℃ 100mW 220Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS | expand | stock 130651
+## CRCW0603270RFKEAC: 1 hit(s)
+    C1730818 | CRCW0603270RFKEAC | Vishay Intertech | 0603 | -55℃~+155℃ 100mW 270Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS | expand | stock 1284
+## CC0402KPX5R8BB104: 1 hit(s)
+    C1853699 | CC0402KPX5R8BB104 | YAGEO | 0402 | 100nF 25V X5R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS | expand | stock 0
+## CL10B474KA8NFNC: 1 hit(s)
+    C318640 | CL10B474KA8NFNC | Samsung Electro-Mechanics | 0603 | 25V 470nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS | expand | stock 20851
+## RC0603FR-0722KL: 1 hit(s)
+    C114065 | RC0603FR-0722KL | YAGEO | 0603 | -55℃~+155℃ 100mW 22kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS | expand | stock 1222982
+## RC0603FR-1333KL: 1 hit(s)
+    C6752479 | RC0603FR-1333KL | YAGEO | 0603 | -55℃~+155℃ 100mW 33kΩ Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS | expand | stock 0
+## CLVBA-FKA-CAEDH8BBB7a363: 2 hit(s)
+    C9900023682 | CLVBA-FKA-CAEDH8BBB7a363 | JLCPCB Assembly | SMD | SMD SMT ROHS | expand | stock 0
+    C5250259 | CLVBA-FKA-CAEDH8BBB7A363 | CREE LED | SMD,2.8x3.2mm | -40℃~+100℃ 1.9V、3V、3V 36mcd~112mcd、71mcd~224mcd、140mcd~450mcd 460nm~480nm、520nm~540nm、619nm~624nm Red, Emerald | expand | stock 0
+## CLVBA-FKA-CC1F1L1BB7R3R3: 1 hit(s)
+    C6484807 | CLVBA-FKA-CC1F1L1BB7R3R3 | CREE LED | PLCC-4 | Common Anode White Lens PLCC-4 RGB LEDs ROHS | expand | stock 0
+## RC0402FR-131KL: 1 hit(s)
+    C4247997 | RC0402FR-131KL | YAGEO | 0402 | -55℃~+155℃ 1kΩ 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS | expand | stock 3
+## AC0603FR-070RL: 1 hit(s)
+    C116699 | AC0603FR-070RL | YAGEO | 0603 | -55℃~+155℃ 0Ω 100mW 75V Thick Film Resistor ±1% 0603 Chip Resistor - Surface Mount ROHS | expand | stock 473218
+## USBLC6-2SC6TR: 0 hit(s)
+## USBLC6-2SC6: 20 hit(s)
+    C7519 | USBLC6-2SC6 | STMicroelectronics | SOT-23-6L | -40℃~+125℃ 150nA 17V 2 3.5pF 5.25V 5A 6V ESD IEC 61000-4-2 Unidirectional SOT-23-6L ESD and Surge Protection ( | expand | stock 47900
+    C558442 | TPUSBLC6-2SC6 | TECH PUBLIC | SOT-23-6 | -55℃~+125℃ 0.35pF、0.8pF 100nA 15V 2 5V 9V ESD IEC 61000-4-2、IEC 61000-4-5、IEC 61000-4-4 SOT-23-6 ESD and Surge | expand | stock 4659
+    C2687116 | USBLC6-2SC6 | UMW(Youtai Semiconductor Co., Ltd.) | SOT-23-6 | 0.35pF、0.8pF 100nA 150W@8/20us 15V 2 5V 6A@8/20us 6V ESD SOT-23-6 ESD and Surge Protection (TVS/ESD) ROHS | expand | stock 69737
+    C2827654 | USBLC6-2SC6 | TECH PUBLIC | SOT-23-6 | -55℃~+125℃ 0.35pF 12V 150W 2 5V 6A 6V 80nA ESD IEC 61000-4-2、IEC 61000-4-5、IEC 61000-4-4 Unidirectional SOT-23 | expand | stock 73925
+    C2830148 | MSUSBLC6-2SC6 | MSKSEMI | SOT-23-6 | -40℃~+125℃ 0.8pF 150W 15V 1uA 2 5V 6A 9V ESD IEC 61000-4-2 Unidirectional SOT-23-6 ESD and Surge Protection (T | expand | stock 2909
+    C2969755 | USBLC6-2SC6Y | STMicroelectronics | SOT-23-6L | -40℃~+150℃ 10nA 12V 2 2.5pF 6V ESD Unidirectional SOT-23-6L ESD and Surge Protection (TVS/ESD) ROHS | expand | stock 2
+    C3029034 | USBLC6-2SC6-MS | MSKSEMI | SOT-23-6 | -40℃~+125℃ 0.8pF 150W 15V 1uA 2 4.5A 5V 6V ESD IEC 61000-4-2 Unidirectional SOT-23-6 ESD and Surge Protection  | expand | stock 4838
+    C5180249 | USBLC6-2SC6-ES | ElecSuper | SOT-23-6L | -40℃~+85℃ 0.6pF 15V 1uA 2 4.5A 5V 6V 70W@8/20us ESD IEC 61000-4-2 Unidirectional SOT-23-6L ESD and Surge Prote | expand | stock 284
+## NSR1020MW2T3G: 1 hit(s)
+    C385198 | NSR1020MW2T3G | onsemi | SOD-323 | 1 Independent 1A 20V 40uA@15V 540mV@1A 5A SOD-323 Schottky Diodes ROHS | expand | stock 1
+## H11L1SR2M: 1 hit(s)
+    C20082 | H11L1SR2M | onsemi | SOP-6-2.54mm | -40℃~+85℃ 0.4V 1 1.2V 1.6mA 1Mbit/s 250mW 30mA 3V~15V 4.17kV 4us 4us 50mA 6V DC SOP-6-2.54mm Logic Output Opto | expand | stock 16884
+## TPA6110A2DGNR: 1 hit(s)
+    C130212 | TPA6110A2DGNR | Texas Instruments | MSOP-8-EP | -40℃~+85℃ 0.6% 1.5mA 100dB 150mWx2@16Ω 2-Channel 2.5V~5.5V 76dB Automatic mute/no-noise switch、ESD protection  | expand | stock 5
+## EMVE350ARA101MF80G: 1 hit(s)
+    C2162906 | EMVE350ARA101MF80G | NCC(Nippon Chemi-Con) | SMD,D6.3xL7.7mm | -40℃~+105℃ 1000hrs@105℃ 100mA@120Hz 100uF 35V 6.3mm 7.7mm Polarized ±20% SMD,D6.3xL7.7mm Aluminum Electrolytic | expand | stock 26
+## PEC11J-9220F-H0015: 1 hit(s)
+    C27288967 | PEC11J-9220F-H0015 | BOURNS | SMD | SMD Rotary Encoders ROHS | expand | stock 0
+## SJ2-35863B1-SMT-TR: 1 hit(s)
+    C4992707 | SJ2-35863B1-SMT-TR | CUI | SMD | -25℃~+85℃ 12V 1A 3.5mm Headphone Jack Copper alloy Silver SMD Audio Connectors ROHS | expand | stock 250
+## DM3AT-SF-PEJM5: 5 hit(s)
+    C114218 | DM3AT-SF-PEJM5 | HRS(Hirose) | SMD | -25℃~+85℃ 1.68mm Connector and Ejector MicroSD Card (TF Card) No Push-Push SMD SD Card / Memory Card Connector | expand | stock 19105
+    C597971 | DM3AT-SF-PEJM5(40) | HRS(Hirose) | SMD | -25℃~+85℃ 1.68mm Connector and Ejector MicroSD Card (TF Card) No Push-Push SMD SD Card / Memory Card Connector | expand | stock 11
+    C49260564 | DM3AT-SF-PEJM5(21) | HRS(Hirose) | - | - SD Card / Memory Card Connector ROHS | expand | stock 3132
+    C3195425 | DM3AT-SF-PEJM5(11) | HRS(Hirose) | SMD | -25℃~+85℃ 1.68mm Connector and Ejector MicroSD Card (TF Card) No Push-Push SMD SD Card / Memory Card Connector | expand | stock 0
+    C22002019 | DM3AT-SF-PEJM5(42) | HRS(Hirose) | - | -25℃~+85℃ 1.68mm Connector and Ejector MicroSD Card (TF Card) No Push-Push - SD Card / Memory Card Connector R | expand | stock 0
+## R0904N-B10K: 3 hit(s)
+    C9900125443 | R0904N-B10K L-25KQ/LWS | JLCPCB Assembly | Through hole | Through hole New Arrivals ROHS | expand | stock 0
+    C9900136787 | R0904N-B10K-L-25-KQ CENTRE DETENT | JLCPCB Assembly | Plugin | Plugin New Arrivals ROHS | expand | stock 0
+    C9900182159 | R0904N-B10KL-25KQ/LWS | JLCPCB Assembly | Through Hole | Through Hole SMT ROHS | expand | stock 0
+## SSM-120-L-SV: 18 hit(s)
+    C5761286 | SSM-120-L-SV | Samtec | SMD,P=2.54mm | -55℃~+125℃ 1 1x20P 2.54mm 20P 5.2A 572V 7.37mm Phosphor bronze Square Hole Surface Mount,Vertical Tin Top SMD, | expand | stock 3
+    C3322821 | SSM-120-L-SV-P | Samtec | SMD,P=2.54mm | -55℃~+125℃ 1 1x20P 2.54mm 20P 5.2A 7.37mm Phosphor bronze Square Hole Surface Mount,Vertical Tin Top SMD,P=2.5 | expand | stock 0
+    C3323767 | SSM-120-L-SV-LC | Samtec | SMD,P=2.54mm | -55℃~+125℃ 1 2.54mm 20P 5.2A 7.37mm Phosphor bronze Square Hole Surface Mount,Vertical Tin SMD,P=2.54mm Female | expand | stock 0
+    C6302538 | SSM-120-L-SV-BE | Samtec | SMD,P=2.54mm | -55℃~+125℃ 1 2.54mm 20P 5.2A 7.37mm Surface Mount,Vertical Tin SMD,P=2.54mm Female Headers ROHS | expand | stock 0
+    C7018217 | SSM-120-L-SV-TR | Samtec | SMD,P=2.54mm | -55℃~+125℃ 1 2.54mm 20P 5.2A 7.37mm Surface Mount,Vertical Tin SMD,P=2.54mm Female Headers ROHS | expand | stock 0
+    C5930337 | SSM-120-L-SV-K-TR | Samtec | SMD,P=2.54mm | -55℃~+125℃ 1 2.54mm 20P 5.2A 7.37mm Surface Mount,Vertical Tin SMD,P=2.54mm Female Headers ROHS | expand | stock 0
+    C6685334 | SSM-120-L-SV-BE-P | Samtec | SMD,P=2.54mm | -55℃~+125℃ 1 2.54mm 20P 5.2A 7.37mm Surface Mount,Vertical Tin SMD,P=2.54mm Female Headers ROHS | expand | stock 0
+    C6685346 | SSM-120-L-SV-P-TR | Samtec | SMD,P=2.54mm | -55℃~+125℃ 1 2.54mm 20P 5.2A 7.37mm Surface Mount,Vertical Tin SMD,P=2.54mm Female Headers ROHS | expand | stock 0
+## RK10J12R0A0B: 1 hit(s)
+    C351175 | RK10J12R0A0B | ALPSALPINE | SMD-5P,14x2.5mm | 10kΩ 20V 30mW ±30% SMD-5P,14x2.5mm Potentiometers, Variable Resistors ROHS | expand | stock 849
