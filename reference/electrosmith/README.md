@@ -13,3 +13,17 @@ Fetched 2026-10-12 from Electrosmith's public CDN (`daisy.nyc3.cdn.digitaloceans
 | daisy_seed | Daisy_Seed_pinout.pdf | Seed pinout card |
 
 **Not obtained:** the Daisy Field schematic (`ES_Daisy_Field_Rev4.pdf` / `.sch`, per 2021 forum references) and any Field board file. The CDN returns 403 for every Field schematic path tried, the Field is a discontinued product whose files are linked only from `daisy.audio/pages/legacy`, and that site, the Electrosmith forum, the Scribd mirror and the Wayback Machine are all unreachable from the review environment. The Seed datasheet v1.1.5 PDF on the same CDN also returns 403. Also not obtained for the Pod: Gerbers (never published); the `.brd` is the layout truth.
+
+## Added 2026-10-12: Seed 3 dev kits and Seed 3 datasheet
+
+Found via the daisyaudio GitHub organisation (the daisy.audio product pages themselves are blocked from this environment, but their README links point to the CDN and to public repos).
+
+| Folder | What | Source |
+|---|---|---|
+| seed3_eurorack_devkit/Rev3 | KiCad project (**KiCad 10 format, version 20260206**; does not load in the KiCad 9.0.9 installed here), review PDFs (schematic + board), BOM CSVs, libs | github.com/daisyaudio/ES-Seed3-DevKit-Eurorack @ 651216a (2026-10-06) |
+| seed3_eurorack_devkit/Rev2 | KiCad 9-format project of the previous revision (loads here) | same repo |
+| seed3_eurorack_devkit/*.pdf, *.csv | Rev3 schematic PDF, Rev3 BOM, pinout | CDN `products/seed-3-euro/` |
+| seed3_pedal_devkit/Rev3 | KiCad 9-format project (loads here), review PDFs | github.com/daisyaudio/ES-Seed3-DevKit-Pedal @ f79f932 (2026-10-06) |
+| daisy_seed3/Daisy_Seed3_datasheet.pdf | Seed 3 datasheet v1.0 (2026-07-23), 38 pp; 3.3 V-only pins 24, 25, 28, 29, 30 | CDN `products/seed3/` |
+
+Production folders (Gerber zips, STEP, EasyEDA JSON) were left out to keep the repo small; the clones live in the session scratchpad. Both repos are MIT-licensed open-source hardware (LICENSE.txt copied).
