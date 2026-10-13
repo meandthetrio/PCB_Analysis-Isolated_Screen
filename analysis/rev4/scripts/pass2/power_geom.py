@@ -72,6 +72,7 @@ def main(path):
     print('\n=== C. U6 TPS62172 LOOP GEOMETRY ===')
     def pad(ref, num): return next(p for p in fps[ref]['pads'] if p['num'] == num)
     for r in ['U6', 'C25', 'C26', 'L1', 'R33', 'C23', 'C24', 'FB7', 'J8']:
+        if r not in fps: print(f"{r} (not in rev 4)"); continue
         f = fps[r]; print(f"{r} {f['value']} layer={f['layer']} at ({f['x']:.2f},{f['y']:.2f}) rot={f['rot']}")
     for r in ['U6', 'L1', 'C25', 'C26']:
         for p in fps[r]['pads']:
@@ -110,6 +111,7 @@ def main(path):
 
     print('\n=== E. SERIES POWER-CHAIN PLACEMENT ===')
     for r in ['J1','SW1','D2','D3','D4','D5','C14','FB3','FB4','FB5','C15','C16','D6','FB6','C19','R29','C17','R30','C18','R31','C20','R32','C21','C22','FB7','FB2','A1']:
+        if r not in fps: print(f"   {r:<4} (not in rev 4)"); continue
         f = fps[r]; print(f"   {r:<4} {f['value']:<22} {f['layer']:<5} ({f['x']:6.1f},{f['y']:6.1f}) pads: " + ', '.join(f"{p['num']}:{p['net']}" for p in f['pads']))
     print(f"   board bbox {d['board_bbox']}")
 

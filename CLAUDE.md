@@ -2,8 +2,11 @@
 
 Design review + rev-2 planning for Trey's WavetableController board (KiCad 9,
 2-layer, Daisy Seed synth controller). Read `README.md` first, then
-`analysis/FINAL_REPORT.md`. Do not re-derive findings that are already in
-`analysis/FINDINGS.md`.
+`analysis/FINAL_REPORT.md` (rev 2) and `analysis/rev4/FINAL_REPORT.md` (rev 4; the
+rev-3 review it builds on lives on branch `claude/charming-meitner-c0w1jh` under
+`analysis/rev3/`). Do not re-derive findings that are already in `analysis/FINDINGS.md`
+or `analysis/rev4/FINDINGS.md`. Rev-4 design files (board with the filled pour, BOM,
+Gerbers) live in `rev4/`.
 
 ## Tooling (already installed in Claude Code on the web sessions)
 

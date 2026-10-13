@@ -92,8 +92,8 @@ print('refdes on wrong-side silk:',wrongside)
 print('refdes bbox intersects a pad:',onpad)
 print('refdes bbox intersects board silk artwork (same layer):',underart)
 hs=collections.Counter((round(h,2),round(t,2)) for _,_,_,_,h,t,_ in rows); print('refdes size histogram (h,thk):',sorted(hs.items()))
-for ref in ['J8','Headphones1','C15','C17','C18','C19','C20','C21','C22','C23','C24','C25','C26','U6','L1','Q1','Q2','Q3','Q4','Q5','Q6','R29','R30','R31','R32','R33','R35','R36','R37','R38','R39','R40','D6','FB5','FB6','FB7','C6','C7','MK1','SW1','LED1','LED2']:
-    r=[x for x in rows if x[0]==ref][0]; print('  ',r)
+for ref in ['J8','Headphones1','C15','C17','C18','C19','C20','C21','C22','C23','C24','C25','C26','U6','L1','Q1','Q2','Q3','Q4','Q5','Q6','R29','R30','R31','R32','R33','R35','R36','R37','R38','R39','R40','R34','R41','C27','C28','D6','FB5','FB6','FB7','C6','C7','MK1','SW1','LED1','LED2']:
+    rr=[x for x in rows if x[0]==ref]; print('  ',rr[0] if rr else f'{ref} (not in rev 4)')
 
 # ---------- D. courtyards ----------
 print('=== D. courtyard overlaps (own check) and missing courtyards')

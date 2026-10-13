@@ -39,14 +39,17 @@ Trey sent files reluctantly and in stages: Gerbers+BOM first, then .pro/.sch, th
 
 Board changes either way: add 2.2k I2C pull-ups, remove J2/FB4/C14/C17/both R21s, use Daisy spare pads 22 & 28 for RES# and VCC_EN sequencing.
 
-## Rev4 (2026-10-13) — in progress
+## Rev 4 (2026-10-13)
 
-Trey sent a Rev4 Gerber set (`rev4/Gerbers/`, plotted 2026-10-13). Gerber-only pass 1 is in
-[rev4/REV4_PASS1_GERBERS.md](rev4/REV4_PASS1_GERBERS.md): traces widened to 0.3 mm, pours on both
-sides, encoder clicks routed, Daisy relocated, ~36 new/replaced parts; new findings R4-1 (bottom-side
-artwork over 242 SMD pads) and R4-2 (pour at zero clearance to three DFN pins). Rev-1 findings
-F-016 and F-008 persist. Net-level checks wait on the Rev4 KiCad files and BOM. Scripts in
-`rev4/tools/`, renders in `rev4/renders/`.
+Rev-4 inputs (KiCad project with filled pour, BOM, Trey's Gerbers) are in `rev4/`; the review is in
+[analysis/rev4/](analysis/rev4/README.md) — start with `FINAL_REPORT.md` and `OCT7_REVIEW_STATUS.md`.
+It builds on the rev-3 review on branch `claude/charming-meitner-c0w1jh` (`analysis/rev3/`, `rev3/`):
+rev 4 is a targeted patch of rev 3 that closes Oct-7 rows 2c, 3c, 6b, 9 and the SD caps, does row 7
+with the caps at the encoders, and leaves row 5 (J8 / mounting holes), the LED documentation/BOM item,
+the fab margins and the ground stitching open. `rev4/REV4_PASS1_GERBERS.md` is the Gerber-only first
+look done before the KiCad files arrived (its R4-1 artwork and R4-2 DFN-pour items are dispositioned
+in the pass reports: the pour sits at zero clearance to U6's three GND pins by design, the artwork is
+the rev-3 back-side engraving).
 
 ## Tooling notes
 

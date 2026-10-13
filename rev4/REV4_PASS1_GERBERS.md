@@ -1,3 +1,7 @@
+# Rev4 — Gerber-only first look (superseded by `analysis/rev4/`)
+
+> **Disposition 2026-10-13, after the KiCad files arrived:** R4-2 is U6's three GND pins (PGND, AGND, FB→GND) meeting the GND pour with the zone's pad connection set to solid — same net, not a short; R4-1 is the rev-3 back-side engraving (R3-P6-01 / R4-P6-01), nothing lands on a pad. The rest is confirmed in `analysis/rev4/PASS1_FAB_CONSTRAINTS.md`.
+
 # Rev4 — Pass 1: Gerber-only fab and delta review
 **Date:** 2026-10-13 · **Input:** `rev4/Gerbers/` (ManifoldGerbs.zip from Trey; plotted 2026-10-13 11:41 CDT by KiCad/Pcbnew 9.0.4, job GUID identical to rev 1). **No KiCad project, BOM or change note received yet**, so this pass covers only what Gerbers can prove: fab rules, geometry, and the physical delta against the rev-1 LedFix set. Net-level checks (I2C pull-ups, LED drive, power tree, refdes/BOM) wait on the `.kicad_sch`/`.kicad_pcb`/BOM.
 
