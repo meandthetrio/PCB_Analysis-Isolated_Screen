@@ -39,6 +39,15 @@ Trey sent files reluctantly and in stages: Gerbers+BOM first, then .pro/.sch, th
 
 Board changes either way: add 2.2k I2C pull-ups, remove J2/FB4/C14/C17/both R21s, use Daisy spare pads 22 & 28 for RES# and VCC_EN sequencing.
 
+## Rev4 (2026-10-13) — in progress
+
+Trey sent a Rev4 Gerber set (`rev4/Gerbers/`, plotted 2026-10-13). Gerber-only pass 1 is in
+[rev4/REV4_PASS1_GERBERS.md](rev4/REV4_PASS1_GERBERS.md): traces widened to 0.3 mm, pours on both
+sides, encoder clicks routed, Daisy relocated, ~36 new/replaced parts; new findings R4-1 (bottom-side
+artwork over 242 SMD pads) and R4-2 (pour at zero clearance to three DFN pins). Rev-1 findings
+F-016 and F-008 persist. Net-level checks wait on the Rev4 KiCad files and BOM. Scripts in
+`rev4/tools/`, renders in `rev4/renders/`.
+
 ## Tooling notes
 
 - **KiCad 9.0.9 (Linux / Claude Code on the web):** `kicad-cli` and the `pcbnew` Python module are on PATH. `.claude/hooks/session-start.sh` (a SessionStart hook) runs `tools/kicad_env_setup.sh` automatically in web sessions; run it by hand with `sudo tools/kicad_env_setup.sh` elsewhere. It installs the stock symbol/footprint libs and seed the user library tables (otherwise ERC/DRC add ~190 "library not found" warnings). `tools/kicad_check.sh` runs ERC, DRC, netlist, Gerber, SVG and PDF exports into `kicad_out/` (git-ignored) as a smoke test.

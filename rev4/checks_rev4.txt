@@ -1,0 +1,101 @@
+# Geometry checks on rev4/Gerbers
+outline polygons: 1; main (89.580609, -162.699998, 254.68058499999998, -61.099999999999994) area 16704 mm2; others: []
+
+## 1. Annular rings (PTH drill vs copper pad on each layer); JLCPCB 2L: abs min 0.18, recommended 0.25
+holes with no containing pad: 0  []
+vias (ViaPad) drill/pad combos: {(0.3, 0.6): 506}  -> JLCPCB via min 0.15 hole / 0.25 dia; min via ring seen 0.149
+component PTH pads: {'<0.18 VIOLATION': 8, '<0.25 below-recommended': 8, '>=0.25 ok': 194}
+  ring=0.174 B_Cu (196.387,-122.959) drill=0.25 HeatsinkPad
+  ring=0.174 B_Cu (197.387,-122.959) drill=0.25 HeatsinkPad
+  ring=0.174 F_Cu (196.387,-122.959) drill=0.25 HeatsinkPad
+  ring=0.174 F_Cu (197.387,-122.959) drill=0.25 HeatsinkPad
+  ring=0.175 B_Cu (172.863,-136.000) drill=0.65 ComponentPad
+  ring=0.175 F_Cu (172.863,-136.000) drill=0.65 ComponentPad
+  ring=0.175 B_Cu (170.963,-136.000) drill=0.65 ComponentPad
+  ring=0.175 F_Cu (170.963,-136.000) drill=0.65 ComponentPad
+  ring=0.250 B_Cu (231.750,-85.250) drill=1.0 ComponentPad
+  ring=0.250 B_Cu (236.750,-85.250) drill=1.0 ComponentPad
+  ring=0.250 F_Cu (231.750,-85.250) drill=1.0 ComponentPad
+  ring=0.250 F_Cu (236.750,-85.250) drill=1.0 ComponentPad
+  ring=0.250 B_Cu (108.000,-85.250) drill=1.0 ComponentPad
+  ring=0.250 B_Cu (113.000,-85.250) drill=1.0 ComponentPad
+  ring=0.250 F_Cu (108.000,-85.250) drill=1.0 ComponentPad
+  ring=0.250 F_Cu (113.000,-85.250) drill=1.0 ComponentPad
+
+## 2. NPTH to copper (JLCPCB NPTH-to-track 0.2mm)
+  B_Cu NPTH (120.860,-66.680) d=0.65: copper at 0.194 mm VIOLATION
+  B_Cu NPTH (126.640,-66.680) d=0.65: copper at 0.194 mm VIOLATION
+
+## 3. Copper to board edge (JLCPCB >=0.2mm routed)
+  F_Cu: 0 features closer than 0.2mm or crossing
+  B_Cu: 0 features closer than 0.2mm or crossing
+
+## 4. Hole-to-hole edge spacing (JLCPCB via-via 0.2, pad hole-hole 0.45)
+  0 pairs below limit
+
+## 5. Silkscreen
+  F_Silkscreen: draws=582 regions=2 line length by width: 0.12:289mm, 0.15:99mm
+    features outside/crossing outline: 0  bounds=None
+    silk features touching a mask opening: 0; within 0.15mm: 0  (JLCPCB pad-to-silk 0.15)
+    region fill area 0 mm2; region bbox (143.76, -134.25, 194.248946, -133.87)
+  B_Silkscreen: draws=4465 regions=3911 line length by width: 0.1:15mm, 0.12:1532mm, 0.15:801mm, 0.3:74mm
+    features outside/crossing outline: 625  bounds=(85.8, -171.66, 244.62, -51.39)
+    silk features touching a mask opening: 542; within 0.15mm: 207  (JLCPCB pad-to-silk 0.15)
+    region fill area 10364 mm2; region bbox (85.80183799999999, -169.603515, 253.64890799999998, -51.387809)
+
+## 6. Copper regions (pours)
+  F_Cu: 15 regions, total 7956 mm2 of board 16704 mm2
+     area=  4445.3 bbox=(90.1, -162.2, 254.2, -61.6)
+     area=   951.5 bbox=(101.0, -103.3, 154.1, -72.9)
+     area=   809.4 bbox=(91.7, -161.4, 130.6, -104.7)
+     area=   550.0 bbox=(228.0, -129.6, 241.8, -67.2)
+     area=   437.4 bbox=(156.9, -103.3, 177.8, -81.4)
+     area=   271.5 bbox=(181.7, -124.8, 189.5, -81.4)
+     area=   259.8 bbox=(189.3, -124.8, 203.1, -104.7)
+     area=    88.3 bbox=(232.4, -124.8, 236.1, -99.9)
+  B_Cu: 5 regions, total 12820 mm2 of board 16704 mm2
+     area= 12789.0 bbox=(90.1, -162.2, 254.2, -61.6)
+     area=    24.1 bbox=(232.4, -99.6, 245.3, -96.9)
+     area=     4.4 bbox=(132.7, -136.1, 134.8, -132.7)
+     area=     1.5 bbox=(219.9, -146.4, 221.5, -144.1)
+     area=     1.1 bbox=(115.6, -162.2, 117.5, -160.9)
+
+## 7. Track widths (JLCPCB min 0.1, ±20%)
+  F_Cu: 0.1mm:9mm, 0.2mm:553mm, 0.3mm:2792mm, 0.5mm:183mm
+    segments <0.2mm: 5; len 4.55 at (197.35, -139.35, 201.9, -139.35); len 1.75 at (194.5, -155.5, 194.5, -153.75); len 1.55 at (186.75, -156.5, 188.3, -156.5); len 0.85 at (201.9, -139.35, 202.5, -138.75); len 0.49 at (197.0, -139.35, 197.35, -139.0)
+  B_Cu: 0.1mm:66mm, 0.2mm:304mm, 0.3mm:1016mm, 0.5mm:231mm
+    segments <0.2mm: 63; len 5.22 at (192.5, -153.0, 197.72, -153.0); len 3.32 at (187.75, -159.07, 187.75, -155.75); len 3.23 at (192.18, -154.88, 195.41, -154.88); len 3.21 at (194.5, -154.48, 197.71, -154.48); len 2.37 at (186.86, -154.88, 189.23, -154.88); len 2.32 at (192.18, -154.48, 194.5, -154.48); len 2.14 at (192.18, -155.68, 194.32, -155.68); len 2.0 at (123.0, -69.75, 123.0, -67.75); len 1.93 at (185.32, -153.0, 187.25, -153.0); len 1.9 at (192.18, -156.08, 194.08, -156.08); len 1.71 at (185.34, -152.99, 185.34, -151.28); len 1.63 at (194.51, -122.01, 196.14, -122.01)
+
+## 8. Copper-to-copper gaps 0 < g < 0.10 mm (JLCPCB min spacing 0.1); also 0.10-0.127 for info
+  F_Cu: 17 gaps <0.10 (violations), 5 gaps 0.10-0.13
+     (0.0089, (198.41, -138.47, 198.42, -138.33))
+     (0.045, (131.43, -133.67, 131.49, -133.61))
+     (0.05, (125.95, -77.71, 126.05, -77.7))
+     (0.05, (152.2, -141.71, 152.3, -141.7))
+     (0.05, (154.45, -128.8, 154.46, -128.7))
+     (0.05, (161.2, -133.05, 161.3, -133.04))
+     (0.0521, (143.19, -132.93, 143.24, -132.87))
+     (0.0536, (112.12, -152.43, 112.18, -152.37))
+     (0.0536, (143.07, -132.18, 143.13, -132.12))
+     (0.0536, (156.07, -133.43, 156.13, -133.37))
+     (0.0536, (159.87, -137.18, 159.93, -137.12))
+     (0.0536, (180.07, -156.93, 180.13, -156.87))
+     (0.0536, (181.37, -157.13, 181.43, -157.07))
+     (0.0536, (203.07, -140.43, 203.13, -140.37))
+     (0.0536, (227.32, -148.93, 227.38, -148.87))
+  B_Cu: 30 gaps <0.10 (violations), 9 gaps 0.10-0.13
+     (0.0005, (196.01, -123.95, 196.02, -123.86))
+     (0.005, (101.83, -141.29, 101.84, -141.14))
+     (0.0146, (188.08, -154.07, 188.12, -154.03))
+     (0.0164, (197.75, -123.96, 197.76, -123.87))
+     (0.0243, (167.26, -132.82, 167.32, -132.76))
+     (0.025, (243.96, -146.57, 244.04, -146.57))
+     (0.0251, (199.92, -120.3, 200.03, -120.29))
+     (0.0252, (102.07, -143.85, 102.14, -143.79))
+     (0.0371, (196.01, -122.05, 196.02, -121.95))
+     (0.045, (123.93, -74.99, 123.99, -74.93))
+     (0.049, (166.95, -146.16, 167.05, -146.15))
+     (0.05, (123.95, -69.55, 123.96, -69.45))
+     (0.05, (203.95, -150.55, 203.96, -150.45))
+     (0.05, (215.26, -160.22, 215.39, -160.22))
+     (0.05, (234.06, -146.65, 234.14, -146.64))
