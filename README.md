@@ -44,9 +44,10 @@ Board changes either way: add 2.2k I2C pull-ups, remove J2/FB4/C14/C17/both R21s
 Rev-4 inputs (KiCad project with filled pour, BOM, Trey's Gerbers) are in `rev4/`; the review is in
 [analysis/rev4/](analysis/rev4/README.md) — start with `FINAL_REPORT.md` and `OCT7_REVIEW_STATUS.md`.
 It builds on the rev-3 review on branch `claude/charming-meitner-c0w1jh` (`analysis/rev3/`, `rev3/`):
-rev 4 is a targeted patch of rev 3 that closes Oct-7 rows 2c, 3c, 6b, 9 and the SD caps, does row 7
-with the caps at the encoders, and leaves row 5 (J8 / mounting holes), the LED documentation/BOM item,
-the fab margins and the ground stitching open. `rev4/REV4_PASS1_GERBERS.md` is the Gerber-only first
+rev 4 is a targeted patch of rev 3 that closes Oct-7 rows 2c, 3c, 6b, 7 (caps at the encoders, accepted),
+9 and the SD caps; row 5 (J8 / mounting holes) is deferred because the screen is not mounted in this
+build, the LEDs are hand-soldered Würth 150505M173300 (documentation item only), and the fab margins
+and ground stitching stay open. `rev4/REV4_PASS1_GERBERS.md` is the Gerber-only first
 look done before the KiCad files arrived (its R4-1 artwork and R4-2 DFN-pour items are dispositioned
 in the pass reports: the pour sits at zero clearance to U6's three GND pins by design, the artwork is
 the rev-3 back-side engraving).

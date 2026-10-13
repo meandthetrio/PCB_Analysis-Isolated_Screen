@@ -10,4 +10,4 @@ Governed by `analysis/SOURCE_OF_TRUTH.md` + the rev-3 and rev-4 addenda. Same si
 | 4 BOM | COMPLETE | `PASS4_BOM.md` | 92/92 clean; LEDs still off-BOM; no hand-solder sheet; bridge part verified |
 | 5 Signals | COMPLETE | `PASS5_SIGNALS.md` | routes unchanged; UART and TAC_SWITCH_2 beside audio |
 | 6 Mechanical | COMPLETE | `PASS6_MECHANICAL.md` | J8 and holes unchanged → row 5 still open |
-| Final synthesis | COMPLETE | `FINDINGS.md`, `FINAL_REPORT.md`, `OCT7_REVIEW_STATUS.md` | 57 entries; rev-3: 4 fixed / 20 pass / 4 settled / 37 open; Oct-7: 2c, 3c, 6b, 9, SD caps moved to DONE; 7 done differently; 5 open |
+| Final synthesis | COMPLETE | `FINDINGS.md`, `FINAL_REPORT.md`, `OCT7_REVIEW_STATUS.md` | 57 entries; rev-3: 4 fixed / 20 pass / 4 settled / 37 open; Oct-7: 2c, 3c, 6b, 7, 9, SD caps DONE; 5 deferred by decision; 3d documentation only |

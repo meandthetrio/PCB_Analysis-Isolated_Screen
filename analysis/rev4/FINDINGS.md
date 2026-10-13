@@ -24,7 +24,7 @@
 |---|---|---|---|
 | R4-P2-01 | PASS | confirmed | U6 fed ahead of R29/R30; /+9V_FLAG ≈ 8.1 V, load-independent (row 2c) |
 | R4-P2-02 | PASS | confirmed | LED resistors 510/390 Ω → 11.6/12.1 mA, 69/57 mW (row 3c, decision 5a) |
-| R4-P2-03 | JUDGMENT (doc) | confirmed | Schematic still names CLS6B-FKW; LEDs on no BOM sheet |
+| R4-P2-03 | JUDGMENT (doc) | confirmed — documentation only (hand-soldered Würth confirmed 2026-10-13) | Schematic still names CLS6B-FKW; LEDs on no BOM sheet |
 | R4-P2-04 | PASS | confirmed | D6 and FB7 removed; bridge now 1N5817W SOD-123FL (row 9) |
 | R4-P2-05 | JUDGMENT | confirmed | No inrush limiter (decision 5e); bulk 700 → 310 µF, unlimited cap 200 → 100 µF, path stiffer (≈ 30 A bound); diodes fine (25 µs pulse vs 25 A / 8.3 ms), contacts not |
 | R4-P2-06 | PASS | confirmed | SD socket decoupled: C28 10 µF 5.2 mm, C27 100 nF 6.9 mm from P1.4 (decision 5d) |
@@ -40,7 +40,7 @@
 |---|---|---|---|
 | R4-P3-01 | PASS | confirmed | sch ↔ pcb 112 ↔ 112, 0 dups, 0 real pad-net diffs |
 | R4-P3-02 | PASS | confirmed | 4 × 10 k encoder pull-ups present and routed (row 7) |
-| R4-P3-03 | JUDGMENT | confirmed | 4 × 10 nF at the encoders on the back, 63–111 mm from the Daisy pins (not per decision 5c) |
+| R4-P3-03 | JUDGMENT | confirmed — **accepted as built** (no room near the Seed, Kyle 2026-10-13) | 4 × 10 nF at the encoders on the back, 63–111 mm from the Daisy pins |
 | R4-P3-04 | PASS | confirmed | Encoder clicks routed (unchanged) |
 | R4-P3-05 | JUDGMENT | confirmed | /RES_SPI still floating (no 10 k) |
 | R4-P3-06 | JUDGMENT | confirmed | 14 NC + 4 PWR_FLAG ERC items unchanged |
@@ -52,7 +52,7 @@
 ### Pass 4 — BOM (`PASS4_BOM.md`)
 | ID | Class | Status | Finding |
 |---|---|---|---|
-| R4-P4-01 | VIOLATION | confirmed | LED1/LED2 on no BOM line; F.Paste = their 12 apertures |
+| R4-P4-01 | JUDGMENT (doc; was VIOLATION) | confirmed — downgraded 2026-10-13: Trey hand-solders Würth 150505M173300 | LED1/LED2 on no BOM line; F.Paste = their 12 apertures; needs a hand-solder sheet, not an SMT line |
 | R4-P4-02 | PASS | confirmed | L1 footprint fixed in sch + PCB |
 | R4-P4-03 | JUDGMENT | confirmed | No hand-assembly sheet (18 THT + LEDs) |
 | R4-P4-04 | JUDGMENT | confirmed | Position-file exclusion only on J3–J7 |
@@ -67,7 +67,7 @@
 | R4-P5-01 | JUDGMENT | confirmed | SPI OLED unterminated (optional series R / slew) |
 | R4-P5-02 | JUDGMENT | confirmed | MIDI UART beside AUDIO_IN_L 0.41/0.45 mm for 49/26 mm |
 | R4-P5-03 | JUDGMENT | confirmed | /TAC_SWITCH_2 beside AUDIO_OUT_R 0.20 mm for 27 mm (and OUT_L 0.70 / 32 mm) |
-| R4-P5-04 | JUDGMENT | confirmed | Encoder RC caps at the encoder end: no termination at the MCU input |
+| R4-P5-04 | JUDGMENT | confirmed — accepted as built | Encoder RC caps at the encoder end: no termination at the MCU input; keep the state-table decoder |
 | R4-P5-05 | PASS | confirmed | SD, USB, MIDI, audio, LED-driver nets unchanged from rev 3 |
 
 ### Pass 6 — Mechanical (`PASS6_MECHANICAL.md`)
@@ -76,8 +76,8 @@
 | R4-P6-01 | JUDGMENT | confirmed | Back-side artwork: 447 silk warnings, refdes buried, nothing on a pad |
 | R4-P6-02 | ZERO-MARGIN | confirmed | Refdes 1.0 / 0.15 mm; outlines 0.12 mm |
 | R4-P6-03 | PASS | confirmed | Courtyards clean |
-| R4-P6-04 | VIOLATION | confirmed | Top stencil = LEDs; LEDs off-BOM (F-034 carry) |
-| R4-P6-05 | JUDGMENT | confirmed | No mounting holes for board or module; J8 not moved (row 5) |
+| R4-P6-04 | JUDGMENT (doc; was VIOLATION) | confirmed — hand-solder confirmed | Top stencil = LEDs; LEDs off-BOM (F-034 carry); stencil apertures are harmless for a hand-fitted part |
+| R4-P6-05 | JUDGMENT | confirmed — **ACKNOWLEDGED, deferred** (screen not mounted in this build, Kyle 2026-10-13) | No mounting holes for board or module; J8 not moved (row 5) |
 | R4-P6-06 | JUDGMENT | confirmed | Module fits only toward +y; buck in the audio corridor |
 | R4-P6-07 | JUDGMENT | confirmed | Headphones1 bushing 9 mm outside the outline |
 | R4-P6-08 | JUDGMENT | confirmed | Hand-assembly list missing |
@@ -156,4 +156,4 @@
 ## Part D — Rev-2 findings (F-001…F-035)
 Statuses as in `analysis/rev3/FINDINGS.md` Part B, with these changes in rev 4: **F-019** (3V3_D decoupling) → FIXED at the SD socket (the trunk and the socket cap are both done); everything else unchanged (F-002/F-034 LEDs off-BOM, F-005, F-008, F-016, F-022, F-024, F-026, F-031, F-032, F-033 still open; F-004 at 74.9 mm).
 
-**Not-a-finding register:** USB-C data-only by design; 9 V barrel power; LED polarity (Würth); the Cree names printed by `sch_pcb_diff.py` are a script artefact.
+**Not-a-finding / decision register:** USB-C data-only by design; 9 V barrel power; LED polarity (Würth); the Cree names printed by `sch_pcb_diff.py` are a script artefact; **display not mounted in this build (row 5 deferred); LEDs hand-soldered Würth 150505M173300; encoder caps at the encoder end accepted** (all Kyle, 2026-10-13).
