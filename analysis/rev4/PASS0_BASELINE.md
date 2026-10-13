@@ -13,6 +13,16 @@
 
 Schematic, board and BOM are one design generation: the netlist delta (§2), the footprint set (Pass 3: 112 ↔ 112, 0 pad-level diffs) and the BOM delta (Pass 4) name the same parts. The Gerbers are a plot of this board, not an independent fab snapshot — nothing has been fabbed from rev 4. The silk still reads "v4.1".
 
+## 1a. Board topology (the two facts every carried-over judgment must be checked against — addendum §6)
+
+| Fact | Rev 4 |
+|---|---|
+| Components per side | **F (control face): 8** — ENCL1, ENCR1, TAC_SWITCH_1/2, LED1, LED2, MK1, J8 (all hand-soldered) · **B: 104** — every SMD part, the Daisy, SD, USB-C, jacks, pot, SW1, TAC_SHIFT_L1/R1 |
+| Ground fill | B.Cu **one piece, 12,789 mm²** (77 % of the board) + 4 slivers · F.Cu 7,956 mm² in 15 fragments, each tied through a through-hole ground pin, in no return path |
+| Signal routing by layer | **F.Cu 3,157 mm (73 %)**, B.Cu 1,197 mm — top-layer signals return through the solid bottom plane |
+| Power routing by layer | F.Cu 380 mm, B.Cu 419 mm |
+| IC exposed pads on the plane | U3.9, U4.15, U6.9 (with 2 vias): all on the B.Cu fill |
+
 ## 2. What changed rev 3 → rev 4 (`scripts/netlist_diff.py` over `kicad-cli` XML netlists; `scripts/netlist_diff_rev3_rev4.txt`)
 
 **Components 110 → 112.** Removed: **D6** (series Schottky), **FB7** (bead into U6 VIN). Added: **C27** 100 nF 0603 + **C28** 10 µF 0805 on /+3V3_D at the SD socket; **R34, R41** 10 k (encoder pull-ups). Changed:
