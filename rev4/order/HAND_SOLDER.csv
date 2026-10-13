@@ -1,0 +1,21 @@
+Designator,Part,Schematic value,KiCad footprint,Side,Qty,Notes
+A1,Electrosmith Daisy Seed (Rev4),Electrosmith_Daisy_Seed_Rev4,Electrosmith_Daisy_Seed_Cuz,bottom,1,bottom; 2 x 20 header rows
+C23,100nF axial THT,100NF,C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal,bottom,1,bottom; /+3V3_OLED decoupling at J8
+C24,100uF radial THT 6.3mm,100UF,CP_Radial_D6.3mm_P2.50mm,bottom,1,bottom; /+3V3_OLED bulk at J8; observe polarity
+ENCL1,"Alps vertical rotary encoder with switch, H20mm",RotaryEncoder_Switch,RotaryEncoder_Alps_Vertical_H20mm,top,1,top
+ENCR1,"Alps vertical rotary encoder with switch, H20mm",RotaryEncoder_Switch,RotaryEncoder_Alps_Vertical_H20mm,top,1,top
+Headphones1,Bourns PTD902-2015K-B103 dual 10k pot (B/linear),B10k Dual,DualGang_Headphone_PTD902-2015K-B103,bottom,1,bottom; bushing exits the bottom edge 9mm outside the outline
+J3,"3.5mm TRS jack, CUI (MIDI OUT)",MIDI OUTPUT,Jack_3.5mm_CUI_RetroactiveCustom,bottom,1,bottom; panel
+J4,"3.5mm TRS jack, CUI (AUDIO IN)",AUDIO INPUT,Jack_3.5mm_CUI_RetroactiveCustom,bottom,1,bottom; panel
+J5,"3.5mm TRS jack, CUI (AUDIO OUT)",AUDIO OUTPUT,Jack_3.5mm_CUI_RetroactiveCustom,bottom,1,bottom; panel
+J6,"3.5mm TRS jack, CUI (MIDI IN)",MIDI INPUT,Jack_3.5mm_CUI_RetroactiveCustom,bottom,1,bottom; panel
+J7,"3.5mm TRS jack, CUI (PHONES)",PHONES,Jack_3.5mm_CUI_RetroactiveCustom,bottom,1,bottom; panel
+J8,1x20 2.54mm header for NHD-2.7-12864WDW3 OLED,NHD-2.7-12864WDW3,Newhaven2.7_OLED,top,1,top; display not mounted in this build (Kyle 2026-10-13)
+LED1,Würth WL-SFTW 150505M173300 RGB LED,CLS6B-FKW,LED_RGB_5050-6_Retroactive Pin Out,top,1,"top, SMD hand-solder; pads 1/3/5 cathodes to Q collectors, 2/4/6 anodes via R to +9V_FLAG; chamfered corner = pin 1"
+LED2,Würth WL-SFTW 150505M173300 RGB LED,CLS6B-FKW,LED_RGB_5050-6_Retroactive Pin Out,top,1,as LED1
+MK1,Electret microphone POM-2244P-C3310-2-R,Microphone_Condenser,POM-2244P-C3310-2-R,top,1,top; observe polarity (pad 1 = GND)
+SW1,Slide switch DigiKey 1101A4VQEA (silver 5A contacts),Power ON/OFF,DigiKey_1101A4VQEA_SPDT_Vertical_SlideSwitch,bottom,1,bottom; power on/off
+TAC_SHIFT_L1,90-degree tactile switch,SW_Push,Retroactive_90DegSW_Tactile,bottom,1,bottom edge
+TAC_SHIFT_R1,90-degree tactile switch,SW_Push,Retroactive_90DegSW_Tactile,bottom,1,bottom edge
+TAC_SWITCH_1,"6mm tactile switch, H9.5mm",SW_MEC_5E,Retroactive_THT_TACTSW_6mm_H9.5mm,top,1,top
+TAC_SWITCH_2,"6mm tactile switch, H9.5mm",SW_MEC_5E,Retroactive_THT_TACTSW_6mm_H9.5mm,top,1,top

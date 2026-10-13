@@ -1,0 +1,3 @@
+SMT lines: 38; SMT designators: 92; hand-solder designators: 20; total footprints on board: 112
+coverage: 92 + 20 = 112 of 112
+no inconsistencies
