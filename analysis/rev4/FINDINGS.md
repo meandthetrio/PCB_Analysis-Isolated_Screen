@@ -13,7 +13,7 @@
 | R4-P1-05 | JUDGMENT | confirmed | SW1 0.414 / /+3V3_D 0.451 mm to edge: project 0.5 rule only |
 | R4-P1-06 | JUDGMENT | confirmed | 9 single-spoke GND pads (rev 3's 8 + C28.1) |
 | R4-P1-07 | JUDGMENT | confirmed | 2 dangling vias /LED_2_R, /LED_2_B |
-| R4-P1-08 | JUDGMENT | confirmed — **revised 2026-10-13** (Trey: all parts on the bottom; bottom plane is one piece) | 0 GND stitching vias / 15 top fragments = optional tidying. What remains: 10 bottom IC ground pins (U2, U3, U4 ×4, U6 ×3) reach the plane only through single 0.1–0.3 mm stubs of 1.2–4.8 mm; 9 single-spoke GND pads |
+| R4-P1-08 | JUDGMENT | **withdrawn as an action 2026-10-13** (Trey: all parts on the bottom, plane is one piece; 0.4/0.5 mm pitch forbids wider stubs). Exposed pads of U3/U4/U6 are on the plane; the 0.1 mm pin stubs are the escapes the packages require | 0 GND stitching vias / 15 top fragments = optional tidying; 9 single-spoke GND pads remain a hygiene note |
 | R4-P1-09 | PASS | confirmed | No copper islands |
 | R4-P1-10 | PASS | confirmed | Hole spacing, hole-to-copper, mask, tenting all pass |
 | R4-P1-11 | PASS | confirmed | DRC at JLC minimums: 0 clearance / width errors |
@@ -95,7 +95,7 @@
 | R3-P1-05 | edge 0.414/0.451 vs project 0.5 | STILL OPEN (judgment) | R4-P1-05 |
 | R3-P1-06 | 8 single-spoke thermals | STILL OPEN, **+1** | R4-P1-06 |
 | R3-P1-07 | 2 dangling vias | STILL OPEN | R4-P1-07 |
-| R3-P1-08 | 0 GND stitching vias | STILL OPEN, **re-scoped** to the bottom IC ground stubs (top stitching optional) | R4-P1-08 |
+| R3-P1-08 | 0 GND stitching vias | **CLOSED — no action** (bottom-only assembly, solid bottom plane, exposed pads on the plane; top stitching optional) | R4-P1-08 |
 | R3-P1-09…13 | islands / spacing / clearance / mask passes | PASS re-verified | R4-P1-09/10/11 |
 | R3-P1-14 | DRC minimums zero | STILL OPEN | R4-P1-12 |
 | R3-P2-01, -02 | LED polarity / footprint | REFUTED (settled) | — |

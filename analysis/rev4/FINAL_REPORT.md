@@ -37,15 +37,16 @@ Rev 4 is a targeted patch of rev 3, not a re-layout. Outside the changed parts t
 
 ---
 
-## Tier 1 — Worth fixing before ordering (judgment; nothing here is a fab rejection)
+## Tier 1 — Judgment items reviewed with Trey (nothing here is a fab rejection)
 
-### 1. Ground returns of the bottom-side ICs run on 0.1 mm stubs; stitching the top layer is optional
-*(R4-P1-08 revised 2026-10-13 after Trey's note; measured on the rev-4 board)*
+### 1. Grounding — withdrawn as an action after Trey's notes (2026-10-13)
+*(R4-P1-08, re-scoped twice and now closed; measurements on the rev-4 board)*
 
-- **Trey's point, confirmed:** every component is on the bottom, and the bottom ground fill is **one solid piece** (12,789 mm², 77 % of the board). The top-layer ground fragments are leftover copper that only the hand-soldered through-hole parts touch; they sit in no return path. 73 % of all signal routing (3,157 of 4,354 mm) is on the top layer, and those traces return through the solid bottom plane directly beneath them, which is exactly the right arrangement for a two-layer board. **Stitching the top fragments is therefore not a fix for anything; it is optional tidying** (marginally lower loop inductance for the 27 % of signals routed on the bottom, a little shielding). The earlier "easy fix, cheap insurance" framing overstated it.
-- **What the same scan does show, and what matters for a bottom-only design:** ten IC ground pins on the bottom do not touch the plane at all, because their fine-pitch pads sit inside the zone's 0.5 mm clearance. Each reaches ground through a single track: U2.2 (USB ESD) 3.3 mm × 0.3 mm; U3.2 / U3.3 (headphone amp) 2.9 mm × 0.3 mm; **U4.4 / 7 / 9 / 11 (mic amp) 1.2–4.8 mm × 0.1 mm**; **U6.1 PGND 3.6 mm × 0.1 mm, U6.4 AGND 3.2 mm × 0.1 mm, U6.5 1.6 mm × 0.1 mm (buck)**. U6's exposed pad does sit on the plane, so the buck has a solid thermal/ground tie; its PGND pin, which carries the 2.25 MHz switching return, still gets there through a 0.1 mm stub (≈ 18 mΩ, a few nH). Nine other ground pads (C28, C9, C10, R18, U1.5, P2 A12/B1, TAC_SWITCH_1.3, U3.3) hang on one 0.5 mm thermal spoke.
-- **Why it matters:** a 0.1 mm, 5 mm ground stub under the mic amp's ground pins is the kind of thing that raises the noise floor on the mic input; a 0.1 mm stub on a buck's PGND lets switching ripple ride on the local ground. Neither will break the board; both are the first places to look if the mic path hisses or the audio picks up a 2.25 MHz whine.
-- **Fix (bottom layer only, ten minutes):** drop the zone clearance around U3, U4 and U6 from 0.5 to 0.25 mm (JLCPCB's minimum is 0.1), or draw 0.3–0.5 mm GND stubs from those ten pins into the pour; set the zone's thermal gap smaller or add a short GND track so the nine single-spoke pads get two. No top-layer work needed.
+- **Trey's first point, confirmed:** all parts are on the bottom; the bottom ground fill is one solid piece (12,789 mm², 77 % of the board); 73 % of signal routing is on top and returns through that plane. The top-layer fragments are in no return path, so stitching them is optional tidying, not a fix.
+- **Trey's second point, confirmed:** U4 is a 0.4 mm-pitch DFN (pads 0.25 mm wide, 0.15 mm apart) and U6 a 0.5 mm-pitch WSON (0.25 mm pads, 0.25 mm apart). A 0.3–0.5 mm ground stub there would short to the neighbouring pin; 0.1 mm escapes are the only sane width between those pins, and a stub can only be pad-width (0.25 mm) where it leaves a pad along its own column. My suggested fix was wrong for these packages.
+- **What the board actually does, measured:** every one of the three ICs has its **exposed pad on the plane** (U4.15, U6.9 with its two vias, U3.9), and the exposed pad is the real ground connection of each package. U4's ground pins 4 and 11 run straight into the exposed pad over 1.48 mm of 0.1 mm trace (≈ 7 mΩ); pins 7 and 9 reach it within 0.6–0.7 mm. U6's PGND/AGND/FB pins reach the pour over 1.05–1.63 mm; U3's two ground pins over 2.9 mm of 0.3 mm. These are the escapes the packages require, not a layout fault.
+- **Potential consequence of leaving it:** none worth a change. The gain from re-routing U6's PGND inward to its exposed pad is a few milliohms and about a nanohenry.
+- **Action:** none for this build. The nine single-spoke ground pads (C28, C9, C10, R18, U1.5, P2 A12/B1, TAC_SWITCH_1.3, U3.3) stay a Tier-4 hygiene note: set the zone's minimum spokes to 2 or shrink the thermal gap when convenient.
 
 ### 2. Inrush — no series resistor before C15; smaller than rev 3, but not limited
 *(R4-P2-05 · decision 5e not applied · first raised in the rev-3 review, not on the 7 Oct list)*
@@ -55,7 +56,7 @@ Rev 4 is a targeted patch of rev 3, not a re-layout. Outside the changed parts t
 - **Potential consequence:** the switch and jack contacts are the wear item. Each power-on puts a small spark across them as they close, and the slide switch does it several times per flip because of contact bounce. Over hundreds of cycles that pits the contacts; the symptom is a supply that drops out when the unit is bumped or the switch is wiggled. A slow failure, not a day-one one. Rev 1/2 never had this (10 µF at the input); rev 3 added 700 µF; rev 4 cut it to 310 µF, but the 100 µF directly on the unprotected path remains, and removing D6 and FB7 took 0.45 V and 50 mΩ out of the path.
 - **Fix:** one part — a 1 Ω, 1 W resistor between FB5 and C15 (or an NTC). Peak drops to ≈ 8 A; cost 0.45 V and 0.2 W at full load; Daisy VIN still ≈ 7 V, inside 4–17 V. Can go in the next spin if not this one.
 
-**If only one of these two is fixed for this build, make it the IC ground stubs under U4 and U6.**
+**The only Tier-1 action left is the inrush resistor, and it can wait for the next spin.**
 
 ---
 
