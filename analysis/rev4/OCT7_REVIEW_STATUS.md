@@ -52,7 +52,7 @@
 ## Items found in the 9 Oct review (rev 3), re-scored
 | Item | Rev 3 | **Rev 4** |
 |---|---|---|
-| No GND stitching vias (R3-P1-08) | open | **NOT DONE** — 0 GND vias of 253; F.Cu still 15 fragments on component holes only |
+| No GND stitching vias (R3-P1-08) | open | **Re-scoped 2026-10-13 (Trey's note):** top-layer stitching is optional — all parts are on the bottom and the bottom plane is one piece. What stands: 10 bottom IC ground pins (U4 ×4, U6 ×3, U3 ×2, U2) on single 0.1–0.3 mm stubs; fix with 0.25 mm zone clearance or 0.3–0.5 mm GND stubs |
 | Single-spoke GND thermals (R3-P1-06) | 8 | **9** (+ C28.1) |
 | Inrush limiter (R3-P2-05, decision 5e) | open | **NOT DONE** — no R/NTC before C15; bulk cut 700 → 310 µF and unlimited cap 200 → 100 µF, but D6 + FB7 removal stiffens the path (≈ 30 A stiff-adapter bound into C15; bridge IFSM 25 A for 8.3 ms vs a ≈ 25 µs pulse — diodes fine, SW1/jack contacts still the concern) |
 | /RES_SPI floating (R3-P3-04) | open | **NOT DONE** |
