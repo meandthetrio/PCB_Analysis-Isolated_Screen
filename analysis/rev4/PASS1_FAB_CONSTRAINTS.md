@@ -51,7 +51,7 @@ Two 0.25 mm holes / 0.60 pads under the WSON EP: legal at JLC (dia ≥ 0.45 → 
 | R4-P1-05 | JUDGMENT | confirmed (R3-P1-05 unchanged) | SW1 pads 0.414 / /+3V3_D track 0.451 from the edge: 5 DRC errors against the project's 0.5 rule only. | copper-to-edge scan | JLC 0.20 |
 | R4-P1-06 | JUDGMENT | confirmed (R3-P1-06 **+1**) | 9 single-spoke GND pads: the rev-3 eight plus **C28.1** (new SD cap). | DRC + connectivity | — |
 | R4-P1-07 | JUDGMENT | confirmed (R3-P1-07 unchanged) | 2 leftover vias on /LED_2_R, /LED_2_B. | DRC via_dangling | — |
-| R4-P1-08 | JUDGMENT (strong) | confirmed (R3-P1-08 unchanged) | **Zero GND stitching vias**; F.Cu pour still 15 fragments tied to B.Cu only through component holes; 10 B-side IC/cap GND pads on single thin tracks. | `pass1_islands.txt` | layout practice |
+| R4-P1-08 | JUDGMENT (strong) | confirmed (R3-P1-08 unchanged) | **Zero GND stitching vias**; F.Cu pour still 15 fragments tied to B.Cu only through component holes; 10 B-side IC/cap GND pads on single thin tracks. Plain-language explanation and fix in `FINAL_REPORT.md` Tier 1 item 1. | `pass1_islands.txt` | layout practice |
 | R4-P1-09 | PASS | confirmed | No copper islands; island removal = always; DRC isolated_copper 0. | `pass1_islands.txt` | — |
 | R4-P1-10 | PASS | confirmed | Hole-to-hole, via-hole-to-copper, PTH-hole-to-track, mask, tenting: all as rev 3, all pass. | `pass1_copper.txt` | JLC |
 | R4-P1-11 | PASS | confirmed | Copper clearance min 0.15 (U3/U4 pad gaps), 0.20 elsewhere; DRC at 0.1/0.1 → 0 clearance / width errors (F-012). | `drc_jlc_nc01_allsev.json` | JLC |
