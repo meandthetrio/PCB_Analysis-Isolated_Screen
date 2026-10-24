@@ -7,6 +7,7 @@
 | **Baselines** | Rev-3 review (`analysis/rev3/`, 65 entries) · 7 October "Rev 2 Design Review" rows · post-rev-3 chat decisions (LED values, /+9V_FLAG re-pointing, encoder RC, SD caps, inrush) |
 | **Scope** | Passes 0–6 complete · 57 rev-4 ledger entries (`FINDINGS.md`) · every rev-3 finding re-scored · every Oct-7 row re-scored (`OCT7_REVIEW_STATUS.md`) |
 | **Truth** | The rev-4 `.kicad_pcb` is copper truth; Trey's Gerbers agree with it on every number; nothing has been fabbed from rev 4 |
+| **Status** | **Rev4 Working** — boards received and tested 2026-10-24; everything works. The MIDI IN symptom reported on the bench was a cable in the wrong input, not a board fault. Open items below are carried to the next spin. |
 | **Verification** | 55 of 57 entries confirmed by script against the files; 1 plausible, waiting on Trey (pot taper); settled facts not re-opened |
 
 **Decisions recorded after the passes ran (Kyle, 2026-10-13)**

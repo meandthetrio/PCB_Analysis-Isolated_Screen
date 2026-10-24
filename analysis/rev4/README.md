@@ -1,5 +1,7 @@
 # Rev 4 analysis index
 
+**Status: Rev4 Working** (2026-10-24) — boards built and tested, everything works.
+
 Start with **`FINAL_REPORT.md`** (tiered red flags + questions for Trey). `FINDINGS.md` is the ledger: Part A = rev-4 findings by pass (ids R4-Pn-nn), Part B = status of every rev-3 finding, Part C = scorecard.
 
 - `OCT7_REVIEW_STATUS.md` — every row of the 7 October "Rev 2 Design Review" doc re-scored against the rev-4 files (baseline: the rev-3 scoring on branch `claude/charming-meitner-c0w1jh`)

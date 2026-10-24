@@ -39,7 +39,10 @@ Trey sent files reluctantly and in stages: Gerbers+BOM first, then .pro/.sch, th
 
 Board changes either way: add 2.2k I2C pull-ups, remove J2/FB4/C14/C17/both R21s, use Daisy spare pads 22 & 28 for RES# and VCC_EN sequencing.
 
-## Rev 4 (2026-10-13)
+## Rev 4 (2026-10-13) — **Rev4 Working**
+
+**Status (2026-10-24): boards back from fab and assembled; everything works.** The one bench
+symptom (MIDI IN silent) was a cable in the wrong input, not a board fault.
 
 Rev-4 inputs (KiCad project with filled pour, BOM, Trey's Gerbers) are in `rev4/`; the review is in
 [analysis/rev4/](analysis/rev4/README.md) — start with `FINAL_REPORT.md` and `OCT7_REVIEW_STATUS.md`.
