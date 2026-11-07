@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ProtoBuild1")(type "KiCad")(uri "${KIPRJMOD}/ProtoBuild1.kicad_sym")(options "")(descr "ProtoBuild1 custom symbols"))
+)

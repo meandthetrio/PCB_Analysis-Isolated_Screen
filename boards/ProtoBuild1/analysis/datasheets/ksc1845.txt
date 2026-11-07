@@ -1,0 +1,273 @@
+                                                                                                                 DATA SHEET
+                                                                                                              www.onsemi.com
+
+
+
+NPN Epitaxial Silicon
+Transistor
+KSC1845
+                                                                                                                1. Emitter
+Features                                                                                                        2. Collector
+• Audio Frequency Low−Noise Amplifier                                                                           3. Base
+                                                                                                 1
+• Complement to KSA992                                                                               2
+                                                                                                         3
+• This is a Pb−Free Device                                                                     TO−92 3 4.83x4.76
+                                                                                                LEADFORMED
+                                                                                                 CASE 135AR
+MAXIMUM RATINGS (Values are at TA = 25°C unless otherwise noted.)
+  Symbol                         Parameter                   Value        Unit               MARKING DIAGRAM
+   VCBO        Collector−Base Voltage                        120           V
+   VCEO        Collector−Emitter Voltage                     120           V                         AC1
+                                                                                                     845X
+   VEBO        Emitter−Base Voltage                           5            V                         YWW
+     IC        Collector Current                              50           mA
+     IB        Base Current                                   10           mA
+     TJ        Junction Temperature                          150           °C
+   TSTG        Storage Temperature                       −55 to 150        °C
+Stresses exceeding those listed in the Maximum Ratings table may damage the
+device. If any of these limits are exceeded, device functionality should not be
+assumed, damage may occur and reliability may be affected.                               A     = Assembly Code
+                                                                                         C1845 = Device Code
+THERMAL CHARACTERISTICS                                                                  X     =F
+(Values are at TA = 25°C unless otherwise noted.) (Note 1)                               YWW = Date Code
+  Symbol                         Parameter                   Value        Unit
+    PD         Power Dissipation                             500           mW           ORDERING INFORMATION
+               Derate Above 25°C                              4           mW/°C     Device        Package            Shipping
+   RqJA        Thermal Resistance,                           250          °C/W    KSC1845FTA     TO−92 3 LF      2000 / Fan−Fold
+               Junction−to−Ambient
+                                                                                                  (Pb−Free)
+1. PCB size: FR−4, 76 mm x 114 mm x 1.57 mm (3.0 inch x 4.5 inch x 0.062 inch)
+   with minimum land pattern size.
+
+
+
+
+© Semiconductor Components Industries, LLC, 2002                      1                                  Publication Order Number:
+August, 2023 − Rev. 3                                                                                                  KSC1845/D
+                                                                KSC1845
+
+ELECTRICAL CHARACTERISTICS (Values are at TA = 25°C unless otherwise noted.)
+  Symbol                     Parameter                             Conditions                    Min          Typ          Max        Unit
+  BVCBO       Collector−Base Breakdown Voltage        IC = 100 mA, IA = 0                        120           −            −          V
+  BVCEO       Collector−Emitter Breakdown Voltage     IC = 1 mA, IB = 0                          120           −            −          V
+  BVEBO       Emitter−Base Breakdown Voltage          IE = 100 mA, IC = 0                         5            −            −          V
+   ICBO       Collector Cut−Off Current               VCB = 120 V, IE = 0                         −            −           50         nA
+    IEBO      Emitter Cut−Off Current                 VEB = 5 V, IC = 0                           −            −           50         nA
+   hFE1       DC Current Gain                         VCE = 6 V, IC = 0.1 mA                     150          580           −
+   hFE2                                               VCE = 6 V, IC = 1 mA                       300          450          600
+  VBE(on)     Base−Emitter On Voltage                 VCE = 6 V, IC = 1 mA                       0.55         0.59         0.65        V
+ VCE(sat)     Collector−Emitter Saturation Voltage    IC = 10 mA, IB = 1 mA                       −           0.07         0.30        V
+     fT       Current Gain Bandwidth Product          VCE = 6 V, IC = 1 mA                        50          100           −        MHz
+    Cob       Output Capacitance                      VCB = 30 V, IE = 0, f = 1 MHz               −           1.6          2.5        pF
+    NF        Noise Figure                            VCE = −5 V, IC = −1.0 mA,                   −            7            −         dB
+                                                      RS = 100 kW, f = 1 kHz
+Product parametric performance is indicated in the Electrical Characteristics for the listed test conditions, unless otherwise noted. Product
+performance may not be indicated by the Electrical Characteristics if operated under different conditions.
+
+
+
+
+                                                           www.onsemi.com
+                                                                     2
+                                                                                           KSC1845
+
+                                                               TYPICAL PERFORMANCE CHARACTERISTICS
+
+
+                              10                                                                                                             1.0
+                                                         IB = 16 mA                                                                                    IB = 1.4 mA                IB = 1.2 mA
+IC, COLLECTOR CURRENT (mA)
+
+
+
+
+                                                                                                               IC, COLLECTOR CURRENT (mA)
+                                                                              IB = 14 mA                                                                                                          IB = 1.0 mA
+                               8                                                                                                             0.8
+                                                                              IB = 12 mA
+                                                                                                                                                                                                  IB = 0.8 mA
+                                                                              IB = 10 mA
+                               6                                                                                                             0.6                                                  IB = 0.6 mA
+                                                                              IB = 8 mA
+
+                                                                              IB = 6 mA                                                                                                           IB = 0.4 mA
+                               4                                                                                                             0.4
+
+                                                                              IB = 4 mA
+                                                                                                                                                                                                  IB = 0.2 mA
+                               2                                                                                                             0.2
+                                                                              IB = 2 mA
+
+                               0                                                                                                              0
+                                    0          1         2            3         4           5                                                      0            20           40         60          80          100
+                                            VCE, COLLECTOR−EMITTER VOLTAGE (V)                                                                             VCE, COLLECTOR−EMITTER VOLTAGE (V)
+
+                                            Figure 1. Static Characteristic                                                                                 Figure 2. Static Characteristic
+
+
+                             1000                                                                                                           100
+                                                                              VCE = 6 V                                                                                                            IC = 10 IB
+                             900
+                                                                                                VBE(sat), VCE(sat), SATURATION
+
+                                                                              Pulse Test                                                                                                           Pulse Test
+                             800
+hFE, DC CURRENT GAIN
+
+
+
+
+                                                                                                                                             10
+                             700                                                                                                                                             VBE(sat)
+                                                                                                          VOLTAGE (V)
+
+
+
+
+                             600
+                             500                                                                                                              1
+                             400
+                                                                                                                                                                             VCE(sat)
+                             300
+                                                                                                                                             0.1
+                             200
+                             100
+                               0                                                                                                            0.01
+                               0.01                0.1        1           10               100                                                  0.1                      1                   10                 100
+                                                IC, COLLECTOR CURRENT (mA)                                                                                       IC, COLLECTOR CURRENT (mA)
+
+                                              Figure 3. DC Current Gain                                                                      Figure 4. Base−Emitter Saturation Voltage and
+                                                                                                                                                 Collector−Emitter Saturation Voltage
+                              10                                                                                                            10k
+                                                                               f = 1 MHz                                                                                                           VCE = 6 V
+                                                                                                fT, CURRENT GAIN−BANDWIDTH
+
+
+
+
+                                                                               IE = 0
+Cob, CAPACITANCE (pF)
+
+
+
+
+                                                                                                        PRODUCT (MHz)
+
+
+
+
+                                                                                                                                             1k
+
+                               1
+
+                                                                                                                                            100
+
+
+
+
+                              0.1                                                                                                            10
+                                    1                         10                           100                                                     0                     1                   10                 100
+                                             VCB, COLLECTOR−BASE VOLTAGE (V)                                                                                         IE, EMITTER CURRENT (mA)
+
+                                        Figure 5. Collector Output Capacitance                                                                    Figure 6. Current Gain Bandwidth Product
+
+
+
+
+                                                                                    www.onsemi.com
+                                                                                                    3
+                                                                             KSC1845
+
+                                                TYPICAL PERFORMANCE CHARACTERISTICS (Continued)
+
+
+                             100                                                                                    800
+                                                                VCE = 6 V
+IC, COLLECTOR CURRENT (mA)
+
+
+
+
+                                                                Pulse Test
+
+
+
+
+                                                                                       PC, POWER DISSIPATION (mW)
+                                                                                                                    700
+
+                              10                                                                                    600
+
+                                                                                                                    500
+
+                               1                                                                                    400
+
+                                                                                                                    300
+
+                              0.1                                                                                   200
+
+                                                                                                                    100
+
+                             0.01                                                                                    0
+                                0.4   0.5     0.6      0.7      0.8          0.9                                          0   25       50    75     100   125     150   175
+                                      VBE, BASE−EMITTER VOLTAGE (V)                                                                Ta, AMBIENT TEMPERATURE (°C)
+
+                      Figure 7. Collector Current vs. Base−Emitter Voltage                                                         Figure 8. Power Derating
+
+
+
+
+                                                                      www.onsemi.com
+                                                                                   4
+                                                                                                                   MECHANICAL CASE OUTLINE
+                                                                                                                                                   PACKAGE DIMENSIONS
+
+
+                                                                  TO−92 3 4.83x4.76 LEADFORMED
+                                                                            CASE 135AR
+                                                                              ISSUE O
+                                                                                                                                                                DATE 30 SEP 2016
+
+
+
+
+                                                                                         Electronic versions are uncontrolled except when accessed directly from the Document Repository.
+ DOCUMENT NUMBER:                          98AON13879G                                   Printed versions are uncontrolled except when stamped “CONTROLLED COPY” in red.
+
+             DESCRIPTION:                  TO−92 3 4.83X4.76 LEADFORMED                                                                                                PAGE 1 OF 1
+
+ onsemi and               are trademarks of Semiconductor Components Industries, LLC dba onsemi or its subsidiaries in the United States and/or other countries. onsemi reserves
+ the right to make changes without further notice to any products herein. onsemi makes no warranty, representation or guarantee regarding the suitability of its products for any particular
+ purpose, nor does onsemi assume any liability arising out of the application or use of any product or circuit, and specifically disclaims any and all liability, including without limitation
+ special, consequential or incidental damages. onsemi does not convey any license under its patent rights nor the rights of others.
+
+
+
+© Semiconductor Components Industries, LLC, 2016                                                                                                                       www.onsemi.com
+ onsemi,                , and other names, marks, and brands are registered and/or common law trademarks of Semiconductor Components Industries, LLC dba “onsemi” or its affiliates
+ and/or subsidiaries in the United States and/or other countries. onsemi owns the rights to a number of patents, trademarks, copyrights, trade secrets, and other intellectual property.
+ A listing of onsemi’s product/patent coverage may be accessed at www.onsemi.com/site/pdf/Patent−Marking.pdf. onsemi reserves the right to make changes at any time to any
+ products or information herein, without notice. The information herein is provided “as−is” and onsemi makes no warranty, representation or guarantee regarding the accuracy of the
+ information, product features, availability, functionality, or suitability of its products for any particular purpose, nor does onsemi assume any liability arising out of the application or use
+ of any product or circuit, and specifically disclaims any and all liability, including without limitation special, consequential or incidental damages. Buyer is responsible for its products
+ and applications using onsemi products, including compliance with all laws, regulations and safety requirements or standards, regardless of any support or applications information
+ provided by onsemi. “Typical” parameters which may be provided in onsemi data sheets and/or specifications can and do vary in different applications and actual performance may
+ vary over time. All operating parameters, including “Typicals” must be validated for each customer application by customer’s technical experts. onsemi does not convey any license
+ under any of its intellectual property rights nor the rights of others. onsemi products are not designed, intended, or authorized for use as a critical component in life support systems
+ or any FDA Class 3 medical devices or medical devices with a same or similar classification in a foreign jurisdiction or any devices intended for implantation in the human body. Should
+ Buyer purchase or use onsemi products for any such unintended or unauthorized application, Buyer shall indemnify and hold onsemi and its officers, employees, subsidiaries, affiliates,
+ and distributors harmless against all claims, costs, damages, and expenses, and reasonable attorney fees arising out of, directly or indirectly, any claim of personal injury or death
+ associated with such unintended or unauthorized use, even if such claim alleges that onsemi was negligent regarding the design or manufacture of the part. onsemi is an Equal
+ Opportunity/Affirmative Action Employer. This literature is subject to all applicable copyright laws and is not for resale in any manner.
+
+
+ADDITIONAL INFORMATION
+    TECHNICAL PUBLICATIONS:                                                                               ONLINE SUPPORT: www.onsemi.com/support
+    Technical Library: www.onsemi.com/design/resources/technical−documentation                            For additional information, please contact your local Sales Representative at
+    onsemi Website: www.onsemi.com                                                                        www.onsemi.com/support/sales
+
+
+
+
+

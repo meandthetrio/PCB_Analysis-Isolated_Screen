@@ -1,0 +1,331 @@
+                                                                                            Share Feedback                   DATA SHEET
+                                                                                            Your Opinion Matters           www.onsemi.com
+
+
+Plastic Medium-Power                                                                       1.5 A POWER TRANSISTORS
+Silicon NPN Transistors                                                                            NPN SILICON
+                                                                                                45, 60, 80 V, 12.5 W
+BD135G, BD137G, BD139G                                                                                             COLLECTOR
+                                                                                                                      2, 4
+  This series of plastic, medium−power silicon NPN transistors are
+designed for use as audio amplifiers and drivers utilizing
+complementary or quasi complementary circuits.                                                              3
+                                                                                                          BASE
+Features
+• High DC Current Gain                                                                                                  1
+                                                                                                                     EMITTER
+• BD 135, 137, 139 are complementary with BD 136, 138, 140
+• These Devices are Pb−Free, Halogen Free/BFR Free and are RoHS
+  Compliant*
+
+ MAXIMUM RATINGS                                                                                                          TO−225
+                                                                                                                        CASE 77−09
+                    Rating                         Symbol          Value          Unit                                   STYLE 1
+ Collector−Emitter Voltage                         VCEO                           Vdc
+   BD135G                                                           45                          1 2
+   BD137G                                                           60                                3
+   BD139G                                                           80
+ Collector−Base Voltage                            VCBO                           Vdc                    MARKING DIAGRAM
+   BD135G                                                          45
+   BD137G                                                          60
+   BD139G                                                          100                                            YWW
+ Emitter−Base Voltage                               VEBO            5.0           Vdc                             BD1xxG
+
+ Collector Current                                   IC             1.5           Adc
+                                                                                                     Y       = Year
+ Base Current                                        IB             0.5           Adc                WW      = Work Week
+ Total Device Dissipation                            PD                                              BD1xx   = Device Code
+   @ TA = 25°C                                                     1.25       Watts                            xx = 35, 37, 39
+   Derate above 25°C                                                10        mW/°C                  G       = Pb−Free Package
+ Total Device Dissipation                            PD
+   @ TC = 25°C                                                     12.5       Watts
+   Derate above 25°C                                               100        mW/°C               ORDERING INFORMATION
+ Operating and Storage Junction                    TJ, Tstg   – 55 to + 150        °C       Device           Package            Shipping
+ Temperature Range
+                                                                                         BD135G               TO−225          500 Units / Box
+Stresses exceeding those listed in the Maximum Ratings table may damage the                                  (Pb−Free)
+device. If any of these limits are exceeded, device functionality should not be
+assumed, damage may occur and reliability may be affected.                               BD137G               TO−225          500 Units / Box
+                                                                                                             (Pb−Free)
+ THERMAL CHARACTERISTICS                                                                 BD139G               TO−225          500 Units / Box
+                  Characteristic                          Symbol     Max          Unit                       (Pb−Free)
+
+ Thermal Resistance, Junction−to−Case                      RqJC       10          °C/W   DISCONTINUED (Note 1)
+ Thermal Resistance, Junction−to−Ambient                   RqJA       100         °C/W       Device              Package         Shipping
+                                                                                         BD135TG                  TO−225       50 Units / Rail
+                                                                                                                 (Pb−Free)
+
+                                                                                         1. DISCONTINUED: These devices are not
+                                                                                            recommended for new design. Please contact
+                                                                                            your onsemi representative for information.
+*For additional information on our Pb−Free strategy and soldering details, please           The most current information on these devices
+ download the ON Semiconductor Soldering and Mounting Techniques                            may be available on www.onsemi.com.
+ Reference Manual, SOLDERRM/D.
+
+
+
+
+© Semiconductor Components Industries, LLC, 2013                              1                                      Publication Order Number:
+June, 2024 − Rev. 18                                                                                                                  BD135/D
+                                                                    BD135G, BD137G, BD139G
+
+    ELECTRICAL CHARACTERISTICS (TC = 25_C unless otherwise noted)
+                                                   Characteristic                                                               Symbol              Min         Max                UnIt
+           Collector−Emitter Sustaining Voltage*                                                                                BVCEO*                                             Vdc
+             (IC = 0.03 Adc, IB = 0)
+                BD135G                                                                                                                              45             −
+                BD137G                                                                                                                              60             −
+                BD139G                                                                                                                              80             −
+           Collector Cutoff Current                                                                                               ICBO                                             mAdc
+             (VCB = 30 Vdc, IE = 0)                                                                                                                  −          0.1
+             (VCB = 30 Vdc, IE = 0, TC = 125_C)                                                                                                      −          10
+           Emitter Cutoff Current                                                                                                 IEBO               −             10              mAdc
+            (VBE = 5.0 Vdc, IC = 0)
+
+           DC Current Gain                                                                                                        hFE*                                              −
+            (IC = 0.005 A, VCE = 2 V)                                                                                                               25           −
+            (IC = 0.15 A, VCE = 2 V)                                                                                                                40          250
+            (IC = 0.5 A VCE = 2 V)                                                                                                                  25           −
+           Collector−Emitter Saturation Voltage*                                                                                VCE(sat)*                                          Vdc
+             (IC = 0.5 Adc, IB = 0.05 Adc)                                                                                                           −          0.5
+
+           Base−Emitter On Voltage*                                                                                             VBE(on)*                                           Vdc
+             (IC = 0.5 Adc, VCE = 2.0 Vdc)                                                                                                           −             1
+  Product parametric performance is indicated in the Electrical Characteristics for the listed test conditions, unless otherwise noted. Product
+  performance may not be indicated by the Electrical Characteristics if operated under different conditions.
+  *Pulse Test: Pulse Width ≤ 300 ms, Duty Cycle ≤ 2.0%.
+
+
+
+
+                                                                    TYPICAL CHARACTERISTICS
+
+                   1000                                                                                                 0.3
+                                                                         VCE = 2 V                                              IC/IB = 10                             150°C
+                                                                                          VCE(sat), COLLECTOR−EMITTER
+                                                                                            SATURATION VOLTAGE (V)
+hFE, DC CURRENT GAIN
+
+
+
+
+                                        150°C
+                                                                                                                        0.2
+                                            25°C
+                                                                                                                                                                                −55°C
+                       100              −55°C                                                                                                               25°C
+
+
+                                                                                                                        0.1
+
+
+
+
+                       10                                                                                                0
+                             0.001   0.01              0.1           1               10                                       0.001          0.01         0.1               1             10
+                                     IC, COLLECTOR CURRENT (A)                                                                               IC, COLLECTOR CURRENT (A)
+                                     Figure 1. DC Current Gain                                                                 Figure 2. Collector−Emitter Saturation Voltage
+
+
+
+
+                                                                             www.onsemi.com                                                                            Share Feedback
+                                                                                          2                                                                            Your Opinion Matters
+                                                                                                         BD135G, BD137G, BD139G
+
+                                                                                                         TYPICAL CHARACTERISTICS
+
+
+
+
+                                                                                                                                    VBE(on), BASE−EMITTER ON VOLTAGE (V)
+                          1.2                                                                                                                                               1.2
+                                     IC/IB = 10                                                                                                                                       VCE = 2 V
+                          1.0                                                                                                                                               1.0
+SATURATION VOLTAGE (V)
+ VBE(sat), BASE−EMITTER
+
+
+
+
+                                                     −55°C                                                                                                                                         −55°C
+                          0.8                        25°C                                                                                                                   0.8
+                                                                                                                                                                                                     25°C
+                          0.6                                                                                                                                               0.6
+                                                     150°C
+                                                                                                                                                                                                   150°C
+                          0.4                                                                                                                                               0.4
+
+                          0.2                                                                                                                                               0.2
+
+                           0                                                                                                                                                 0
+                                0.001             0.01                                    0.1              1               10                                                     0.001        0.01         0.1             1            10
+                                              IC, COLLECTOR CURRENT (A)                                                                                                                        IC, COLLECTOR CURRENT (A)
+                                     Figure 3. Base−Emitter Saturation Voltage                                                                                                              Figure 4. Base−Emitter On Voltage
+
+
+                      1000                                                                                                                                                  10
+                                                                                                         f = 1 MHz
+                                                                                                                                    IC, COLLECTOR CURRENT (A)
+
+                                                             Cib                                                                                                                                                                0.1 ms
+                                                                                                                                                                                                     5 ms         0.5 ms
+C, CAPACITANCE (pF)
+
+
+
+
+                       100                                                                                                                                                   1
+                                                                                                                                                                                        TJ = 125°C          dc
+                                                             Cob
+
+
+                          10                                                                                                                                                0.1
+
+                                                                                                                                                                                                                       BD135
+                                                                                                                                                                                                                       BD137
+                                                                                                                                                                                                                       BD139
+                           1                                                                                                                                               0.01
+                               0.1                       1                                          10                    100                                                     1                          10                          80
+                                                  VR, REVERSE VOLTAGE (V)                                                                                                                 VCE, COLLECTOR−EMITTER VOLTAGE (V)
+                                                   Figure 5. Capacitance                                                                                                              Figure 6. Active−Region Safe Operating Area
+
+
+                                                                                         1.50
+                                                             PD, POWER DISSIPATION (W)
+
+
+
+
+                                                                                         1.25
+
+
+                                                                                         1.00
+
+                                                                                         0.75
+
+                                                                                         0.50
+
+
+                                                                                         0.25
+
+                                                                                           0
+                                                                                                0   20     40        60     80                                             100        120    140      160
+                                                                                                          TA, AMBIENT TEMPERATURE (°C)
+                                                                                                               Figure 7. Power Derating
+
+
+
+
+                                                                                                                  www.onsemi.com                                                                                       Share Feedback
+                                                                                                                                3                                                                                      Your Opinion Matters
+                                                                                                                     MECHANICAL CASE OUTLINE
+                                                                                                                                                   PACKAGE DIMENSIONS
+
+
+
+                                                                                       TO−225
+                                                                                     CASE 77−09
+                                            4                                         ISSUE AD
+                                                                                                                                                                 DATE 25 MAR 2015
+
+
+
+1 2                          3 2
+      3                            1
+    FRONT VIEW                     BACK VIEW
+                   SCALE 1:1
+                                                E                                                                                   NOTES:
+                                                                                                                                     1. DIMENSIONING AND TOLERANCING PER
+                                                                                A1                                                      ASME Y14.5M, 1994.
+                                                                                                                                     2. CONTROLLING DIMENSION: MILLIMETERS.
+                             Q                                                                               A                       3. NUMBER AND SHAPE OF LUGS OPTIONAL.
+
+                                                                                                          PIN 4                                   MILLIMETERS
+                                                                                                       BACKSIDE TAB                       DIM     MIN     MAX
+                                                                                                                                           A      2.40    3.00
+                                                                                                                                          A1      1.00    1.50
+                                                                                                                                           b      0.60    0.90
+                                                                      D                                                                   b2      0.51    0.88
+                         P                                                                                                                 c      0.39    0.63
+                                                                                                                                           D     10.60   11.10
+                                                                                                                                           E      7.40    7.80
+                                        1       2    3
+                                                                                                                                           e      2.04    2.54
+                                                                                                                                           L     14.50   16.63
+                                                                                                                                          L1      1.27    2.54
+                                                                                                                                           P      2.90    3.30
+                                                                                                                                           Q      3.80    4.20
+                                                                 L1
+                                                                                                                                      GENERIC
+                                                                                                                 L
+                                                                                                                                  MARKING DIAGRAM*
+
+                                                                                                                                                YWW
+                                                                                                                                                XX
+                                                                                                                                                XXXXXG
+
+                    2X   b2                                                                                                     Y     = Year
+                                                                                                                                WW    = Work Week
+                              2X e                                                                                              XXXXX = Device Code
+                                                             b                     c                                            G     = Pb−Free Package
+
+                                       FRONT VIEW                                         SIDE VIEW                  *This information is generic. Please refer to
+                                                                                                                      device data sheet for actual part marking.
+                                                                                                                      Pb−Free indicator, “G” or microdot “G”, may
+                                                                                                                      or may not be present. Some products may
+                                                                                                                      not follow the Generic Marking.
+
+                         STYLE 1:                    STYLE 2:                    STYLE 3:                     STYLE 4:                     STYLE 5:
+                           PIN 1. EMITTER              PIN 1. CATHODE              PIN 1. BASE                  PIN 1. ANODE 1               PIN 1. MT 1
+                            2., 4. COLLECTOR            2., 4. ANODE                2., 4. COLLECTOR             2., 4. ANODE 2               2., 4. MT 2
+                                3. BASE                     3. GATE                     3. EMITTER                   3. GATE                      3. GATE
+
+
+                         STYLE 6:                    STYLE 7:                    STYLE 8:                     STYLE 9:                     STYLE 10:
+                           PIN 1. CATHODE              PIN 1. MT 1                 PIN 1. SOURCE                PIN 1. GATE                  PIN 1. SOURCE
+                            2., 4. GATE                 2., 4. GATE                 2., 4. GATE                  2., 4. DRAIN                 2., 4. DRAIN
+                                3. ANODE                    3. MT 2                     3. DRAIN                     3. SOURCE                    3. GATE
+
+
+
+
+                                                                                         Electronic versions are uncontrolled except when accessed directly from the Document Repository.
+ DOCUMENT NUMBER:                           98ASB42049B                                  Printed versions are uncontrolled except when stamped “CONTROLLED COPY” in red.
+
+             DESCRIPTION:                   TO−225                                                                                                                     PAGE 1 OF 1
+
+ onsemi and               are trademarks of Semiconductor Components Industries, LLC dba onsemi or its subsidiaries in the United States and/or other countries. onsemi reserves
+ the right to make changes without further notice to any products herein. onsemi makes no warranty, representation or guarantee regarding the suitability of its products for any particular
+ purpose, nor does onsemi assume any liability arising out of the application or use of any product or circuit, and specifically disclaims any and all liability, including without limitation
+ special, consequential or incidental damages. onsemi does not convey any license under its patent rights nor the rights of others.
+
+
+
+© Semiconductor Components Industries, LLC, 2019                                                                                                                       www.onsemi.com
+ onsemi,                , and other names, marks, and brands are registered and/or common law trademarks of Semiconductor Components Industries, LLC dba “onsemi” or its affiliates
+ and/or subsidiaries in the United States and/or other countries. onsemi owns the rights to a number of patents, trademarks, copyrights, trade secrets, and other intellectual property.
+ A listing of onsemi’s product/patent coverage may be accessed at www.onsemi.com/site/pdf/Patent−Marking.pdf. onsemi reserves the right to make changes at any time to any
+ products or information herein, without notice. The information herein is provided “as−is” and onsemi makes no warranty, representation or guarantee regarding the accuracy of the
+ information, product features, availability, functionality, or suitability of its products for any particular purpose, nor does onsemi assume any liability arising out of the application or use
+ of any product or circuit, and specifically disclaims any and all liability, including without limitation special, consequential or incidental damages. Buyer is responsible for its products
+ and applications using onsemi products, including compliance with all laws, regulations and safety requirements or standards, regardless of any support or applications information
+ provided by onsemi. “Typical” parameters which may be provided in onsemi data sheets and/or specifications can and do vary in different applications and actual performance may
+ vary over time. All operating parameters, including “Typicals” must be validated for each customer application by customer’s technical experts. onsemi does not convey any license
+ under any of its intellectual property rights nor the rights of others. onsemi products are not designed, intended, or authorized for use as a critical component in life support systems
+ or any FDA Class 3 medical devices or medical devices with a same or similar classification in a foreign jurisdiction or any devices intended for implantation in the human body. Should
+ Buyer purchase or use onsemi products for any such unintended or unauthorized application, Buyer shall indemnify and hold onsemi and its officers, employees, subsidiaries, affiliates,
+ and distributors harmless against all claims, costs, damages, and expenses, and reasonable attorney fees arising out of, directly or indirectly, any claim of personal injury or death
+ associated with such unintended or unauthorized use, even if such claim alleges that onsemi was negligent regarding the design or manufacture of the part. onsemi is an Equal
+ Opportunity/Affirmative Action Employer. This literature is subject to all applicable copyright laws and is not for resale in any manner.
+
+
+ADDITIONAL INFORMATION
+    TECHNICAL PUBLICATIONS:                                                                               ONLINE SUPPORT: www.onsemi.com/support
+    Technical Library: www.onsemi.com/design/resources/technical−documentation                            For additional information, please contact your local Sales Representative at
+    onsemi Website: www.onsemi.com                                                                        www.onsemi.com/support/sales
+
+
+
+
+

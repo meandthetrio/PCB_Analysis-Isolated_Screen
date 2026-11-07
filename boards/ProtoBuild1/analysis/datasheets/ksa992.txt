@@ -1,0 +1,321 @@
+                                                                                      Share Feedback                     DATA SHEET
+                                                                                      Your Opinion Matters           www.onsemi.com
+
+
+
+PNP Epitaxial Silicon
+Transistor
+KSA992                                                                                                                        1. Emitter
+                                                                                                                              2. Collector
+                                                                                                                              3. Base
+Features                                                                                 12                  1
+                                                                                                                 2
+                                                                                              3                      3
+ Audio Frequency Low-Noise Amplifier
+                                                                                  TO-92 3 4.825x4.76 TO-92 3 4.83x4.76
+ Complement to KSC1845                                                             CASE 135AN        LEADFORMED
+ These are Pb-Free Devices                                                                            CASE 135AR
+
+
+ MAXIMUM RATINGS (Values are at TA = 25 C unless otherwise noted.)                               MARKING DIAGRAMS
+
+  Symbol                         Parameter                 Value         Unit
+                                                                                         AA9                             AA9
+   VCBO        Collector-Base Voltage                      −120           V
+                                                                                         92X                             92X
+   VCEO        Collector-Emitter Voltage                   −120           V              YWW                             YWW
+   VEBO        Emitter-Base Voltage                            −5         V
+     IC        Collector Current                            −50          mA
+     IB        Base Current                                 −10          mA
+     TJ        Junction Temperature                         150           C
+   TSTG        Storage Temperature                         −55 to         C
+                                                            150
+                                                                                              A    = Assembly Code
+Stresses exceeding those listed in the Maximum Ratings table may damage the                   A992 = Device Code
+device. If any of these limits are exceeded, device functionality should not be               X    = F / FA / FB
+assumed, damage may occur and reliability may be affected.                                    YWW = Date Code
+
+ THERMAL CHARACTERISTICS                                                                      ORDERING INFORMATION
+ (Values are at TA = 25 C unless otherwise noted.) (Note 2)
+
+  Symbol                         Parameter                 Value         Unit         Device          Package               Shipping
+    PD         Power Dissipation                            500          mW       KSA992FTA          TO-92 3 LF          2000 / Fan-Fold
+                                                                                                      (Pb-Free)
+               Derate Above 25 C                              4      mW/C
+                                                                                  KSA992FATA         TO-92 3 LF          2000 / Fan-Fold
+   RqJA        Thermal Resistance,                          250          C/W                         (Pb-Free)
+               Junction-to-Ambient
+                                                                                  DISCONTINUED (Note 1)
+2. PCB size: FR-4, 76 mm x 114 mm x 1.57 mm (3.0 inch x 4.5 inch x 0.062 inch)
+   with minimum land pattern size.                                                KSA992FBU            TO-92 3            10000 Units /
+                                                                                                      (Pb-Free)             Bulk Bag
+
+                                                                                  KSA992FBTA         TO-92 3 LF          2000 / Fan-Fold
+                                                                                                      (Pb-Free)
+                                                                                  1. DISCONTINUED: These devices are not
+                                                                                     available. Please contact your onsemi
+                                                                                     representative for information. The most current
+                                                                                     information on these devices may be available
+                                                                                     on www.onsemi.com.
+
+
+
+
+ Semiconductor Components Industries, LLC, 2004                     1                                       Publication Order Number:
+January, 2026 − Rev. 5                                                                                                      KSA992/D
+                                                                KSA992
+
+ ELECTRICAL CHARACTERISTICS (Values are at TA = 25 C unless otherwise noted.)
+  Symbol                     Parameter                                    Conditions                   Min       Typ        Max      Unit
+   ICBO       Collector Cut-Off Current                   VCB = −120 V, IE = 0                          −         −         −50       nA
+   ICEO       Collector Cut-Off Current                   VCE = −100 V, IB = 0                          −         −         −1        mA
+    IEBO      Emitter Cut-Off Current                     VEB = −5 V, IC = 0                            −         −         −50       nA
+   hFE1       DC Current Gain                             VCE = −6 V, IC = −0.1 mA                     150       500           −
+   hFE2                                                   VCE = −6 V, IC = −1 mA                       300       450        600
+  VBE(on)     Base-Emitter On Voltage                     VCE = −6 V, IC = −1 mA                      −0.55     −0.61      −0.65       V
+ VCE(sat)     Collector-Emitter Saturation Voltage        IC = −10 mA, IB = −1 mA                       −       −0.09      −0.30       V
+     fT       Current Gain Bandwidth Product              VCE = −6 V, IC = −1 mA                       50        100           −     MHz
+    Cob       Output Capacitance                          VCB = −30 V, IE = 0, f = 1 MHz                −         2            3      pF
+    NF        Noise Figure                                VCE = −5 V, IC = −1.0 mA,                     −         7            −      dB
+                                                          RS = 100 kW, f = 1 kHz
+Product parametric performance is indicated in the Electrical Characteristics for the listed test conditions, unless otherwise noted. Product
+performance may not be indicated by the Electrical Characteristics if operated under different conditions.
+
+
+ hFE CLASSIFICATION
+           Classification                            F                                 FA                                 FB
+               hFE2                             300~600                              300~470                            430~600
+
+
+
+
+                                                           www.onsemi.com                                               Share Feedback
+                                                                      2                                                 Your Opinion Matters
+                                                                                                   KSA992
+
+                                                                         TYPICAL PERFORMANCE CHARACTERISTICS
+
+
+                             −1.0                                                                                                                      −10
+                                         IB = −1.2 mA                                                                                                            IB = −24 mA
+                                                                          IB = −1.2 mA                                                                                                               IB = −20 mA
+IC, COLLECTOR CURRENT (mA)
+
+
+
+
+                                                                                                                         IC, COLLECTOR CURRENT (mA)
+                             −0.8                                                IB = −1.0 mA                                                          −8
+                                                                                                                                                                                                     IB = −16 mA
+
+                                                                                         IB = −0.8 mA
+                             −0.6                                                                                                                      −6                                            IB = −12 mA
+                                                                                         IB = −0.6 mA
+                             −0.4                                                                                                                      −4                                            IB = −8 mA
+                                                                                         IB = −0.4 mA
+                                                                                                                                                                                                     IB = −4 mA
+                             −0.2                                                                                                                      −2
+                                                                                         IB = −0.2 mA
+                                                                                IB = 0                                                                                                               IB = 0
+                              0.0                                                                                                                        0
+                                    0         −20             −40         −60            −80       −100                                                      0         −1           −2         −3              −4            −5
+                                            VCE, COLLECTOR-EMITTER VOLTAGE (V)                                                                                      VCE, COLLECTOR-EMITTER VOLTAGE (V)
+
+                                            Figure 1. Static Characteristic                                                                                         Figure 2. Static Characteristic
+
+
+                             1000                                                                                                                      −10
+                                                                                         VCE = −6 V                                                                                                           IC = 10 − IB
+                                                                                                          VCE(sat), VBE(sat), SATURATION
+
+
+                             800
+hFE, DC CURRENT GAIN
+
+
+
+
+                                                                                                                                                       −1                           VBE(sat)
+                                                                                                                    VOLTAGE (V)
+
+
+
+
+                             600
+
+
+                             400
+                                                                                                                                                      −0.1                          VCE(sat)
+
+                             200
+
+
+                               0                                                                                                                 −0.01
+                              −0.01             −0.1                −1             −10             −100                                             −0.1                       −1                   −10                  −100
+                                                 IC, COLLECTOR CURRENT (mA)                                                                                              IC, COLLECTOR CURRENT (mA)
+
+                                              Figure 3. DC Current Gain                                                                                 Figure 4. Base-Emitter Saturation Voltage and
+                                                                                                                                                            Collector-Emitter Saturation Voltage
+                              10                                                                                                                      1000
+                                                                                          IE = 0                                                                                                              VCE = −6 V
+                                                                                                          fT, CURRENT GAIN-BANDWIDTH
+
+
+
+
+                                                                                          f = 1 MHz
+Cob, CAPACITANCE (pF)
+
+
+
+
+                                                                                                                 PRODUCT (MHz)
+
+
+
+
+                                                                                                                                                      100
+
+                               1
+
+                                                                                                                                                       10
+
+
+
+
+                              0.1                                                                                                                        1
+                                 −1                     −10                 −100                  −1000                                                      0                 1                     10                      100
+                                             VCB, COLLECTOR-BASE VOLTAGE (V)                                                                                             IE, COLLECTOR CURRENT (mA)
+
+                                        Figure 5. Collector Output Capacitance                                                                               Figure 6. Current Gain Bandwidth Product
+
+
+
+
+                                                                                               www.onsemi.com                                                                                         Share Feedback
+                                                                                                              3                                                                                       Your Opinion Matters
+                                                                                 KSA992
+
+                                                      TYPICAL PERFORMANCE CHARACTERISTICS (continued)
+
+
+                             800
+PC, POWER DISSIPATION (mW)
+
+
+
+
+                             700
+
+                             600
+
+                             500
+
+                             400
+
+                             300
+
+                             200
+
+                             100
+
+                              0
+                                   0   25       50    75    100    125     150   175
+                                            Ta, AMBIENT TEMPERATURE (C)
+
+                                            Figure 7. Power Derating
+
+
+
+
+                                                                             www.onsemi.com             Share Feedback
+                                                                                       4                Your Opinion Matters
+                                                               KSA992
+
+ REVISION HISTORY
+   Revision                                          Description of Changes                                                  Date
+       5          KSA992FBTA, KSA992FBU OPNs Marked as Discontinued.                                                       1/16/2026
+This document has undergone updates prior to the inclusion of this revision history table. The changes tracked here only reflect updates made
+on the noted approval dates.
+
+
+
+
+                                                           www.onsemi.com                                             Share Feedback
+                                                                     5                                                Your Opinion Matters
+                                                                                                                   MECHANICAL CASE OUTLINE
+                                                                                                                                                   PACKAGE DIMENSIONS
+
+
+                                                                               TO−92 3 4.825x4.76
+                                                                                 CASE 135AN
+                                                                                   ISSUE O
+                                                                                                                                                                 DATE 31 JUL 2016
+
+
+
+
+                                                                                         Electronic versions are uncontrolled except when accessed directly from the Document Repository.
+ DOCUMENT NUMBER:                          98AON13880G                                   Printed versions are uncontrolled except when stamped “CONTROLLED COPY” in red.
+
+             DESCRIPTION:                  TO−92 3 4.825X4.76                                                                                                          PAGE 1 OF 1
+
+ onsemi and               are trademarks of Semiconductor Components Industries, LLC dba onsemi or its subsidiaries in the United States and/or other countries. onsemi reserves
+ the right to make changes without further notice to any products herein. onsemi makes no warranty, representation or guarantee regarding the suitability of its products for any particular
+ purpose, nor does onsemi assume any liability arising out of the application or use of any product or circuit, and specifically disclaims any and all liability, including without limitation
+ special, consequential or incidental damages. onsemi does not convey any license under its patent rights nor the rights of others.
+
+
+
+© Semiconductor Components Industries, LLC, 2016                                                                                                                       www.onsemi.com
+                                                                                                                   MECHANICAL CASE OUTLINE
+                                                                                                                                                   PACKAGE DIMENSIONS
+
+
+                                                                  TO−92 3 4.83x4.76 LEADFORMED
+                                                                            CASE 135AR
+                                                                              ISSUE O
+                                                                                                                                                                DATE 30 SEP 2016
+
+
+
+
+                                                                                         Electronic versions are uncontrolled except when accessed directly from the Document Repository.
+ DOCUMENT NUMBER:                          98AON13879G                                   Printed versions are uncontrolled except when stamped “CONTROLLED COPY” in red.
+
+             DESCRIPTION:                  TO−92 3 4.83X4.76 LEADFORMED                                                                                                PAGE 1 OF 1
+
+ onsemi and               are trademarks of Semiconductor Components Industries, LLC dba onsemi or its subsidiaries in the United States and/or other countries. onsemi reserves
+ the right to make changes without further notice to any products herein. onsemi makes no warranty, representation or guarantee regarding the suitability of its products for any particular
+ purpose, nor does onsemi assume any liability arising out of the application or use of any product or circuit, and specifically disclaims any and all liability, including without limitation
+ special, consequential or incidental damages. onsemi does not convey any license under its patent rights nor the rights of others.
+
+
+
+© Semiconductor Components Industries, LLC, 2016                                                                                                                       www.onsemi.com
+ onsemi,                , and other names, marks, and brands are registered and/or common law trademarks of Semiconductor Components Industries, LLC dba “onsemi” or its affiliates
+ and/or subsidiaries in the United States and/or other countries. onsemi owns the rights to a number of patents, trademarks, copyrights, trade secrets, and other intellectual property.
+ A listing of onsemi’s product/patent coverage may be accessed at www.onsemi.com/site/pdf/Patent−Marking.pdf. onsemi reserves the right to make changes at any time to any
+ products or information herein, without notice. The information herein is provided “as−is” and onsemi makes no warranty, representation or guarantee regarding the accuracy of the
+ information, product features, availability, functionality, or suitability of its products for any particular purpose, nor does onsemi assume any liability arising out of the application or use
+ of any product or circuit, and specifically disclaims any and all liability, including without limitation special, consequential or incidental damages. Buyer is responsible for its products
+ and applications using onsemi products, including compliance with all laws, regulations and safety requirements or standards, regardless of any support or applications information
+ provided by onsemi. “Typical” parameters which may be provided in onsemi data sheets and/or specifications can and do vary in different applications and actual performance may
+ vary over time. All operating parameters, including “Typicals” must be validated for each customer application by customer’s technical experts. onsemi does not convey any license
+ under any of its intellectual property rights nor the rights of others. onsemi products are not designed, intended, or authorized for use as a critical component in life support systems
+ or any FDA Class 3 medical devices or medical devices with a same or similar classification in a foreign jurisdiction or any devices intended for implantation in the human body. Should
+ Buyer purchase or use onsemi products for any such unintended or unauthorized application, Buyer shall indemnify and hold onsemi and its officers, employees, subsidiaries, affiliates,
+ and distributors harmless against all claims, costs, damages, and expenses, and reasonable attorney fees arising out of, directly or indirectly, any claim of personal injury or death
+ associated with such unintended or unauthorized use, even if such claim alleges that onsemi was negligent regarding the design or manufacture of the part. onsemi is an Equal
+ Opportunity/Affirmative Action Employer. This literature is subject to all applicable copyright laws and is not for resale in any manner.
+
+
+ADDITIONAL INFORMATION
+    TECHNICAL PUBLICATIONS:                                                                               ONLINE SUPPORT: www.onsemi.com/support
+    Technical Library: www.onsemi.com/design/resources/technical−documentation                            For additional information, please contact your local Sales Representative at
+    onsemi Website: www.onsemi.com                                                                        www.onsemi.com/support/sales
+
+
+
+
+

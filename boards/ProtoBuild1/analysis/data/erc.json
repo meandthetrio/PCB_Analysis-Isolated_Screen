@@ -1,0 +1,1430 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-07T16:34:12+0000",
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "9.0.9",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/733cdb22-f517-44d3-97ad-cef7fb285902",
+            "violations": [
+                {
+                    "description": "Symbol 'Screw_Terminal_01x03' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J3 [Screw_Terminal_01x03]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 0.3556
+                            },
+                            "uuid": "f1f56631-33c3-410b-8c31-1f7efbbd2003"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J1 [Screw_Terminal_01x02]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 0.6604
+                            },
+                            "uuid": "102d84d0-2703-4964-95d3-14f641dc5e1d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'D' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D3 [D]",
+                            "pos": {
+                                "x": 0.7112,
+                                "y": 0.3302
+                            },
+                            "uuid": "edf372c9-e0ff-4627-ac64-b1594772ee54"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C1 [C]",
+                            "pos": {
+                                "x": 0.7112,
+                                "y": 0.6985
+                            },
+                            "uuid": "b19597d3-2c04-48f5-845e-51fa13082980"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'D' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D4 [D]",
+                            "pos": {
+                                "x": 1.0668,
+                                "y": 0.3302
+                            },
+                            "uuid": "45c548ce-fa67-4a4b-a41f-8833f09d8fb1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C18 [C]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 1.0795
+                            },
+                            "uuid": "0154fc48-4207-4110-bf16-43e552df94b2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x03' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J4 [Screw_Terminal_01x03]",
+                            "pos": {
+                                "x": 1.0668,
+                                "y": 0.6858
+                            },
+                            "uuid": "951af9e9-6439-47d6-9d67-1b3beb0953ba"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R35 [R]",
+                            "pos": {
+                                "x": 0.7112,
+                                "y": 1.0795
+                            },
+                            "uuid": "1d6e3eac-3889-4d3b-80f5-7d15da690641"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C_Polarized' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C11 [C_Polarized]",
+                            "pos": {
+                                "x": 1.4224,
+                                "y": 0.3683
+                            },
+                            "uuid": "62030aa7-f250-4e5e-873b-15fa628f1a4f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x03' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J7 [Screw_Terminal_01x03]",
+                            "pos": {
+                                "x": 1.0668,
+                                "y": 1.0668
+                            },
+                            "uuid": "68e5c4a5-5940-47bd-b076-7e8160518879"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R1 [R]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 1.4859
+                            },
+                            "uuid": "8462d044-8b74-436a-bf87-7f46c52cc9a2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R_Potentiometer' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol RV1 [R_Potentiometer]",
+                            "pos": {
+                                "x": 1.4224,
+                                "y": 0.6985
+                            },
+                            "uuid": "27b04bf8-04a7-460b-9051-60951521d3ec"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol Rap1 [R]",
+                            "pos": {
+                                "x": 0.7112,
+                                "y": 1.4859
+                            },
+                            "uuid": "5d33f985-4315-41ef-9fdd-29f7cbdc512d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C12 [C]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 0.3683
+                            },
+                            "uuid": "4bedab90-cb13-4aee-95ee-7ddfe899ad1e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol Rap2 [R]",
+                            "pos": {
+                                "x": 1.0668,
+                                "y": 1.4859
+                            },
+                            "uuid": "bfbf2c78-7bb1-4af3-9a33-cd8e51a4070d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x03' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J9 [Screw_Terminal_01x03]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 2.0066
+                            },
+                            "uuid": "b333d2c4-c9a7-4c49-a386-56c81b8603ef"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol Rap3 [R]",
+                            "pos": {
+                                "x": 1.4224,
+                                "y": 1.4859
+                            },
+                            "uuid": "66d8b9e6-db90-4308-b2bc-8f174222e786"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J15 [Screw_Terminal_01x02]",
+                            "pos": {
+                                "x": 0.7112,
+                                "y": 1.9812
+                            },
+                            "uuid": "dea59a14-f021-446b-bf40-98ebdd746811"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C_Polarized' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C13 [C_Polarized]",
+                            "pos": {
+                                "x": 2.1336,
+                                "y": 0.3683
+                            },
+                            "uuid": "f6f98a5e-030c-43d0-aaf6-4df0477468ae"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x03' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J8 [Screw_Terminal_01x03]",
+                            "pos": {
+                                "x": 1.0668,
+                                "y": 2.0066
+                            },
+                            "uuid": "0adedde7-90e6-475b-8423-a9aef7c9a23f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J10 [Screw_Terminal_01x02]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 1.4478
+                            },
+                            "uuid": "60c32714-23be-4e50-9140-b12f3486ae4a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J16 [Screw_Terminal_01x02]",
+                            "pos": {
+                                "x": 1.4224,
+                                "y": 1.9812
+                            },
+                            "uuid": "f9ba9f45-fc11-408b-aff3-45b410d2bf43"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C14 [C]",
+                            "pos": {
+                                "x": 2.4892,
+                                "y": 0.3683
+                            },
+                            "uuid": "06d7fa07-cc52-4f32-b49f-e9c58036094a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J14 [Screw_Terminal_01x02]",
+                            "pos": {
+                                "x": 2.1336,
+                                "y": 1.4478
+                            },
+                            "uuid": "ba073dbc-4a6c-4cec-83d3-3cd1fc3c9f44"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Q_NPN_ECB' doesn't match copy in library 'Transistor_BJT'",
+                    "items": [
+                        {
+                            "description": "Symbol Q1 [Q_NPN_ECB]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 2.5908
+                            },
+                            "uuid": "188175df-be98-4c5f-bec8-b4f0ca510762"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Q_NPN_ECB' doesn't match copy in library 'Transistor_BJT'",
+                    "items": [
+                        {
+                            "description": "Symbol Q2 [Q_NPN_ECB]",
+                            "pos": {
+                                "x": 0.7112,
+                                "y": 2.5908
+                            },
+                            "uuid": "fb58ef4b-f564-47e9-897a-787e3fd301e7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C21 [C]",
+                            "pos": {
+                                "x": 2.4892,
+                                "y": 1.0795
+                            },
+                            "uuid": "c6c20220-0150-42b4-9596-6e7e13ab1eb4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R3 [R]",
+                            "pos": {
+                                "x": 1.0668,
+                                "y": 2.5781
+                            },
+                            "uuid": "4a02ac25-1911-494a-89ac-ea27b2f36b32"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R18 [R]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 0.3683
+                            },
+                            "uuid": "0bc46f2a-0753-4e19-9f25-3315a6fb8f71"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'TestPoint' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP2 [TestPoint]",
+                            "pos": {
+                                "x": 2.1336,
+                                "y": 1.9812
+                            },
+                            "uuid": "9c1c596d-b8c3-4317-a091-313793e233d8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C19 [C]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 0.6985
+                            },
+                            "uuid": "34fc1cc3-5069-4522-b7ca-611831d3ad48"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R9 [R]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 2.9083
+                            },
+                            "uuid": "87f458a0-cf39-4b67-a256-fb6ab79eb457"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R4 [R]",
+                            "pos": {
+                                "x": 1.4224,
+                                "y": 2.5781
+                            },
+                            "uuid": "5dccccc3-bcf3-492f-b830-5ddaa2eca3f5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Q_PNP_ECB' doesn't match copy in library 'Transistor_BJT'",
+                    "items": [
+                        {
+                            "description": "Symbol Q5 [Q_PNP_ECB]",
+                            "pos": {
+                                "x": 0.7112,
+                                "y": 2.921
+                            },
+                            "uuid": "b684ccaa-25e7-43e5-9563-b644883c49f7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C22 [C]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 1.0795
+                            },
+                            "uuid": "ead040b4-56e4-4964-8386-1088a2c41150"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R10 [R]",
+                            "pos": {
+                                "x": 1.0668,
+                                "y": 2.9083
+                            },
+                            "uuid": "16222f09-7a63-468f-9463-9736c79e1c03"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Q_PNP_ECB' doesn't match copy in library 'Transistor_BJT'",
+                    "items": [
+                        {
+                            "description": "Symbol Q3 [Q_PNP_ECB]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 2.5908
+                            },
+                            "uuid": "0c4a1142-2585-4077-8620-22c3ed23396b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R50 [R]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 1.4859
+                            },
+                            "uuid": "9d980e91-9d99-4b8f-bedf-982f7eadbfa5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R12 [R]",
+                            "pos": {
+                                "x": 1.4224,
+                                "y": 2.9083
+                            },
+                            "uuid": "6d8eb200-d9dd-4c36-80bf-9f991de113f9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x03' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J11 [Screw_Terminal_01x03]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 3.2512
+                            },
+                            "uuid": "bcc1749b-bcb2-47d2-b854-b367ac072698"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C20 [C]",
+                            "pos": {
+                                "x": 3.2004,
+                                "y": 0.6985
+                            },
+                            "uuid": "222d4974-0014-4c14-8f37-43b160fd4941"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'SW_SPDT' doesn't match copy in library 'Switch'",
+                    "items": [
+                        {
+                            "description": "Symbol SW3 [SW_SPDT]",
+                            "pos": {
+                                "x": 0.7112,
+                                "y": 3.2512
+                            },
+                            "uuid": "236a19f3-98e5-45df-9a3b-c7a0884c2eac"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R5 [R]",
+                            "pos": {
+                                "x": 2.1336,
+                                "y": 2.5781
+                            },
+                            "uuid": "c3869e51-d0b5-474b-a73d-73a2d825d252"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R22 [R]",
+                            "pos": {
+                                "x": 3.2004,
+                                "y": 1.0795
+                            },
+                            "uuid": "908f4461-3e37-46c1-b762-9564500d9aad"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R14 [R]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 2.9083
+                            },
+                            "uuid": "a6c7c199-6055-4167-bd0d-7d7453504dd7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x03' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J5 [Screw_Terminal_01x03]",
+                            "pos": {
+                                "x": 1.0668,
+                                "y": 3.2512
+                            },
+                            "uuid": "0b4f4805-59e4-4192-9923-7a33f706411e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x03' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J13 [Screw_Terminal_01x03]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.0066
+                            },
+                            "uuid": "d818908f-8833-4724-bbc1-d10d0afdc04e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C31 [C]",
+                            "pos": {
+                                "x": 3.2004,
+                                "y": 1.4859
+                            },
+                            "uuid": "a34a7cfb-2cb4-4b9d-87b9-16f6ab634c84"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R_Potentiometer' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol RV2 [R_Potentiometer]",
+                            "pos": {
+                                "x": 1.4224,
+                                "y": 3.2639
+                            },
+                            "uuid": "92dfdbcc-87cb-4c27-90f6-a55454fa08e2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C5 [C]",
+                            "pos": {
+                                "x": 2.4892,
+                                "y": 2.5781
+                            },
+                            "uuid": "8898e433-8be6-4c93-acb7-f79a4620c769"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C10 [C]",
+                            "pos": {
+                                "x": 2.1336,
+                                "y": 2.9083
+                            },
+                            "uuid": "1833824f-ce78-480d-becd-07d4470f58f3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R34 [R]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 3.5941
+                            },
+                            "uuid": "1245f58e-d188-4d29-9007-bc0c819ec0f0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R21 [R]",
+                            "pos": {
+                                "x": 3.556,
+                                "y": 0.6985
+                            },
+                            "uuid": "733efa2e-16a6-43ad-9315-76f8631a7d9a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x03' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J6 [Screw_Terminal_01x03]",
+                            "pos": {
+                                "x": 0.7112,
+                                "y": 3.5814
+                            },
+                            "uuid": "9db3b36c-0063-44eb-9530-bd62c7128a5c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R23 [R]",
+                            "pos": {
+                                "x": 3.556,
+                                "y": 1.0795
+                            },
+                            "uuid": "aa99d97c-59d7-495f-958a-4ec0bf960c40"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R30 [R]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 3.2639
+                            },
+                            "uuid": "29570180-2ce6-423d-b184-ad1c14a2d466"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R_Potentiometer' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol RV4 [R_Potentiometer]",
+                            "pos": {
+                                "x": 1.0668,
+                                "y": 3.5941
+                            },
+                            "uuid": "2ffdd566-6e1a-40ed-aa6c-039b1fce48c3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J17 [Screw_Terminal_01x02]",
+                            "pos": {
+                                "x": 3.2004,
+                                "y": 1.9812
+                            },
+                            "uuid": "064c1d14-4f96-4510-bc29-bfa7d9eea8ea"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'D' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D1 [D]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.54
+                            },
+                            "uuid": "729e00b0-a012-49ab-8832-2c08a85e3b67"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C_Polarized' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C9 [C_Polarized]",
+                            "pos": {
+                                "x": 2.4892,
+                                "y": 2.9083
+                            },
+                            "uuid": "ab4d4ab3-4d07-4b13-b020-76929b252c85"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C32 [C]",
+                            "pos": {
+                                "x": 3.556,
+                                "y": 1.4859
+                            },
+                            "uuid": "f4547253-ef82-4bfa-b8b4-da41e13657cc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R15 [R]",
+                            "pos": {
+                                "x": 1.4224,
+                                "y": 3.5941
+                            },
+                            "uuid": "2e9ed177-841a-4a7a-bc37-314ff4e2e16e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x03' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J18 [Screw_Terminal_01x03]",
+                            "pos": {
+                                "x": 2.1336,
+                                "y": 3.2512
+                            },
+                            "uuid": "76bbab31-8640-4538-b040-263c43850656"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R16 [R]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 3.5941
+                            },
+                            "uuid": "f8104657-22e6-4dcf-af2f-3e308baebf99"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R24 [R]",
+                            "pos": {
+                                "x": 3.9116,
+                                "y": 1.0795
+                            },
+                            "uuid": "436ea5a6-b1a5-48d0-a17d-26146a228ae3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R13 [R]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.9083
+                            },
+                            "uuid": "60d6a498-d565-43e7-8028-b1f011475b3b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'D' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D2 [D]",
+                            "pos": {
+                                "x": 3.2004,
+                                "y": 2.54
+                            },
+                            "uuid": "c44861e0-e4a8-4b51-873e-1410c42abd3e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R51 [R]",
+                            "pos": {
+                                "x": 3.556,
+                                "y": 2.0193
+                            },
+                            "uuid": "435e6295-c25d-4d26-a183-c5a27a477487"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R_Potentiometer_Dual' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol RV5 [R_Potentiometer_Dual]",
+                            "pos": {
+                                "x": 2.4892,
+                                "y": 3.2512
+                            },
+                            "uuid": "72c2fa6f-abbd-4cd7-a13a-323470f8f52b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C_Polarized' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C15 [C_Polarized]",
+                            "pos": {
+                                "x": 2.1336,
+                                "y": 3.5941
+                            },
+                            "uuid": "5750504f-f598-4bc5-b8be-8488c577b76f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C33 [C]",
+                            "pos": {
+                                "x": 3.9116,
+                                "y": 1.4859
+                            },
+                            "uuid": "dcb58dd3-9dcc-46c2-b5e8-2356aff3ffd7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'TestPoint' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP1 [TestPoint]",
+                            "pos": {
+                                "x": 3.2004,
+                                "y": 2.8702
+                            },
+                            "uuid": "bc014c89-ad57-4500-8381-270ec85b538b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R31 [R]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 3.2639
+                            },
+                            "uuid": "f34549ba-ed7e-4a41-b9c0-fc857701d866"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R17 [R]",
+                            "pos": {
+                                "x": 2.4892,
+                                "y": 3.5941
+                            },
+                            "uuid": "7a0d05dd-eee1-4438-b973-9306552668cf"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'TestPoint' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP3 [TestPoint]",
+                            "pos": {
+                                "x": 3.9116,
+                                "y": 1.9812
+                            },
+                            "uuid": "b7110767-0f86-474d-9cf1-3ba19d899632"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R6 [R]",
+                            "pos": {
+                                "x": 3.556,
+                                "y": 2.5781
+                            },
+                            "uuid": "3fa1f36d-b24d-4882-a87e-0a96aed82690"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'TestPoint' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP4 [TestPoint]",
+                            "pos": {
+                                "x": 4.2672,
+                                "y": 1.0414
+                            },
+                            "uuid": "80306632-7b56-4d1f-ae4f-ba20d82052cb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C34 [C]",
+                            "pos": {
+                                "x": 4.2672,
+                                "y": 1.4859
+                            },
+                            "uuid": "ddf51115-a9e2-46e3-a910-efa5c4b1315e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R32 [R]",
+                            "pos": {
+                                "x": 3.2004,
+                                "y": 3.2639
+                            },
+                            "uuid": "694ee431-f270-43e1-bcdb-1c279f872395"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Q_PNP_ECB' doesn't match copy in library 'Transistor_BJT'",
+                    "items": [
+                        {
+                            "description": "Symbol Q6 [Q_PNP_ECB]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 3.6068
+                            },
+                            "uuid": "f8d69401-bcf1-4f70-a9ce-c87a61fe8789"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R7 [R]",
+                            "pos": {
+                                "x": 3.9116,
+                                "y": 2.5781
+                            },
+                            "uuid": "bdd96c12-99a5-4fb0-880a-f7c2a20f95d4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J12 [Screw_Terminal_01x02]",
+                            "pos": {
+                                "x": 3.2004,
+                                "y": 3.556
+                            },
+                            "uuid": "a554d2a3-af95-4e3e-9970-0f7625595bf9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C16 [C]",
+                            "pos": {
+                                "x": 3.556,
+                                "y": 3.2639
+                            },
+                            "uuid": "7d4e07cb-d9a8-47a7-96cc-c71b44095349"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C35 [C]",
+                            "pos": {
+                                "x": 4.6228,
+                                "y": 1.4859
+                            },
+                            "uuid": "3ecd543e-6bcf-47cf-a8ef-39bf636a4309"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C_Polarized' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C6 [C_Polarized]",
+                            "pos": {
+                                "x": 4.2672,
+                                "y": 2.5781
+                            },
+                            "uuid": "417b748f-dc52-4e77-a6c1-00bce48aca4d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C17 [C]",
+                            "pos": {
+                                "x": 4.9784,
+                                "y": 0.6985
+                            },
+                            "uuid": "91ab2a71-5b27-4aa0-b790-2390498ca538"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'SW_SPDT' doesn't match copy in library 'Switch'",
+                    "items": [
+                        {
+                            "description": "Symbol SW4 [SW_SPDT]",
+                            "pos": {
+                                "x": 3.556,
+                                "y": 3.5814
+                            },
+                            "uuid": "ead715da-e361-4e17-9493-924a3936ade1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R33 [R]",
+                            "pos": {
+                                "x": 3.9116,
+                                "y": 3.2639
+                            },
+                            "uuid": "1f168de8-3c2b-4297-b218-93e49730e27e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'C' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C36 [C]",
+                            "pos": {
+                                "x": 4.9784,
+                                "y": 1.4859
+                            },
+                            "uuid": "e7e41533-ca4c-4ea2-8a9d-2a5e97c29d2e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'TestPoint' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP5 [TestPoint]",
+                            "pos": {
+                                "x": 3.9116,
+                                "y": 3.556
+                            },
+                            "uuid": "dcb6f8b4-fbef-47a0-928b-35438e2f41d3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Q_NPN_ECB' doesn't match copy in library 'Transistor_BJT'",
+                    "items": [
+                        {
+                            "description": "Symbol Q4 [Q_NPN_ECB]",
+                            "pos": {
+                                "x": 4.6228,
+                                "y": 2.5908
+                            },
+                            "uuid": "e34e084e-1cc0-466e-a162-9236a738c4f7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'Screw_Terminal_01x02' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J2 [Screw_Terminal_01x02]",
+                            "pos": {
+                                "x": 4.2672,
+                                "y": 3.2258
+                            },
+                            "uuid": "517513a3-cd86-4fee-a7d2-0b486d61e7d6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'TestPoint' doesn't match copy in library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP6 [TestPoint]",
+                            "pos": {
+                                "x": 4.2672,
+                                "y": 3.556
+                            },
+                            "uuid": "c2244798-3473-438c-8de9-2da611c9f16d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'R' doesn't match copy in library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R8 [R]",
+                            "pos": {
+                                "x": 4.9784,
+                                "y": 2.5781
+                            },
+                            "uuid": "5cfe3607-0dc8-41d1-9ffa-18f4d0957113"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                }
+            ]
+        }
+    ],
+    "source": "ProtoBuild1.kicad_sch"
+}

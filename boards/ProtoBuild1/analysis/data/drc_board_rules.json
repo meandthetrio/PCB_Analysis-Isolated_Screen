@@ -1,0 +1,292 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-07T16:24:49+0000",
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "9.0.9",
+    "schematic_parity": [],
+    "source": "ProtoBuild1.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 125.61,
+                        "y": 108.47
+                    },
+                    "uuid": "0cfed073-d33e-43e6-9bd8-3f91becd21ba"
+                },
+                {
+                    "description": "PTH pad B1 [<no net>] of L1",
+                    "pos": {
+                        "x": 125.61,
+                        "y": 109.74
+                    },
+                    "uuid": "59553d75-66a4-4b4b-8d51-d130c609ae19"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "PTH pad B2 [<no net>] of L1",
+                    "pos": {
+                        "x": 130.69,
+                        "y": 109.74
+                    },
+                    "uuid": "780260ed-848e-408a-b4ee-eee89b89f4be"
+                },
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 130.69,
+                        "y": 108.47
+                    },
+                    "uuid": "f8f8e5af-fca4-4b94-95bb-bcbefb6a7e3c"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "PTH pad B3 [<no net>] of L1",
+                    "pos": {
+                        "x": 120.53,
+                        "y": 109.74
+                    },
+                    "uuid": "e66d968b-c49d-45b3-b340-590a5571773c"
+                },
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 120.53,
+                        "y": 108.47
+                    },
+                    "uuid": "fc86caa2-a838-4ec9-9bcb-64b6ca61be81"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "PTH pad B4 [<no net>] of L1",
+                    "pos": {
+                        "x": 133.23,
+                        "y": 109.74
+                    },
+                    "uuid": "6be66cf4-c944-4efc-8edf-dec6ee333de0"
+                },
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 133.23,
+                        "y": 108.47
+                    },
+                    "uuid": "a99eacd6-bc0c-42bc-8fcf-31e6c26e64e5"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "PTH pad B5 [<no net>] of L1",
+                    "pos": {
+                        "x": 123.07,
+                        "y": 109.74
+                    },
+                    "uuid": "1fd2ccb7-5b68-4f1a-8569-12f0bcf7e667"
+                },
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 123.07,
+                        "y": 108.47
+                    },
+                    "uuid": "6b528275-45a7-4961-bf5a-50883bd84a3d"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "PTH pad B6 [<no net>] of L1",
+                    "pos": {
+                        "x": 128.15,
+                        "y": 109.74
+                    },
+                    "uuid": "73194cce-4342-4338-8a7e-89726643a883"
+                },
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 128.15,
+                        "y": 108.47
+                    },
+                    "uuid": "8405a41b-da40-4f99-9d8c-129480b4e646"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "PTH pad B7 [<no net>] of L1",
+                    "pos": {
+                        "x": 140.85,
+                        "y": 109.74
+                    },
+                    "uuid": "32fb8175-81fe-4081-ac5a-4112c0cc412d"
+                },
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 140.85,
+                        "y": 108.47
+                    },
+                    "uuid": "5ed6c294-3d64-4304-b6bb-4b23b0767a04"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 145.93,
+                        "y": 108.47
+                    },
+                    "uuid": "b058c477-9f0c-433f-8e3d-86f28ff7e2a3"
+                },
+                {
+                    "description": "PTH pad B8 [<no net>] of L1",
+                    "pos": {
+                        "x": 145.93,
+                        "y": 109.74
+                    },
+                    "uuid": "ea6ee802-2599-4f4f-824e-be59f8f8fc89"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 135.77,
+                        "y": 108.47
+                    },
+                    "uuid": "4ed9513d-2893-4b93-805c-19bb764a1fdf"
+                },
+                {
+                    "description": "PTH pad B9 [<no net>] of L1",
+                    "pos": {
+                        "x": 135.77,
+                        "y": 109.74
+                    },
+                    "uuid": "ad3c0871-d891-4fc0-abaa-4eb44ed90d44"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "PTH pad B10 [<no net>] of L1",
+                    "pos": {
+                        "x": 148.47,
+                        "y": 109.74
+                    },
+                    "uuid": "4aecd2e1-11f3-4eb2-b9ab-126c5d3e5242"
+                },
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 148.47,
+                        "y": 108.47
+                    },
+                    "uuid": "50c85700-be7e-47f4-9c4d-f3356a58260d"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "PTH pad B11 [<no net>] of L1",
+                    "pos": {
+                        "x": 138.31,
+                        "y": 109.74
+                    },
+                    "uuid": "1c1e34b3-84c4-4d51-ab99-263615cd8f2e"
+                },
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 138.31,
+                        "y": 108.47
+                    },
+                    "uuid": "3eecbf20-63a9-4cf1-b36d-7391f7760f39"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets  and )",
+            "items": [
+                {
+                    "description": "Segment [<no net>] of L1 on F.Cu",
+                    "pos": {
+                        "x": 143.39,
+                        "y": 108.47
+                    },
+                    "uuid": "a02802fb-7076-4a83-a1d2-b0cc15e3dc67"
+                },
+                {
+                    "description": "PTH pad B12 [<no net>] of L1",
+                    "pos": {
+                        "x": 143.39,
+                        "y": 109.74
+                    },
+                    "uuid": "c7e22987-36e5-441b-a2f2-e5956fbf65c3"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        }
+    ]
+}

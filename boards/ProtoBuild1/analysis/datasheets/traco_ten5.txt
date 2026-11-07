@@ -1,0 +1,196 @@
+                                                  DC/DC Converters
+                                                  TEN 5 Series, 6 Watt
+
+
+Features                                                                                                         CB
+                                                                                                                 Scheme
+
+◆ Wide 2:1 input range                                                                                                    UL 60950-1
+
+◆ Full SMD-design
+◆ High efficiency up to 86%
+◆ Extended operating temperature
+   range –40°C to 85°C
+◆ I/O isolation 1’500 VDC
+◆ Indefinite short circuit protection
+◆ Input filter to meet EN 55022, Class A 		
+   and FCC, level A without external
+   components
+◆ Shielded metal case with insulated               The TEN 5 Series is a range of DC/DC-converter modules with wide input range
+   baseplate                                       of 2:1. State of the art SMD-technology guarantees a product with very high
+                                                   reliability and good cost /performance ratio. High efficiency allows an operating
+◆ 24-pin DIP with industry standard pinout
+                                                   temperature range of –40°C to +85°C. I/O-isolation of 1’500 VDC together with
+◆ High reliability, MTBF >1 Mio. h                 conducted noise compliance to EN 55022-A and FCC, level A makes these con-
+◆ 3-year product warranty                          verters ideal for a wide range of applications in communications, mobile battery
+                                                   powered equipments and industrial systems.
+
+
+ Models
+       Ordercode            Input voltage range         Output voltage          Output current max.            Efficiency typ.
+      TEN 5-0510                                           3.3 VDC                   1200 mA                         75 %
+      TEN 5-0511                                             5 VDC                   1000 mA                         79 %
+      TEN 5-0512                                            12 VDC                    500 mA                         82 %
+                               4.5 – 7 VDC
+      TEN 5-0513                                            15 VDC                    400 mA                         82 %
+                             (5 VDC nominal)
+      TEN 5-0521                                            ±5 VDC                   ±500 mA                         79 %
+      TEN 5-0522                                          ±12 VDC                    ±250 mA                         82 %
+      TEN 5-0523                                          ±15 VDC                    ±200 mA                         82 %
+      TEN 5-1210                                           3.3 VDC                   1200 mA                         77 %
+      TEN 5-1211                                             5 VDC                   1000 mA                         81 %
+      TEN 5-1212                                            12 VDC                    500 mA                         84 %
+                                9 – 18 VDC
+      TEN 5-1213                                            15 VDC                    400 mA                         84 %
+                             (12 VDC nominal)
+      TEN 5-1221                                            ±5 VDC                   ±500 mA                         81 %
+      TEN 5-1222                                          ±12 VDC                    ±250 mA                         84 %
+      TEN 5-1223                                          ±15 VDC                    ±200 mA                         84 %
+      TEN 5-2410                                           3.3 VDC                   1200 mA                         79 %
+      TEN 5-2411                                             5 VDC                   1000 mA                         83 %
+      TEN 5-2412                                            12 VDC                    500 mA                         86 %
+                               18 – 36 VDC
+      TEN 5-2413                                            15 VDC                    400 mA                         86 %
+                             (24 VDC nominal)
+      TEN 5-2421                                            ±5 VDC                   ±500 mA                         83 %
+      TEN 5-2422                                          ±12 VDC                    ±250 mA                         86 %
+      TEN 5-2423                                          ±15 VDC                    ±200 mA                         86 %
+      TEN 5-4810                                           3.3 VDC                   1200 mA                         79 %
+      TEN 5-4811                                             5 VDC                   1000 mA                         83 %
+      TEN 5-4812                                            12 VDC                    500 mA                         86 %
+                               36 – 75 VDC
+      TEN 5-4813                                            15 VDC                    400 mA                         86 %
+                             (48 VDC nominal)
+      TEN 5-4821                                            ±5 VDC                   ±500 mA                         83 %
+      TEN 5-4822                                          ±12 VDC                    ±250 mA                         86 %
+      TEN 5-4823                                          ±15 VDC                    ±200 mA                         86 %
+
+http://www.tracopower.com                                                                                                 Page 1 of 3
+                                                                                                   DC/DC Converters
+                                                                                                   TEN 5 Series       6 Watt
+
+Input Specifications
+Input current no load / full load                                       5 Vin models:    50 mA / 1460 mA typ.
+		                                                                     12 Vin models:    20 mA / 590 mA typ.
+		                                                                     24 Vin models:    5 mA / 290 mA typ.
+		                                                                     48 Vin models:    3 mA / 145 mA typ.
+Start-up voltage / 		                                                   5 Vin models:    4.4 VDC / 4.0 VDC
+under voltage shut down		                                              12 Vin models:    8.0 VDC / 8.0 VDC
+		                                                                     24 Vin models:    16.0 VDC / 16.0 VDC
+		                                                                     48 Vin models:    32.0 VDC / 32.0 VDC
+Surge voltage (1 sec. max.)		                                           5 Vin models:    10 V max.
+		                                                                     12 Vin models:    25 V max.
+		                                                                     24 Vin models:    50 V max.
+		                                                                     48 Vin models:    100 V max.
+Reverse voltage protection      		 1.0 A max.
+Conducted noise (input)			 EN 55022 level A, FCC part 15, level A
+Output Specifications
+Voltage set accuracy			 1.0 %
+Regulation
+  – Input variation Vin min. to Vin max.		 0.3 % max.
+  – Load variation 20 – 100 %
+                                     single output models: 1.0 % max.
+		                    dual output models balanced load: 2.0 % max.
+                    dual output models unbalanced load: 5.0 % max.
+Ripple and noise (20 MHz Bandwidth)		 50 mVpk-pk max.
+Temperature coefficient			 ±0.02 %/K
+Output current limitation			 >120 % of Iout max., constant current
+Short-circuit protection 			 indefinite (automatic recovery)
+Capacitive load                                                  single output models: 6800 µF max.
+                                                                   dual output models: 1000 µF max. (each output)
+General Specifications
+Temperature ranges             – Operating		 –40°C to +85°C
+                               – Case temperature		 +100°C max.
+                               – Storage		 –55°C to +125°C
+Derating			 3.5 %/K above 70°C
+Humidity (non condensing)			 95 % rel H max.
+Reliability, calculated MTBF (MIL-HDBK-217F, @ +25°C, ground benign)		 >1 Mio. h
+Isolation voltage (60 sec)     – Input/Output		 1’500 VDC
+Isolation capacity             – Input/Output 		 380 pF typ.
+Isolation resistance           – Input/Output 		 >1‘000 M Ohm (500 VDC)
+Switching frequency 			 300 kHz typ. (Pulse frequency modulation PFM)
+Safety standards 			 UL 60950-1, IEC/EN 60950-1
+Safety approval			 CSA File No. 226037
+			 http://directories.csa-international.org
+
+
+
+
+All specifications valid at nominal input voltage, full load and +25°C after warm-up time unless otherwise stated.
+
+http://www.tracopower.com                                                                                            Page 2 of 3
+                                                                                                                                              DC/DC Converters
+                                                                                                                                              TEN 5 Series            6 Watt
+
+Physical Specifications
+Casing material			 steel, nickel plated
+Baseplate material			 non conductive FR4
+Potting material			 epoxy (UL 94V-0 rated)
+Weight			 16.9 g (0.59 oz)
+Soldering temperature 			 max. 265°C / 10 sec.
+
+
+
+
+Outline Dimensions mm (inches)
+                         4.54 ±0.5
+                                       (0.18 ±0.02)
+
+                                                       2.54 (0.1)
+
+
+
+
+                                                                                                                                                          Pin-Out
+                                                                                                                      23                 2
+                                                                                                                                                Pin     Single        Dual
+                                                                                                                      22                 3
+  32 ±0.5 (1.25 ±0.02)
+
+
+
+
+                                                                                                                                                2     –Vin (GND)   –Vin (GND)
+                                                                                                                           Bottom view
+                                                      5.08 15.24 (0.6)
+                         22.86 (0.9)
+
+
+
+
+                                                                                                                                                3     –Vin (GND)   –Vin (GND)
+                                                                                                                                                9       No pin      Common
+                                                                                                                                                11     No con.        –Vout
+                                                                                                                      16                 9
+                                                                                                                                                14      +Vout         +Vout
+                                                                         (0.2)
+
+
+
+
+                                                                                                                      14                 11     16      –Vout       Common
+                                                                                                                                                22    +Vin (Vcc)    +Vin (Vcc)
+
+                                                                                           0.5         2.4 ±0.5         15.24 (0.6)             23    +Vin (Vcc)    +Vin (Vcc)
+Insulated Baseplate
+                                                                                           (0.02)      (0.1 ±0.02)
+                                                                                  5      10 ±0.5                     20 ±0.5 (0.8 ±0.02)
+                                                                                 (0.2)   (0.4 ±0.02)
+
+
+Pin diameter ø 0.5 ±0.05 (0.02 ±0.002)
+Tolerances ±0.5 (±0.02)
+
+
+
+
+Specifications can be changed any time without notice
+
+                                                                                                                                                                       Rev. 12/09
+
+
+
+
+Jenatschstrasse 1 · CH-8002 Zurich · Switzerland
+Tel. +41 43 311 45 11 · Fax +41 43 311 45 45 · info@traco.ch · www.tracopower.com                                                                                    Page 3 of 3
+
