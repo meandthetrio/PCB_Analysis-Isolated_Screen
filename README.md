@@ -1,3 +1,16 @@
+# PCB Analysis — two unrelated boards in one repo
+
+| Board | Where | Status |
+|---|---|---|
+| **WavetableController ("Manifold")** — Trey's Daisy Seed synth controller, KiCad 9, fabbed twice | repo root (`WavetableController.*`, `Manifold_Gerb_LedFix/`, `analysis/`) | review complete, rev-2 planning |
+| **ProtoBuild1 ("Rev K iron block")** — Quad Eight project, tapped-inductor EQ section, KiCad 10, not yet fabbed | [`boards/ProtoBuild1/`](boards/ProtoBuild1/README.md) | review complete (2026-11-07) |
+
+The two products share nothing but the tooling (`tools/`) and the six-pass checklist. Each has
+its own `analysis/` with its own findings ledger (`F-nnn` for Manifold, `PB-F-nnn` for
+ProtoBuild1). Everything below this line is about the WavetableController.
+
+---
+
 # PCB Analysis — WavetableController (Daisy Seed synth)
 
 **Read this first.** This folder holds a completed design review of Trey's "WavetableController" board — an Electrosmith Daisy Seed–based wavetable synth controller, 2-layer, 165×102 mm, designed in KiCad 9. The board has been fabbed twice at JLCPCB and the physical boards mostly work. The analysis (all passes complete, 2026-08-13) found several real defects and produced a rev-2 plan.
@@ -41,7 +54,7 @@ Board changes either way: add 2.2k I2C pull-ups, remove J2/FB4/C14/C17/both R21s
 
 ## Tooling notes
 
-- **KiCad 9.0.9 (Linux / Claude Code on the web):** `kicad-cli` and the `pcbnew` Python module are on PATH. `.claude/hooks/session-start.sh` (a SessionStart hook) runs `tools/kicad_env_setup.sh` automatically in web sessions; run it by hand with `sudo tools/kicad_env_setup.sh` elsewhere. It installs the stock symbol/footprint libs and seed the user library tables (otherwise ERC/DRC add ~190 "library not found" warnings). `tools/kicad_check.sh` runs ERC, DRC, netlist, Gerber, SVG and PDF exports into `kicad_out/` (git-ignored) as a smoke test.
+- **KiCad 9.0.9 (Linux / Claude Code on the web):** `kicad-cli` and the `pcbnew` Python module are on PATH. `.claude/hooks/session-start.sh` (a SessionStart hook) runs `tools/kicad_env_setup.sh` automatically in web sessions; run it by hand with `sudo tools/kicad_env_setup.sh` elsewhere. It installs the stock symbol/footprint libs and seed the user library tables (otherwise ERC/DRC add ~190 "library not found" warnings). `tools/kicad_check.sh [DIR BASENAME]` runs ERC, DRC, netlist, Gerber, SVG and PDF exports into `kicad_out/<basename>/` (git-ignored) as a smoke test; with no arguments it checks the WavetableController. `tools/kicad10_to_9.py SRC DST` makes a KiCad-9-loadable copy of a project that carries KiCad 10 library content (needed for ProtoBuild1).
 - **Freerouting 2.4.1 autorouter** is installed by the same setup script (needs Java 25, installed alongside the system Java 21; `freerouting` wrapper on PATH runs it headless with analytics off). `tools/autoroute.py IN.kicad_pcb OUT.kicad_pcb [--passes N]` does DSN export → route → SES import. It temporarily renames the duplicate R21, because the Specctra exporter refuses boards with duplicate refdes (an independent confirmation of that finding). On the stale checked-in board, 2 passes took 53 unrouted connections to 5. Remaining lib warnings name Trey's private libs (`Retroactive_Custom_Parts`, `Jack_3.5mm_CUI_RetroactiveCustom`, `SOP-6_...(RetroactiveCustom)`), which only exist on his machine; footprints are embedded in the `.kicad_pcb`, so they are harmless. Note `pcbnew.LoadBoard(...).Zones()` returns 0 here because the 6 keepout zones live inside footprints, not at board level.
 - On Trey's Mac, KiCad 10.0.5 lives at `/Applications/KiCad.app` (kicad-cli at `Contents/MacOS/kicad-cli`; brew cask fails without sudo).
 - `analysis/gerber_analyze.py` is the Gerber parser/net-matcher that produced the routing CSVs. Other scratch scripts (pcb_parse.py, pcb_audit.py, DRC/ERC reports) lived in a session scratchpad and may be gone — regenerate from gerber_analyze.py patterns if needed.
