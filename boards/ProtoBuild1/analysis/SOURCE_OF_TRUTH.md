@@ -1,5 +1,5 @@
 # Source of Truth — ProtoBuild1 Analysis Methodology
-**Project:** ProtoBuild1 "Rev K iron block" (Quad Eight project; tapped-inductor resonant EQ section, ±15 V, through-hole, 2-layer 170 × 130 mm, KiCad 10)
+**Project:** ProtoBuild1 "Rev K iron block" (Quad Eight project; tuned-inductor all-pass "iron" saturation stage, ±15 V, through-hole, 2-layer 170 × 130 mm, KiCad 10)
 **Established:** 2026-11-07 · **Status:** governing document for this board; same rules as the Manifold review, re-stated here so this folder stands alone.
 
 ---

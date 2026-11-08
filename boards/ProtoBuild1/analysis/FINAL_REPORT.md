@@ -36,6 +36,7 @@ ordered as-is".
 14. Long autorouted analog nets: N 164 mm, P 190, X 159, D 253 (PB-F-024). Hand-route N/P/X short on Rev L.
 15. Series 1N4002 diodes cost ~0.7 V per rail; R18 bleed is optional per the Traco sheet (PB-F-012).
 16. Net-label-style schematic is unreadable as a circuit (PB-F-004); worth a drawn sheet before anyone else works on it.
+17. **Drive headroom changes with the Q switch (PB-F-033):** the three paralleled NE5532 halves current-limit at ≈13 / 6.7 / 4.1 V peak on Q 1 / 2 / 4. Fine if intended as soft limiting; otherwise note it or add drive capability.
 
 ## Verified passes (cited in the pass reports)
 
@@ -45,6 +46,7 @@ ordered as-is".
 - All fab dimensions other than items 2, 10, 11 pass with ≥2× margin: 0.40 mm tracks, ≥0.202 mm clearance, 0.407 mm hole-to-track, 0.52 mm hole-to-hole, 0.89 mm copper-to-edge, mask web 0.94 mm (PB-F-009).
 - Rail capacity 1.23 A vs ≤0.1 A; ±14.3 V inside NE5532 limits; 100 µF per rail inside the Traco's 1000 µF cap-load limit (PB-F-014, PB-F-025).
 - Tuning arithmetic lands on 100.7 / 199 / 404 / 801 Hz; switch/pot/coil wiring tables are self-consistent (PB-F-019).
+- Function verified from the netlist: a tuned second-order all-pass around the coil (OUT = 2P − D), flat magnitude, Q 0.9 / 1.8 / 2.9, DRIVE and make-up gains exactly complementary — an iron-saturation colour stage, not an EQ (PB-F-032).
 - Parts list values and footprints match the schematic for all 70 on-board refs (PB-F-021).
 - 18/18 terminal blocks on an edge, facing outward; no body overlaps; courtyards everywhere; vias tented; M3 holes at the corners (PB-F-027, PB-F-029).
 

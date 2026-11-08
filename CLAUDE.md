@@ -7,7 +7,7 @@ Two unrelated boards live here (see the table at the top of `README.md`):
   first, then `analysis/FINAL_REPORT.md`. Do not re-derive findings that are
   already in `analysis/FINDINGS.md`.
 - **ProtoBuild1 / Rev K iron block** (`boards/ProtoBuild1/`): a different
-  product (Quad Eight tapped-inductor EQ section, KiCad 10, not yet fabbed).
+  product (Quad Eight tuned-inductor all-pass "iron" saturation stage, KiCad 10, not yet fabbed).
   Read `boards/ProtoBuild1/README.md`, then its `analysis/FINAL_REPORT.md`;
   ledger IDs are `PB-F-nnn`. Its shipped KiCad files do not open in KiCad 9 —
   run `tools/kicad10_to_9.py boards/ProtoBuild1/source/kicad-project kicad_out/pb1_conv`

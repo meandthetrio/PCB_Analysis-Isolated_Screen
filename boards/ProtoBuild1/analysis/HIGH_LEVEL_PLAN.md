@@ -55,6 +55,7 @@ status line of each pass when it completes; do not delete completed passes.
 - [x] Analog net lengths and routing; op-amp paralleling; supply vs NE5532 limits; compensation/output network; input/output coupling
 - **Deliverable:** ✅ `PASS5_SIGNALS.md`
 - **Result:** PB-F-024 (long autorouted analog nets — judgment), PB-F-025 (supply PASS), PB-F-026 (I/O notes)
+- [x] 2026-11-08: function derived from the netlist (all-pass, Q table, gain product) → PB-F-032 PASS, PB-F-033 drive-headroom judgment; "EQ section" wording corrected everywhere
 
 ## Pass 6 — Mechanical & assembly
 **Status: COMPLETE** (2026-11-07)

@@ -11,8 +11,11 @@ re-derive anything before checking those. Methodology and which-file-is-truth ru
 
 ## What the board is
 
-A through-hole, 2-layer, 170 × 130 mm, ±15 V audio board: one section of a tapped-inductor
-resonant EQ ("iron block"). Signal path: input jack → INPUT pot → NE5532 buffer → NE5532 DRIVE
+A through-hole, 2-layer, 170 × 130 mm, ±15 V audio board: an inductor-saturation ("iron") colour stage, **not an EQ**. The coil sits in a
+tuned second-order all-pass (OUT = 2P − D makes the magnitude flat, the phase rotates 360° through
+the selected frequency) so the signal current, plus an optional DC magnetising bias, drives the
+core into nonlinearity in a chosen band without changing the frequency response
+(function derived from the netlist, see PASS5 and PB-F-032). Signal path: input jack → INPUT pot → NE5532 buffer → NE5532 DRIVE
 stage (U1A inverting, U1B + U3B followers, 3 × 10 Ω share resistors) → node **D** → Q resistor
 (SW2) → node **P** → tuning capacitor (SW1b) → node **X** → coil tap (SW1a) → RM10 tapped
 inductor → 1 Ω sense (TP3) → GND. A discrete "Quad Eight" amplifier Q1–Q5 forms OUT = 2P − D,

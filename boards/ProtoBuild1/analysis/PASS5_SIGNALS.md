@@ -27,6 +27,38 @@ already says to twist those leads.
 ## PB-F-025 — op-amp operating points: PASS
 ±14.3 V supply inside the NE5532 recommended ±5…±15 V; three halves paralleled into D through 10 Ω each — offset mismatches of a few mV circulate < 1 mA, well under IOS 38 mA; U1A closed-loop gain (R35 4k7 + RV5a) / R21 2k4 = ×2 … ×23; U2A make-up ×(240 k / (4k7 + RV5b)) — with the dual pot both gangs move together, which is the stated "DRIVE holds level" intent. Slew (5 V/µs) and bandwidth are irrelevant at 800 Hz.
 
+## Function check (added 2026-11-08) — PB-F-032, PB-F-033
+Derived from the netlist, not from the labels. The LTP feedback forces N = P with N the midpoint of
+R1 (10 k from D) and R10 (10 k from OUT), so OUT = 2P − D. With Z = j(ωL − 1/ωC) + r the coil leg
+(r = Rs 1 Ω + coil DCR, ≈11 Ω assumed) and P = D·Z/(Rap + Z):
+
+  OUT/D = (Z − Rap)/(Z + Rap)  — a second-order all-pass. |H| = 0 dB away from f0, phase 0 → −360°
+  through f0, and a dip of (Rap − r)/(Rap + r) at f0 that exists only because of r.
+
+| Setting | f0 | ω0·L | Rap 120 Ω ("Q 1") | Rap 56 Ω ("Q 2") | Rap 30 Ω ("Q 4") |
+|---|---|---|---|---|---|
+| 188 mH / 13.3 µF | 100.7 Hz | 119 Ω | Q 0.91, dip −1.6 dB | Q 1.77, dip −3.5 dB | Q 2.90, dip −6.7 dB |
+| 94 mH / 6.8 µF | 199.1 Hz | 118 Ω | same | same | same |
+| 47 mH / 3.3 µF | 404.1 Hz | 119 Ω | same | same | same |
+| 23.5 mH / 1.68 µF | 801.0 Hz | 118 Ω | same | same | same |
+
+ω0·L is 118 Ω on every setting by construction (L halves as f doubles), so each Rap gives the same
+series Q at all four frequencies, and the parts list's "Exact 118 Ω" note for Rap1 is Q = 1 exactly.
+DRIVE: U1A gain (4k7 + RV5a)/2k4 = ×1.96…×22.8, make-up U2A 240 k/(4k7 + RV5b) = ×51…×4.4; the
+product is 240 k/2k4 = ×100 (40 dB) at every pot position, so DRIVE changes coil current, not
+output level. Purpose: push AC current (and the optional 0–80 mA DC bias from Q6) through the iron
+core in a selectable band so the core's nonlinearity colours the signal while the response stays
+flat — a saturation/"iron" stage, not an EQ. The "Quad Eight amplifier" Q1–Q5 is a discrete op-amp
+used as the 2P − D summing stage; no published Quad Eight circuit for this block was found, so the
+lineage is the author's claim, the function is verified.
+
+**PB-F-033 (JUDGMENT):** the available drive depends on the Q switch. At resonance D sees Rap + r:
+131 / 67 / 41 Ω. Three NE5532 halves (IOS 38 mA each) through 10 Ω share resistors can source
+roughly 100 mA peak, so the drive stage current-limits at ≈ 13 / 6.7 / 4.1 V peak on the three Q
+settings before the ±14 V rails clip — about 10 dB less headroom at "Q 4" than at "Q 1". May be
+intended (soft limiting), but it means the Q switch also changes the maximum drive level and the
+coil current (≈ 7.6 / 15 / 24 mA per volt at D).
+
 ## PB-F-026 — I/O and output network: notes, no defects
 - Input: unbalanced jack → C1 10 µF film → RV1 (10 k log) → U2B buffer. No RF/ESD network — acceptable for a studio-rack prototype.
 - Output: U2A → R32 100 Ω build-out → C16 10 µF film → OUTX, R33 100 k bleed to GND ✓.

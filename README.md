@@ -3,7 +3,7 @@
 | Board | Where | Status |
 |---|---|---|
 | **WavetableController ("Manifold")** — Trey's Daisy Seed synth controller, KiCad 9, fabbed twice | repo root (`WavetableController.*`, `Manifold_Gerb_LedFix/`, `analysis/`) | review complete, rev-2 planning |
-| **ProtoBuild1 ("Rev K iron block")** — Quad Eight project, tapped-inductor EQ section, KiCad 10, not yet fabbed | [`boards/ProtoBuild1/`](boards/ProtoBuild1/README.md) | review complete (2026-11-07) |
+| **ProtoBuild1 ("Rev K iron block")** — Quad Eight project, tuned-inductor all-pass "iron" saturation stage, KiCad 10, not yet fabbed | [`boards/ProtoBuild1/`](boards/ProtoBuild1/README.md) | review complete (2026-11-07) |
 
 The two products share nothing but the tooling (`tools/`) and the six-pass checklist. Each has
 its own `analysis/` with its own findings ledger (`F-nnn` for Manifold, `PB-F-nnn` for
