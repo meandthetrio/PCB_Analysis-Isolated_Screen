@@ -49,10 +49,9 @@ by `analysis/scripts/gerber_vs_pcb.py`). Never edit the copy as if it were the d
 
 ## Headline findings (details and evidence in analysis/)
 
-- **The inductor is not connected.** The coil footprint's 12 pins and its breakout row carry no
-  net; the circuit ends at five jumper pads. The board does nothing until hand-wired jumpers are
-  added, and the jumper table is undefined until the coil's pinout is known. Deliberate, but the
-  single biggest assembly landmine (PB-F-018).
+- **The inductor is not connected** on the uploaded board: the coil footprint's 12 pins and its
+  breakout row carry no net (PB-F-018). **Decision 2026-11-08:** the coil moves to a plug-in
+  daughterboard; the main board needs a keyed 1 × 5 header for common + four taps (PB-F-031).
 - **TO-92 pads break the JLCPCB annular-ring minimum** (0.15 mm vs 0.18 mm absolute minimum) on
   all 9 pads of Q1–Q3, because the 1.27 mm-pitch `TO-92_Inline` footprint was used while the BOM
   specifies 2.54 mm formed-lead parts (PB-F-006).

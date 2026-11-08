@@ -70,3 +70,6 @@ status line of each pass when it completes; do not delete completed passes.
 - **Deliverable:** ✅ `FINAL_REPORT.md`
 
 **ALL PASSES COMPLETE.**
+
+## Decisions log
+- 2026-11-08 — inductor to a plug-in daughterboard with a keyed 1 × 5 header on the main board (PB-F-031); PB-F-018 and PB-F-028 superseded.

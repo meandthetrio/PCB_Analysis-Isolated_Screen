@@ -5,16 +5,20 @@ This board has not been fabricated. Unlike the Manifold review there is no "what
 boards do" tier; Tier 1 here means "will stop the first build from working or from being
 ordered as-is".
 
+## Decisions log
+
+- **2026-11-08 — inductor moves to a plug-in daughterboard** (PB-F-031). The main board drops the RM10 footprint and gets a keyed 1 × 5 header: common/RST, 23.5 mH/TAP4, 47 mH/TAP3, 94 mH/TAP2, 188 mH/TAP1. PB-F-018 and PB-F-028 are superseded; the former-pinout question now lives on the small board only.
+
 ## Tier 1 — fix before ordering
 
-1. **The inductor is not wired in (PB-F-018).** The coil footprint's 12 pins and its breakout row have no nets; the circuit stops at five jumper pads. The board needs five hand-soldered links whose mapping is unknown until Don-Audio's pin drawing arrives. Get the drawing, route the five nets to the right pins, drop the breakout row — or decide now that the coil goes on wires to J13/J17 and say so in the build notes.
+1. **Define the coil header (PB-F-031, replaces PB-F-018).** Replace the coil footprint with a keyed 1 × 5 header wired common / 23.5 / 47 / 94 / 188 mH = RST / TAP4 / TAP3 / TAP2 / TAP1, holes ≈1.0 mm. Until that is drawn, the board as uploaded still has an open coil and five undefined jumpers.
 2. **TO-92 annular ring 0.15 mm on Q1–Q3 (PB-F-006)** is under JLCPCB's 0.18 mm absolute minimum; the same narrow 1.27 mm footprint also conflicts with the lead-formed 2.54 mm parts on the order (PB-F-030). Swap to `TO-92_Inline_Wide` — one change fixes both.
 3. **Parts list is short two terminal blocks (PB-F-020):** J13 (3-pos) and J17 (2-pos), the coil-lead blocks. 8 × MKDS 1,5/2 and 10 × MKDS 1,5/3 are needed, 46 positions not 41.
 4. **The design files only open in KiCad 10 (PB-F-001)** despite the README's "9 or 10"; the DRC that reports 0 ran with no constraints at all (PB-F-002). Re-save natively from KiCad 10, put the JLCPCB minimums into Board Setup → Constraints (`data/ProtoBuild1.jlcpcb-rules.kicad_pro` has the values), and re-run — it will then show item 2.
 
 ## Tier 2 — assembly and first-power landmines
 
-5. **Coil footprint commits to one former type (PB-F-028).** It matches the Ferroxcube corner-group CSV-RM10-1S-12P drawing labels; a DIL former would not fit. Pin holes are Ø0.75 for Ø0.6 pins (tight) and clip stakes 1.2 mm against a 1.3 mm feature on the sheet. Needs the real part or its drawing.
+5. **Coil former pinout now belongs to the daughterboard (PB-F-028, superseded).** The corner-group footprint, its Ø0.75 pin holes and 1.2 mm clip stakes still need Don-Audio's drawing, but a wrong guess now costs a small respin instead of the main board.
 6. **Q6 bias current source tops out near 80 mA / ~0.85 W (PB-F-015)**, not the parts list's 50 mA / 0.6 W. Thermally fine with the heatsink, but 80 mA DC flows through SW1a, the tap, the coil and the 1 Ω sense; set the design maximum deliberately (R17 68 Ω for 50 mA) or document 80.
 7. **Heatsink clearance (PB-F-023):** C15 and R17 are 6 mm from Q6 where the parts list asks for 10 mm; the slip-on sink is 19.8 mm in one axis.
 8. **Parts-list names ≠ silkscreen names (PB-F-022):** Rs/Rdc/R1a/Cs1a…/J-2/J-3 vs R51/R50/R1/C31…/J1–J18. Rename or add a column before stuffing.
@@ -46,7 +50,7 @@ ordered as-is".
 
 ## Questions for Trey
 
-1. **Coil pinout / former type** — Don-Audio's drawing for the RM10-CTM 23.5/47/94/188 mH part. This decides PB-F-018 and PB-F-028 and whether the breakout row survives.
+1. **Coil pinout / former type** — Don-Audio's drawing for the RM10-CTM 23.5/47/94/188 mH part, now for the daughterboard layout (PB-F-031); plus the header keying choice.
 2. **Which KiCad is the working tool?** If KiCad 10 on the Mac, re-save the project natively and drop the "KiCad 9" claim; if anyone needs 9, `tools/kicad10_to_9.py` makes a review copy only.
 3. **Lead form actually ordered for Q1–Q3** (KSC1845FTA / KSA992FTA are lead-formed per onsemi) — confirms the footprint swap in item 2.
 4. **Heatsink orientation on Q6** and whether 80 mA is the intended bias maximum.

@@ -20,6 +20,8 @@ for Ø0.6 pins leave 0.075 mm radial slack before JLCPCB's drill tolerance — 0
 usual choice; (b) the sheet shows a "1.3 +0.15/0" feature at the clip location while the footprint
 drills 1.2 mm for the clip stakes. Alternative already provided: wire the coil to J13/J17.
 
+**Decision 2026-11-08 (PB-F-031):** superseded for the main board — the footprint moves to a daughterboard, where these checks still apply.
+
 ## PB-F-029 — solder mask / tenting: fine
 245 mask openings per side = 239 PTH pads + 6 NPTH; the 86 vias have no openings (tented, matching the KiCad 10 setup). Mask expansion 0; narrowest pad-to-pad mask web is on the 2.54 mm rows (0.94 mm) — far above JLCPCB's 0.10 mm bridge minimum. HASL finish per the parts list.
 

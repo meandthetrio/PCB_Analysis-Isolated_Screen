@@ -23,6 +23,8 @@ known and add it to the parts-list build notes. KiCad 9's 12 `shorting_items` DR
 footprint are the tool objecting to copper joining no-net pads; KiCad 10 accepts the net-tie
 declaration.
 
+**Decision 2026-11-08 (PB-F-031):** the inductor moves to its own plug-in board. The main board keeps only a keyed 1 × 5 header: pin order common (RST), 23.5 mH (TAP4), 47 mH (TAP3), 94 mH (TAP2), 188 mH (TAP1) — the table below is the complete electrical definition; nothing else on the board touches the coil.
+
 ## PB-F-019 — off-board wiring tables reconstructed from the netlist (info, all consistent)
 | Block | Pin 1 | Pin 2 | Pin 3 | Function |
 |---|---|---|---|---|
